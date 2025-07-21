@@ -1,0 +1,37 @@
+site_name: SAP DCOM 2024 HandsOn
+repo_url: https://github.tools.sap/engsrvperformance/dcom2024-islm
+theme:
+  name: material
+  logo: assets/dcom-handson.png
+  favicon: assets/logo.png
+  palette:
+    - scheme: default
+      primary: black
+      accent: purple
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - content.code.copy
+markdown_extensions:
+  - codehilite
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.progressbar
+  - attr_list
+  - md_in_html
+  - tables
+  - attr_list
+nav:
+- Welcome: "index.md"
+- Prerequisites: "Exercise/prerequisites.md"
+- Create a new Intelligent Scenario: "Exercise/create.md"
+- Connect to GPT-4 model: "Exercise/connect_with_tcode.md"
+- Operate the Intelligent Scenario: "Exercise/Operate.md"
+- Consume Inference by executing prompt: "Exercise/online_inference.md"
+- Summary: "Exercise/summary.md"
