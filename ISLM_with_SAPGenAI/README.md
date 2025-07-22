@@ -22,7 +22,7 @@ Workshop aims to provide a deep dive into Intelligent Scenario Lifecycle Managem
 **Note: Data science and AI Content development is out of the scope of this session. In this workshop, we will explore how to develop, operate and integrate Generative AI capabilities in SAP S/4HANA using ISLM.**
 
 # ISLM Key Capabilities
-•**	Centralized AI Management:**  ISLM offers an end-to-end framework to manage both pre-delivered and custom AI scenarios in SAP S/4HANA. It enables organizations to integrate and operationalize AI use cases efficiently, ensuring seamless lifecycle management. 
+• **Centralized AI Management:**  ISLM offers an end-to-end framework to manage both pre-delivered and custom AI scenarios in SAP S/4HANA. It enables organizations to integrate and operationalize AI use cases efficiently, ensuring seamless lifecycle management. 
 •	**Integration with Large Language Models (LLMs):** ISLM allows customers and partners to: 
   o	Develop custom generative AI based use cases tailored to their business needs. 
   o	Integrate business applications with LLMs for enhanced automation and decision-making. 
