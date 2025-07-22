@@ -77,10 +77,7 @@ The Intelligent Scenarios  app is used to create intelligent scenarios, revi
 7. Click on tick icon
    ![](./images/7.png)
 
-8. Ctrl+Click [here](https://44.217.183.24:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home) to open Fiori Launchpad in a new tab.<br>
-   Enter the user details as provided in cheat sheet.
-
-9. Click on **Analytics** section, you can find **Analytics** tab in **More** if it's not displayed in front. Then, choose the **Intelligent Scenario** app.
+8. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario** app.
    ![](./images/8.png)
 
 10. Click the **Create** button and choose->**Side-by Side**.
@@ -175,8 +172,7 @@ Once the Intelligent Scenario is published, we need to maintain the connection f
 Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to train, monitor the model quality, deploy, and activate the model for productive usage.
 In this section, you will use the Intelligent Scenario Management app to perform ML operations. 
 
-1. Ctrl+Click [here](https://44.217.183.24:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home) to open Fiori Launchpad in a new tab.<br>
-   Enter the user details as provided in cheat sheet. Click on **Analytics** section, you can find **Analytics** tab in **More** if it's not displayed in front. Then,choose the **Intelligent Scenario Management** app.
+1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario Management** app.
    ![](./images/32.png)
 
 2. Find the scenario created by searching using the name and navigate to the details page by clicking the **>** icon. 
@@ -347,6 +343,3 @@ In this section, you will use the Intelligent Scenario Management app to perform
 <br>
 
 ## 🎉 Congratulations! You have successfully completed the Exercise!🎉
-
-## Please provide your feedback in the link below
-[Feedback Form](https://docs.google.com/forms/d/e/1FAIpQLScNH3NDY2vKgSvQoxTr2WQZNU9uV6PhLemlBmWn1L2mchW8nQ/viewform?hl=en)
