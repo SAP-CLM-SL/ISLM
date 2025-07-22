@@ -54,14 +54,14 @@ The Intelligent Scenarios  app is used to create intelligent scenarios, revi
    For this use case, we will use generic template which make use of Classification algorithm.<br>
    
    Open **SAP Logon** and logon to system **S4H 100** (You can find the credentials written in the cheatsheet)<br>
-   Open transaction **/nse24** and search for the ABAP class **ZCL_PLANTYPE_HO**. 
+   Open transaction **/nse24** and search for the ABAP class **ZCL_PRED_PLANETYPE_000**. 
    ![](./images/1.png)
 
 2. Click on **Copy** 
    ![](./images/2.png)
 
 3. Provide the unique name in the Copy to field.<br>  
-   Enter a unique name such as **ZCL_PLANTYPE_###**, where ### is your attendee id. <br> **Please ask moderator to know your attendee id**. <br>
+   Enter a unique name such as **ZCL_PRED_PLANETYPE_###**, where ### is your attendee id. <br> **Please ask moderator to know your attendee id**. <br>
    Click on tick icon.
    ![](./images/3.png)
 
@@ -85,7 +85,7 @@ The Intelligent Scenarios  app is used to create intelligent scenarios, revi
    ![](./images/9.png)
 
 11. Provide the required information in the screen:
-  -	**Intelligent Scenario Name**: Enter a unique name starting such as `Z_SIT24_PLANETYP_###` where **###** is your attendee id.
+  -	**Intelligent Scenario Name**: Enter a unique name starting such as `Z_PRED_PLANETYPE_###` where **###** is your attendee id.
   -	**Intelligent Scenario Description**: Enter a description for the Intelligent Scenario.
   -	**Intelligent Scenario Type** as **Data Attribute Recommendation**
   -	Ensure the **Data Management checkbox** is selected
@@ -209,7 +209,7 @@ In this section, you will use the Intelligent Scenario Management app to perform
     Click on **Debrief** tab.
     ![](./images/44.png)
 
-13. View Overall and target metrics in Debrief. **Accuracy, F1Score, Precision and Recall** are classificaiton metrics. The higher the better.
+13. View Overall and target metrics in Debrief. **Accuracy, F1Score, Precision and Recall** are classification metrics. The higher the better.
     ![](./images/45.png)
 
 14. Click on Data Management tab to view details of data packets.
