@@ -84,7 +84,7 @@ And click the **tick icon**.
 ![](./images/6.png)
 9. Click the **tick** icon.
 ![](./images/7.png)
-10. Open the Fiori Launchpad by clicking [here](https://ldai1ui3.wdf.sap.corp:44332/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-language=EN&sap-client=000#Shell-home){:target="_blank"}.
+10. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}.
 Input the username and password provided in the cheat sheet. Click on My Home section and choose the **Intelligent Scenarios** app.
 ![](./images/IntelligentScenariosApp.png)
 11. Click the **Create** button and choose **Side-by Side**.
@@ -205,7 +205,7 @@ Well done, you just **Set up the connection for Intelligent Scenario** to connec
 Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to deploy and activate the model for productive usage.
 In this section, you will use the **Intelligent Scenario Management app** to perform operations on your Intelligent Scenario.
 
-1. Open the Fiori Launchpad by clicking [here](https://ldai1ui3.wdf.sap.corp:44332/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-language=EN&sap-client=000#Shell-home){:target="_blank"}.
+1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}.
 Input the username and password provided in the cheat sheet. Click on My Home section and choose the **Intelligent Scenario Management** app.
 ![](./images/IntelligentScenarioManagementApp.png)
 2. Search the **Gen AI** scenario created by you and navigate to the details page by clicking the **>** icon.
