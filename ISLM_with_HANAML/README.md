@@ -56,7 +56,7 @@ SAP HANA APL lets you build and apply different types of predictive models, such
 
 Gradient Boosting regression model type provides a more accurate modeling result than the legacy regression model.
 
-1. Open the Fiori Launchpad. Ctrl+Click [here](https://44.217.183.24:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home) to open Fiori Launchpad in a new tab. Input the username and password provided in the cheat sheet. Click on **Analytics** section, you can find **Analytics** tab in **More** if it's not displayed in front. Then, choose the **Intelligent Scenario** app.
+1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario** app.
 
     ![](./images/1.png)
 
@@ -123,7 +123,7 @@ Once the Intelligent Scenario is published, the Intelligent Scenario Management 
 
 In this section, you will use the Intelligent Scenario Management app to perform ML operations. 
 
-1. Open the Fiori Launchpad. Ctrl+Click [here](https://44.217.183.24:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home) to open Fiori Launchpad in a new tab. Input the username and password provided in the cheat sheet. Click on **Analytics** section, you can find **Analytics** tab in **More** if it's not displayed in front. Then, choose the Intelligent Scenario Management app.
+1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario Management** app.
     ![](./images/14.png)
 2. Search the **First-Class Seats Occupied** scenario created by you and navigate to the details page by clicking the `>` icon. <br>![](./images/15.png)
 3. Select the Model and click on the **Train button** to trigger the training.
@@ -159,7 +159,7 @@ In this section, you will use the Intelligent Scenario Management app to perform
 
 ## 3. Visualizing Model Version Predictions
 
-1. Open the Fiori Launchpad. Ctrl+Click [here](https://44.217.183.24:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home) to open Fiori Launchpad in a new tab. Input the username and password provided in the cheat sheet. Click on **Analytics** section, you can find **Analytics** tab in **More** if it's not displayed in front. Then, choose the **Intelligent Scenario** app.
+1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario** app.
     ![](./images/1.png)
 
 2. Search the Intelligent Scenario created by you by entering the **Intelligent Scenario name and Status = Published**.
@@ -230,7 +230,7 @@ Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied sea
 # Schedule training 
 You can schedule a training for your intelligent scenarios. Once the trainings are scheduled, model versions are created automatically based on the selected frequency and preselected filters.
 
-1. Open the Fiori Launchpad. Ctrl+Click [here](https://44.217.183.24:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home) to open Fiori Launchpad in a new tab. Input the username and password provided in the cheat sheet. Click on **Analytics** section, you can find **Analytics** tab in **More** if it's not displayed in front. Then, choose the Intelligent Scenario Management app.
+1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario Management** app.
     ![](./images/Scheduling/1.png)
 2. Search the **First-Class Seats Occupied** scenario created by you and navigate to the details page by clicking the **>** 
    icon.
@@ -274,7 +274,4 @@ You can schedule a training for your intelligent scenarios. Once the trainings a
 
 🎉 Congratulations! 🎉 <br>
 You have successfully completed the exercise. <br>
-
-## Please provide your feedback in the link below
-[Feedback Form](https://docs.google.com/forms/d/e/1FAIpQLScNH3NDY2vKgSvQoxTr2WQZNU9uV6PhLemlBmWn1L2mchW8nQ/viewform?hl=en)
 
