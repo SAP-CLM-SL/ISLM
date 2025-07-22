@@ -43,7 +43,7 @@ Workshop aims to provide a deep dive into Intelligent Scenario Lifecycle Managem
 
 # Scenario storyline:  Generate an order confirmation email based on Sales data
 
-### 1.1	Overview: Sales Order summary
+## 1.1	Overview: Sales Order summary
 In this exercise, we are using gpt-4o large language model (LLM) to generate an order confirmation email for Sales Order. As an ABAP Developer, you will use ISLM framework to create a GenAI use case in ABAP stack.
 
 This exercise includes the following steps:
@@ -54,7 +54,9 @@ This exercise includes the following steps:
 
 ![](./images/IntegrateGenAIwithISLM.png)
 
-### 1.2	Create Intelligent Scenario
+</br>
+
+## 1.2	Create Intelligent Scenario
 The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app.
 In this step, you’ll create a new intelligent scenario to generate the order confirmation email for Sales Order using LLM model.
 
@@ -169,12 +171,9 @@ Build a confirmation mail for a sales order containing {ISLM_Items}. The source 
 
 Well done, you just created your first Side-by-side Intelligent Scenario.
 
+</br>
 
-
-
-
-
-### 1.3	Connection setup
+## 1.3	Connection setup
 Once the Intelligent Scenario is published, we need to maintain the connection for an intelligent scenario in SAP S/4 HANA with the Generative AI Hub service in BTP.
 Your service key is indicated in the cheat sheet that you received.
 
@@ -200,7 +199,9 @@ Your service key is indicated in the cheat sheet that you received.
 
 Well done, you just **Set up the connection for Intelligent Scenario** to connect to BTP based Generative AI Hub service.
 
-### 1.4	Operate the Intelligent Scenario
+</br>
+
+## 1.4	Operate the Intelligent Scenario
 Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to deploy and activate the model for productive usage.
 In this section, you will use the **Intelligent Scenario Management app** to perform operations on your Intelligent Scenario.
 
@@ -227,16 +228,17 @@ Input the username and password provided in the cheat sheet. Click on My Home se
 
 Well done, you just Used Intelligent Scenario Management app to deploy and activate the llm model.
 
+</br>
 
-
-### 1.5	Generate Sales Order Confirmation email. 
+## 1.5	Generate Sales Order Confirmation email. 
 In this step, you will use the ABAP GUI to view the email generated using LLM model.
 
 1. Logon to backend system and execute the transaction code **/nSE38**.
 ![](./images/SE38.png)
-2. Input the Report Name as **Z_SALES_ORD_CONF_###**, where ### is your attendee id mentioned in the cheat sheet.
-And Click the **Create** button.
+
+2. Input the Report Name as **Z_SALES_ORD_CONF_###**, where ### is your attendee id mentioned in the cheat sheet. And Click the **Create** button.
 ![](./images/40.png)
+
 3. In the dialog input the below details:
   - Title: **Generate confirmation email for sales order**
   - Select the **Type** as **Executable program**.
