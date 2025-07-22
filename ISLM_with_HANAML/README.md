@@ -84,12 +84,13 @@ Gradient Boosting regression model type provides a more accurate modeling result
     
     ![](./images/6.png)
 
-     -	Enter a CDS view to be used as **Training Dataset**: `ZISLM_SFLIGHT_TRAIN_CDS`. <br>Training Dataset to be used for training the model. 
-     -	Enter a CDS view to be used as **Apply Dataset**: `ZISLM_SFLIGHT_APPLY_CDS` (Note that apply dataset is different from training dataset). <br>Apply dataset is Dataset used for prediction.
+     -	Enter a CDS view to be used as **Training Dataset**: `Z_SFLIGHTTRAINCDS`. Training Dataset to be used for training the model. 
+     -	Enter a CDS view to be used as **Apply Dataset**: `Z_SFLIGHTPREDICTCDS`. Apply dataset is Dataset used for prediction.
+       **Note that apply dataset is different from training dataset.**
 
     ![](./images/7.png)
 
-     -	Select your target variable. **Target**: `SEATSOCC_F`. <br>Target variable is field whose value you want to predict. 
+     -	Select your target variable. **Target**: `SEATSOCCF`. <br>Target variable is field whose value you want to predict. 
      -	**Max Reason Code:** `1` Number of reason codes you want to generate. Reason codes are variables whose values have the most influence in a score-based decision (typically a risk score). <br>The variables for which the contribution is the most differential are selected as the most important reason codes. <br>Apply output configuration has the selected metrics that are added in the intelligent scenario output and used for prediction. 
      -	Click on the **Add** button.
     
@@ -196,10 +197,10 @@ Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied sea
     ![](./images/32.png)
 
 10. Provide below values to the respective CDS parameters
-     -	P_BOOKID = 00000012
-     -	P_CARRID = AA
-     -	P_CONNID = 0017
-     -	P_FLDATE = 20210916
+     -	P_BOOKID = `00002484`
+     -	P_CARRID = `AZ`
+     -	P_CONNID = `0555`
+     -	P_FLDATE = `20250813`
 
     ![](./images/33.png)
     
@@ -216,7 +217,7 @@ Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied sea
     ![](./images/35.png)
 
 13. Provide below values to the respective CDS parameters
-     -	P_WHERE = CONNID = 0017 AND FLDATE = 20210916
+     -	P_WHERE = `CONNID = 0017 AND FLDATE = 20250813`
 
     ![](./images/36.png)
     
