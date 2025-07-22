@@ -236,7 +236,7 @@ In this step, you will use the ABAP GUI to view the email generated using LLM mo
 1. Logon to backend system and execute the transaction code **/nSE38**.
 ![](./images/SE38.png)
 
-2. Input the Report Name as **Z_SALES_ORD_CONF_###**, where ### is your attendee id mentioned in the cheat sheet. And Click the **Create** button.
+2. Input the Report Name as **Z_SALES_ORD_CONF_###**, where ### is your attendee id mentioned in the cheat sheet. Click the **Create** button.
 ![](./images/40.png)
 
 3. In the dialog input the below details:
