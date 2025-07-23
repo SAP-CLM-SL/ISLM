@@ -41,7 +41,7 @@ Workshop aims to provide a deep dive into Intelligent Scenario Lifecycle Managem
 - **ABAP Developer:** A developer who can create ABAP artifacts required for Intelligent Scenario registration.
 - **Intelligent Scenario Owner:** An owner who creates, reviews, and publishes Intelligent Scenario.
 
-# Scenario storyline:  Generate an order confirmation email based on Sales data
+# [Exercise for Hands-on] Scenario storyline:  Generate an order confirmation email based on Sales data
 
 ## 1.1	Overview: Sales Order summary
 In this exercise, we are using gpt-4o-mini large language model (LLM) to generate an order confirmation email for Sales Order. As an ABAP Developer, you will use ISLM framework to create a GenAI use case in ABAP stack.
