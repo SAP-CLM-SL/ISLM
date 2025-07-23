@@ -90,7 +90,7 @@ Input the username and password provided in the cheat sheet. Click on My Home se
 11. Click the **Create** button and choose **Side-by Side**.
 ![](./images/CreateSBS.png)
 12. Provide the required information in the screen:
-  - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as **Z_SLS_ORD_CONF _###**, where ### is your attendee id mentioned in the cheat sheet.
+  - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as **Z_SLS_ORD_CONF_###**, where ### is your attendee id mentioned in the cheat sheet.
   - **Intelligent Scenario Description**: Generate sales order confirmation email
   - **Intelligent Scenario Type**: Generative AI
  ![](./images/8.png)
