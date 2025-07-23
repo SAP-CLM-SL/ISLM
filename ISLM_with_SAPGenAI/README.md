@@ -5,7 +5,7 @@
 **Intelligent Scenario Lifecycle Management (ISLM)** is a key enabler for integrating AI into SAP S/4HANA. With its latest enhancements, ISLM now facilitates the adoption of generative AI (GenAI), providing customers and partners with a centralized framework to manage both SAP-delivered and custom AI use cases. This allows organizations to transform core business processes by integrating large language models (LLMs) seamlessly within their business applications.
 </br>
 
-![](./images/Overview.png)
+![](./images/Overview.jpg)
 
 Using the **ABAP AI SDK powered by Intelligent Scenario Lifecycle Management**, you can enhance your own custom ABAP-based applications with integrated generative AI features.
 ISLM provides an auto enablement of generative AI-based scenarios and the connectivity management to access large language models. ISLM also provides the **Intelligent Scenario** and the **Intelligent Scenario Model**, transportable objects that contain all information to ship, instantiate, and run a solution based on generative AI functionality, including the information about the selected large language model and its version.
