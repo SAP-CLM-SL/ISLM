@@ -52,7 +52,7 @@ This exercise includes the following steps:
 3.	Use Intelligent Scenario Management app to deploy and activate the model.
 4.	Generate summary of Sales data using LLM. 
 
-![](./images/IntegrateGenAIwithISLM.png)
+![](./images/integrate.jpg)
 
 
 
