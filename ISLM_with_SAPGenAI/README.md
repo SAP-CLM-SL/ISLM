@@ -109,7 +109,7 @@ Input the username and password provided in the cheat sheet. Click on My Home se
   - Description: **LLM Model for generating SO email**
   - Executable ID: **azure-openai**
   - Large Language Model Name: **gpt-4o-mini**
-![](./images/12.png)
+![](./images/add_model.png)
 
 17. Click the **Add** button.
 ![](./images/13.png)
