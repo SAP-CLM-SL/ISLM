@@ -33,7 +33,7 @@ Workshop aims to provide a deep dive into Intelligent Scenario Lifecycle Managem
 - **ISLM and ABAP AI SDK Integration:** ABAP AI SDK and Intelligent Scenario Lifecycle Management serve as integration components between business applications and large language models. Using  ABAP AI SDK powered by Intelligent Scenario Lifecycle Management (ISLM), you can easily embed generative AI capabilities into your custom ABAP based applications. ISLM and  ABAP AI SDK offer a low-code approach within ABAP stack, enabling seamless integration of generative AI models into your business applications. With the combined experience of ISLM and the ABAP AI SDK, customers can develop and deploy generative AI-driven use cases directly within their SAP S/4HANA environment.
 </br>
 
-![](./images/RolesAndComponents.png)
+![](./images/role_components.jpg)
 
 - **Business User:** The end user who interacts with the business application and uses the predictions from machine learning for the business purpose.
 - **Business Administrator:** A domain expert or analytics specialist, who can perform model trainings based on business context, evaluate model quality, and can activate a model for production usage.
