@@ -3,7 +3,7 @@
 # Workshop Background and Overview
 ## ISLM Overview 
 **Intelligent Scenario Lifecycle Management (ISLM)** is a key enabler for integrating AI into SAP S/4HANA. With its latest enhancements, ISLM now facilitates the adoption of generative AI (GenAI), providing customers and partners with a centralized framework to manage both SAP-delivered and custom AI use cases. This allows organizations to transform core business processes by integrating large language models (LLMs) seamlessly within their business applications.
-</br>
+
 
 ![](./images/islm_arch.jpg)
 
@@ -31,7 +31,7 @@ Workshop aims to provide a deep dive into Intelligent Scenario Lifecycle Managem
   - Enable prompt templating capabilities for effective GenAI model usage.
 - **Connectivity to GenAI Hub:** ISLM enables seamless connectivity to SAP’s Generative AI Hub.
 - **ISLM and ABAP AI SDK Integration:** ABAP AI SDK and Intelligent Scenario Lifecycle Management serve as integration components between business applications and large language models. Using  ABAP AI SDK powered by Intelligent Scenario Lifecycle Management (ISLM), you can easily embed generative AI capabilities into your custom ABAP based applications. ISLM and  ABAP AI SDK offer a low-code approach within ABAP stack, enabling seamless integration of generative AI models into your business applications. With the combined experience of ISLM and the ABAP AI SDK, customers can develop and deploy generative AI-driven use cases directly within their SAP S/4HANA environment.
-</br>
+
 
 ![](./images/role_components.jpg)
 
@@ -54,7 +54,7 @@ This exercise includes the following steps:
 
 ![](./images/IntegrateGenAIwithISLM.png)
 
-</br>
+
 
 ## 1.2	Create Intelligent Scenario
 The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app.
@@ -171,7 +171,7 @@ Build a confirmation mail for a sales order containing {ISLM_Items}. The source 
 
 Well done, you just created your first Side-by-side Intelligent Scenario.
 
-</br>
+
 
 ## 1.3	Connection setup
 Once the Intelligent Scenario is published, we need to maintain the connection for an intelligent scenario in SAP S/4 HANA with the Generative AI Hub service in BTP.
@@ -199,7 +199,7 @@ Your service key is indicated in the cheat sheet that you received.
 
 Well done, you just **Set up the connection for Intelligent Scenario** to connect to BTP based Generative AI Hub service.
 
-</br>
+
 
 ## 1.4	Operate the Intelligent Scenario
 Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to deploy and activate the model for productive usage.
@@ -228,7 +228,7 @@ Input the username and password provided in the cheat sheet. Click on My Home se
 
 Well done, you just Used Intelligent Scenario Management app to deploy and activate the llm model.
 
-</br>
+
 
 ## 1.5	Generate Sales Order Confirmation email. 
 In this step, you will use the ABAP GUI to view the email generated using LLM model.
