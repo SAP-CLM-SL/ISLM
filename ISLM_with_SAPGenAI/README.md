@@ -74,11 +74,8 @@ And click the **tick icon**.
 6. The class is created in **Inactive** status. Click the **Display** button.
 ![](./images/5.png)
 7. View the following methods of the prediction class.
-
-  | Method | Description |
-  |---|---|
-  | IF_ISLM_INTS~GET_INFERENCE_TYPE | Using this method, specify the inference type that supports this intelligent scenario. |
-  | IF_ISLM_INTS_SBS_DAR~GET_SERVEFLOW_ENDPOINT_URI | Using this method, specify the end point URI of the LLM Model. |
+  - **IF_ISLM_INTS~GET_INFERENCE_TYPE** - Using this method, specify the inference type that supports this intelligent scenario.
+  - **IF_ISLM_INTS_SBS_DAR~GET_SERVEFLOW_ENDPOINT_URI** - Using this method, specify the end point URI of the LLM Model.
 
 8. Click the **Activate** icon.
 ![](./images/6.png)
