@@ -166,43 +166,40 @@ In this section, you will use the Intelligent Scenario Management app to perform
 6. Search for report **RUT_DDLS_DATA_PREVIEW** and click on **Execute(F8)**.
 ![](./images/29.png)
 
-7. Enter the ISLM generated 1st CDS view of created Intelligent Scenario to view predictions from trained model. This CDS View was copied in the first step during creation of the Intelligent Scenario.
-"CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01". Enter CDS View Name in Entity Name field and click on **Execute**.
+7. Enter the ISLM generated 1st CDS view of created Intelligent Scenario to view predictions from trained model. **CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01**. Enter CDS View Name in Entity Name field and click on **Execute**.
 ![](./images/30.png)
 
 8. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.** 
  - Column **SEATSOCCF** has the actual value of the seats occupied. 
  - Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
-![](./images/31.png)
+![](./images/Prediction1.png)
 
-9. Goto **SE38** again and Search for report **RUT_DDLS_DATA_PREVIEW** and click on **Execute(F8)**. Enter the ISLM generated 2nd CDS view of created Intelligent Scenario to view predictions from trained model. This CDS View was copied in the first step during creation of the Intelligent Scenario. "CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01_KEY". Enter CDS View Name in Entity Name field and click on **Execute**.
-
+9. Goto **SE38** again and Search for report **RUT_DDLS_DATA_PREVIEW** and click on **Execute(F8)**. Enter the ISLM generated 2nd CDS view of created Intelligent Scenario to view predictions from trained model. **CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01_KEY**. Enter CDS View Name in Entity Name field and click on **Execute**.
 ![](./images/32.png)
 
 10. Provide below values to the respective CDS parameters:
- -	P_BOOKID = `00002484`
+ -	P_BOOKID = `2274`
  -	P_CARRID = `AZ`
- -	P_CONNID = `0555`
+ -	P_CONNID = `555`
  -	P_FLDATE = `20250813`
-![](./images/33.png)
+![](./images/EnterKeyParameters.png)
     
 13. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.**
 Column **SEATSOCCF** has the actual value of the seats occupied.
 Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
-![](./images/34.png)
+![](./images/Prediction2.png)
 
-14. Goto SE38 again and Search for report **RUT_DDLS_DATA_PREVIEW** and click on Execute(F8). Enter the ISLM generated 3rd CDS view of created Intelligent Scenario to view predictions from trained model. This CDS View was copied in the first step during creation of the Intelligent Scenario. "CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01_WHR". Enter CDS View Name in Entity Name field and click on **Execute**.
-
+14. Goto SE38 again and Search for report **RUT_DDLS_DATA_PREVIEW** and click on Execute(F8). Enter the ISLM generated 3rd CDS view of created Intelligent Scenario to view predictions from trained model. **CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01_WHR**. Enter CDS View Name in Entity Name field and click on **Execute**.
 ![](./images/35.png)
 
 15. Provide below values to the respective CDS parameters
  -	P_WHERE = `CONNID = 0017 AND FLDATE = 20250813`
-![](./images/36.png)
+![](./images/EnterWhereParameter.png)
 
 16. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.**
 Column **SEATSOCCF** has the actual value of the seats occupied.
 Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
-![](./images/37.png)
+![](./images/Prediction3.png)
 
 **Well done, you just visualized your trained model predictions..!**
 
@@ -212,41 +209,49 @@ You can schedule a training for your intelligent scenarios. Once the trainings a
 1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario Management** app.
 ![](../ISLM_with_SAPGenAI/images/IntelligentScenarioManagementApp.png)
 
-2. Search the **First-Class Seats Occupied** scenario created by you and navigate to the details page by clicking the **>** 
-   icon.
-    <br>![](./images/Scheduling/2.png)
-4. Click on **Create Schedule**.
-    <br>![](./images/Scheduling/3.png)
-5. View the information displayed in the screen. Click on **Model Version** value help.
-    <br>![](./images/Scheduling/4.png)
-6. Select the reference Model Version.
-    <br>![](./images/Scheduling/5.png)
-7. Click on **Go to Step 2**.
-    <br>![](./images/Scheduling/6.png)
-8. Review Scheduling Options automatically proposed by the system. <br>
-   Enter the Start as **2 minutes later** than the system proposed time. <br>
-   Schedule for **1 Occurrence(s)** and click on **Go to Step 3**.
-    <br>![](./images/Scheduling/7.png)
-9. Review the section Intelligent Scenarios Details and Schedule Details.<br>
-   Click on **Create Schedule** 
-    <br>![](./images/Scheduling/8.png)
-10. Click on **Schedule Planned Task** tab to view the planned task created as a result of scheduling of training. Please wait until the given start time of the task and status is completed.
-    <br>![](./images/Scheduling/9.png)
-11. Click on **>** icon.
-    <br>![](./images/Scheduling/10.png)
-12. Review **scheduling Options** and **Scheduling Runs** tab.
-    <br>![](./images/Scheduling/11.png)
-13. Click the highlighted icon to view the created Model Version. **This step will take time** as logs are opened in another App.
-    <br>![](./images/Scheduling/12.png)
-14. View the created **Model Version ID**.
-    <br>![](./images/Scheduling/13.png)
-15. Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back Scheduled Planned Task screen.
-    Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back to Model screen.
+2. Search the **First-Class Seats Occupied** scenario created by you and navigate to the details page by clicking the **>** icon.
+![](./images/SearchAndNavigateToScenarioInManagement.png)
 
-    Click on **>** icon to view the created Model Version.
-    <br>![](./images/Scheduling/14.png)
-16. View the created Model Version as outcome of Scheduling of Training.
-    <br>![](./images/Scheduling/15.png)
+3. Click the **Create Schedule** button.
+![](./images/ClickCreateScheduleButton.png)
+
+4. View the information displayed in the screen. Click on **Model Version** value help.
+![](./images/SelectReferenceModelVersion.png)
+
+5. Select the reference Model Version.
+![](./images/SelectReferenceModelVersion2.png)
+
+6. Click on **Go to Step 2**.
+![](./images/GoToStep2.png)
+
+7. Review Scheduling Options automatically proposed by the system.
+ - Enter the Start as **2 minutes later** than the system proposed time.
+ - Schedule for **1 Occurrence(s)** and click on **Go to Step 3**.
+![](./images/GoToStep3.png)
+
+8. Review the section Intelligent Scenarios Details and Schedule Details. Click the **Create Schedule** button.
+![](./images/ScheduleTraining.png)
+
+9. Click on **Schedule Planned Task** tab to view the planned task created as a result of scheduling of training. Please wait until the given start time of the task and status is completed.
+![](./images/ClickScheduleTaskTab.png)  
+
+10. Once the status changes to **Completed**, click the **>** button.
+![](./images/NavigateToScheduleTaskDetailsPage.png)
+
+11. Review **scheduling Options** and **Scheduling Runs** tab.
+![](./images/ViewSchedulingDetailsPage.png)
+
+12. Click the highlighted icon to view the created Model Version. **[Note]: This step will take time** as logs are opened in a dialog.
+![](./images/ClickSchedulingRunIconButton.png)
+
+13. View the created **Model Version ID**.
+![](./images/SchedulingApplicationJobLog.png)
+
+14. Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back Scheduled Planned Tasks screen. Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back to Model screen. Select the **Models** tab and Click on **>** icon to view the created Model Version.
+![](./images/GoToModelsTab.png)
+
+15. View the created Model Version as outcome of Scheduling of Training.
+![](./images/Scheduling/15.png)
 
 
 **Well done, you just scheduled training.**
