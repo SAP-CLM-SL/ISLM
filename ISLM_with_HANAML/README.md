@@ -166,7 +166,9 @@ In this section, you will use the Intelligent Scenario Management app to perform
 6. Search for report **RUT_DDLS_DATA_PREVIEW** and click on **Execute(F8)**.
 ![](./images/29.png)
 
-7. Enter the ISLM generated 1st CDS view of created Intelligent Scenario to view predictions from trained model. **CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01**. Enter CDS View Name in Entity Name field and click on **Execute**.
+7. Enter the ISLM generated 1st CDS view of created Intelligent Scenario to view predictions from trained model.
+- **CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01**.
+- Enter CDS View Name in Entity Name field and click on **Execute**.
 ![](./images/30.png)
 
 8. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.** 
@@ -174,7 +176,9 @@ In this section, you will use the Intelligent Scenario Management app to perform
  - Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
 ![](./images/Prediction1.png)
 
-9. Goto **SE38** again and Search for report **RUT_DDLS_DATA_PREVIEW** and click on **Execute(F8)**. Enter the ISLM generated 2nd CDS view of created Intelligent Scenario to view predictions from trained model. **CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01_KEY**. Enter CDS View Name in Entity Name field and click on **Execute**.
+9. Goto **SE38** again and Search for report **RUT_DDLS_DATA_PREVIEW** and click on **Execute(F8)**. Enter the ISLM generated 2nd CDS view of created Intelligent Scenario to view predictions from trained model.
+- **CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01_KEY**.
+- Enter CDS View Name in Entity Name field and click on **Execute**.
 ![](./images/32.png)
 
 10. Provide below values to the respective CDS parameters:
@@ -184,19 +188,21 @@ In this section, you will use the Intelligent Scenario Management app to perform
  -	P_FLDATE = `20250813`
 ![](./images/EnterKeyParameters.png)
     
-13. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.**
+11. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.**
 Column **SEATSOCCF** has the actual value of the seats occupied.
 Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
 ![](./images/Prediction2.png)
 
-14. Goto SE38 again and Search for report **RUT_DDLS_DATA_PREVIEW** and click on Execute(F8). Enter the ISLM generated 3rd CDS view of created Intelligent Scenario to view predictions from trained model. **CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01_WHR**. Enter CDS View Name in Entity Name field and click on **Execute**.
+12. Goto SE38 again and Search for report **RUT_DDLS_DATA_PREVIEW** and click on Execute(F8). Enter the ISLM generated 3rd CDS view of created Intelligent Scenario to view predictions from trained model.
+- **CDS View will have following name <INTELLIGENT_SCENARIO_NAME>_CDS01_WHR**.
+- Enter CDS View Name in Entity Name field and click on **Execute**.
 ![](./images/35.png)
 
-15. Provide below values to the respective CDS parameters
+13. Provide below values to the respective CDS parameters
  -	P_WHERE = `CONNID = 0017 AND FLDATE = 20250813`
 ![](./images/EnterWhereParameter.png)
 
-16. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.**
+14. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.**
 Column **SEATSOCCF** has the actual value of the seats occupied.
 Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
 ![](./images/Prediction3.png)
