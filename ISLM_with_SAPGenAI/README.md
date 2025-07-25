@@ -181,7 +181,7 @@ Your service key is indicated in the cheat sheet that you received.
 ![](./images/26.png)
 
 4. Enter the **service key** from remote machine learning provider which is mentioned in the cheat sheet. And click the **Next** button.
-![](./images/27.png)
+![](./images/27-1.png)
 5. The **RFC Destination** and **OAuth 2.0 Client Configuration** will be generated using the service key.
 ![](./images/28.png) 
 
