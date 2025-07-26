@@ -200,44 +200,44 @@ In this section, you will use the Intelligent Scenario Management app to perform
     ![](./images/manage-7.png)
 
 10. Wait for the status of the Training to change to Completed. Note that training can take around 5 minutes to complete.
-    ![](./images/42.png)
+    ![](./images/manage-8.png)
 
 11. Click on **>** icon to view Training Details.
-    ![](./images/43.png)
+    ![](./images/manage-9.png)
 
 12. View the information in header section. 
     Click on **Debrief** tab.
-    ![](./images/44.png)
+    ![](./images/manage-10.png)
 
 13. View Overall and target metrics in Debrief. **Accuracy, F1Score, Precision and Recall** are classification metrics. The higher the better.
-    ![](./images/45.png)
+    ![](./images/manage-10.png)
 
 14. Click on Data Management tab to view details of data packets.
-    ![](./images/46.png)
+    ![](./images/manage-11.png)
 
 15. Choose the back icon to navigate back to Trainings screen.
-    ![](./images/47.png)
+    ![](./images/manage-12.png)
 
 16. Click on **Deploy** Button
-    ![](./images/48.png)
+    ![](./images/manage-13.png)
 
 17. Click on **Deploy and Monitor** Button
-    ![](./images/49.png)
+    ![](./images/manage-14.png)
 
 18. New Deployment will be created in Scheduled status.
     ![](./images/50.png)
 
 19. Monitor the status of Deployment and check the status changes to Deployment Pending.
-    ![](./images/51.png)
+    ![](./images/manage-15.png)
 
 20. Monitor the status of Deployment and check the status changes to **Deployed**. Note that Deployments can take 
     approximately **10 minutes** to be Deployed.
-    ![](./images/52.png)
+    ![](./images/manage-16.png)
 
 21. To consume the resulting inference from this intelligent scenario the deployment must be activated. Select the Deployment and click on **Activate** button and choose **For All** 
     option. In the dialog Activate for All Users, choose **Activate For All**. Validate that the Deployment has **Active for 
     all** Indicator. Then the status will change to Active
-    ![](./images/54.png)
+    ![](./images/manage-17.png)
 
 
 ### Well done, you just used Intelligent Scenario Management app to train, view model quality, deploy and activate the model.
