@@ -857,7 +857,7 @@
 <img alt="" src="../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png" /></p>
 </li>
 <li>
-<p>Click the <strong>Create</strong> button and choose <strong>Embedded</strong>. In Embedded approach, a business application, for example SAP S/4HANA runs in the same stack as its machine learning provider SAP HANA ML and it provides analytics libraries <strong>SAP HANA Automated Predictive Library (APL)</strong> or <strong>SAP HANA Predictive Analysis Library (PAL)</strong>.
+<p>Click the <strong>Create</strong> button and choose <strong>Embedded</strong>.<br/>In Embedded approach, a business application, for example SAP S/4HANA runs in the same stack as its machine learning provider SAP HANA ML and it provides analytics libraries <strong>SAP HANA Automated Predictive Library (APL)</strong> or <strong>SAP HANA Predictive Analysis Library (PAL)</strong>.
 <img alt="" src="images/2.png" /></p>
 </li>
 <li>
@@ -866,14 +866,14 @@
 </li>
 <li>
 <p>Provide the required information in the screen:</p>
-</li>
+<ul>
 <li><strong>Intelligent Scenario Name</strong>: Enter a unique name starting with Z, such as <code>Z_SEATOCC_FTCLAS_###</code>, where ### is your attendee id.</li>
 <li><strong>Intelligent Scenario Description</strong>: <code>Predict seats occupied in the first class of a flight</code>.</li>
 <li><strong>Intelligent Scenario Type</strong>: Select <code>Regression</code> type.</li>
 <li><strong>Algorithm</strong>: Select <code>Gradient Boosting</code>.</li>
-<li>
-<p><strong>Machine Learning Library</strong>: Select <code>APL</code>.
-<img alt="" src="images/AddScenarioDetails.png" /></p>
+<li><strong>Machine Learning Library</strong>: Select <code>APL</code>.
+<img alt="" src="images/AddScenarioDetails.png" /></li>
+</ul>
 </li>
 <li>
 <p>Click the <strong>Add Model</strong> button.
@@ -881,16 +881,15 @@
 </li>
 <li>
 <p>The APL Regression Model screen will pop up. Provide information as mentioned below:</p>
-</li>
+<ul>
 <li><strong>Name</strong>: Enter a model name starting with Z - <code>ZISLM_SFLIGHT_TRAIN_CDS_MODEL</code>.</li>
 <li><strong>Description</strong>: Enter the description - <code>Flight model</code>.</li>
 <li><strong>Training Dataset</strong>: <code>Z_SFLIGHTTRAINCDS</code>. Training Dataset to be used for training the model.</li>
 <li><strong>Apply Dataset</strong>: <code>Z_SFLIGHTPREDICTCDS</code>. Apply dataset is Dataset used for prediction. <strong>Note that apply dataset is different from training dataset.</strong></li>
 <li><strong>Target</strong>: <code>SEATSOCCF</code>. Target variable is field whose value you want to predict.</li>
-<li>
-<p><strong>Max Reason Code:</strong> <code>1</code> Number of reason codes you want to generate. Reason codes are variables whose values have the most influence in a score-based decision (typically a risk score). The variables for which the contribution is the most influential are selected as the most important reason codes.
-Apply output configuration has the selected metrics that are added in the intelligent scenario output and used for prediction.
-<img alt="" src="images/EnterModelDetails.png" /></p>
+<li><strong>Max Reason Code:</strong> <code>1</code> Number of reason codes you want to generate.<br/> Reason codes are variables whose values have the most influence in a score-based decision (typically a risk score). The variables for which the contribution is the most influential are selected as the most important reason codes.<br/> Apply output configuration has the selected metrics that are added in the intelligent scenario output and used for prediction.
+<img alt="" src="images/EnterModelDetails.png" /></li>
+</ul>
 </li>
 <li>
 <p>Click the <strong>Add</strong> button.
@@ -901,11 +900,11 @@ Apply output configuration has the selected metrics that are added in the intell
 <img alt="" src="images/ViewDraftScenario.png" /></p>
 </li>
 <li>
-<p>View the <strong>Input Tab</strong> which displays the <strong>Key</strong>, <strong>Input</strong>, and <strong>Target</strong> fields. The Input variable is considered for modelling. The Key variable is a key field of the dataset and is also considered for modelling. The Target variable is the variable whose values are to be modelled and predicted by other variables.
+<p>View the <strong>Input Tab</strong> which displays the <strong>Key</strong>, <strong>Input</strong>, and <strong>Target</strong> fields.<br/> The Input variable is considered for modelling.<br/> The Key variable is a key field of the dataset and is also considered for modelling.<br/> The Target variable is the variable whose values are to be modelled and predicted by other variables.
 <img alt="" src="images/ClickInputTab.png" /></p>
 </li>
 <li>
-<p>View the <strong>Output tab</strong> which displays the <strong>Key</strong>, <strong>Target</strong>, and <strong>Prediction</strong> fields. The Prediction variable includes the calculated result.
+<p>View the <strong>Output tab</strong> which displays the <strong>Key</strong>, <strong>Target</strong>, and <strong>Prediction</strong> fields.<br/> The Prediction variable includes the calculated result.
 <img alt="" src="images/ClickOutputTab.png" /></p>
 </li>
 <li>
@@ -962,17 +961,14 @@ Navigate to the details page by clicking the <code>&gt;</code> icon.
 <li>
 <p>View different tabs like <strong>Quality Information and Debrief</strong>. You can see attributes about data quality and what key influencers are affecting the predictions.
 <img alt="" src="images/22.png" /></p>
-</li>
+<ul>
 <li><strong>Mean Absolute Error(MAE):</strong> Average absolute difference between the predicted values and the actual values. The lower the better.</li>
 <li><strong>Root Mean Square Error(RMSE):</strong> RMSE is the square root of mean squared error. It measures the average difference between values predicted by a model and the actual values. RMSE tells us how close the actual values are to prediction values made by the model. The lower the better.</li>
-<li>
-<p><strong>Mean Absolute Percentage Error(MAPE)</strong> Average of the absolute percentage errors of the predictions. The lower the better.</p>
+<li><strong>Mean Absolute Percentage Error(MAPE)</strong> Average of the absolute percentage errors of the predictions. The lower the better.</li>
+</ul>
 </li>
 <li>
-<p>Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back to Model Versions screen.</p>
-</li>
-<li>
-<p>Activate the model version to return predictions. Select the Model Version and click the <strong>Activate</strong> button.
+<p>Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back to Model Versions screen.<br/> Activate the model version to get the predictions from regression model. Select the Model Version and click the <strong>Activate</strong> button.
 <img alt="" src="images/23.png" /></p>
 </li>
 </ol>
@@ -1004,60 +1000,68 @@ Navigate to the details page by clicking the <code>&gt;</code> icon.
 </li>
 <li>
 <p>Enter the ISLM generated 1st CDS view of created Intelligent Scenario to view predictions from trained model.</p>
-</li>
+<ul>
 <li>CDS View will have following name <strong>Z_SEATOCC_FTCLAS_###_CDS01</strong>, where ### is your attendee id.</li>
-<li>
-<p>Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
-<img alt="" src="images/30.png" /></p>
+<li>Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
+<img alt="" src="images/30.png" /></li>
+</ul>
 </li>
 <li>
 <p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong> </p>
-</li>
+<ul>
 <li>Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied. </li>
-<li>
-<p>Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
-<img alt="" src="images/Prediction1.png" /></p>
+<li>Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
+<img alt="" src="images/Prediction1.png" /></li>
+</ul>
 </li>
 <li>
 <p>Goto <strong>SE38</strong> again and Search for report <strong>RUT_DDLS_DATA_PREVIEW</strong> and click on <strong>Execute(F8)</strong>. Enter the ISLM generated 2nd CDS view of created Intelligent Scenario to view predictions from trained model.</p>
-</li>
+<ul>
 <li>CDS View will have following name <strong>Z_SEATOCC_FTCLAS_###_CDS01_KEY</strong>, where ### is your attendee id.</li>
-<li>
-<p>Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
-<img alt="" src="images/32.png" /></p>
+<li>Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
+<img alt="" src="images/32.png" /></li>
+</ul>
 </li>
 <li>
 <p>Provide below values to the respective CDS parameters:</p>
-</li>
+<ul>
 <li>P_BOOKID = <code>2274</code></li>
 <li>P_CARRID = <code>AZ</code></li>
 <li>P_CONNID = <code>555</code></li>
-<li>
-<p>P_FLDATE = <code>20250813</code>
-<img alt="" src="images/EnterKeyParameters.png" /></p>
+<li>P_FLDATE = <code>20250813</code>
+<img alt="" src="images/EnterKeyParameters.png" /></li>
+</ul>
 </li>
 <li>
-<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong> Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied. Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
-<img alt="" src="images/Prediction2.png" /></p>
+<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong></p>
+<ul>
+<li>Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied.</li>
+<li>Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
+<img alt="" src="images/Prediction2.png" /></li>
+</ul>
 </li>
 <li>
 <p>Goto SE38 again and Search for report <strong>RUT_DDLS_DATA_PREVIEW</strong> and click on Execute(F8). Enter the ISLM generated 3rd CDS view of created Intelligent Scenario to view predictions from trained model.</p>
-</li>
+<ul>
 <li>CDS View will have following name <strong>Z_SEATOCC_FTCLAS_###_CDS01_WHR</strong>, where ### is your attendee i.</li>
-<li>
-<p>Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
-<img alt="" src="images/35.png" /></p>
+<li>Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
+<img alt="" src="images/35.png" /></li>
+</ul>
 </li>
 <li>
 <p>Provide below values to the respective CDS parameters</p>
+<ul>
+<li>P_WHERE = <code>CONNID = 0017 AND FLDATE = 20250813</code>
+<img alt="" src="images/EnterWhereParameter.png" /></li>
+</ul>
 </li>
 <li>
-<p>P_WHERE = <code>CONNID = 0017 AND FLDATE = 20250813</code>
-<img alt="" src="images/EnterWhereParameter.png" /></p>
-</li>
-<li>
-<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong> Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied. Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
-<img alt="" src="images/Prediction3.png" /></p>
+<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong></p>
+<ul>
+<li>Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied.</li>
+<li>Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
+<img alt="" src="images/Prediction3.png" /></li>
+</ul>
 </li>
 </ol>
 <p><strong>Well done, you just visualized your trained model predictions..!</strong></p>
@@ -1090,11 +1094,11 @@ Navigate to the details page by clicking the <code>&gt;</code> icon.
 </li>
 <li>
 <p>Review Scheduling Options automatically proposed by the system.</p>
-</li>
+<ul>
 <li>Enter the Start as <strong>2 minutes later</strong> than the system proposed time.</li>
-<li>
-<p>Schedule for <strong>1 Occurrence(s)</strong> and click on <strong>Go to Step 3</strong>.
-<img alt="" src="images/GoToStep3.png" /></p>
+<li>Schedule for <strong>1 Occurrence(s)</strong> and click on <strong>Go to Step 3</strong>.
+<img alt="" src="images/GoToStep3.png" /></li>
+</ul>
 </li>
 <li>
 <p>Review the section Intelligent Scenarios Details and Schedule Details. Click the <strong>Create Schedule</strong> button.
