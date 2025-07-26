@@ -89,17 +89,17 @@ The Intelligent Scenarios  app is used to create intelligent scenarios, revi
   -	**Intelligent Scenario Description**: Enter a description for the Intelligent Scenario.
   -	**Intelligent Scenario Type** as **Data Attribute Recommendation**
   -	Ensure the **Data Management checkbox** is selected
-   ![](./images/create-1.png)
-   ![](./images/create-2.png)
+   ![](./images/create1.png)
+   ![](./images/create2.png)
 
 12. Click on value help for **Prediction Class** 
-   ![](./images/11.png)
+   ![](./images/create3.png)
 
 13. Click on **OK** in the information box
-   ![](./images/12.png)
+   ![](./images/create4.png)
 
 14. Select the prediction class created by you in Step 3
-   ![](./images/13.png)
+   ![](./images/create5.png)
 
 15. Click on the Add Model button. The Add DAR Model dialog will pop up. In the General Information section, provide a Name starting with Z and Description for the model. In the Data section, provide the below details. Training Dataset : `Z_SFLIGHT_DATA`.
    ![](./images/14.png)
@@ -123,10 +123,10 @@ The Intelligent Scenarios  app is used to create intelligent scenarios, revi
    ![](./images/19.png)
 
 22. The scenario is now created in Draft Status. You can view the Input and Output fields used to train the model in the Input and Outputs Tabs respectively. Also Scenario is now ready to be published. Click on **Publish** button. You will receive a message that Intelligent Scenario is published.
-   ![](./images/20.png)
+   ![](./images/create6.png)
 
 23. Search the Intelligent Scenario created by you by entering the **Intelligent Scenario name** and **Status = Published**. 
-   ![](./images/21.png)
+   ![](./images/create7.png)
 
 ### Well done, you just created your first Side-by-side Intelligent Scenario.
 <br>
@@ -148,22 +148,22 @@ Once the Intelligent Scenario is published, we need to maintain the connection f
    ![](./images/25.png)
 
 6. Input the Intelligent Scenario Name created by you and click on **Next**
-   ![](./images/26.png)
+   ![](./images/create8.png)
 
 7. Enter the Service Key details. Please find the service key in a .txt file in desktop to get Service Key details.
-   ![](./images/27.png)
+   ![](./images/create9.png)
 
 8. Click **Next**.
-   ![](./images/28.png)
+   ![](./images/create10.png)
 
 9. Perform **Connection Check** to know the health of ML provider.
-   ![](./images/29.png)
+   ![](./images/create11.png)
 
 10. Check the Connection Status changes to **Ready**. Click **Save**.
-   ![](./images/30.png)
+   ![](./images/create12.png)
 
 11. New entry will be added to the table.
-   ![](./images/31.png)
+   ![](./images/create13.png)
 
 ### Well done, you just Set up the connection for Intelligent Scenario to connect to BTP based ML service.
 <br>
@@ -176,28 +176,28 @@ In this section, you will use the Intelligent Scenario Management app to perform
    ![](./images/32.png)
 
 2. Find the scenario created by searching using the name and navigate to the details page by clicking the **>** icon. 
-   ![](./images/33.png)
+   ![](./images/manage-1.png)
 
 3. Select the Model and click on the **Train** button to launch the training dialog.
-   ![](./images/35.png)
+   ![](./images/manage-2.png)
 
 4. Train dialog opens. To select a Version from the remote machine learning provider click on value help highlighted.
-   ![](./images/36.png)
+   ![](./images/manage-3.png)
 
 5. Select the version 3.0 in the version field.
-   ![](./images/37.png)
+   ![](./images/manage-4.png)
 
 6. Review the information in the train dialog. Click on Train.
-   ![](./images/39.png)
+   ![](./images/manage-5.png)
 
 7. New Training will be created in Scheduled status.
-   ![](./images/40.png)
+   ![](./images/manage-6.png)
 
 8. Monitor the status of Training and check that the status changes to Uploading Data.
     ![](./images/40_1.png)
 
 9. Monitor the status of Training and check the status changes to Training.
-    ![](./images/41.png)
+    ![](./images/manage-7.png)
 
 10. Wait for the status of the Training to change to Completed. Note that training can take around 5 minutes to complete.
     ![](./images/42.png)
