@@ -102,25 +102,25 @@ The Intelligent Scenarios  app is used to create intelligent scenarios, revi
    ![](./images/create5.png)
 
 15. Click on the Add Model button. The Add DAR Model dialog will pop up. In the General Information section, provide a Name starting with Z and Description for the model. In the Data section, provide the below details. Training Dataset : `Z_SFLIGHT_DATA`.
-   ![](./images/14.png)
+   ![](./images/create15.png)
 
 16. Click on value help for the Inputs field
-   ![](./images/14_1.png)
+   ![](./images/create16.png)
 
 17. The Select Model Inputs will pop up. Select all the Inputs expect CARRID, CONNID, PLANETYPE. (Tip: Use the Select All option and uncheck the CARRID, CONNID, PLANETYPE)
-   ![](./images/15.png)
+   ![](./images/create17.png)
 
 18. Select the Data Management Type as Category/Number. Then, click on Select button.
-   ![](./images/16.png)
+   ![](./images/create18.png)
 
 19. Click on Target value help
-   ![](./images/17.png)
+   ![](./images/create19.png)
 
 20. The Select Model Targets will pop up. Select PLANETYPE and the corresponding Data Management Type as CATEGORY. Click on Select button.
-   ![](./images/18.png)
+   ![](./images/create20.png)
 
 21. Click on Add button.
-   ![](./images/19.png)
+   ![](./images/create21.png)
 
 22. The scenario is now created in Draft Status. You can view the Input and Output fields used to train the model in the Input and Outputs Tabs respectively. Also Scenario is now ready to be published. Click on **Publish** button. You will receive a message that Intelligent Scenario is published.
    ![](./images/create6.png)
