@@ -1,16 +1,18 @@
-site_name: CLM Day ISLM Handson
+site_name: CLM Day 2025 - ISLM Handson
 site_url: https://sap-clm-sl.github.io/ISLM/
 theme:
   name: material
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
       toggle:
-        icon: material/brightness-2
+        icon: material/weather-night
         name: Switch to dark mode
-      primary: orange
-      accent: purple
-
+      primary: green
+      accent: light-green
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
@@ -33,7 +35,13 @@ markdown_extensions:
   - tables
   - attr_list
 nav:
-  - Welcome: "index.md"
-  - Custom Gen AI Use Cases in SAP S/4HANA: "ISLM_with_SAPGenAI/README.md"
-  - Predict the number of first class seats occupied in a flight: "ISLM_with_HANAML/README.md"
-  - Predict the plane type of an aircraft: "ISLM_with_SAPAIServices_BTP/README.md"
+  - Getting Started: "index.md"
+  - Gen AI: "ISLM_with_SAPGenAI/README.md"
+  - APL: "ISLM_with_HANAML/README.md"
+  - DAR: "ISLM_with_SAPAIServices_BTP/README.md"
+  - Community:
+      - Blogs: "community/readme.md"
+      - Videos: "community/videos.md"
+
+  - Contact us: "Contactus/readme.md"
+  - Feedback: "feedback/readme.md"
