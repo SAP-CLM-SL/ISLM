@@ -2,7 +2,7 @@ site_name: CLM Day ISLM Handson
 site_url: https://sap-clm-sl.github.io/ISLM/
 theme:
   name: material
-  logo: assets/CLMDDaylogo.png
+
   palette:
     - scheme: default
       primary: orange
