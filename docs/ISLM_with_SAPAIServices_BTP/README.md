@@ -225,7 +225,7 @@ In this section, you will use the Intelligent Scenario Management app to perform
     ![](./images/manage-14.png)
 
 18. New Deployment will be created in Scheduled status.
-    ![](./images/50.png)
+    ![](./images/ScheduleDeployment.png)
 
 19. Monitor the status of Deployment and check the status changes to Deployment Pending.
     ![](./images/manage-15.png)
