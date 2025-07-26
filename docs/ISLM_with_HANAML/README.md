@@ -55,30 +55,31 @@ Gradient Boosting regression model type provides a more accurate modeling result
 1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario** app. 
 ![](../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png)
 
-2. Click the Create button and choose Embedded. In Embedded approach, a business application, for example SAP S/4HANA runs in the same stack as its machine learning provider SAP HANA ML and it provides analytics libraries SAP HANA Automated Predictive Library (APL) or SAP HANA Predictive Analysis Library (PAL).
+2. Click the **Create** button and choose **Embedded**. In Embedded approach, a business application, for example SAP S/4HANA runs in the same stack as its machine learning provider SAP HANA ML and it provides analytics libraries **SAP HANA Automated Predictive Library (APL)** or **SAP HANA Predictive Analysis Library (PAL)**.
 ![](./images/2.png)
 
-3. Click on 'Do Not Show Again' and Close in the Onboarding Dialog.
+3. Click the **Do Not Show Again and Close** button in the Onboarding Dialog.
 ![](./images/3.png)
 
 4. Provide the required information in the screen:
- - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as `Z_SEATOCC_FTCLAS_###`, where ### is your attendee id.
- - **Intelligent Scenario Description**: `Predict seats occupied in the first class of a flight`.
- - **Intelligent Scenario Type**: Select `Regression` type.
- - **Algorithm**: Select `Gradient Boosting`.
- - **Machine Learning Library**: Select `APL`.
+  - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as `Z_SEATOCC_FTCLAS_###`, where ### is your attendee id.
+  - **Intelligent Scenario Description**: `Predict seats occupied in the first class of a flight`.
+  - **Intelligent Scenario Type**: Select `Regression` type.
+  - **Algorithm**: Select `Gradient Boosting`.
+  - **Machine Learning Library**: Select `APL`.
 ![](./images/AddScenarioDetails.png)
 
 5. Click the **Add Model** button.
 ![](./images/ClickAddModelButton.png)
 
 6. The APL Regression Model screen will pop up. Provide information as mentioned below:
- - **Name**: Enter a model name starting with Z - `ZISLM_SFLIGHT_TRAIN_CDS_MODEL`.
- - **Description**: Enter the description - `Flight model`.
- - **Training Dataset**: `Z_SFLIGHTTRAINCDS`. Training Dataset to be used for training the model.
- - **Apply Dataset**: `Z_SFLIGHTPREDICTCDS`. Apply dataset is Dataset used for prediction. **Note that apply dataset is different from training dataset.**
- - **Target**: `SEATSOCCF`. Target variable is field whose value you want to predict.
- - **Max Reason Code:** `1` Number of reason codes you want to generate. Reason codes are variables whose values have the most influence in a score-based decision (typically a risk score). The variables for which the contribution is the most differential are selected as the most important reason codes. Apply output configuration has the selected metrics that are added in the intelligent scenario output and used for prediction.
+  - **Name**: Enter a model name starting with Z - `ZISLM_SFLIGHT_TRAIN_CDS_MODEL`.
+  - **Description**: Enter the description - `Flight model`.
+  - **Training Dataset**: `Z_SFLIGHTTRAINCDS`. Training Dataset to be used for training the model.
+  - **Apply Dataset**: `Z_SFLIGHTPREDICTCDS`. Apply dataset is Dataset used for prediction. **Note that apply dataset is different from training dataset.**
+  - **Target**: `SEATSOCCF`. Target variable is field whose value you want to predict.
+  - **Max Reason Code:** `1` Number of reason codes you want to generate. Reason codes are variables whose values have the most influence in a score-based decision (typically a risk score). The variables for which the contribution is the most influential are selected as the most important reason codes.
+Apply output configuration has the selected metrics that are added in the intelligent scenario output and used for prediction.
 ![](./images/EnterModelDetails.png)
 
 7. Click the **Add** button.
@@ -100,7 +101,7 @@ Gradient Boosting regression model type provides a more accurate modeling result
 Navigate to the details page by clicking the `>` icon.
 ![](./images/SearchScenario.png)
 
-13. Click on **Apply Setting** Tab. 3 CDS views are generated for the intelligent scenario to allow easy access to the predictions. Click the **i** icon to view the functionality & usage of each CDS view.
+13. Click on **Apply Setting** Tab. Three CDS views are generated for the intelligent scenario to allow easy access to the predictions. Click the `i` icon to view the functionality & usage of each CDS view.
 ![](./images/ClickApplySettingsTab.png)
 
 **Well done, you just created your first embedded Intelligent Scenario.**
@@ -136,9 +137,9 @@ In this section, you will use the Intelligent Scenario Management app to perform
 
 9. View different tabs like **Quality Information and Debrief**. You can see attributes about data quality and what key influencers are affecting the predictions.
 ![](./images/22.png)
- - **Mean Absolute Error(MAE):** Average absolute difference between the predicted values and the actual values. The lower the better.
- - **Root Mean Square Error(RMSE):** RMSE is the square root of mean squared error. It measures the average difference between values predicted by a model and the actual values. RMSE tells us how close the actual values are to prediction values made by the model. The lower the better.
- - **Mean Absolute Percentage Error(MAPE)** Average of the absolute percentage errors of the predictions. The lower the better.
+  - **Mean Absolute Error(MAE):** Average absolute difference between the predicted values and the actual values. The lower the better.
+  - **Root Mean Square Error(RMSE):** RMSE is the square root of mean squared error. It measures the average difference between values predicted by a model and the actual values. RMSE tells us how close the actual values are to prediction values made by the model. The lower the better.
+  - **Mean Absolute Percentage Error(MAPE)** Average of the absolute percentage errors of the predictions. The lower the better.
 
 10. Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back to Model Versions screen.
 
@@ -167,44 +168,40 @@ In this section, you will use the Intelligent Scenario Management app to perform
 ![](./images/29.png)
 
 7. Enter the ISLM generated 1st CDS view of created Intelligent Scenario to view predictions from trained model.
-- CDS View will have following name **Z_SEATOCC_FTCLAS_###_CDS01**, where ### is your attendee id.
-- Enter CDS View Name in Entity Name field and click on **Execute**.
+  - CDS View will have following name **Z_SEATOCC_FTCLAS_###_CDS01**, where ### is your attendee id.
+  - Enter CDS View Name in Entity Name field and click on **Execute**.
 ![](./images/30.png)
 
 8. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.** 
- - Column **SEATSOCCF** has the actual value of the seats occupied. 
- - Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
+  - Column **SEATSOCCF** has the actual value of the seats occupied. 
+  - Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
 ![](./images/Prediction1.png)
 
 9. Goto **SE38** again and Search for report **RUT_DDLS_DATA_PREVIEW** and click on **Execute(F8)**. Enter the ISLM generated 2nd CDS view of created Intelligent Scenario to view predictions from trained model.
-- CDS View will have following name **Z_SEATOCC_FTCLAS_###_CDS01_KEY**, where ### is your attendee id.
-- Enter CDS View Name in Entity Name field and click on **Execute**.
+  - CDS View will have following name **Z_SEATOCC_FTCLAS_###_CDS01_KEY**, where ### is your attendee id.
+  - Enter CDS View Name in Entity Name field and click on **Execute**.
 ![](./images/32.png)
 
 10. Provide below values to the respective CDS parameters:
- -	P_BOOKID = `2274`
- -	P_CARRID = `AZ`
- -	P_CONNID = `555`
- -	P_FLDATE = `20250813`
+  -	P_BOOKID = `2274`
+  -	P_CARRID = `AZ`
+  -	P_CONNID = `555`
+  -	P_FLDATE = `20250813`
 ![](./images/EnterKeyParameters.png)
     
-11. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.**
-Column **SEATSOCCF** has the actual value of the seats occupied.
-Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
+11. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.** Column **SEATSOCCF** has the actual value of the seats occupied. Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
 ![](./images/Prediction2.png)
 
 12. Goto SE38 again and Search for report **RUT_DDLS_DATA_PREVIEW** and click on Execute(F8). Enter the ISLM generated 3rd CDS view of created Intelligent Scenario to view predictions from trained model.
-- CDS View will have following name **Z_SEATOCC_FTCLAS_###_CDS01_WHR**, where ### is your attendee i.
-- Enter CDS View Name in Entity Name field and click on **Execute**.
+  - CDS View will have following name **Z_SEATOCC_FTCLAS_###_CDS01_WHR**, where ### is your attendee i.
+  - Enter CDS View Name in Entity Name field and click on **Execute**.
 ![](./images/35.png)
 
 13. Provide below values to the respective CDS parameters
- -	P_WHERE = `CONNID = 0017 AND FLDATE = 20250813`
+  -	P_WHERE = `CONNID = 0017 AND FLDATE = 20250813`
 ![](./images/EnterWhereParameter.png)
 
-14. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.**
-Column **SEATSOCCF** has the actual value of the seats occupied.
-Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
+14. You can scroll down and see the model's keys in the first four columns: **Airline Code, Flight Connection Number, Flight Date and Booking number.** Column **SEATSOCCF** has the actual value of the seats occupied. Column **GB_SCORE_SEATSOCCF** column has the predicted value of the occupied seats.
 ![](./images/Prediction3.png)
 
 **Well done, you just visualized your trained model predictions..!**
@@ -231,8 +228,8 @@ You can schedule a training for your intelligent scenarios. Once the trainings a
 ![](./images/GoToStep2.png)
 
 7. Review Scheduling Options automatically proposed by the system.
- - Enter the Start as **2 minutes later** than the system proposed time.
- - Schedule for **1 Occurrence(s)** and click on **Go to Step 3**.
+  - Enter the Start as **2 minutes later** than the system proposed time.
+  - Schedule for **1 Occurrence(s)** and click on **Go to Step 3**.
 ![](./images/GoToStep3.png)
 
 8. Review the section Intelligent Scenarios Details and Schedule Details. Click the **Create Schedule** button.
