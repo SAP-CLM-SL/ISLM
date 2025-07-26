@@ -89,8 +89,8 @@ The Intelligent Scenarios  app is used to create intelligent scenarios, revi
   -	**Intelligent Scenario Description**: Enter a description for the Intelligent Scenario.
   -	**Intelligent Scenario Type** as **Data Attribute Recommendation**
   -	Ensure the **Data Management checkbox** is selected
-   ![](./images/10.png)
-   ![](./images/10_1.png)
+   ![](./images/create-1.png)
+   ![](./images/create-2.png)
 
 12. Click on value help for **Prediction Class** 
    ![](./images/11.png)
