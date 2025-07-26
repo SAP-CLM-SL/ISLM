@@ -1,0 +1,849 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/ISLM_with_SAPAIServices_BTP/">
+      
+      
+        <link rel="prev" href="../ISLM_with_HANAML/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Predict the plane type of an aircraft - CLM Day ISLM Handson</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-custom-ai-use-cases-in-sap-s4hana" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CLM Day ISLM Handson" class="md-header__button md-logo" aria-label="CLM Day ISLM Handson" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CLM Day ISLM Handson
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Predict the plane type of an aircraft
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="purple"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CLM Day ISLM Handson" class="md-nav__button md-logo" aria-label="CLM Day ISLM Handson" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CLM Day ISLM Handson
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ISLM_with_SAPGenAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Gen AI Use Cases in SAP S/4HANA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ISLM_with_HANAML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Predict the number of first class seats occupied in a flight
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Predict the plane type of an aircraft
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Predict the plane type of an aircraft
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#islm-brief-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      ISLM brief introduction
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#islm-brief-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      ISLM brief introduction
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="creating-custom-ai-use-cases-in-sap-s4hana">Creating Custom AI Use Cases in SAP S/4HANA</h1>
+<h2 id="context">Context</h2>
+<p>In the rapidly evolving landscape of AI and machine learning, Intelligent Scenario Lifecycle Management (ISLM) has emerged as a critical framework that bridges the gap between data science endeavors and practical application development. ISLM plays a pivotal role in streamlining and optimizing the adoption of AI solutions, particularly within the SAP S/4HANA environment. </p>
+<p>ISLM standardizes the integration and consumption of intelligent scenarios within SAP S/4HANA for both embedded as well as side-by-side scenarios. </p>
+<p>ISLM can be leveraged to perform lifecycle operations, including (scheduled) (re-)training and deployment as well as activation of the model that should be consumed by the business application, directly within SAP S/4HANA. MLOps in ISLM is supported in the context of ML use case (Intelligent Scenario). 
+<br></p>
+<h2 id="islm-brief-introduction">ISLM brief introduction</h2>
+<p>ISLM framework stacked into SAP S/4HANA, is the right tool for application developers for SAP S/4HANA. ISLM standardizes the integration and consumption of intelligent scenarios within SAP S/4HANA for both embedded as well as side-by-side scenarios. Thus, application developers are required to use ISLM to create, register, and publish new scenarios and to implement the consumption of that scenario within the business application.  </p>
+<p>ISLM can be leveraged to perform lifecycle operations, including (scheduled) (re-)training and deployment as well as activation of the model that should be consumed by the business application, directly within SAP S/4HANA. ML ops in ISLM is supported in the context of ML use case (Intelligent Scenario).  </p>
+<p>An application developer for SAP S/4HANA from SAP or customer/partner side, is mainly responsible for integrating the AI scenarios into the respective application. ISLM facilitates embedding AI into business application with a low code approach. </p>
+<p>By the end of this workshop, participants will gain a comprehensive understanding of how ISLM empowers organizations to smoothly transition from data science experimentation to real-world AI application development, all within the SAP S/4HANA environment. </p>
+<p><img alt="" src="images/Overview.png" /></p>
+<p><strong>Business User:</strong> The end user who interacts with the business application and uses the predictions from machine learning for the business purpose. <br>
+<strong>Business Administrator:</strong> A domain expert or analytics specialist, who can perform model trainings based on business context, evaluate model quality, and can activate a model for production usage. <br>
+<strong>Technical Administrator:</strong> A system administrator who can perform the configurations of connectivity between different entities as well as maintains the technical configurations of the system. <br>
+<strong>ABAP Developer:</strong> A developer who can create ABAP artifacts required for Intelligent Scenario registration.<br> 
+<strong>Intelligent Scenario Owner:</strong> An owner who creates, reviews and publishes Intelligent Scenario. <br></p>
+<h1 id="predict-the-plane-type-of-an-aircraft">Predict the plane type of an aircraft</h1>
+<p>In this exercise, we are going to predict the plane type of an aircraft using SAP BTP based ML service Data Attribute Recommendation. We will use the Intelligent Scenario Lifecycle Management (ISLM) framework to create and operate the ML use case. </p>
+<p>Data Attribute Recommendation uses machine learning to predict and classify data records.<br>
+With Data Attribute Recommendation you can
+  - Automate and speed up data management processes
+  - Reduce errors and manual efforts in data maintenance
+  - Increase data consistency and accuracy</p>
+<p>This exercise includes the following steps: 
+1. Create and publish an Intelligent Scenario.
+2. Set up the connection for the Intelligent Scenario to connect to BTP based ML service.
+3. Use Intelligent Scenario Management app to train, view model quality, deploy and activate the model.
+4. View the inference result returned by the model in an ABAP report.</p>
+<h2 id="1-create-and-publish-intelligent-scenario">1. Create and publish Intelligent Scenario</h2>
+<p>The Intelligent Scenarios  app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app. In this step, you’ll create a new intelligent scenario to predict the plane type using SAP BTP based ML service Data Attribute Recommendation. </p>
+<ol>
+<li>Create a Prediction Class which defines the behavior of the scenario.<br></li>
+</ol>
+<p>Prediction class has methods to specify Inference type and ML Template for Data Attribute Recommendation. 
+   For this use case, we will use generic template which make use of Classification algorithm.<br></p>
+<p>Open <strong>SAP Logon</strong> and logon to system <strong>S4H 100</strong> (You can find the credentials written in the cheatsheet)<br>
+   Open transaction <strong>/nse24</strong> and search for the ABAP class <strong>ZCL_PRED_PLANETYPE_000</strong>. 
+   <img alt="" src="images/1.png" /></p>
+<ol>
+<li>
+<p>Click on <strong>Copy</strong> 
+   <img alt="" src="images/2.png" /></p>
+</li>
+<li>
+<p>Provide the unique name in the Copy to field.<br><br />
+   Enter a unique name such as <strong>ZCL_PRED_PLANETYPE_###</strong>, where ### is your attendee id. <br> <strong>Please ask moderator to know your attendee id</strong>. <br>
+   Click on tick icon.
+   <img alt="" src="images/3.png" /></p>
+</li>
+<li>
+<p>Click on <strong>Local Object</strong><br>
+   <img alt="" src="images/4.png" /></p>
+</li>
+<li>
+<p>Class is created in Inactive status. Click on <strong>Display</strong>
+   <img alt="" src="images/5.png" /></p>
+</li>
+<li>
+<p>Click on <strong>Activate</strong> icon
+   <img alt="" src="images/6.png" /></p>
+</li>
+<li>
+<p>Click on tick icon
+   <img alt="" src="images/7.png" /></p>
+</li>
+<li>
+<p>Open the Fiori Launchpad by clicking <a href="https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Input the username and password provided in the cheat sheet. Click on the <strong>Intelligent Scenario</strong> app.
+   <img alt="" src="images/8.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Create</strong> button and choose-&gt;<strong>Side-by Side</strong>.
+   This approach is commonly known as '<strong>side-by-side</strong>,' where the ML provider and the business application operate in separate stacks.
+   <img alt="" src="images/9.png" /></p>
+</li>
+<li>
+<p>Provide the required information in the screen:</p>
+</li>
+<li><strong>Intelligent Scenario Name</strong>: Enter a unique name starting such as <code>Z_PRED_PLANETYPE_###</code> where <strong>###</strong> is your attendee id.</li>
+<li><strong>Intelligent Scenario Description</strong>: Enter a description for the Intelligent Scenario.</li>
+<li><strong>Intelligent Scenario Type</strong> as <strong>Data Attribute Recommendation</strong></li>
+<li>
+<p>Ensure the <strong>Data Management checkbox</strong> is selected
+   <img alt="" src="images/10.png" />
+   <img alt="" src="images/10_1.png" /></p>
+</li>
+<li>
+<p>Click on value help for <strong>Prediction Class</strong> 
+   <img alt="" src="images/11.png" /></p>
+</li>
+<li>
+<p>Click on <strong>OK</strong> in the information box
+   <img alt="" src="images/12.png" /></p>
+</li>
+<li>
+<p>Select the prediction class created by you in Step 3
+   <img alt="" src="images/13.png" /></p>
+</li>
+<li>
+<p>Click on the Add Model button. The Add DAR Model dialog will pop up. In the General Information section, provide a Name starting with Z and Description for the model. In the Data section, provide the below details. Training Dataset : <code>Z_SFLIGHT_DATA</code>.
+   <img alt="" src="images/14.png" /></p>
+</li>
+<li>
+<p>Click on value help for the Inputs field
+   <img alt="" src="images/14_1.png" /></p>
+</li>
+<li>
+<p>The Select Model Inputs will pop up. Select all the Inputs expect CARRID, CONNID, PLANETYPE. (Tip: Use the Select All option and uncheck the CARRID, CONNID, PLANETYPE)
+   <img alt="" src="images/15.png" /></p>
+</li>
+<li>
+<p>Select the Data Management Type as Category/Number. Then, click on Select button.
+   <img alt="" src="images/16.png" /></p>
+</li>
+<li>
+<p>Click on Target value help
+   <img alt="" src="images/17.png" /></p>
+</li>
+<li>
+<p>The Select Model Targets will pop up. Select PLANETYPE and the corresponding Data Management Type as CATEGORY. Click on Select button.
+   <img alt="" src="images/18.png" /></p>
+</li>
+<li>
+<p>Click on Add button.
+   <img alt="" src="images/19.png" /></p>
+</li>
+<li>
+<p>The scenario is now created in Draft Status. You can view the Input and Output fields used to train the model in the Input and Outputs Tabs respectively. Also Scenario is now ready to be published. Click on <strong>Publish</strong> button. You will receive a message that Intelligent Scenario is published.
+   <img alt="" src="images/20.png" /></p>
+</li>
+<li>
+<p>Search the Intelligent Scenario created by you by entering the <strong>Intelligent Scenario name</strong> and <strong>Status = Published</strong>. 
+   <img alt="" src="images/21.png" /></p>
+</li>
+</ol>
+<h3 id="well-done-you-just-created-your-first-side-by-side-intelligent-scenario">Well done, you just created your first Side-by-side Intelligent Scenario.</h3>
+<p><br></p>
+<h2 id="2-set-up-the-connection-for-intelligent-scenario-to-connect-to-btp-based-ml-service">2. Set up the connection for Intelligent Scenario to connect to BTP based ML service</h2>
+<p>Once the Intelligent Scenario is published, we need to maintain the connection for the intelligent scenario in SAP S/4 HANA with the Data Attribute Recommendation service in BTP. This service has already been provisioned in BTP and  <strong>service key</strong> is available in the Desktop folder. </p>
+<ol>
+<li>
+<p>Open transaction <strong>/nSPRO</strong> in <strong>SAP Logon</strong><br>
+   Click <strong>SAP Reference IMG</strong> 
+   <img alt="" src="images/22.png" /></p>
+</li>
+<li>
+<p>Navigate to <strong>ABAP Platform &gt;Application Server &gt;Basis Services &gt;Intelligent Scenario Lifecycle Management&gt; Service Connections for Machine Learning Infrastructure &gt; Maintain Connection for an Intelligent Scenario</strong>.Click on <strong>Execute</strong>
+   <img alt="" src="images/23.png" /></p>
+</li>
+</ol>
+<p><img alt="" src="images/24.png" /></p>
+<ol>
+<li>
+<p>The ISLM Connection Mapping window opens. Click the <strong>Create Connection</strong> icon. 
+   <img alt="" src="images/25.png" /></p>
+</li>
+<li>
+<p>Input the Intelligent Scenario Name created by you and click on <strong>Next</strong>
+   <img alt="" src="images/26.png" /></p>
+</li>
+<li>
+<p>Enter the Service Key details. Please find the service key in a .txt file in desktop to get Service Key details.
+   <img alt="" src="images/27.png" /></p>
+</li>
+<li>
+<p>Click <strong>Next</strong>.
+   <img alt="" src="images/28.png" /></p>
+</li>
+<li>
+<p>Perform <strong>Connection Check</strong> to know the health of ML provider.
+   <img alt="" src="images/29.png" /></p>
+</li>
+<li>
+<p>Check the Connection Status changes to <strong>Ready</strong>. Click <strong>Save</strong>.
+   <img alt="" src="images/30.png" /></p>
+</li>
+<li>
+<p>New entry will be added to the table.
+   <img alt="" src="images/31.png" /></p>
+</li>
+</ol>
+<h3 id="well-done-you-just-set-up-the-connection-for-intelligent-scenario-to-connect-to-btp-based-ml-service">Well done, you just Set up the connection for Intelligent Scenario to connect to BTP based ML service.</h3>
+<p><br></p>
+<h2 id="3-use-intelligent-scenario-management-app-to-train-view-model-quality-deploy-and-activate-the-model">3. Use Intelligent Scenario Management app to train, view model quality, deploy and activate the model</h2>
+<p>Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to train, monitor the model quality, deploy, and activate the model for productive usage.
+In this section, you will use the Intelligent Scenario Management app to perform ML operations. </p>
+<ol>
+<li>
+<p>Open the Fiori Launchpad by clicking <a href="https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Input the username and password provided in the cheat sheet. Click on the <strong>Intelligent Scenario Management</strong> app.
+   <img alt="" src="images/32.png" /></p>
+</li>
+<li>
+<p>Find the scenario created by searching using the name and navigate to the details page by clicking the <strong>&gt;</strong> icon. 
+   <img alt="" src="images/33.png" /></p>
+</li>
+<li>
+<p>Select the Model and click on the <strong>Train</strong> button to launch the training dialog.
+   <img alt="" src="images/35.png" /></p>
+</li>
+<li>
+<p>Train dialog opens. To select a Version from the remote machine learning provider click on value help highlighted.
+   <img alt="" src="images/36.png" /></p>
+</li>
+<li>
+<p>Select the version 3.0 in the version field.
+   <img alt="" src="images/37.png" /></p>
+</li>
+<li>
+<p>Review the information in the train dialog. Click on Train.
+   <img alt="" src="images/39.png" /></p>
+</li>
+<li>
+<p>New Training will be created in Scheduled status.
+   <img alt="" src="images/40.png" /></p>
+</li>
+<li>
+<p>Monitor the status of Training and check that the status changes to Uploading Data.
+    <img alt="" src="images/40_1.png" /></p>
+</li>
+<li>
+<p>Monitor the status of Training and check the status changes to Training.
+    <img alt="" src="images/41.png" /></p>
+</li>
+<li>
+<p>Wait for the status of the Training to change to Completed. Note that training can take around 5 minutes to complete.
+    <img alt="" src="images/42.png" /></p>
+</li>
+<li>
+<p>Click on <strong>&gt;</strong> icon to view Training Details.
+    <img alt="" src="images/43.png" /></p>
+</li>
+<li>
+<p>View the information in header section. 
+    Click on <strong>Debrief</strong> tab.
+    <img alt="" src="images/44.png" /></p>
+</li>
+<li>
+<p>View Overall and target metrics in Debrief. <strong>Accuracy, F1Score, Precision and Recall</strong> are classification metrics. The higher the better.
+    <img alt="" src="images/45.png" /></p>
+</li>
+<li>
+<p>Click on Data Management tab to view details of data packets.
+    <img alt="" src="images/46.png" /></p>
+</li>
+<li>
+<p>Choose the back icon to navigate back to Trainings screen.
+    <img alt="" src="images/47.png" /></p>
+</li>
+<li>
+<p>Click on <strong>Deploy</strong> Button
+    <img alt="" src="images/48.png" /></p>
+</li>
+<li>
+<p>Click on <strong>Deploy and Monitor</strong> Button
+    <img alt="" src="images/49.png" /></p>
+</li>
+<li>
+<p>New Deployment will be created in Scheduled status.
+    <img alt="" src="images/50.png" /></p>
+</li>
+<li>
+<p>Monitor the status of Deployment and check the status changes to Deployment Pending.
+    <img alt="" src="images/51.png" /></p>
+</li>
+<li>
+<p>Monitor the status of Deployment and check the status changes to <strong>Deployed</strong>. Note that Deployments can take 
+    approximately <strong>10 minutes</strong> to be Deployed.
+    <img alt="" src="images/52.png" /></p>
+</li>
+<li>
+<p>To consume the resulting inference from this intelligent scenario the deployment must be activated. Select the Deployment and click on <strong>Activate</strong> button and choose <strong>For All</strong> 
+    option. In the dialog Activate for All Users, choose <strong>Activate For All</strong>. Validate that the Deployment has <strong>Active for 
+    all</strong> Indicator. Then the status will change to Active
+    <img alt="" src="images/54.png" /></p>
+</li>
+</ol>
+<h3 id="well-done-you-just-used-intelligent-scenario-management-app-to-train-view-model-quality-deploy-and-activate-the-model">Well done, you just used Intelligent Scenario Management app to train, view model quality, deploy and activate the model.</h3>
+<p><br></p>
+<h2 id="4-view-the-inference-result-returned-by-the-model-in-an-abap-report">4. View the inference result returned by the model in an ABAP report</h2>
+<p>In this step, you will use the ABAP GUI to view the inference result from the trained model.</p>
+<ol>
+<li>
+<p>Open transaction <strong>/nSE38</strong> in the SAP GUI
+      <img alt="" src="images/55.png" /></p>
+</li>
+<li>
+<p>Input Report Name as <code>ZR_ISLM_TEST_OPERATION_API</code> and Click on <strong>Execute</strong> Button
+      <img alt="" src="images/56.png" /></p>
+</li>
+<li>
+<p>In the API Definition, choose option <strong>TRIGGER_ONLINE_INFERENCE</strong> from drop down.
+      <img alt="" src="images/57.png" /></p>
+</li>
+<li>
+<p>Enter the prediction class associated with your Intelligent Scenario (Created in Section 1 Step 3) .
+      Click on <strong>Execute</strong>.
+      <img alt="" src="images/58.png" /></p>
+<p>Your trained model is now ready to predict the target <strong>PLANETYPE</strong>. To predict this target, inputs to model has to be provided.</p>
+<p>Copy the below text which contains the Inference Request with inputs in JSON format.
+- Inference Request contains the features and its value which is input for the trained model.
+- <strong>topN</strong>-parameter which defines how many options will be predicted.
+    - Inputs would be <strong>FLDATE, PRICE, SEATSMAX, SEATSOCC, SEATSMAX_B, SEATSMAX_F, SEATSOCC_B, SEATSOCC_F, PAYMENTSUM, CURRENCY</strong>.
+  # Inference Request in JSON
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;topN&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;objects&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;objectId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;optional-identifier-5&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FLDATE&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PRICE&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;422.94&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SEATSMAX&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;385&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SEATSOCC&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;374&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SEATSMAX_B&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;31&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SEATSMAX_F&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;21&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SEATSOCC_B&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;29&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SEATSOCC_F&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;21&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PAYMENTSUM&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CURRENCY&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+5. Paste the copied text in the <strong>text editor</strong>. Click on <strong>tick</strong> icon.
+   <img alt="" src="images/59.png" /></p>
+</li>
+<li>
+<p>View the response from the trained model.</p>
+</li>
+</ol>
+<p>In the response, you find the values that the model predicted. This includes the value that is predicted and the 
+   probability. The probability describes how certain the model is about its prediction. <strong>If the probability is close to 1, 
+   the model is very certain</strong>.</p>
+<p>Model predicts the PLANETYPE with two possible values(as defined in Inference request <strong>"topN": 2</strong> <br>
+    | Predicted Value | Probability    | 
+    | :---:   | :---: | 
+    | A319-100 | 1.0 |
+    | 747-400 | 0.0  |</p>
+<p>Note: The predicted values and the probabilities depend heavily on the inputs, the training data as well as the training metrics</p>
+<p><img alt="" src="images/60.png" /></p>
+<h3 id="well-done-you-just-viewed-the-inference-result-returned-by-the-model-in-an-abap-report">Well done, you just Viewed the inference result returned by the model in an ABAP report.</h3>
+<p><br></p>
+<h2 id="congratulations-you-have-successfully-completed-the-exercise">🎉 Congratulations! You have successfully completed the Exercise!🎉</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

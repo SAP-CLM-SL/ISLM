@@ -1,0 +1,798 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/ISLM_with_HANAML/">
+      
+      
+        <link rel="prev" href="../ISLM_with_SAPGenAI/">
+      
+      
+        <link rel="next" href="../ISLM_with_SAPAIServices_BTP/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Predict the number of first class seats occupied in a flight - CLM Day ISLM Handson</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-custom-ai-use-cases-in-sap-s4hana" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CLM Day ISLM Handson" class="md-header__button md-logo" aria-label="CLM Day ISLM Handson" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CLM Day ISLM Handson
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Predict the number of first class seats occupied in a flight
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="purple"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CLM Day ISLM Handson" class="md-nav__button md-logo" aria-label="CLM Day ISLM Handson" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CLM Day ISLM Handson
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ISLM_with_SAPGenAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Gen AI Use Cases in SAP S/4HANA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Predict the number of first class seats occupied in a flight
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Predict the number of first class seats occupied in a flight
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#islm-brief-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      ISLM brief introduction
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ISLM_with_SAPAIServices_BTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Predict the plane type of an aircraft
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#islm-brief-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      ISLM brief introduction
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="creating-custom-ai-use-cases-in-sap-s4hana">Creating Custom AI Use Cases in SAP S/4HANA</h1>
+<h2 id="context">Context</h2>
+<p>In the rapidly evolving landscape of AI and machine learning, <strong>Intelligent Scenario Lifecycle Management (ISLM)</strong> has emerged as a critical framework that bridges the gap between data science endeavors and practical application development. ISLM plays a pivotal role in streamlining and optimizing the adoption of AI solutions, particularly within the SAP S/4HANA environment. </p>
+<p>ISLM standardizes the integration and consumption of intelligent scenarios within SAP S/4HANA for both <strong>Embedded</strong> as well as <strong>Side-by-Side</strong> scenarios. </p>
+<p>ISLM can be leveraged to perform lifecycle operations, including (scheduled) (re-)training and deployment as well as activation of the model that should be consumed by the business application, directly within SAP S/4HANA. MLOps in ISLM is supported in the context of ML use case (Intelligent Scenario). 
+<br></p>
+<h2 id="islm-brief-introduction">ISLM brief introduction</h2>
+<p>ISLM framework stacked into SAP S/4HANA, is the right tool for application developers for SAP S/4HANA. ISLM standardizes the integration and consumption of intelligent scenarios within SAP S/4HANA for both embedded as well as side-by-side scenarios. Thus, application developers are required to use ISLM to create, register, and publish new scenarios and to implement the consumption of that scenario within the business application.  </p>
+<p>ISLM can be leveraged to perform lifecycle operations, including (scheduled) (re-)training and deployment as well as activation of the model that should be consumed by the business application, directly within SAP S/4HANA. ML ops in ISLM is supported in the context of ML use case (Intelligent Scenario).  </p>
+<p>An application developer for SAP S/4HANA from SAP or customer/partner side, is mainly responsible for integrating the AI scenarios into the respective application. ISLM facilitates embedding AI into business application with a low code approach. </p>
+<p>By the end of this workshop, participants will gain a comprehensive understanding of how ISLM empowers organizations to smoothly transition from data science experimentation to real-world AI application development, all within the SAP S/4HANA environment. </p>
+<p><img alt="" src="images/Overview.png" /></p>
+<ul>
+<li><strong>Business User:</strong> The end user who interacts with the business application and uses the predictions from machine learning for the business purpose.</li>
+<li><strong>Business Administrator:</strong> A domain expert or analytics specialist, who can perform model trainings based on business context, evaluate model quality, and can activate a model for production usage.</li>
+<li><strong>Technical Administrator:</strong> A system administrator who can perform the configurations of connectivity between different entities as well as maintains the technical configurations of the system. </li>
+<li><strong>ABAP Developer:</strong> A developer who can create ABAP artifacts required for Intelligent Scenario registration.</li>
+<li><strong>Intelligent Scenario Owner:</strong> A owner who creates, reviews and publishes Intelligent Scenario.</li>
+</ul>
+<h1 id="exercise-for-hands-on-scenario-storyline-predict-the-number-of-first-class-seats-occupied-in-a-flight">[Exercise for Hands-on] Scenario storyline: Predict the number of first class seats occupied in a flight</h1>
+<h2 id="11-overview-predict-first-class-seats-occupied">1.1 Overview: Predict First Class Seats Occupied</h2>
+<p>In this exercise, our focus is on utilizing the SAP HANA Machine Learning (ML) algorithm to predict the occupancy of first-class seats on flights using APL Library. </p>
+<p>To execute this exercise, we will leverage the Intelligent Scenario Lifecycle Management (ISLM) framework. ISLM serves as the foundation for creating and managing ML use cases seamlessly within the SAP S/4HANA stack. </p>
+<p>This exercise includes the following steps: </p>
+<ol>
+<li><strong>Creating a New Intelligent Scenario:</strong> We will begin by creating a new intelligent scenario that will encompass the predictive model for first-class seat occupancy.</li>
+<li><strong>Operating the Intelligent Scenario:</strong> Once the scenario is set up, we will operate it to enable the prediction process.</li>
+<li><strong>Visualizing Model Version Predictions:</strong> This step involves visualizing the predictions generated by the model versions within the intelligent scenario.</li>
+<li><strong>Schedule Training:</strong> This step involves scheduling training for intelligent scenario based on selected frequency. </li>
+</ol>
+<p>By the end of this exercise, participants will have gained hands-on experience in utilizing the ISLM framework and SAP HANA ML algorithm to enhance decision-making processes and improve customer experiences. </p>
+<h2 id="12-create-intelligent-scenario">1.2 Create Intelligent Scenario</h2>
+<p>The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app. </p>
+<p>In this step, you’ll create a new intelligent scenario to predict the airplane seats occupation in the first class of a flight using SAP HANA ML algorithm. </p>
+<p>For this use case we will use regression model with Gradient Boosting algorithm. </p>
+<p>SAP HANA APL lets you build and apply different types of predictive models, such as classification, regression, and time series forecasting models.  </p>
+<p>Gradient Boosting regression model type provides a more accurate modeling result than the legacy regression model.</p>
+<ol>
+<li>
+<p>Open the Fiori Launchpad by clicking <a href="https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Input the username and password provided in the cheat sheet. Click on the <strong>Intelligent Scenario</strong> app. 
+<img alt="" src="../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png" /></p>
+</li>
+<li>
+<p>Click the Create button and choose Embedded. In Embedded approach, a business application, for example SAP S/4HANA runs in the same stack as its machine learning provider SAP HANA ML and it provides analytics libraries SAP HANA Automated Predictive Library (APL) or SAP HANA Predictive Analysis Library (PAL).
+<img alt="" src="images/2.png" /></p>
+</li>
+<li>
+<p>Click on 'Do Not Show Again' and Close in the Onboarding Dialog.
+<img alt="" src="images/3.png" /></p>
+</li>
+<li>
+<p>Provide the required information in the screen:</p>
+</li>
+<li><strong>Intelligent Scenario Name</strong>: Enter a unique name starting with Z, such as <code>Z_SEATOCC_FTCLAS_###</code>, where ### is your attendee id.</li>
+<li><strong>Intelligent Scenario Description</strong>: <code>Predict seats occupied in the first class of a flight</code>.</li>
+<li><strong>Intelligent Scenario Type</strong>: Select <code>Regression</code> type.</li>
+<li><strong>Algorithm</strong>: Select <code>Gradient Boosting</code>.</li>
+<li>
+<p><strong>Machine Learning Library</strong>: Select <code>APL</code>.
+<img alt="" src="images/AddScenarioDetails.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Add Model</strong> button.
+<img alt="" src="images/ClickAddModelButton.png" /></p>
+</li>
+<li>
+<p>The APL Regression Model screen will pop up. Provide information as mentioned below:</p>
+</li>
+<li><strong>Name</strong>: Enter a model name starting with Z - <code>ZISLM_SFLIGHT_TRAIN_CDS_MODEL</code>.</li>
+<li><strong>Description</strong>: Enter the description - <code>Flight model</code>.</li>
+<li><strong>Training Dataset</strong>: <code>Z_SFLIGHTTRAINCDS</code>. Training Dataset to be used for training the model.</li>
+<li><strong>Apply Dataset</strong>: <code>Z_SFLIGHTPREDICTCDS</code>. Apply dataset is Dataset used for prediction. <strong>Note that apply dataset is different from training dataset.</strong></li>
+<li><strong>Target</strong>: <code>SEATSOCCF</code>. Target variable is field whose value you want to predict.</li>
+<li>
+<p><strong>Max Reason Code:</strong> <code>1</code> Number of reason codes you want to generate. Reason codes are variables whose values have the most influence in a score-based decision (typically a risk score). The variables for which the contribution is the most differential are selected as the most important reason codes. Apply output configuration has the selected metrics that are added in the intelligent scenario output and used for prediction.
+<img alt="" src="images/EnterModelDetails.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Add</strong> button.
+<img alt="" src="images/ClickAddModelButtonInDialog.png" /></p>
+</li>
+<li>
+<p>The scenario is now created in <strong>Draft</strong> Status.
+<img alt="" src="images/ViewDraftScenario.png" /></p>
+</li>
+<li>
+<p>View the <strong>Input Tab</strong> which displays the <strong>Key</strong>, <strong>Input</strong>, and <strong>Target</strong> fields. The Input variable is considered for modelling. The Key variable is a key field of the dataset and is also considered for modelling. The Target variable is the variable whose values are to be modelled and predicted by other variables.
+<img alt="" src="images/ClickInputTab.png" /></p>
+</li>
+<li>
+<p>View the <strong>Output tab</strong> which displays the <strong>Key</strong>, <strong>Target</strong>, and <strong>Prediction</strong> fields. The Prediction variable includes the calculated result.
+<img alt="" src="images/ClickOutputTab.png" /></p>
+</li>
+<li>
+<p>Scenario is now ready to be published. Click on <strong>Publish</strong> button. You will receive a message that Intelligent Scenario is published.
+<img alt="" src="images/ClickPublishButton.png" /></p>
+</li>
+<li>
+<p>Search the Intelligent Scenario created by you by entering the <strong>Intelligent Scenario name</strong> as <code>Z_SEATOCC_FTCLAS_###</code>, where ### is your attendee id and <strong>Status = Published</strong>.
+Navigate to the details page by clicking the <code>&gt;</code> icon.
+<img alt="" src="images/SearchScenario.png" /></p>
+</li>
+<li>
+<p>Click on <strong>Apply Setting</strong> Tab. 3 CDS views are generated for the intelligent scenario to allow easy access to the predictions. Click the <strong>i</strong> icon to view the functionality &amp; usage of each CDS view.
+<img alt="" src="images/ClickApplySettingsTab.png" /></p>
+</li>
+</ol>
+<p><strong>Well done, you just created your first embedded Intelligent Scenario.</strong></p>
+<h2 id="13-operating-the-intelligent-scenario">1.3. Operating the Intelligent Scenario</h2>
+<p>Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to train, monitor the model quality and activate the model for productive usage.</p>
+<p>In this section, you will use the Intelligent Scenario Management app to perform ML operations. </p>
+<ol>
+<li>
+<p>Open the Fiori Launchpad by clicking <a href="https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Input the username and password provided in the cheat sheet. Click on the <strong>Intelligent Scenario Management</strong> app.
+<img alt="" src="../ISLM_with_SAPGenAI/images/IntelligentScenarioManagementApp.png" /></p>
+</li>
+<li>
+<p>Search the <strong>First-Class Seats Occupied</strong> scenario created by you and navigate to the details page by clicking the <code>&gt;</code> icon.
+<img alt="" src="images/15.png" /></p>
+</li>
+<li>
+<p>Select the Model and click on the <strong>Train button</strong> to trigger the training.
+<img alt="" src="images/16.png" /></p>
+</li>
+<li>
+<p>In the Model section, view the Dataset Record Count. Click on <strong>Train</strong> button.
+<img alt="" src="images/17.png" /></p>
+</li>
+<li>
+<p>New Model Version will be created in <strong>Scheduled</strong> status.
+<img alt="" src="images/18.png" /></p>
+</li>
+<li>
+<p>Monitor the status of the <strong>Model Version</strong> and check the status changes to <strong>Training</strong>.
+<img alt="" src="images/19.png" /></p>
+</li>
+<li>
+<p>Monitor the status of the Model Version and check the status changes to <strong>Ready</strong>.
+<img alt="" src="images/20.png" /></p>
+</li>
+<li>
+<p>Click on <strong>'&gt;'</strong> icon to view Model Version Report.
+<img alt="" src="images/21.png" /></p>
+</li>
+<li>
+<p>View different tabs like <strong>Quality Information and Debrief</strong>. You can see attributes about data quality and what key influencers are affecting the predictions.
+<img alt="" src="images/22.png" /></p>
+</li>
+<li><strong>Mean Absolute Error(MAE):</strong> Average absolute difference between the predicted values and the actual values. The lower the better.</li>
+<li><strong>Root Mean Square Error(RMSE):</strong> RMSE is the square root of mean squared error. It measures the average difference between values predicted by a model and the actual values. RMSE tells us how close the actual values are to prediction values made by the model. The lower the better.</li>
+<li>
+<p><strong>Mean Absolute Percentage Error(MAPE)</strong> Average of the absolute percentage errors of the predictions. The lower the better.</p>
+</li>
+<li>
+<p>Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back to Model Versions screen.</p>
+</li>
+<li>
+<p>Activate the model version to return predictions. Select the Model Version and click the <strong>Activate</strong> button.
+<img alt="" src="images/23.png" /></p>
+</li>
+</ol>
+<p><strong>Well done, you just Operated the Intelligent Scenario by training your first model.</strong></p>
+<h2 id="14-visualizing-model-version-predictions">1.4. Visualizing Model Version Predictions</h2>
+<ol>
+<li>
+<p>Open the Fiori Launchpad by clicking <a href="https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Input the username and password provided in the cheat sheet. Click on the <strong>Intelligent Scenario</strong> app.
+<img alt="" src="../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png" /></p>
+</li>
+<li>
+<p>Search the Intelligent Scenario created by you by entering the <strong>Intelligent Scenario name</strong> as <code>Z_SEATOCC_FTCLAS_###</code>, where ### is your attendee id and <strong>Status = Published</strong>. Navigate to the details page by clicking the <code>&gt;</code> icon.
+<img alt="" src="images/SearchScenario.png" /></p>
+</li>
+<li>
+<p>Click on <strong>Apply Setting</strong> Tab. You can find the 3 Apply CDS views in this tab. We can see the predictions for each view in next steps.
+<img alt="" src="images/ViewApplyViews.png" /></p>
+</li>
+<li>
+<p>You will use the SAP GUI to view the model's prediction. Login to <strong>S4H/100</strong> system via SAP GUI, with the given credentials in cheat sheet.</p>
+</li>
+<li>
+<p>Type <code>/n se38</code> in the command field and press <strong>ENTER</strong>.
+<img alt="" src="images/28.png" /></p>
+</li>
+<li>
+<p>Search for report <strong>RUT_DDLS_DATA_PREVIEW</strong> and click on <strong>Execute(F8)</strong>.
+<img alt="" src="images/29.png" /></p>
+</li>
+<li>
+<p>Enter the ISLM generated 1st CDS view of created Intelligent Scenario to view predictions from trained model.</p>
+</li>
+<li>CDS View will have following name <strong>Z_SEATOCC_FTCLAS_###_CDS01</strong>, where ### is your attendee id.</li>
+<li>
+<p>Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
+<img alt="" src="images/30.png" /></p>
+</li>
+<li>
+<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong> </p>
+</li>
+<li>Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied. </li>
+<li>
+<p>Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
+<img alt="" src="images/Prediction1.png" /></p>
+</li>
+<li>
+<p>Goto <strong>SE38</strong> again and Search for report <strong>RUT_DDLS_DATA_PREVIEW</strong> and click on <strong>Execute(F8)</strong>. Enter the ISLM generated 2nd CDS view of created Intelligent Scenario to view predictions from trained model.</p>
+</li>
+<li>CDS View will have following name <strong>Z_SEATOCC_FTCLAS_###_CDS01_KEY</strong>, where ### is your attendee id.</li>
+<li>
+<p>Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
+<img alt="" src="images/32.png" /></p>
+</li>
+<li>
+<p>Provide below values to the respective CDS parameters:</p>
+</li>
+<li>P_BOOKID = <code>2274</code></li>
+<li>P_CARRID = <code>AZ</code></li>
+<li>P_CONNID = <code>555</code></li>
+<li>
+<p>P_FLDATE = <code>20250813</code>
+<img alt="" src="images/EnterKeyParameters.png" /></p>
+</li>
+<li>
+<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong>
+Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied.
+Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
+<img alt="" src="images/Prediction2.png" /></p>
+</li>
+<li>
+<p>Goto SE38 again and Search for report <strong>RUT_DDLS_DATA_PREVIEW</strong> and click on Execute(F8). Enter the ISLM generated 3rd CDS view of created Intelligent Scenario to view predictions from trained model.</p>
+</li>
+<li>CDS View will have following name <strong>Z_SEATOCC_FTCLAS_###_CDS01_WHR</strong>, where ### is your attendee i.</li>
+<li>
+<p>Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
+<img alt="" src="images/35.png" /></p>
+</li>
+<li>
+<p>Provide below values to the respective CDS parameters</p>
+</li>
+<li>
+<p>P_WHERE = <code>CONNID = 0017 AND FLDATE = 20250813</code>
+<img alt="" src="images/EnterWhereParameter.png" /></p>
+</li>
+<li>
+<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong>
+Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied.
+Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
+<img alt="" src="images/Prediction3.png" /></p>
+</li>
+</ol>
+<p><strong>Well done, you just visualized your trained model predictions..!</strong></p>
+<h2 id="15-schedule-training">1.5 Schedule training</h2>
+<p>You can schedule a training for your intelligent scenarios. Once the trainings are scheduled, model versions are created automatically based on the selected frequency and preselected filters.</p>
+<ol>
+<li>
+<p>Open the Fiori Launchpad by clicking <a href="https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Input the username and password provided in the cheat sheet. Click on the <strong>Intelligent Scenario Management</strong> app.
+<img alt="" src="../ISLM_with_SAPGenAI/images/IntelligentScenarioManagementApp.png" /></p>
+</li>
+<li>
+<p>Search the <strong>First-Class Seats Occupied</strong> scenario created by you and navigate to the details page by clicking the <strong>&gt;</strong> icon.
+<img alt="" src="images/SearchAndNavigateToScenarioInManagement.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Create Schedule</strong> button.
+<img alt="" src="images/ClickCreateScheduleButton.png" /></p>
+</li>
+<li>
+<p>View the information displayed in the screen. Click on <strong>Model Version</strong> value help.
+<img alt="" src="images/SelectReferenceModelVersion.png" /></p>
+</li>
+<li>
+<p>Select the reference Model Version.
+<img alt="" src="images/SelectReferenceModelVersion2.png" /></p>
+</li>
+<li>
+<p>Click on <strong>Go to Step 2</strong>.
+<img alt="" src="images/GoToStep2.png" /></p>
+</li>
+<li>
+<p>Review Scheduling Options automatically proposed by the system.</p>
+</li>
+<li>Enter the Start as <strong>2 minutes later</strong> than the system proposed time.</li>
+<li>
+<p>Schedule for <strong>1 Occurrence(s)</strong> and click on <strong>Go to Step 3</strong>.
+<img alt="" src="images/GoToStep3.png" /></p>
+</li>
+<li>
+<p>Review the section Intelligent Scenarios Details and Schedule Details. Click the <strong>Create Schedule</strong> button.
+<img alt="" src="images/ScheduleTraining.png" /></p>
+</li>
+<li>
+<p>Click on <strong>Schedule Planned Task</strong> tab to view the planned task created as a result of scheduling of training. Please wait until the given start time of the task and status is completed.
+<img alt="" src="images/ClickScheduleTaskTab.png" />  </p>
+</li>
+<li>
+<p>Once the status changes to <strong>Completed</strong>, click the <strong>&gt;</strong> button.
+<img alt="" src="images/NavigateToScheduleTaskDetailsPage.png" /></p>
+</li>
+<li>
+<p>Review <strong>scheduling Options</strong> and <strong>Scheduling Runs</strong> tab.
+<img alt="" src="images/ViewSchedulingDetailsPage.png" /></p>
+</li>
+<li>
+<p>Click the highlighted icon to view the created Model Version. <strong>[Note]: This step will take time</strong> as logs are opened in a dialog.
+<img alt="" src="images/ClickSchedulingRunIconButton.png" /></p>
+</li>
+<li>
+<p>View the created <strong>Model Version ID</strong>.
+<img alt="" src="images/SchedulingApplicationJobLog.png" /></p>
+</li>
+<li>
+<p>Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back Scheduled Planned Tasks screen. Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back to Model screen. Select the <strong>Models</strong> tab and Click on <strong>&gt;</strong> icon to view the created Model Version.
+<img alt="" src="images/GoToModelsTab.png" /></p>
+</li>
+<li>
+<p>View the created Model Version as outcome of Scheduling of Training.
+<img alt="" src="images/Scheduling/15.png" /></p>
+</li>
+</ol>
+<p><strong>Well done, you just scheduled training.</strong></p>
+<p>🎉 Congratulations! 🎉
+You have successfully completed the exercise.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
