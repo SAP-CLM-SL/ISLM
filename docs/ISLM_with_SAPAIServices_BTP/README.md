@@ -145,7 +145,7 @@ Once the Intelligent Scenario is published, we need to maintain the connection f
    ![](./images/24.png)
 
 5. The ISLM Connection Mapping window opens. Click the **Create Connection** icon. 
-   ![](./images/25.png)
+   ![](./images/create14.png)
 
 6. Input the Intelligent Scenario Name created by you and click on **Next**
    ![](./images/create8.png)
