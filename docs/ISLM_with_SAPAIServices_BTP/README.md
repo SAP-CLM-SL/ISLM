@@ -194,7 +194,7 @@ In this section, you will use the Intelligent Scenario Management app to perform
    ![](./images/manage-6.png)
 
 8. Monitor the status of Training and check that the status changes to Uploading Data.
-    ![](./images/40_1.png)
+    ![](./images/manage-18.png)
 
 9. Monitor the status of Training and check the status changes to Training.
     ![](./images/manage-7.png)
