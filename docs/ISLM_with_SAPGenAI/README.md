@@ -26,9 +26,9 @@ Workshop aims to provide a deep dive into Intelligent Scenario Lifecycle Managem
 # ISLM Key Capabilities
 - **Centralized AI Management:**  ISLM offers an end-to-end framework to manage both pre-delivered and custom AI scenarios in SAP S/4HANA. It enables organizations to integrate and operationalize AI use cases efficiently, ensuring seamless lifecycle management. 
 -	**Integration with Large Language Models (LLMs):** ISLM allows customers and partners to:
-  - Develop custom generative AI based use cases tailored to their business needs.
-  - Integrate business applications with LLMs for enhanced automation and decision-making.
-  - Enable prompt templating capabilities for effective GenAI model usage.
+    - Develop custom generative AI based use cases tailored to their business needs.
+    - Integrate business applications with LLMs for enhanced automation and decision-making.
+    - Enable prompt templating capabilities for effective GenAI model usage.
 - **Connectivity to GenAI Hub:** ISLM enables seamless connectivity to SAP’s Generative AI Hub.
 - **ISLM and ABAP AI SDK Integration:** ABAP AI SDK and Intelligent Scenario Lifecycle Management serve as integration components between business applications and large language models. Using  ABAP AI SDK powered by Intelligent Scenario Lifecycle Management (ISLM), you can easily embed generative AI capabilities into your custom ABAP based applications. ISLM and  ABAP AI SDK offer a low-code approach within ABAP stack, enabling seamless integration of generative AI models into your business applications. With the combined experience of ISLM and the ABAP AI SDK, customers can develop and deploy generative AI-driven use cases directly within their SAP S/4HANA environment.
 
@@ -74,8 +74,8 @@ And click the **tick icon**.
 6. The class is created in **Inactive** status. Click the **Display** button.
 ![](./images/5.png)
 7. View the following methods of the prediction class.
-  - **IF_ISLM_INTS~GET_INFERENCE_TYPE** - Using this method, specify the inference type that supports this intelligent scenario.
-  - **IF_ISLM_INTS_SBS_DAR~GET_SERVEFLOW_ENDPOINT_URI** - Using this method, specify the end point URI of the LLM Model.
+    - **IF_ISLM_INTS~GET_INFERENCE_TYPE** - Using this method, specify the inference type that supports this intelligent scenario.
+    - **IF_ISLM_INTS_SBS_DAR~GET_SERVEFLOW_ENDPOINT_URI** - Using this method, specify the end point URI of the LLM Model.
 
 8. Click the **Activate** icon.
 ![](./images/6.png)
@@ -87,9 +87,9 @@ Input the username and password provided in the cheat sheet. Click on My Home se
 11. Click the **Create** button and choose **Side-by Side**.
 ![](./images/CreateSBS.png)
 12. Provide the required information in the screen:
-  - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as **Z_SLS_ORD_CONF_###**, where ### is your attendee id mentioned in the cheat sheet.
-  - **Intelligent Scenario Description**: Generate sales order confirmation email
-  - **Intelligent Scenario Type**: Generative AI
+    - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as **Z_SLS_ORD_CONF_###**, where ### is your attendee id mentioned in the cheat sheet.
+    - **Intelligent Scenario Description**: Generate sales order confirmation email
+    - **Intelligent Scenario Type**: Generative AI
  ![](./images/8.png)
 
 13. Select **Prediction Class** from value help.
@@ -102,10 +102,10 @@ Input the username and password provided in the cheat sheet. Click on My Home se
 ![](./images/11.png)
 
 16. The Add Generative AI Model screen will pop up. Enter the below details:
-  - Name: **Z_SLS_ORD_CONF_MDL**
-  - Description: **LLM Model for generating SO email**
-  - Executable ID: **azure-openai**
-  - Large Language Model Name: **gpt-4o-mini**
+    - Name: **Z_SLS_ORD_CONF_MDL**
+    - Description: **LLM Model for generating SO email**
+    - Executable ID: **azure-openai**
+    - Large Language Model Name: **gpt-4o-mini**
 ![](./images/add_model.png)
 
 17. Click the **Add** button.
@@ -115,8 +115,8 @@ Input the username and password provided in the cheat sheet. Click on My Home se
 ![](./images/14.png)
 
 19. In the Add Prompt Template dialog, enter the below details:
-  - Name: **SYSTEM_PROMPT**
-  - Description: **Provide context to gpt-4o-mini model**
+    - Name: **SYSTEM_PROMPT**
+    - Description: **Provide context to gpt-4o-mini model**
 ![](./images/15.png)
 
 20. Enter the **Prompt** text:
@@ -141,8 +141,8 @@ IF <distance between source address and delivery address> > 100 kms THEN include
 ![](./images/18.png)
 
 23. In the Add Prompt Template dialog, enter the below details:
-  - Name: **USER_PROMPT**
-  - Description: **Provide sales order item data for generating the order confirmation email**
+    - Name: **USER_PROMPT**
+    - Description: **Provide sales order item data for generating the order confirmation email**
 ![](./images/19.png)
 
 24. Enter the **Prompt** text:
@@ -237,9 +237,9 @@ In this step, you will use the ABAP GUI to view the email generated using LLM mo
 ![](./images/40.png)
 
 3. In the dialog input the below details:
-  - Title: **Generate confirmation email for sales order**
-  - Select the **Type** as **Executable program**.
-  - Change the **Status** to **Test program**
+    - Title: **Generate confirmation email for sales order**
+    - Select the **Type** as **Executable program**.
+    - Change the **Status** to **Test program**
 ![](./images/41.png)
 
 4. Click the **Save** button.
