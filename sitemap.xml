@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://mydomain.org/mysite/</loc>
+         <loc>https://sap-clm-sl.github.io/ISLM/</loc>
          <lastmod>2025-07-26</lastmod>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/ISLM_with_HANAML/</loc>
+         <loc>https://sap-clm-sl.github.io/ISLM/ISLM_with_HANAML/</loc>
          <lastmod>2025-07-26</lastmod>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/ISLM_with_SAPAIServices_BTP/</loc>
+         <loc>https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPAIServices_BTP/</loc>
          <lastmod>2025-07-26</lastmod>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/ISLM_with_SAPGenAI/</loc>
+         <loc>https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPGenAI/</loc>
          <lastmod>2025-07-26</lastmod>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/ISLM_with_SAPGenAI/images/</loc>
+         <loc>https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPGenAI/images/</loc>
          <lastmod>2025-07-26</lastmod>
     </url>
     <url>
-         <loc>https://mydomain.org/mysite/images/</loc>
+         <loc>https://sap-clm-sl.github.io/ISLM/images/</loc>
          <lastmod>2025-07-26</lastmod>
     </url>
 </urlset>
