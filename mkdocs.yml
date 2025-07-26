@@ -35,7 +35,10 @@ markdown_extensions:
   - tables
   - attr_list
 nav:
-  - Getting Started: "index.md"
+  - Getting Started:
+      - GenAI Mandatory: "Gettingstarted/genaimandatory.md"
+      - APL Optional: "Gettingstarted/aploptional.md"
+      - DAR Optional: "Gettingstarted/daroptional.md"
   - Gen AI: "ISLM_with_SAPGenAI/README.md"
   - APL: "ISLM_with_HANAML/README.md"
   - DAR: "ISLM_with_SAPAIServices_BTP/README.md"
