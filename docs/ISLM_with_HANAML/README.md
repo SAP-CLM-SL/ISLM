@@ -140,9 +140,7 @@ In this section, you will use the Intelligent Scenario Management app to perform
     - **Root Mean Square Error(RMSE):** RMSE is the square root of mean squared error. It measures the average difference between values predicted by a model and the actual values. RMSE tells us how close the actual values are to prediction values made by the model. The lower the better.
     - **Mean Absolute Percentage Error(MAPE)** Average of the absolute percentage errors of the predictions. The lower the better.
 
-10. Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back to Model Versions screen.
-
-11. Activate the model version to return predictions. Select the Model Version and click the **Activate** button.
+10. Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back to Model Versions screen.<br/> Activate the model version to get the predictions from regression model. Select the Model Version and click the **Activate** button.
 ![](./images/23.png)
 
 **Well done, you just Operated the Intelligent Scenario by training your first model.**
