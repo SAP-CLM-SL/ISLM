@@ -5,14 +5,14 @@ theme:
   palette:
     - scheme: default
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
       primary: orange
       accent: purple
-   - scheme: slate
+    - scheme: slate
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode   
+        name: Switch to light mode
   font:
     text: Roboto
     code: Roboto Mono
