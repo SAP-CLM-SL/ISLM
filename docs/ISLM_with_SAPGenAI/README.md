@@ -47,10 +47,10 @@ Workshop aims to provide a deep dive into Intelligent Scenario Lifecycle Managem
 In this exercise, we are using gpt-4o-mini large language model (LLM) to generate an order confirmation email for Sales Order. As an ABAP Developer, you will use ISLM framework to create a GenAI use case in ABAP stack.
 
 This exercise includes the following steps:
-1.	Create a new Intelligent Scenario
-2.	Set up the connection for Intelligent Scenario to connect to BTP based ML service. 
-3.	Use Intelligent Scenario Management app to deploy and activate the model.
-4.	Generate summary of Sales data using LLM. 
+1. Create a new Intelligent Scenario
+2. Set up the connection for Intelligent Scenario to connect to BTP based ML service.
+3. Use Intelligent Scenario Management app to deploy and activate the model.
+4. Generate summary of Sales data using LLM. 
 
 ![](./images/integrate.jpg)
 
@@ -60,13 +60,13 @@ This exercise includes the following steps:
 The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app.
 In this step, you’ll create a new intelligent scenario to generate the order confirmation email for Sales Order using LLM model.
 
-1. Open **SAP Logon** and logon to system. Check the username and password provided in the cheat sheet.
+1. Open **SAP Logon** and logon to **S4H** system. Check the username and password provided in the cheat sheet.
 2. Create a Prediction Class which defines the behavior of the scenario. Prediction class has methods to specify Inference type and metadata like end point URI for LLM Model.
-Open transaction **/nse24** and search for the class **ZCL_SOC_EMAIL_CONFIRMATION**
+Open transaction `/nse24` and search for the class `ZCL_SOC_EMAIL_CONFIRMATION`
 ![](./images/1.png)
 3. Click the **Copy** button.
 ![](./images/2.png)
-4. Provide the unique name in the **Copy to** field. Enter a unique name starting with **ZCL**, such as **ZCL_SLS_ORD_CONF_###**, where ### is your attendee id mentioned in the cheat sheet.
+4. Provide the unique name in the **Copy to** field. Enter a unique name starting with `ZCL`, such as `ZCL_SLS_ORD_CONF_###`, where ### is your attendee id mentioned in the cheat sheet.
 And click the **tick icon**.
 ![](./images/3.png)
 5. Click the **Local Object** button.
@@ -81,15 +81,15 @@ And click the **tick icon**.
 ![](./images/6.png)
 9. Click the **tick** icon.
 ![](./images/7.png)
-10. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}.
-Input the username and password provided in the cheat sheet. Click on My Home section and choose the **Intelligent Scenarios** app.
+10. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}.
+Input the username and password provided in the cheat sheet. Click on **Intelligent Scenario Management** section and choose the **Intelligent Scenarios** app.
 ![](./images/IntelligentScenariosApp.png)
 11. Click the **Create** button and choose **Side-by Side**.
 ![](./images/CreateSBS.png)
 12. Provide the required information in the screen:
-    - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as **Z_SLS_ORD_CONF_###**, where ### is your attendee id mentioned in the cheat sheet.
-    - **Intelligent Scenario Description**: Generate sales order confirmation email
-    - **Intelligent Scenario Type**: Generative AI
+    - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as `Z_SLS_ORD_CONF_###`, where ### is your attendee id mentioned in the cheat sheet.
+    - **Intelligent Scenario Description**: `Generate sales order confirmation email`
+    - **Intelligent Scenario Type**: `Generative AI`
  ![](./images/8.png)
 
 13. Select **Prediction Class** from value help.
@@ -102,22 +102,22 @@ Input the username and password provided in the cheat sheet. Click on My Home se
 ![](./images/11.png)
 
 16. The Add Generative AI Model screen will pop up. Enter the below details:
-    - Name: **Z_SLS_ORD_CONF_MDL**
-    - Description: **LLM Model for generating SO email**
-    - Executable ID: **azure-openai**
-    - Large Language Model Name: **gpt-4o-mini**
+    - Name: `Z_SLS_ORD_CONF_MDL`
+    - Description: `LLM Model for generating SO email`
+    - Executable ID: `azure-openai`
+    - Large Language Model Name: `gpt-4o-mini`
 ![](./images/add_model.png)
 
 17. Click the **Add** button.
-![](./images/13.png)
+![](./images/ClickAddButtonInAddGenAIModelDialog.png)
 
 18. Click the **Add** prompt templates button.
-![](./images/14.png)
+![](./images/ClickAddPromptButton1.png)
 
 19. In the Add Prompt Template dialog, enter the below details:
-    - Name: **SYSTEM_PROMPT**
-    - Description: **Provide context to gpt-4o-mini model**
-![](./images/15.png)
+    - Name: `SYSTEM_PROMPT`
+    - Description: `Provide context to gpt-4o-mini model`
+![](./images/EnterSystemPromptNameAndDescription.png)
 
 20. Enter the **Prompt** text:
 ```
@@ -132,17 +132,17 @@ Write an email in the following format:
 - The body of email should be of format: "Sales order contains <Category> to be delivered to <Location>. The order will be delivered via a <size> vehicle.
 IF <distance between source address and delivery address> > 100 kms THEN include a message about potential delivery delays ELSE congratulate on being eligible for one day delivery
 ```
-![](./images/16.png)
+![](./images/EnterSystemPrompt.png)
 
 21. Click the **Save** button.
-![](./images/17.png)
+![](./images/SaveSystemPrompt.png)
 
 22. Click the **Add** prompt templates button.
-![](./images/18.png)
+![](./images/ClickAddPromptButton2.png)
 
 23. In the Add Prompt Template dialog, enter the below details:
-    - Name: **USER_PROMPT**
-    - Description: **Provide sales order item data for generating the order confirmation email**
+    - Name: `USER_PROMPT`
+    - Description: `Provide sales order item data for generating the order confirmation email`
 ![](./images/19.png)
 
 24. Enter the **Prompt** text:
@@ -155,10 +155,10 @@ Build a confirmation mail for a sales order containing {ISLM_Items}. The source 
 ![](./images/21.png)
 
 26. The added prompt should be visible in the Prompt Templates table. Click the **Save Draft** button.
-![](./images/22.png)
+![](./images/SaveDraftModel.png)
 
 27. Navigate back to Intelligent Scenario by clicking the **back** button.
-![](./images/23.png)
+![](./images/NavigateBackToDraftScenario.png)
 
 28. Scenario is now ready to be published. Click on **Publish** button. You will receive a message that Intelligent Scenario is published.
 ![](./images/24.png)
@@ -174,8 +174,8 @@ Well done, you just created your first Side-by-side Intelligent Scenario.
 Once the Intelligent Scenario is published, we need to maintain the connection for an intelligent scenario in SAP S/4 HANA with the Generative AI Hub service in BTP.
 Your service key is indicated in the cheat sheet that you received.
 
-1. Logon to **SAP GUI**. Check the username and password provided in the cheat sheet.
-2. Call up the transaction **ISLM_CONN_MAP** and Click the **Create Connection** icon.
+1. Logon to **S4H** system in **SAP GUI**. Check the username and password provided in the cheat sheet.
+2. Call up the transaction `/n ISLM_CONN_MAP` and Click the **Create Connection** icon.
 ![](./images/CreateConnection.png)
 3. Input the **Intelligent Scenario Name** and click on **Next** button.
 ![](./images/26.png)
@@ -202,17 +202,17 @@ Well done, you just **Set up the connection for Intelligent Scenario** to connec
 Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to deploy and activate the model for productive usage.
 In this section, you will use the **Intelligent Scenario Management app** to perform operations on your Intelligent Scenario.
 
-1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}.
-Input the username and password provided in the cheat sheet. Click on My Home section and choose the **Intelligent Scenario Management** app.
+1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}.
+Input the username and password provided in the cheat sheet. Click on **Intelligent Scenario Management** section and choose the **Intelligent Scenario Management** app.
 ![](./images/IntelligentScenarioManagementApp.png)
 2. Search the **Gen AI** scenario created by you and navigate to the details page by clicking the **>** icon.
 ![](./images/32.png)
 3. Navigate to details page by clicking the **>** icon
 ![](./images/33png.png)
-4. Click the **Deploy** Button.
-![](./images/34.png)
+4. Select the default training and click the **Deploy** Button.
+![](./images/ClickDeployButton.png)
 5. Click the **Deploy and Monitor** Button.
-![](./images/35.png)
+![](./images/ClickDeployAndMonitorButton.png)
 6. A new Deployment will be created in **Deployment Pending** status.
 ![](./images/36.png)
 7. Monitor the status of Deployment and check the status changes to Deployed. 
@@ -230,16 +230,16 @@ Well done, you just Used Intelligent Scenario Management app to deploy and activ
 ## 1.5	Generate Sales Order Confirmation email. 
 In this step, you will use the ABAP GUI to view the email generated using LLM model.
 
-1. Logon to backend system and execute the transaction code **/nSE38**.
+1. Logon to `S4H` system in SAP GUI and execute the transaction code `/nSE38`.
 ![](./images/SE38.png)
 
-2. Input the Report Name as **Z_SALES_ORD_CONF_###**, where ### is your attendee id mentioned in the cheat sheet. Click the **Create** button.
+2. Input the Report Name as `Z_SALES_ORD_CONF_###`, where ### is your attendee id mentioned in the cheat sheet. Click the **Create** button.
 ![](./images/40.png)
 
 3. In the dialog input the below details:
-    - Title: **Generate confirmation email for sales order**
-    - Select the **Type** as **Executable program**.
-    - Change the **Status** to **Test program**
+    - Title: `Generate confirmation email for sales order`
+    - Select the **Type** as `Executable program`.
+    - Change the **Status** to `Test program`.
 ![](./images/41.png)
 
 4. Click the **Save** button.
