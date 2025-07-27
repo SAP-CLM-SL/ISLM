@@ -20,6 +20,8 @@ theme:
     - content.code.copy
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.footer
+
 markdown_extensions:
   - codehilite
   - admonition
@@ -34,11 +36,10 @@ markdown_extensions:
   - md_in_html
   - tables
   - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
 nav:
-  - Getting Started:
-      - GenAI Mandatory: "Gettingstarted/genaimandatory.md"
-      - APL Optional: "Gettingstarted/aploptional.md"
-      - DAR Optional: "Gettingstarted/daroptional.md"
+  - Getting Started: "Gettingstarted/readme.md"
   - Gen AI: "ISLM_with_SAPGenAI/README.md"
   - APL: "ISLM_with_HANAML/README.md"
   - DAR: "ISLM_with_SAPAIServices_BTP/README.md"
@@ -48,3 +49,9 @@ nav:
 
   - Contact us: "Contactus/readme.md"
   - Feedback: "feedback/readme.md"
+
+extra:
+  generator: false # Hides "Made with MkDocs"
+  footer:
+    license: |
+      © CLM Day 2025 Intelligent Scenario Lifecycle Management. All rights reserved.
