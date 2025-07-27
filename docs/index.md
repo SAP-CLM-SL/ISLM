@@ -7,7 +7,7 @@ ISLM can be leveraged to perform lifecycle operations, including (scheduled) (re
 An application developer for SAP S/4HANA from SAP or customer/partner side, is mainly responsible for integrating the AI scenarios into the respective application. ISLM facilitates embedding AI into business application with a low code approach.
 
 By the end of this workshop, participants will gain a comprehensive understanding of how ISLM empowers organizations to smoothly transition from data science experimentation to real-world AI application development, all within the SAP S/4HANA environment.
-![](./images/Overview.png)
+![](./ISLM_with_SAPGenAI/images/role_components.jpg)
 
 - **Business User:** The end user who interacts with the business application and uses the predictions from machine learning for the business purpose.
 - **Business Administrator:** A domain expert or analytics specialist, who can perform model trainings based on business context, evaluate model quality, and can activate a model for production usage.
