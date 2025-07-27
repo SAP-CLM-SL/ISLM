@@ -3,8 +3,8 @@
 We'd love to hear your thoughts!
 
 📋 **Please fill out our feedback form:**  
-👉 [Click here to open the form](https://forms.gle/your-form-id)
+👉 [Click here to open the form](https://forms.gle/5STqLupYrc34RAfB9)
 
 📱 **Scan the QR code below:**
 
-![Scan to give feedback](images/feedback_qr.png)
+![Scan to give feedback](qrcode.png)

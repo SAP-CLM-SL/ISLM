@@ -54,6 +54,4 @@ nav:
 
 extra:
   generator: false # Hides "Made with MkDocs"
-  footer:
-    license: |
-      © CLM Day 2025 Intelligent Scenario Lifecycle Management. All rights reserved.
+
