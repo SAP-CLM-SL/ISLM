@@ -39,7 +39,9 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 nav:
-  - Getting Started: "Gettingstarted/readme.md"
+  - Getting Started:
+      - Welcome: "Gettingstarted/welcome.md"
+      - Tutorials: "Gettingstarted/tutorials.md"
   - Gen AI: "ISLM_with_SAPGenAI/README.md"
   - APL: "ISLM_with_HANAML/README.md"
   - DAR: "ISLM_with_SAPAIServices_BTP/README.md"

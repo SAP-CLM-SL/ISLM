@@ -11,4 +11,4 @@ Predict the number of first class seats occupied in a flight.
 !!! info "DAR Exercise is Optional"
 Predict the plane type of an aircraft.
 
-👉 [Exercise 3](/docs/ISLM/ISLM_with_SAPAIServices_BTP/#DAR-Optional)
+👉 [Exercise 3](https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPAIServices_BTP/)
