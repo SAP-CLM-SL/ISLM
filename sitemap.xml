@@ -2,54 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sap-clm-sl.github.io/ISLM/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://sap-clm-sl.github.io/ISLM/Contactus/readme/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
-         <loc>https://sap-clm-sl.github.io/ISLM/Gettingstarted/aploptional/</loc>
-         <lastmod>2025-07-26</lastmod>
-    </url>
-    <url>
-         <loc>https://sap-clm-sl.github.io/ISLM/Gettingstarted/daroptional/</loc>
-         <lastmod>2025-07-26</lastmod>
-    </url>
-    <url>
-         <loc>https://sap-clm-sl.github.io/ISLM/Gettingstarted/genaimandatory/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <loc>https://sap-clm-sl.github.io/ISLM/Gettingstarted/readme/</loc>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://sap-clm-sl.github.io/ISLM/ISLM_with_HANAML/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPAIServices_BTP/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPGenAI/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPGenAI/images/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://sap-clm-sl.github.io/ISLM/community/readme/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://sap-clm-sl.github.io/ISLM/community/videos/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://sap-clm-sl.github.io/ISLM/feedback/readme/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
     <url>
          <loc>https://sap-clm-sl.github.io/ISLM/images/</loc>
-         <lastmod>2025-07-26</lastmod>
+         <lastmod>2025-07-27</lastmod>
     </url>
 </urlset>
