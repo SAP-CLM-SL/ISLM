@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     name: Build Documentation
-    runs-on: [self-hosted]
+
     steps:
       - name: Checkout Main
         uses: actions/checkout@v2

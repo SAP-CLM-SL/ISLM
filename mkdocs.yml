@@ -40,7 +40,7 @@ markdown_extensions:
       alternate_style: true
 nav:
   - Getting Started:
-      - Welcome: "Gettingstarted/welcome.md"
+      - Welcome: "index.md"
       - Tutorials: "Gettingstarted/tutorials.md"
   - Gen AI: "ISLM_with_SAPGenAI/README.md"
   - APL: "ISLM_with_HANAML/README.md"
