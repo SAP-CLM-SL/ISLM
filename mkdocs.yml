@@ -43,7 +43,13 @@ nav:
   - Getting Started:
       - Welcome: "index.md"
       - Tutorials: "Gettingstarted/tutorials.md"
-  - Gen AI: "ISLM_with_SAPGenAI/README.md"
+  - Gen AI:
+      - ISLM Overview: "ISLM_with_SAPGenAI/overview.md"
+      - Exercise Overview: "ISLM_with_SAPGenAI/exerciseoverview.md"
+      - Create Intelligent Scenario: "ISLM_with_SAPGenAI/createandpublish.md"
+      - Connect to SAP BTP: "ISLM_with_SAPGenAI/connection.md"
+      - ML Operations: "ISLM_with_SAPGenAI/mloperations.md"
+      - Inference: "ISLM_with_SAPGenAI/generateemail.md"
   - APL:
       - Overview: "ISLM_with_HANAML/overview.md"
       - Create Intelligent Scenario: "ISLM_with_HANAML/createandpublish.md"
