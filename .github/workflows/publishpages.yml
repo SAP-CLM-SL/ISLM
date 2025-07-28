@@ -34,5 +34,5 @@ jobs:
         run: |
           curl -s -X POST \
           -H "Accept: application/vnd.github.switcheroo-preview+json" -H "Authorization: token ${{ secrets.PERFMONBOT_USER_TOKEN }}" \
-          https://github.tools.sap/api/v3/repos/${{github.repository}}/pages \
+          https://sap-clm-sl.github.io/api/v3/repos/${{github.repository}}/pages \
           -d '{"source":{"branch":"gh-pages","path":"/"}}'
