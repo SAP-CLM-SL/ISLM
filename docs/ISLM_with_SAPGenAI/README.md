@@ -1,7 +1,6 @@
 # Creating Custom Gen AI Use Cases in SAP S/4HANA
 
-# Workshop Background and Overview
-## ISLM Overview 
+## 1. ISLM Overview 
 **Intelligent Scenario Lifecycle Management (ISLM)** is a key enabler for integrating AI into SAP S/4HANA. With its latest enhancements, ISLM now facilitates the adoption of generative AI (GenAI), providing customers and partners with a centralized framework to manage both SAP-delivered and custom AI use cases. This allows organizations to transform core business processes by integrating large language models (LLMs) seamlessly within their business applications.
 
 
@@ -33,22 +32,20 @@ Workshop aims to provide a deep dive into Intelligent Scenario Lifecycle Managem
 - **ISLM and ABAP AI SDK Integration:** ABAP AI SDK and Intelligent Scenario Lifecycle Management serve as integration components between business applications and large language models. Using  ABAP AI SDK powered by Intelligent Scenario Lifecycle Management (ISLM), you can easily embed generative AI capabilities into your custom ABAP based applications. ISLM and  ABAP AI SDK offer a low-code approach within ABAP stack, enabling seamless integration of generative AI models into your business applications. With the combined experience of ISLM and the ABAP AI SDK, customers can develop and deploy generative AI-driven use cases directly within their SAP S/4HANA environment.
 
 
-# [Exercise for Hands-on] Scenario storyline:  Generate an order confirmation email based on Sales data
-
-## 1.1	Overview: Sales Order summary
-In this exercise, we are using gpt-4o-mini large language model (LLM) to generate an order confirmation email for Sales Order. As an ABAP Developer, you will use ISLM framework to create a GenAI use case in ABAP stack.
+## 2. Exercise Overview: Generate an order confirmation email based on Sales data
+In this exercise, we are using **gpt-4o-mini** large language model (LLM) to generate an order confirmation email for Sales Order. As an ABAP Developer, you will use ISLM framework to create a GenAI use case in ABAP stack.
 
 This exercise includes the following steps:
-1. Create a new Intelligent Scenario
-2. Set up the connection for Intelligent Scenario to connect to BTP based ML service.
-3. Use Intelligent Scenario Management app to deploy and activate the model.
-4. Generate summary of Sales data using LLM. 
+        1. Create a new Intelligent Scenario
+        2. Set up the connection for Intelligent Scenario to connect to BTP based ML service.
+        3. Use Intelligent Scenario Management app to deploy and activate the model.
+        4. Generate summary of Sales data using LLM. 
 
 ![](./images/integrate.jpg)
 
 
 
-## 1.2	Create Intelligent Scenario
+## 3. Create Intelligent Scenario
 The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app.
 In this step, you’ll create a new intelligent scenario to generate the order confirmation email for Sales Order using LLM model.
 
@@ -162,7 +159,7 @@ Well done, you just created your first Side-by-side Intelligent Scenario.
 
 
 
-## 1.3	Connection setup
+## 4. Connection setup
 Once the Intelligent Scenario is published, we need to maintain the connection for an intelligent scenario in SAP S/4 HANA with the Generative AI Hub service in BTP.
 Your service key is indicated in the cheat sheet that you received.
 
@@ -190,7 +187,7 @@ Well done, you just **Set up the connection for Intelligent Scenario** to connec
 
 
 
-## 1.4	Operate the Intelligent Scenario
+## 5. Operate the Intelligent Scenario
 Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to deploy and activate the model for productive usage.
 In this section, you will use the **Intelligent Scenario Management app** to perform operations on your Intelligent Scenario.
 
@@ -219,7 +216,7 @@ Well done, you just Used Intelligent Scenario Management app to deploy and activ
 
 
 
-## 1.5	Generate Sales Order Confirmation email. 
+## 6. Generate Sales Order Confirmation email. 
 In this step, you will use the ABAP GUI to view the email generated using LLM model.
 
 1. Logon to `S4H` system in SAP GUI and execute the transaction code `/nSE38`.
