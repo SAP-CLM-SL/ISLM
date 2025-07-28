@@ -1,8 +1,10 @@
-# Predict the plane type of an aircraft using Data Attribute Recommendation
+# Scenario storyline: Predict the plane type of an aircraft using Data Attribute Recommendation
+
+## 1. Overview
 
 In this exercise, we are going to predict the plane type of an aircraft using SAP BTP based ML service Data Attribute Recommendation. We will use the Intelligent Scenario Lifecycle Management (ISLM) framework to create and operate the ML use case. 
 
-Data Attribute Recommendation uses machine learning to predict and classify data records.<br>
+Data Attribute Recommendation uses machine learning to predict and classify data records.
 With Data Attribute Recommendation you can
   -	Automate and speed up data management processes
   -	Reduce errors and manual efforts in data maintenance
@@ -14,94 +16,88 @@ This exercise includes the following steps:
 3. Use Intelligent Scenario Management app to train, view model quality, deploy and activate the model.
 4. View the inference result returned by the model in an ABAP report.
 
-## 1. Create and publish Intelligent Scenario
+## 2. Create and publish Intelligent Scenario
 
-The Intelligent Scenarios  app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app. In this step, you’ll create a new intelligent scenario to predict the plane type using SAP BTP based ML service Data Attribute Recommendation. 
+The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app. In this step, you’ll create a new intelligent scenario to predict the plane type using SAP BTP based ML service Data Attribute Recommendation. 
 
-1. Create a Prediction Class which defines the behavior of the scenario.<br>
+Create a Prediction Class which defines the behavior of the scenario. Prediction class has methods to specify Inference type and ML Template for Data Attribute Recommendation. For this use case, we will use generic template which make use of Classification algorithm.
 
-   Prediction class has methods to specify Inference type and ML Template for Data Attribute Recommendation. 
-   For this use case, we will use generic template which make use of Classification algorithm.<br>
-   
-   Open **SAP Logon** and logon to system **S4H 100** (You can find the credentials written in the cheatsheet)<br>
-   Open transaction **/nse24** and search for the ABAP class **ZCL_PRED_PLANETYPE_000**. 
-   ![](./images/1.png)
+1. Open **SAP Logon** and logon to **S4H** system. Check the username and password provided in the cheat sheet.
+2. Open transaction `/nse24` and search for the ABAP class `ZCL_PRED_PLANETYPE_000`.
+![](./images/1.png)
 
-2. Click on **Copy** 
-   ![](./images/2.png)
+3. Click the **Copy** button.
+![](./images/2.png)
 
-3. Provide the unique name in the Copy to field.<br>  
-   Enter a unique name such as **ZCL_PRED_PLANETYPE_###**, where ### is your attendee id. <br> **Please ask moderator to know your attendee id**. <br>
-   Click on tick icon.
-   ![](./images/3.png)
+4. Provide the unique name in the **Copy to** field. Enter a unique name such as `ZCL_PRED_PLANETYPE_###`, where ### is your attendee id. And click the **tick** icon.
+![](./images/3.png)
 
-4. Click on **Local Object**<br>
-   ![](./images/4.png)
+5. Click the **Local Object** button.
+![](./images/4.png)
 
-5. Class is created in Inactive status. Click on **Display**
-   ![](./images/5.png)
+6. The class is created in **Inactive** status. Click the **Display** button.
+![](./images/5.png)
 
-6. Click on **Activate** icon
-   ![](./images/6.png)
+7. Click the **Activate** icon.
+![](./images/6.png)
 
-7. Click on tick icon
-   ![](./images/7.png)
+8. Click the **tick** icon.
+![](./images/7.png)
 
-8. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario** app.
-   ![](./images/8.png)
+9. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario** app.
+![](./images/8.png)
 
-10. Click the **Create** button and choose->**Side-by Side**.
-   This approach is commonly known as '**side-by-side**,' where the ML provider and the business application operate in separate stacks.
-   ![](./images/9.png)
+10. Click the **Create** button and choose **Side-by Side**. <br/> This approach is commonly known as '**side-by-side**,' where the ML provider and the business application operate in separate stacks.
+![](./images/9.png)
 
 11. Provide the required information in the screen:
-  -	**Intelligent Scenario Name**: Enter a unique name starting such as `Z_PRED_PLANETYPE_###` where **###** is your attendee id.
-  -	**Intelligent Scenario Description**: Enter a description for the Intelligent Scenario.
-  -	**Intelligent Scenario Type** as **Data Attribute Recommendation**
-  -	Ensure the **Data Management checkbox** is selected
-   ![](./images/create1.png)
-   ![](./images/create2.png)
+    - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as `Z_PRED_PLANETYPE_###`, where ### is your attendee id mentioned in the cheat sheet.
+    - **Intelligent Scenario Description**: `CLM Day Hands on 2025`
+    - **Intelligent Scenario Type**: `Data Attribute Recommendation`
+    - Ensure the `Data Management checkbox` is selected
+![](./images/create1.png)
 
-12. Click on value help for **Prediction Class** 
-   ![](./images/create3.png)
+12. Ensure the **Data Management checkbox** is selected. ![](./images/create2.png)
 
-13. Click on **OK** in the information box
-   ![](./images/create4.png)
+13. Click the value help for **Prediction Class**.
+![](./images/create3.png)
 
-14. Select the prediction class created by you in Step 3
-   ![](./images/create5.png)
+14. Click the **OK** button in the information box.
+![](./images/create4.png)
 
-15. Click on the Add Model button. The Add DAR Model dialog will pop up. In the General Information section, provide a Name starting with Z and Description for the model. In the Data section, provide the below details. Training Dataset : `Z_SFLIGHT_DATA`.
-   ![](./images/create15.png)
+15. Click the **Add Model** button. The Add DAR Model dialog will pop up. In the General Information section, provide the following details:
+    - **Name**: `Z_PRED_PLANETYPE_MOD`
+    - **Description**: `Model for CLM Day 2025 - Hands on`
+    - **Training Dataset**: `Z_SFLIGHT_DATA`
+![](./images/create15.png)
 
-16. Click on value help for the Inputs field
-   ![](./images/create16.png)
+16. Click the value help for the **Inputs** field.
+![](./images/create16.png)
 
-17. The Select Model Inputs will pop up. Select all the Inputs expect CARRID, CONNID, PLANETYPE. (Tip: Use the Select All option and uncheck the CARRID, CONNID, PLANETYPE)
-   ![](./images/create17.png)
+17. The **Select Model Inputs** dialog will pop up. Select all the Inputs expect `CARRID`, `CONNID`, `PLANETYPE`. <br/> **Tip**: Use the Select All option and uncheck the CARRID, CONNID, PLANETYPE.
+![](./images/create17.png)
 
-18. Select the Data Management Type as Category/Number. Then, click on Select button.
-   ![](./images/create18.png)
+18. Select the relevant **Machine Learning Provider Type** as `Category` or `Number`, as displayed in the screnshot. And click the **Select** button.
+![](./images/create18.png)
 
-19. Click on Target value help
-   ![](./images/create19.png)
+19. Click the value help for the **Targets** field.
+![](./images/create19.png)
 
-20. The Select Model Targets will pop up. Select PLANETYPE and the corresponding Data Management Type as CATEGORY. Click on Select button.
-   ![](./images/create20.png)
+20. The **Select Model Targets** dialog will pop up. Select `PLANETYPE` and the corresponding **Machine Learning Provider Type** as `CATEGORY`. And click the **Select** button.
+![](./images/create20.png)
 
-21. Click on Add button.
-   ![](./images/create21.png)
+21. Click the **Add** button.
+![](./images/create21.png)
 
-22. The scenario is now created in Draft Status. You can view the Input and Output fields used to train the model in the Input and Outputs Tabs respectively. Also Scenario is now ready to be published. Click on **Publish** button. You will receive a message that Intelligent Scenario is published.
-   ![](./images/create6.png)
+22. The scenario is now created in **Draft** Status. You can view the input and output fields used to train the model in the **Input** and **Output** Tabs respectively. Also Scenario is now ready to be published.<br/> Click on **Publish** button. You will receive a message that Intelligent Scenario is published.
+![](./images/create6.png)
 
 23. Search the Intelligent Scenario created by you by entering the **Intelligent Scenario name** and **Status = Published**. 
-   ![](./images/create7.png)
+![](./images/create7.png)
 
-### Well done, you just created your first Side-by-side Intelligent Scenario.
-<br>
+**Well done, you just created your first Side-by-side Intelligent Scenario.**
 
-## 2. Set up the connection for Intelligent Scenario to connect to BTP based ML service
+## 3. Set up the connection for Intelligent Scenario to connect to BTP based ML service
 
 Once the Intelligent Scenario is published, we need to maintain the connection for the intelligent scenario in SAP S/4 HANA with the Data Attribute Recommendation service in BTP. This service has already been provisioned in BTP and  **service key** is available in the Desktop folder. 
 
@@ -138,7 +134,7 @@ Once the Intelligent Scenario is published, we need to maintain the connection f
 ### Well done, you just Set up the connection for Intelligent Scenario to connect to BTP based ML service.
 <br>
 
-## 3. Use Intelligent Scenario Management app to train, view model quality, deploy and activate the model
+## 4. Use Intelligent Scenario Management app to train, view model quality, deploy and activate the model
 Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to train, monitor the model quality, deploy, and activate the model for productive usage.
 In this section, you will use the Intelligent Scenario Management app to perform ML operations. 
 
@@ -214,7 +210,7 @@ In this section, you will use the Intelligent Scenario Management app to perform
 <br>
     
    
-## 4. View the inference result returned by the model in an ABAP report
+## 5. View the inference result returned by the model in an ABAP report
   In this step, you will use the ABAP GUI to view the inference result from the trained model.
 
    1. Open transaction **/nSE38** in the SAP GUI
@@ -310,6 +306,5 @@ In this section, you will use the Intelligent Scenario Management app to perform
    ![](./images/60.png)
 
 ### Well done, you just Viewed the inference result returned by the model in an ABAP report.
-<br>
 
 ## 🎉 Congratulations! You have successfully completed the Exercise!🎉
