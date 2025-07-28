@@ -1,6 +1,6 @@
 # Scenario storyline: Predict the plane type of an aircraft using Data Attribute Recommendation
 
-## Overview
+# Overview
 
 In this exercise, we are going to predict the plane type of an aircraft using SAP BTP based ML service Data Attribute Recommendation. We will use the Intelligent Scenario Lifecycle Management (ISLM) framework to create and operate the ML use case.
 

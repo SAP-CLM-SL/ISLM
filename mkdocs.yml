@@ -44,12 +44,17 @@ nav:
       - Welcome: "index.md"
       - Tutorials: "Gettingstarted/tutorials.md"
   - Gen AI: "ISLM_with_SAPGenAI/README.md"
-  - APL: "ISLM_with_HANAML/README.md"
+  - APL:
+      - Overview: "ISLM_with_HANAML/overview.md"
+      - Create Intelligent Scenario: "ISLM_with_HANAML/createandpublish.md"
+      - ML Operations: "ISLM_with_HANAML/mloperations.md"
+      - Inference: "ISLM_with_HANAML/inference.md"
+      - ScheduleTraining: "ISLM_with_HANAML/scheduletraining.md"
   - DAR:
       - Overview: "ISLM_with_SAPAIServices_BTP/overview.md"
-      - Create Intelligent Scenario: "ISLM_with_SAPAIServices_BTP/create_intelligent_scenario.md"
-      - Connect to SAP BTP: "ISLM_with_SAPAIServices_BTP/connect_to_sap_btp.md"
-      - ML Operations: "ISLM_with_SAPAIServices_BTP/ml_operations.md"
+      - Create Intelligent Scenario: "ISLM_with_SAPAIServices_BTP/createandpublish.md"
+      - Connect to SAP BTP: "ISLM_with_SAPAIServices_BTP/connection.md"
+      - ML Operations: "ISLM_with_SAPAIServices_BTP/mloperations.md"
       - Inference: "ISLM_with_SAPAIServices_BTP/inference.md"
   - Community:
       - Blogs: "community/readme.md"
