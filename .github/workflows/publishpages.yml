@@ -23,7 +23,8 @@ jobs:
           git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
           git fetch
           git branch --remote
-          git push origin --delete gh-pages
+
+          mkdocs gh-deploy --force --clean
       - name: Clean Build
         run: |
           pip install mkdocs-material
