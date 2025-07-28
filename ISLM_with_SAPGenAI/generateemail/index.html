@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPGenAI/">
+        <link rel="canonical" href="https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPGenAI/generateemail/">
       
       
-        <link rel="prev" href="../Gettingstarted/tutorials/">
+        <link rel="prev" href="../mloperations/">
       
       
-        <link rel="next" href="../ISLM_with_HANAML/overview/">
+        <link rel="next" href="../../ISLM_with_HANAML/overview/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>Gen AI - CLM Day 2025 - ISLM Handson</title>
+        <title>Inference - CLM Day 2025 - ISLM Handson</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-custom-gen-ai-use-cases-in-sap-s4hana" class="md-skip">
+        <a href="#generate-sales-order-confirmation-email" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +90,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="CLM Day 2025 - ISLM Handson" class="md-header__button md-logo" aria-label="CLM Day 2025 - ISLM Handson" data-md-component="logo">
+    <a href="../.." title="CLM Day 2025 - ISLM Handson" class="md-header__button md-logo" aria-label="CLM Day 2025 - ISLM Handson" data-md-component="logo">
       
-  <img src="../assets/clm-day-banner.png" alt="logo">
+  <img src="../../assets/clm-day-banner.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gen AI
+              Inference
             
           </span>
         </div>
@@ -204,7 +204,7 @@
     
     
       <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   
@@ -223,17 +223,18 @@
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
   
   Gen AI
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -245,7 +246,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../ISLM_with_HANAML/overview/" class="md-tabs__link">
+        <a href="../../ISLM_with_HANAML/overview/" class="md-tabs__link">
           
   
   
@@ -265,7 +266,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../ISLM_with_SAPAIServices_BTP/overview/" class="md-tabs__link">
+        <a href="../../ISLM_with_SAPAIServices_BTP/overview/" class="md-tabs__link">
           
   
   
@@ -285,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../community/readme/" class="md-tabs__link">
+        <a href="../../community/readme/" class="md-tabs__link">
           
   
   
@@ -303,7 +304,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Contactus/readme/" class="md-tabs__link">
+      <a href="../../Contactus/readme/" class="md-tabs__link">
         
   
   
@@ -322,7 +323,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../feedback/readme/" class="md-tabs__link">
+      <a href="../../feedback/readme/" class="md-tabs__link">
         
   
   
@@ -363,9 +364,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="CLM Day 2025 - ISLM Handson" class="md-nav__button md-logo" aria-label="CLM Day 2025 - ISLM Handson" data-md-component="logo">
+    <a href="../.." title="CLM Day 2025 - ISLM Handson" class="md-nav__button md-logo" aria-label="CLM Day 2025 - ISLM Handson" data-md-component="logo">
       
-  <img src="../assets/clm-day-banner.png" alt="logo">
+  <img src="../../assets/clm-day-banner.png" alt="logo">
 
     </a>
     CLM Day 2025 - ISLM Handson
@@ -421,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -444,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Gettingstarted/tutorials/" class="md-nav__link">
+      <a href="../../Gettingstarted/tutorials/" class="md-nav__link">
         
   
   
@@ -475,6 +476,167 @@
   
   
   
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gen AI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Gen AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ISLM Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exerciseoverview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exercise Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../createandpublish/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Intelligent Scenario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Connect to SAP BTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mloperations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ML Operations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -483,58 +645,25 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Gen AI
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Gen AI
+    Inference
     
   </span>
   
 
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-islm-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. ISLM Overview
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -588,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ISLM_with_HANAML/overview/" class="md-nav__link">
+      <a href="../../ISLM_with_HANAML/overview/" class="md-nav__link">
         
   
   
@@ -611,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ISLM_with_HANAML/createandpublish/" class="md-nav__link">
+      <a href="../../ISLM_with_HANAML/createandpublish/" class="md-nav__link">
         
   
   
@@ -634,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ISLM_with_HANAML/mloperations/" class="md-nav__link">
+      <a href="../../ISLM_with_HANAML/mloperations/" class="md-nav__link">
         
   
   
@@ -657,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ISLM_with_HANAML/inference/" class="md-nav__link">
+      <a href="../../ISLM_with_HANAML/inference/" class="md-nav__link">
         
   
   
@@ -680,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ISLM_with_HANAML/scheduletraining/" class="md-nav__link">
+      <a href="../../ISLM_with_HANAML/scheduletraining/" class="md-nav__link">
         
   
   
@@ -751,7 +880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ISLM_with_SAPAIServices_BTP/overview/" class="md-nav__link">
+      <a href="../../ISLM_with_SAPAIServices_BTP/overview/" class="md-nav__link">
         
   
   
@@ -774,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ISLM_with_SAPAIServices_BTP/createandpublish/" class="md-nav__link">
+      <a href="../../ISLM_with_SAPAIServices_BTP/createandpublish/" class="md-nav__link">
         
   
   
@@ -797,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ISLM_with_SAPAIServices_BTP/connection/" class="md-nav__link">
+      <a href="../../ISLM_with_SAPAIServices_BTP/connection/" class="md-nav__link">
         
   
   
@@ -820,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ISLM_with_SAPAIServices_BTP/mloperations/" class="md-nav__link">
+      <a href="../../ISLM_with_SAPAIServices_BTP/mloperations/" class="md-nav__link">
         
   
   
@@ -843,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ISLM_with_SAPAIServices_BTP/inference/" class="md-nav__link">
+      <a href="../../ISLM_with_SAPAIServices_BTP/inference/" class="md-nav__link">
         
   
   
@@ -914,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../community/readme/" class="md-nav__link">
+      <a href="../../community/readme/" class="md-nav__link">
         
   
   
@@ -937,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../community/videos/" class="md-nav__link">
+      <a href="../../community/videos/" class="md-nav__link">
         
   
   
@@ -967,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contactus/readme/" class="md-nav__link">
+      <a href="../../Contactus/readme/" class="md-nav__link">
         
   
   
@@ -989,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../feedback/readme/" class="md-nav__link">
+      <a href="../../feedback/readme/" class="md-nav__link">
         
   
   
@@ -1024,23 +1153,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-islm-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. ISLM Overview
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1055,282 +1167,33 @@
 
 
 
-<h1 id="creating-custom-gen-ai-use-cases-in-sap-s4hana">Creating Custom Gen AI Use Cases in SAP S/4HANA</h1>
-<h2 id="1-islm-overview">1. ISLM Overview</h2>
-<p><strong>Intelligent Scenario Lifecycle Management (ISLM)</strong> is a key enabler for integrating AI into SAP S/4HANA. With its latest enhancements, ISLM now facilitates the adoption of generative AI (GenAI), providing customers and partners with a centralized framework to manage both SAP-delivered and custom AI use cases. This allows organizations to transform core business processes by integrating large language models (LLMs) seamlessly within their business applications.</p>
-<p><img alt="" src="images/islm_arch.jpg" /></p>
-<p>Using the <strong>ABAP AI SDK powered by Intelligent Scenario Lifecycle Management</strong>, you can enhance your own custom ABAP-based applications with integrated generative AI features.
-ISLM provides an auto enablement of generative AI-based scenarios and the connectivity management to access large language models. ISLM also provides the <strong>Intelligent Scenario</strong> and the <strong>Intelligent Scenario Model</strong>, transportable objects that contain all information to ship, instantiate, and run a solution based on generative AI functionality, including the information about the selected large language model and its version.
-The ABAP AI SDK is a reuse library in an ABAP system that provides access to generative AI functionality via ISLM.</p>
-<h1 id="scope-of-the-workshop">Scope of the Workshop</h1>
-<p>Workshop aims to provide a deep dive into Intelligent Scenario Lifecycle Management (ISLM), focusing on its role as a catalyst for efficient AI (Artificial Intelligence) integration within SAP S/4HANA. The scope of this workshop includes:</p>
-<h3 id="introduction-to-islm">Introduction to ISLM</h3>
-<ul>
-<li>Understanding the fundamentals of ISLM and its significance in the AI ecosystem.</li>
-</ul>
-<h3 id="islm-integration">ISLM Integration</h3>
-<ul>
-<li>Learning how ISLM standardizes the integration of intelligent scenarios within SAP S/4HANA.</li>
-</ul>
-<h3 id="embedding-ai-into-applications">Embedding AI into applications</h3>
-<ul>
-<li>Understanding how application developers leverage ISLM for creating, registering, publishing, and managing scenarios.</li>
-</ul>
-<h3 id="lifecycle-streamlining">Lifecycle Streamlining</h3>
-<ul>
-<li>Discovering how ISLM simplifies and streamlines essential lifecycle operations, including training, deployment and activation.
-<strong>Note: Data science and AI Content development is out of the scope of this session. In this workshop, we will explore how to develop, operate and integrate Generative AI capabilities in SAP S/4HANA using ISLM.</strong></li>
-</ul>
-<h1 id="islm-key-capabilities">ISLM Key Capabilities</h1>
-<ul>
-<li><strong>Centralized AI Management:</strong>  ISLM offers an end-to-end framework to manage both pre-delivered and custom AI scenarios in SAP S/4HANA. It enables organizations to integrate and operationalize AI use cases efficiently, ensuring seamless lifecycle management. </li>
-<li><strong>Integration with Large Language Models (LLMs):</strong> ISLM allows customers and partners to:<ul>
-<li>Develop custom generative AI based use cases tailored to their business needs.</li>
-<li>Integrate business applications with LLMs for enhanced automation and decision-making.</li>
-<li>Enable prompt templating capabilities for effective GenAI model usage.</li>
-</ul>
-</li>
-<li><strong>Connectivity to GenAI Hub:</strong> ISLM enables seamless connectivity to SAP’s Generative AI Hub.</li>
-<li><strong>ISLM and ABAP AI SDK Integration:</strong> ABAP AI SDK and Intelligent Scenario Lifecycle Management serve as integration components between business applications and large language models. Using  ABAP AI SDK powered by Intelligent Scenario Lifecycle Management (ISLM), you can easily embed generative AI capabilities into your custom ABAP based applications. ISLM and  ABAP AI SDK offer a low-code approach within ABAP stack, enabling seamless integration of generative AI models into your business applications. With the combined experience of ISLM and the ABAP AI SDK, customers can develop and deploy generative AI-driven use cases directly within their SAP S/4HANA environment.</li>
-</ul>
-<h2 id="2-exercise-overview-generate-an-order-confirmation-email-based-on-sales-data">2. Exercise Overview: Generate an order confirmation email based on Sales data</h2>
-<p>In this exercise, we are using <strong>gpt-4o-mini</strong> large language model (LLM) to generate an order confirmation email for Sales Order. As an ABAP Developer, you will use ISLM framework to create a GenAI use case in ABAP stack.</p>
-<p>This exercise includes the following steps:
-        1. Create a new Intelligent Scenario
-        2. Set up the connection for Intelligent Scenario to connect to BTP based ML service.
-        3. Use Intelligent Scenario Management app to deploy and activate the model.
-        4. Generate summary of Sales data using LLM. </p>
-<p><img alt="" src="images/integrate.jpg" /></p>
-<h2 id="3-create-intelligent-scenario">3. Create Intelligent Scenario</h2>
-<p>The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app.
-In this step, you’ll create a new intelligent scenario to generate the order confirmation email for Sales Order using LLM model.</p>
-<ol>
-<li>Open <strong>SAP Logon</strong> and logon to <strong>S4H</strong> system. Check the username and password provided in the cheat sheet.</li>
-<li>Create a Prediction Class which defines the behavior of the scenario. Prediction class has methods to specify Inference type and metadata like end point URI for LLM Model.
-Open transaction <code>/nse24</code> and search for the class <code>ZCL_SOC_EMAIL_CONFIRMATION</code>
-<img alt="" src="images/1.png" /></li>
-<li>Click the <strong>Copy</strong> button.
-<img alt="" src="images/2.png" /></li>
-<li>Provide the unique name in the <strong>Copy to</strong> field. Enter a unique name starting with <code>ZCL</code>, such as <code>ZCL_SLS_ORD_CONF_###</code>, where ### is your attendee id mentioned in the cheat sheet.
-And click the <strong>tick icon</strong>.
-<img alt="" src="images/3.png" /></li>
-<li>Click the <strong>Local Object</strong> button.
-<img alt="" src="images/4.png" /></li>
-<li>The class is created in <strong>Inactive</strong> status. Click the <strong>Display</strong> button.
-<img alt="" src="images/5.png" /></li>
-<li>
-<p>View the following methods of the prediction class.</p>
-<ul>
-<li><strong>IF_ISLM_INTS~GET_INFERENCE_TYPE</strong> - Using this method, specify the inference type that supports this intelligent scenario.</li>
-<li><strong>IF_ISLM_INTS_SBS_DAR~GET_SERVEFLOW_ENDPOINT_URI</strong> - Using this method, specify the end point URI of the LLM Model.</li>
-</ul>
-</li>
-<li>
-<p>Click the <strong>Activate</strong> icon.
-<img alt="" src="images/6.png" /></p>
-</li>
-<li>Click the <strong>tick</strong> icon.
-<img alt="" src="images/7.png" /></li>
-<li>Open the Fiori Launchpad by clicking <a href="https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>.
-Input the username and password provided in the cheat sheet. Click on <strong>Intelligent Scenario Management</strong> section and choose the <strong>Intelligent Scenarios</strong> app.
-<img alt="" src="images/IntelligentScenariosApp.png" /></li>
-<li>Click the <strong>Create</strong> button and choose <strong>Side-by Side</strong>.
-<img alt="" src="images/CreateSBS.png" /></li>
-<li>
-<p>Provide the required information in the screen:</p>
-<ul>
-<li><strong>Intelligent Scenario Name</strong>: Enter a unique name starting with Z, such as <code>Z_SLS_ORD_CONF_###</code>, where ### is your attendee id mentioned in the cheat sheet.</li>
-<li><strong>Intelligent Scenario Description</strong>: <code>Generate sales order confirmation email</code></li>
-<li><strong>Intelligent Scenario Type</strong>: <code>Generative AI</code>
- <img alt="" src="images/8.png" /></li>
-</ul>
-</li>
-<li>
-<p>Select <strong>Prediction Class</strong> from value help.
-<img alt="" src="images/9.png" /></p>
-</li>
-<li>
-<p>Select the <strong>prediction class</strong> created by you in the previous section.
-<img alt="" src="images/10.png" /></p>
-</li>
-<li>
-<p>Click the <strong>Add Model</strong> button.
-<img alt="" src="images/11.png" /></p>
-</li>
-<li>
-<p>The Add Generative AI Model screen will pop up. Enter the below details:</p>
-<ul>
-<li>Name: <code>Z_SLS_ORD_CONF_MDL</code></li>
-<li>Description: <code>LLM Model for generating SO email</code></li>
-<li>Executable ID: <code>azure-openai</code></li>
-<li>Large Language Model Name: <code>gpt-4o-mini</code>
-<img alt="" src="images/add_model.png" /></li>
-</ul>
-</li>
-<li>
-<p>Click the <strong>Add</strong> button.
-<img alt="" src="images/ClickAddButtonInAddGenAIModelDialog.png" /></p>
-</li>
-<li>
-<p>Click the <strong>Add</strong> prompt templates button.
-<img alt="" src="images/ClickAddPromptButton1.png" /></p>
-</li>
-<li>
-<p>In the Add Prompt Template dialog, enter the below details:</p>
-<ul>
-<li>Name: <code>SYSTEM_PROMPT</code></li>
-<li>Description: <code>Provide context to gpt-4o-mini model</code>
-<img alt="" src="images/EnterSystemPromptNameAndDescription.png" /></li>
-</ul>
-</li>
-<li>
-<p>Enter the <strong>Prompt</strong> text:
-<div class="highlight"><pre><span></span><code>You are a sales executive who is responsible for reaching out to customers for confirming or declining their orders via email.
-For the given sales order, evaluate the following:
-1. Size of the delivery vehicle based on the number of items.
-2. The distance between the source and destination location of delivery in kilometers.
-3. The category of items which are ordered.
-
-Write an email in the following format:
-- The subject of email should be of format &lt;Confirmation on order number: {order_number} placed on {booking_date}&gt;
-- The body of email should be of format: &quot;Sales order contains &lt;Category&gt; to be delivered to &lt;Location&gt;. The order will be delivered via a &lt;size&gt; vehicle.
-IF &lt;distance between source address and delivery address&gt; &gt; 100 kms THEN include a message about potential delivery delays ELSE congratulate on being eligible for one day delivery
-</code></pre></div>
-<img alt="" src="images/EnterSystemPrompt.png" /></p>
-</li>
-<li>
-<p>Click the <strong>Save</strong> button.
-<img alt="" src="images/SaveSystemPrompt.png" /></p>
-</li>
-<li>
-<p>Click the <strong>Add</strong> prompt templates button.
-<img alt="" src="images/ClickAddPromptButton2.png" /></p>
-</li>
-<li>
-<p>In the Add Prompt Template dialog, enter the below details:</p>
-<ul>
-<li>Name: <code>USER_PROMPT</code></li>
-<li>Description: <code>Provide sales order item data for generating the order confirmation email</code>
-<img alt="" src="images/19.png" /></li>
-</ul>
-</li>
-<li>
-<p>Enter the <strong>Prompt</strong> text:
-<div class="highlight"><pre><span></span><code>Build a confirmation mail for a sales order containing {ISLM_Items}. The source address is {ISLM_Source} and the delivery address is {ISLM_Destination}.
-</code></pre></div>
-<img alt="" src="images/20.png" /></p>
-</li>
-<li>
-<p>Click the <strong>Save</strong> button.
-<img alt="" src="images/21.png" /></p>
-</li>
-<li>
-<p>The added prompt should be visible in the Prompt Templates table. Click the <strong>Save Draft</strong> button.
-<img alt="" src="images/SaveDraftModel.png" /></p>
-</li>
-<li>
-<p>Navigate back to Intelligent Scenario by clicking the <strong>back</strong> button.
-<img alt="" src="images/NavigateBackToDraftScenario.png" /></p>
-</li>
-<li>
-<p>Scenario is now ready to be published. Click on <strong>Publish</strong> button. You will receive a message that Intelligent Scenario is published.
-<img alt="" src="images/24.png" /></p>
-</li>
-<li>
-<p>Search the Intelligent Scenario created by you by entering the <strong>Intelligent Scenario name</strong> and <strong>Status = Published</strong>.
-<img alt="" src="images/25.png" /></p>
-</li>
-</ol>
-<p>Well done, you just created your first Side-by-side Intelligent Scenario.</p>
-<h2 id="4-connection-setup">4. Connection setup</h2>
-<p>Once the Intelligent Scenario is published, we need to maintain the connection for an intelligent scenario in SAP S/4 HANA with the Generative AI Hub service in BTP.
-Your service key is indicated in the cheat sheet that you received.</p>
-<ol>
-<li>Logon to <strong>S4H</strong> system in <strong>SAP GUI</strong>. Check the username and password provided in the cheat sheet.</li>
-<li>Call up the transaction <code>/n ISLM_CONN_MAP</code> and Click the <strong>Create Connection</strong> icon.
-<img alt="" src="images/CreateConnection.png" /></li>
-<li>
-<p>Input the <strong>Intelligent Scenario Name</strong> and click on <strong>Next</strong> button.
-<img alt="" src="images/26.png" /></p>
-</li>
-<li>
-<p>Enter the <strong>service key</strong> from remote machine learning provider which is mentioned in the cheat sheet. And click the <strong>Next</strong> button.
-<img alt="" src="images/27-1.png" /></p>
-</li>
-<li>
-<p>The <strong>RFC Destination</strong> and <strong>OAuth 2.0 Client Configuration</strong> will be generated using the service key.
-<img alt="" src="images/28.png" /> </p>
-</li>
-<li>
-<p>Perform <strong>Connection Check</strong> to know the health of ML provider.
-<img alt="" src="images/29.png" /></p>
-</li>
-<li>
-<p>Ensure that the Connection Status changes to <strong>Ready</strong>. Click the <strong>Save</strong> button.
-<img alt="" src="images/30.png" /></p>
-</li>
-<li>
-<p>A new entry will be added to the table.
-<img alt="" src="images/31.png" /></p>
-</li>
-</ol>
-<p>Well done, you just <strong>Set up the connection for Intelligent Scenario</strong> to connect to BTP based Generative AI Hub service.</p>
-<h2 id="5-operate-the-intelligent-scenario">5. Operate the Intelligent Scenario</h2>
-<p>Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to deploy and activate the model for productive usage.
-In this section, you will use the <strong>Intelligent Scenario Management app</strong> to perform operations on your Intelligent Scenario.</p>
-<ol>
-<li>Open the Fiori Launchpad by clicking <a href="https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>.
-Input the username and password provided in the cheat sheet. Click on <strong>Intelligent Scenario Management</strong> section and choose the <strong>Intelligent Scenario Management</strong> app.
-<img alt="" src="images/IntelligentScenarioManagementApp.png" /></li>
-<li>Search the <strong>Gen AI</strong> scenario created by you and navigate to the details page by clicking the <strong>&gt;</strong> icon.
-<img alt="" src="images/32.png" /></li>
-<li>Navigate to details page by clicking the <strong>&gt;</strong> icon
-<img alt="" src="images/33png.png" /></li>
-<li>Select the default training and click the <strong>Deploy</strong> Button.
-<img alt="" src="images/ClickDeployButton.png" /></li>
-<li>Click the <strong>Deploy and Monitor</strong> Button.
-<img alt="" src="images/ClickDeployAndMonitorButton.png" /></li>
-<li>A new Deployment will be created in <strong>Deployment Pending</strong> status.
-<img alt="" src="images/36.png" /></li>
-<li>Monitor the status of Deployment and check the status changes to Deployed. 
-<strong>Note</strong>: Deployments can take approximately 10 minutes to be Deployed.
-<img alt="" src="images/37.png" /></li>
-<li>Activate the deployment to run inference. Select the Deployment and click on <strong>Activate</strong> button and choose <strong>For All</strong> option.
-<img alt="" src="images/39.png" /></li>
-<li>In the dialog Activate for All Users, choose <strong>Activate For All</strong> button.
-<img alt="" src="images/ActivateForAll.png" /></li>
-</ol>
-<p>Well done, you just Used Intelligent Scenario Management app to deploy and activate the llm model.</p>
-<h2 id="6-generate-sales-order-confirmation-email">6. Generate Sales Order Confirmation email.</h2>
+<h1 id="generate-sales-order-confirmation-email">Generate Sales Order Confirmation email</h1>
 <p>In this step, you will use the ABAP GUI to view the email generated using LLM model.</p>
 <ol>
 <li>
 <p>Logon to <code>S4H</code> system in SAP GUI and execute the transaction code <code>/nSE38</code>.
-<img alt="" src="images/SE38.png" /></p>
+   <img alt="" src="../images/SE38.png" /></p>
 </li>
 <li>
 <p>Input the Report Name as <code>Z_SALES_ORD_CONF_###</code>, where ### is your attendee id mentioned in the cheat sheet. Click the <strong>Create</strong> button.
-<img alt="" src="images/40.png" /></p>
+   <img alt="" src="../images/40.png" /></p>
 </li>
 <li>
-<p>In the dialog input the below details:</p>
-<ul>
-<li>Title: <code>Generate confirmation email for sales order</code></li>
-<li>Select the <strong>Type</strong> as <code>Executable program</code>.</li>
-<li>Change the <strong>Status</strong> to <code>Test program</code>.
-<img alt="" src="images/41.png" /></li>
-</ul>
+<p>In the dialog input the below details: - Title: <code>Generate confirmation email for sales order</code> - Select the <strong>Type</strong> as <code>Executable program</code>. - Change the <strong>Status</strong> to <code>Test program</code>.
+   <img alt="" src="../images/41.png" /></p>
 </li>
 <li>
 <p>Click the <strong>Save</strong> button.
-<img alt="" src="images/42.png" /></p>
+   <img alt="" src="../images/42.png" /></p>
 </li>
 <li>
 <p>Click the <strong>Local Object</strong> button in the <strong>Create Object Directory Entry</strong> dialog.
-<img alt="" src="images/43.png" /></p>
+   <img alt="" src="../images/43.png" /></p>
 </li>
 <li>
-<p>In the editor, paste the below code. Change the intelligent scenario name in the report to the scenario that you have created, where ### is your attendee id.
+<p>In the editor, paste the below code. Change the intelligent scenario name in the report to the scenario that you have created, where ### is your attendee id.</p>
+</li>
+</ol>
 <div class="highlight"><pre><span></span><code>DATA lv_scenario_name TYPE islm_de_sbs_is_name VALUE &#39;Z_SLS_ORD_CONF_###&#39;.
 
 TRY.
@@ -1379,19 +1242,19 @@ ENDTRY.
 
 &quot; Display the sales report generated by gpt-4o-mini model
 cl_demo_output=&gt;display_text( text = lv_response ).
-</code></pre></div></p>
-</li>
+</code></pre></div>
+<ol>
 <li>
 <p><strong>Activate</strong> the report.
-<img alt="" src="images/44.png" /></p>
+   <img alt="" src="../images/44.png" /></p>
 </li>
 <li>
 <p><strong>Execute</strong> the report.
-<img alt="" src="images/45.png" /></p>
+   <img alt="" src="../images/45.png" /></p>
 </li>
 <li>
 <p>Order confirmation email for sales order generated by LLM model will be displayed.
-<img alt="" src="images/46png.png" /></p>
+   <img alt="" src="../images/46png.png" /></p>
 </li>
 </ol>
 <p>Well done, you have successfully queried the <strong>gpt-4o-mini model</strong> to generate the confirmation email for sales order.</p>
@@ -1424,7 +1287,7 @@ cl_demo_output=&gt;display_text( text = lv_response ).
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Gettingstarted/tutorials/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Tutorials">
+          <a href="../mloperations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ML Operations">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1434,14 +1297,14 @@ cl_demo_output=&gt;display_text( text = lv_response ).
                 Previous
               </span>
               <div class="md-ellipsis">
-                Tutorials
+                ML Operations
               </div>
             </div>
           </a>
         
         
           
-          <a href="../ISLM_with_HANAML/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+          <a href="../../ISLM_with_HANAML/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
@@ -1478,10 +1341,10 @@ cl_demo_output=&gt;display_text( text = lv_response ).
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   </body>
