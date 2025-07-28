@@ -1,6 +1,6 @@
 # Scenario storyline: Predict the number of first class seats occupied in a flight using HANA ML - APL
 
-## 1.1 Overview: Predict First Class Seats Occupied
+## 1. Overview
 In this exercise, our focus is on utilizing the SAP HANA Machine Learning (ML) algorithm to predict the occupancy of first-class seats on flights using APL Library. 
 
 To execute this exercise, we will leverage the Intelligent Scenario Lifecycle Management (ISLM) framework. ISLM serves as the foundation for creating and managing ML use cases seamlessly within the SAP S/4HANA stack. 
@@ -14,7 +14,7 @@ This exercise includes the following steps:
 
 By the end of this exercise, participants will have gained hands-on experience in utilizing the ISLM framework and SAP HANA ML algorithm to enhance decision-making processes and improve customer experiences. 
 
-## 1.2 Create Intelligent Scenario 
+## 2. Create Intelligent Scenario 
 The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app. 
 
 In this step, you’ll create a new intelligent scenario to predict the airplane seats occupation in the first class of a flight using SAP HANA ML algorithm. 
@@ -25,7 +25,7 @@ SAP HANA APL lets you build and apply different types of predictive models, such
 
 Gradient Boosting regression model type provides a more accurate modeling result than the legacy regression model.
 
-1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario** app. 
+1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click the **Intelligent Scenario** app. 
 ![](../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png)
 
 2. Click the **Create** button and choose **Embedded**.<br/>In Embedded approach, a business application, for example SAP S/4HANA runs in the same stack as its machine learning provider SAP HANA ML and it provides analytics libraries **SAP HANA Automated Predictive Library (APL)** or **SAP HANA Predictive Analysis Library (PAL)**.
@@ -78,12 +78,12 @@ Navigate to the details page by clicking the `>` icon.
 
 **Well done, you just created your first embedded Intelligent Scenario.**
 
-## 1.3. Operating the Intelligent Scenario
+## 3. Operating the Intelligent Scenario
 Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to train, monitor the model quality and activate the model for productive usage.
 
 In this section, you will use the Intelligent Scenario Management app to perform ML operations. 
 
-1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario Management** app.
+1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario Management** app.
 ![](../ISLM_with_SAPGenAI/images/IntelligentScenarioManagementApp.png)
 
 2. Search the **First-Class Seats Occupied** scenario created by you and navigate to the details page by clicking the `>` icon.
@@ -118,9 +118,9 @@ In this section, you will use the Intelligent Scenario Management app to perform
 
 **Well done, you just Operated the Intelligent Scenario by training your first model.**
 
-## 1.4. Visualizing Model Version Predictions
+## 4. Visualizing Model Version Predictions
 
-1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario** app.
+1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario** app.
 ![](../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png)
 
 2. Search the Intelligent Scenario created by you by entering the **Intelligent Scenario name** as `Z_SEATOCC_FTCLAS_###`, where ### is your attendee id and **Status = Published**. Navigate to the details page by clicking the `>` icon.
@@ -180,10 +180,10 @@ In this section, you will use the Intelligent Scenario Management app to perform
 
 **Well done, you just visualized your trained model predictions..!**
 
-## 1.5 Schedule training 
+## 5. Schedule training 
 You can schedule a training for your intelligent scenarios. Once the trainings are scheduled, model versions are created automatically based on the selected frequency and preselected filters.
 
-1. Open the Fiori Launchpad by clicking [here](https://44.207.24.229:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario Management** app.
+1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario Management** app.
 ![](../ISLM_with_SAPGenAI/images/IntelligentScenarioManagementApp.png)
 
 2. Search the **First-Class Seats Occupied** scenario created by you and navigate to the details page by clicking the **>** icon.
