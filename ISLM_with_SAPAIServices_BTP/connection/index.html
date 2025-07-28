@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPGenAI/images/">
+        <link rel="canonical" href="https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPAIServices_BTP/connection/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Index - CLM Day 2025 - ISLM Handson</title>
+        <title>Set up the connection for Intelligent Scenario to connect to BTP based ML service - CLM Day 2025 - ISLM Handson</title>
       
     
     
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#set-up-the-connection-for-intelligent-scenario-to-connect-to-btp-based-ml-service" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Set up the connection for Intelligent Scenario to connect to BTP based ML service
             
           </span>
         </div>
@@ -213,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../../ISLM_with_SAPGenAI/" class="md-tabs__link">
         
   
   
@@ -253,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ISLM_with_SAPAIServices_BTP/overview/" class="md-tabs__link">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -462,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../ISLM_with_SAPGenAI/" class="md-nav__link">
         
   
   
@@ -547,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPAIServices_BTP/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -570,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPAIServices_BTP/create_intelligent_scenario.md" class="md-nav__link">
+      <a href="../create_intelligent_scenario.md" class="md-nav__link">
         
   
   
@@ -593,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPAIServices_BTP/connect_to_sap_btp.md" class="md-nav__link">
+      <a href="../connect_to_sap_btp.md" class="md-nav__link">
         
   
   
@@ -616,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPAIServices_BTP/ml_operations.md" class="md-nav__link">
+      <a href="../ml_operations.md" class="md-nav__link">
         
   
   
@@ -639,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPAIServices_BTP/inference/" class="md-nav__link">
+      <a href="../inference/" class="md-nav__link">
         
   
   
@@ -817,6 +822,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -832,9 +839,51 @@
 
 
 
-  <h1>Index</h1>
-
-
+<h1 id="set-up-the-connection-for-intelligent-scenario-to-connect-to-btp-based-ml-service">Set up the connection for Intelligent Scenario to connect to BTP based ML service</h1>
+<p>Once the Intelligent Scenario is published, we need to maintain the connection for the intelligent scenario in SAP S/4 HANA with the Data Attribute Recommendation service in BTP. This service has already been provisioned in BTP and <strong>service key</strong> is available in the Desktop folder.</p>
+<ol>
+<li>
+<p>Open transaction <strong>/nSPRO</strong> in <strong>S4H</strong> system via <strong>SAP Logon</strong>. And click <strong>SAP Reference IMG</strong> button.
+   <img alt="" src="../images/22.png" /></p>
+</li>
+<li>
+<p>Navigate to <strong>ABAP Platform &gt;Application Server &gt;Basis Services &gt;Intelligent Scenario Lifecycle Management&gt; Service Connections for Machine Learning Infrastructure &gt; Maintain Connection for an Intelligent Scenario</strong>.
+   <img alt="" src="../images/23.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Execute</strong> button. <br/>
+   <a href="../images/24.png"></a></p>
+</li>
+<li>
+<p>In the ISLM Connection Mapping screen, click the <strong>Create Connection</strong> icon.
+   <img alt="" src="../images/create14.png" /></p>
+</li>
+<li>
+<p>Input the Intelligent Scenario Name created by you (<code>Z_PRED_PLANETYPE_###</code>, where ### is your attendee id) and click the <strong>Next</strong> button.
+   <img alt="" src="../images/create8.png" /></p>
+</li>
+<li>
+<p>Enter the <strong>Service Key</strong> maintained in the cheat sheet.
+   <img alt="" src="../images/create9.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Next</strong> button.
+   <img alt="" src="../images/create10.png" /></p>
+</li>
+<li>
+<p>Perform <strong>Connection Check</strong> to know the health of ML provider.
+   <img alt="" src="../images/create11.png" /></p>
+</li>
+<li>
+<p>Ensure that the <strong>Connection Status</strong> changes to <strong>Ready</strong>. Click the <strong>Save</strong> button.
+   <img alt="" src="../images/create12.png" /></p>
+</li>
+<li>
+<p>A new entry is added to the table.
+    <img alt="" src="../images/create13.png" /></p>
+</li>
+</ol>
+<p><strong>Well done, you just Set up the connection for Intelligent Scenario to connect to BTP based ML service.</strong></p>
 
 
 

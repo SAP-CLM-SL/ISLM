@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPGenAI/images/">
+        <link rel="canonical" href="https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPAIServices_BTP/createandpublish/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Index - CLM Day 2025 - ISLM Handson</title>
+        <title>Create and publish Intelligent Scenario - CLM Day 2025 - ISLM Handson</title>
       
     
     
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#create-and-publish-intelligent-scenario" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Create and publish Intelligent Scenario
             
           </span>
         </div>
@@ -213,7 +218,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../../ISLM_with_SAPGenAI/" class="md-tabs__link">
         
   
   
@@ -253,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ISLM_with_SAPAIServices_BTP/overview/" class="md-tabs__link">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -462,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../ISLM_with_SAPGenAI/" class="md-nav__link">
         
   
   
@@ -547,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPAIServices_BTP/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -570,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPAIServices_BTP/create_intelligent_scenario.md" class="md-nav__link">
+      <a href="../create_intelligent_scenario.md" class="md-nav__link">
         
   
   
@@ -593,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPAIServices_BTP/connect_to_sap_btp.md" class="md-nav__link">
+      <a href="../connect_to_sap_btp.md" class="md-nav__link">
         
   
   
@@ -616,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPAIServices_BTP/ml_operations.md" class="md-nav__link">
+      <a href="../ml_operations.md" class="md-nav__link">
         
   
   
@@ -639,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPAIServices_BTP/inference/" class="md-nav__link">
+      <a href="../inference/" class="md-nav__link">
         
   
   
@@ -817,6 +822,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -832,9 +839,100 @@
 
 
 
-  <h1>Index</h1>
-
-
+<h1 id="create-and-publish-intelligent-scenario">Create and publish Intelligent Scenario</h1>
+<p>The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app. In this step, you’ll create a new intelligent scenario to predict the plane type using SAP BTP based ML service Data Attribute Recommendation.</p>
+<p>Create a Prediction Class which defines the behavior of the scenario. Prediction class has methods to specify Inference type and ML Template for Data Attribute Recommendation. For this use case, we will use generic template which make use of Classification algorithm.</p>
+<ol>
+<li>Open <strong>SAP Logon</strong> and logon to <strong>S4H</strong> system. Check the username and password provided in the cheat sheet.</li>
+<li>
+<p>Open transaction <code>/nse24</code> and search for the ABAP class <code>ZCL_PRED_PLANETYPE_000</code>.
+   <img alt="" src="../images/1.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Copy</strong> button.
+   <img alt="" src="../images/2.png" /></p>
+</li>
+<li>
+<p>Provide the unique name in the <strong>Copy to</strong> field. Enter a unique name such as <code>ZCL_PRED_PLANETYPE_###</code>, where ### is your attendee id. And click the <strong>tick</strong> icon.
+   <img alt="" src="../images/3.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Local Object</strong> button.<br/>
+   <img alt="" src="../images/4.png" /></p>
+</li>
+<li>
+<p>The class is created in <strong>Inactive</strong> status. Click the <strong>Display</strong> button.
+   <img alt="" src="../images/5.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Activate</strong> icon.
+   <img alt="" src="../images/6.png" /></p>
+</li>
+<li>
+<p>Click the <strong>tick</strong> icon.
+   <img alt="" src="../images/7.png" /></p>
+</li>
+<li>
+<p>Open the Fiori Launchpad by clicking <a href="https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Input the username and password provided in the cheat sheet. Click on the <strong>Intelligent Scenario</strong> app.
+   <img alt="" src="../../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Create</strong> button and choose <strong>Side-by Side</strong>. <br/> This approach is commonly known as '<strong>side-by-side</strong>,' where the ML provider and the business application operate in separate stacks.
+    <img alt="" src="../images/9.png" /></p>
+</li>
+<li>
+<p>Provide the required information in the screen: - <strong>Intelligent Scenario Name</strong>: Enter a unique name starting with Z, such as <code>Z_PRED_PLANETYPE_###</code>, where ### is your attendee id mentioned in the cheat sheet. - <strong>Intelligent Scenario Description</strong>: <code>CLM Day Hands on 2025</code> - <strong>Intelligent Scenario Type</strong>: <code>Data Attribute Recommendation</code> - Ensure the <code>Data Management checkbox</code> is selected
+    <img alt="" src="../images/create1.png" /></p>
+</li>
+<li>
+<p>Ensure the <strong>Data Management checkbox</strong> is selected. <img alt="" src="../images/create2.png" /></p>
+</li>
+<li>
+<p>Click the value help for <strong>Prediction Class</strong>.
+    <img alt="" src="../images/create3.png" /></p>
+</li>
+<li>
+<p>Click the <strong>OK</strong> button in the information box.
+    <img alt="" src="../images/create4.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Add Model</strong> button. The Add DAR Model dialog will pop up. Provide the following details: - <strong>Name</strong>: <code>Z_PRED_PLANETYPE_MOD</code> - <strong>Description</strong>: <code>Model for CLM Day 2025 - Hands on</code> - <strong>Training Dataset</strong>: <code>Z_SFLIGHT_DATA</code>
+    <img alt="" src="../images/create15.png" /></p>
+</li>
+<li>
+<p>Click the value help for the <strong>Inputs</strong> field.
+    <img alt="" src="../images/create16.png" /></p>
+</li>
+<li>
+<p>The <strong>Select Model Inputs</strong> dialog will pop up. Select all the Inputs expect <code>CARRID</code>, <code>CONNID</code>, <code>PLANETYPE</code>. <br/> <strong>Tip</strong>: Use the Select All option and uncheck the CARRID, CONNID, PLANETYPE.
+    <img alt="" src="../images/create17.png" /></p>
+</li>
+<li>
+<p>Select the relevant <strong>Machine Learning Provider Type</strong> as <code>Category</code> or <code>Number</code>, as displayed in the screnshot. And click the <strong>Select</strong> button.
+    <img alt="" src="../images/create18.png" /></p>
+</li>
+<li>
+<p>Click the value help for the <strong>Targets</strong> field.
+    <img alt="" src="../images/create19.png" /></p>
+</li>
+<li>
+<p>The <strong>Select Model Targets</strong> dialog will pop up. Select <code>PLANETYPE</code> and the corresponding <strong>Machine Learning Provider Type</strong> as <code>CATEGORY</code>. And click the <strong>Select</strong> button.<br/>
+    <img alt="" src="../images/create20.png" /></p>
+</li>
+<li>
+<p>Click the <strong>Add</strong> button.
+    <img alt="" src="../images/create21.png" /></p>
+</li>
+<li>
+<p>The scenario is now created in <strong>Draft</strong> Status. You can view the input and output fields used to train the model in the <strong>Input</strong> and <strong>Output</strong> Tabs respectively. Also Scenario is now ready to be published.<br/> Click on <strong>Publish</strong> button. You will receive a message that Intelligent Scenario is published.
+    <img alt="" src="../images/create6.png" /></p>
+</li>
+<li>
+<p>Search the Intelligent Scenario created by you by entering the <strong>Intelligent Scenario name</strong> and <strong>Status = Published</strong>.
+    <img alt="" src="../images/create7.png" /></p>
+</li>
+</ol>
+<p><strong>Well done, you just created your first Side-by-side Intelligent Scenario.</strong></p>
 
 
 
