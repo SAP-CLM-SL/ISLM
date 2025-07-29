@@ -1171,35 +1171,36 @@
 <p>The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app.
 In this step, you’ll create a new intelligent scenario to generate the order confirmation email for Sales Order using LLM model.</p>
 <ol>
-<li>Open <strong>SAP Logon</strong> and logon to <strong>S4H</strong> system. Check the username and password provided in the cheat sheet.</li>
-<li>Create a Prediction Class which defines the behavior of the scenario. Prediction class has methods to specify Inference type and metadata like end point URI for LLM Model.
-   Open transaction <code>/nse24</code> and search for the class <code>ZCL_SOC_EMAIL_CONFIRMATION</code>
-   <img alt="" src="../images/1.png" /></li>
-<li>Click the <strong>Copy</strong> button.
-   <img alt="" src="../images/2.png" /></li>
-<li>Provide the unique name in the <strong>Copy to</strong> field. Enter a unique name starting with <code>ZCL</code>, such as <code>ZCL_SLS_ORD_CONF_###</code>, where ### is your attendee id mentioned in the cheat sheet.
-   And click the <strong>tick icon</strong>.
-   <img alt="" src="../images/3.png" /></li>
-<li>Click the <strong>Local Object</strong> button.
-   <img alt="" src="../images/4.png" /></li>
-<li>The class is created in <strong>Inactive</strong> status. Click the <strong>Display</strong> button.
-   <img alt="" src="../images/5.png" /></li>
-<li>View the following methods of the prediction class.</li>
-<li><strong>IF_ISLM_INTS~GET_INFERENCE_TYPE</strong> - Using this method, specify the inference type that supports this intelligent scenario.</li>
+<li>Open <strong>SAP Logon</strong> and logon to <strong>S4H</strong> system.</li>
+<li>Create a Prediction Class which defines the behavior of the scenario. Prediction class has methods to specify Inference type and metadata like end point URI for LLM Model. <br/>Open transaction <code>/nse24</code> and search for the class <code>ZCL_SOC_EMAIL_CONFIRMATION</code>
+<img alt="" src="../images/1.png" /></li>
 <li>
-<p><strong>IF_ISLM_INTS_SBS_DAR~GET_SERVEFLOW_ENDPOINT_URI</strong> - Using this method, specify the end point URI of the LLM Model.</p>
+<p>Click the <strong>Copy</strong> button.
+<img alt="" src="../images/2.png" /></p>
+</li>
+<li>
+<p>Provide the unique name in the <strong>Copy to</strong> field. Enter a unique name starting with <code>ZCL</code>, such as <code>ZCL_SLS_ORD_CONF_###</code>, where ### is your attendee id mentioned in the cheat sheet. And click the <strong>tick icon</strong>.
+<img alt="" src="../images/3.png" /></p>
+</li>
+<li>Click the <strong>Local Object</strong> button.
+<img alt="" src="../images/4.png" /></li>
+<li>The class is created in <strong>Inactive</strong> status. Click the <strong>Display</strong> button.
+<img alt="" src="../images/5.png" /></li>
+<li>View the following methods of the prediction class.</li>
+<li><strong>IF_ISLM_INTS~GET_INFERENCE_TYPE</strong>: Using this method, specify the inference type that supports this intelligent scenario.</li>
+<li>
+<p><strong>IF_ISLM_INTS_SBS_DAR~GET_SERVEFLOW_ENDPOINT_URI</strong>: Using this method, specify the end point URI of the LLM Model.</p>
 </li>
 <li>
 <p>Click the <strong>Activate</strong> icon.
-   <img alt="" src="../images/6.png" /></p>
+<img alt="" src="../images/6.png" /></p>
 </li>
 <li>Click the <strong>tick</strong> icon.
-   <img alt="" src="../images/7.png" /></li>
-<li>Open the Fiori Launchpad by clicking <a href="https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>.
-    Click on <strong>Intelligent Scenario Management</strong> section and choose the <strong>Intelligent Scenarios</strong> app.
-    <img alt="" src="../images/IntelligentScenariosApp.png" /></li>
+<img alt="" src="../images/7.png" /></li>
+<li>Open the Fiori Launchpad by clicking <a href="https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>.<br/>Click on <strong>Intelligent Scenario Management</strong> section and choose the <strong>Intelligent Scenarios</strong> app. 
+<img alt="" src="../images/IntelligentScenariosApp.png" /></li>
 <li>Click the <strong>Create</strong> button and choose <strong>Side-by Side</strong>.
-    <img alt="" src="../images/CreateSBS.png" /></li>
+<img alt="" src="../images/CreateSBS.png" /></li>
 <li>
 <p>Provide the required information in the screen:</p>
 <ul>
