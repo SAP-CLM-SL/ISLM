@@ -18,7 +18,6 @@ In this step, you will use the ABAP GUI to view the email generated using LLM mo
    ![](./images/43.png)
 
 6. In the editor, paste the below code. Change the intelligent scenario name in the report to the scenario that you have created, where ### is your attendee id.
-
 ```
 DATA lv_scenario_name TYPE islm_de_sbs_is_name VALUE 'Z_SLS_ORD_CONF_###'.
 
