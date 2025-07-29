@@ -3,7 +3,7 @@
 Once the Intelligent Scenario is published, the Intelligent Scenario Management app helps you to train, monitor the model quality, deploy, and activate the model for productive usage.
 In this section, you will use the Intelligent Scenario Management app to perform ML operations.
 
-1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}. Input the username and password provided in the cheat sheet. Click the **Intelligent Scenario Management** app.
+1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}. Click the **Intelligent Scenario Management** app.
    ![](./images/32.png)
 
 2. Find the scenario created by searching using the name (`Z_PRED_PLANETYPE_###`, where ### is your attendee id). Navigate to the details page by clicking the **>** icon.
