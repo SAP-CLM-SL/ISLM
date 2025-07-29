@@ -1,7 +1,5 @@
 # Creating Custom Gen AI Use Cases in SAP S/4HANA
 
-# 1. ISLM Overview
-
 **Intelligent Scenario Lifecycle Management (ISLM)** is a key enabler for integrating AI into SAP S/4HANA. With its latest enhancements, ISLM now facilitates the adoption of generative AI (GenAI), providing customers and partners with a centralized framework to manage both SAP-delivered and custom AI use cases. This allows organizations to transform core business processes by integrating large language models (LLMs) seamlessly within their business applications.
 
 ![](./images/islm_arch.jpg)
