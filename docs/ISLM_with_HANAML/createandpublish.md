@@ -10,7 +10,7 @@ SAP HANA APL lets you build and apply different types of predictive models, such
 
 Gradient Boosting regression model type provides a more accurate modeling result than the legacy regression model.
 
-1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}. Input the username and password provided in the cheat sheet. Click the **Intelligent Scenario** app.
+1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}. Click the **Intelligent Scenario** app.
    ![](../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png)
 
 2. Click the **Create** button and choose **Embedded**.<br/>In Embedded approach, a business application, for example SAP S/4HANA runs in the same stack as its machine learning provider SAP HANA ML and it provides analytics libraries **SAP HANA Automated Predictive Library (APL)** or **SAP HANA Predictive Analysis Library (PAL)**.
@@ -19,13 +19,24 @@ Gradient Boosting regression model type provides a more accurate modeling result
 3. Click the **Do Not Show Again and Close** button in the Onboarding Dialog.
    ![](./images/3.png)
 
-4. Provide the required information in the screen: - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as `Z_SEATOCC_FTCLAS_###`, where ### is your attendee id. - **Intelligent Scenario Description**: `Predict seats occupied in the first class of a flight`. - **Intelligent Scenario Type**: Select `Regression` type. - **Algorithm**: Select `Gradient Boosting`. - **Machine Learning Library**: Select `APL`.
+4. Provide the required information in the screen:
+   - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as `Z_SEATOCC_FTCLAS_###`, where ### is your attendee id.
+   - **Intelligent Scenario Description**: `Predict seats occupied in the first class of a flight`.
+   - **Intelligent Scenario Type**: Select `Regression` type.
+   - **Algorithm**: Select `Gradient Boosting`.
+   - **Machine Learning Library**: Select `APL`.
    ![](./images/AddScenarioDetails.png)
 
 5. Click the **Add Model** button.
    ![](./images/ClickAddModelButton.png)
 
-6. The APL Regression Model screen will pop up. Provide information as mentioned below: - **Name**: Enter a model name starting with Z - `ZISLM_SFLIGHT_TRAIN_CDS_MODEL`. - **Description**: Enter the description - `Flight model`. - **Training Dataset**: `Z_SFLIGHTTRAINCDS`. Training Dataset to be used for training the model. - **Apply Dataset**: `Z_SFLIGHTPREDICTCDS`. Apply dataset is Dataset used for prediction. **Note that apply dataset is different from training dataset.** - **Target**: `SEATSOCCF`. Target variable is field whose value you want to predict. - **Max Reason Code:** `1` Number of reason codes you want to generate.<br/> Reason codes are variables whose values have the most influence in a score-based decision (typically a risk score). The variables for which the contribution is the most influential are selected as the most important reason codes.<br/> Apply output configuration has the selected metrics that are added in the intelligent scenario output and used for prediction.
+6. The APL Regression Model screen will pop up. Provide information as mentioned below:
+   - **Name**: Enter a model name starting with Z - `ZISLM_SFLIGHT_TRAIN_CDS_MODEL`.
+   - **Description**: Enter the description - `Flight model`.
+   - **Training Dataset**: `Z_SFLIGHTTRAINCDS`. Training Dataset to be used for training the model.
+   - **Apply Dataset**: `Z_SFLIGHTPREDICTCDS`. Apply dataset is Dataset used for prediction. **Note that apply dataset is different from training dataset.**
+   - **Target**: `SEATSOCCF`. Target variable is field whose value you want to predict.
+   - **Max Reason Code:** `1` Number of reason codes you want to generate.<br/> Reason codes are variables whose values have the most influence in a score-based decision (typically a risk score). The variables for which the contribution is the most influential are selected as the most important reason codes.<br/> Apply output configuration has the selected metrics that are added in the intelligent scenario output and used for prediction.
    ![](./images/EnterModelDetails.png)
 
 7. Click the **Add** button.
