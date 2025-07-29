@@ -17,7 +17,6 @@ In this step, you’ll create a new intelligent scenario to generate the order c
 6. The class is created in **Inactive** status. Click the **Display** button.
    ![](./images/5.png)
 7. View the following methods of the prediction class.
-
    - **IF_ISLM_INTS~GET_INFERENCE_TYPE** - Using this method, specify the inference type that supports this intelligent scenario.
    - **IF_ISLM_INTS_SBS_DAR~GET_SERVEFLOW_ENDPOINT_URI** - Using this method, specify the end point URI of the LLM Model.
 
@@ -31,7 +30,6 @@ In this step, you’ll create a new intelligent scenario to generate the order c
 11. Click the **Create** button and choose **Side-by Side**.
     ![](./images/CreateSBS.png)
 12. Provide the required information in the screen:
-
     - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as `Z_SLS_ORD_CONF_###`, where ### is your attendee id mentioned in the cheat sheet.
     - **Intelligent Scenario Description**: `Generate sales order confirmation email`
     - **Intelligent Scenario Type**: `Generative AI`
@@ -46,7 +44,11 @@ In this step, you’ll create a new intelligent scenario to generate the order c
 15. Click the **Add Model** button.
     ![](./images/11.png)
 
-16. The Add Generative AI Model screen will pop up. Enter the below details: - Name: `Z_SLS_ORD_CONF_MDL` - Description: `LLM Model for generating SO email` - Executable ID: `azure-openai` - Large Language Model Name: `gpt-4o-mini`
+16. The Add Generative AI Model screen will pop up. Enter the below details:
+    - Name: `Z_SLS_ORD_CONF_MDL`
+    - Description: `LLM Model for generating SO email`
+    - Executable ID: `azure-openai`
+    - Large Language Model Name: `gpt-4o-mini`
     ![](./images/add_model.png)
 
 17. Click the **Add** button.
@@ -55,7 +57,9 @@ In this step, you’ll create a new intelligent scenario to generate the order c
 18. Click the **Add** prompt templates button.
     ![](./images/ClickAddPromptButton1.png)
 
-19. In the Add Prompt Template dialog, enter the below details: - Name: `SYSTEM_PROMPT` - Description: `Provide context to gpt-4o-mini model`
+19. In the Add Prompt Template dialog, enter the below details:
+    - Name: `SYSTEM_PROMPT`
+    - Description: `Provide context to gpt-4o-mini model`
     ![](./images/EnterSystemPromptNameAndDescription.png)
 
 20. Enter the **Prompt** text:
@@ -81,15 +85,15 @@ IF <distance between source address and delivery address> > 100 kms THEN include
 22. Click the **Add** prompt templates button.
     ![](./images/ClickAddPromptButton2.png)
 
-23. In the Add Prompt Template dialog, enter the below details: - Name: `USER_PROMPT` - Description: `Provide sales order item data for generating the order confirmation email`
+23. In the Add Prompt Template dialog, enter the below details:
+    - Name: `USER_PROMPT`
+    - Description: `Provide sales order item data for generating the order confirmation email`
     ![](./images/19.png)
 
 24. Enter the **Prompt** text:
-
 ```
 Build a confirmation mail for a sales order containing {ISLM_Items}. The source address is {ISLM_Source} and the delivery address is {ISLM_Destination}.
 ```
-
 ![](./images/20.png)
 
 25. Click the **Save** button.
