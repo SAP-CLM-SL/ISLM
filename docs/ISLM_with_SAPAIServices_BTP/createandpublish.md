@@ -4,7 +4,7 @@ The Intelligent Scenarios app is used to create intelligent scenarios, review,
 
 Create a Prediction Class which defines the behavior of the scenario. Prediction class has methods to specify Inference type and ML Template for Data Attribute Recommendation. For this use case, we will use generic template which make use of Classification algorithm.
 
-1. Open **SAP Logon** and logon to **S4H** system. Check the username and password provided in the cheat sheet.
+1. Open **SAP Logon** and logon to **S4H** system.
 2. Open transaction `/nse24` and search for the ABAP class `ZCL_PRED_PLANETYPE_000`.
    ![](./images/1.png)
 
@@ -26,16 +26,20 @@ Create a Prediction Class which defines the behavior of the scenario. Prediction
 8. Click the **tick** icon.
    ![](./images/7.png)
 
-9. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario** app.
+9. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}. Click on the **Intelligent Scenario** app.
    ![](../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png)
 
 10. Click the **Create** button and choose **Side-by Side**. <br/> This approach is commonly known as '**side-by-side**,' where the ML provider and the business application operate in separate stacks.
     ![](./images/9.png)
 
-11. Provide the required information in the screen: - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as `Z_PRED_PLANETYPE_###`, where ### is your attendee id mentioned in the cheat sheet. - **Intelligent Scenario Description**: `CLM Day Hands on 2025` - **Intelligent Scenario Type**: `Data Attribute Recommendation` - Ensure the `Data Management checkbox` is selected
+11. Provide the required information in the screen:
+    - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as `Z_PRED_PLANETYPE_###`, where ### is your attendee id mentioned in the cheat sheet.
+    - **Intelligent Scenario Description**: `CLM Day Hands on 2025`
+    - **Intelligent Scenario Type**: `Data Attribute Recommendation`
     ![](./images/create1.png)
 
-12. Ensure the **Data Management checkbox** is selected. ![](./images/create2.png)
+12. Ensure the **Data Management checkbox** is selected.
+![](./images/create2.png)
 
 13. Click the value help for **Prediction Class**.
     ![](./images/create3.png)
@@ -43,7 +47,10 @@ Create a Prediction Class which defines the behavior of the scenario. Prediction
 14. Click the **OK** button in the information box.
     ![](./images/create4.png)
 
-15. Click the **Add Model** button. The Add DAR Model dialog will pop up. Provide the following details: - **Name**: `Z_PRED_PLANETYPE_MOD` - **Description**: `Model for CLM Day 2025 - Hands on` - **Training Dataset**: `Z_SFLIGHT_DATA`
+15. Click the **Add Model** button. The Add DAR Model dialog will pop up. Provide the following details:
+    - **Name**: `Z_PRED_PLANETYPE_MOD`
+    - **Description**: `Model for CLM Day 2025 - Hands on`
+    - **Training Dataset**: `Z_SFLIGHT_DATA`
     ![](./images/create15.png)
 
 16. Click the value help for the **Inputs** field.
