@@ -5,13 +5,13 @@ The Intelligent Scenarios app is used to create intelligent scenarios, review,
 Create a Prediction Class which defines the behavior of the scenario. Prediction class has methods to specify Inference type and ML Template for Data Attribute Recommendation. For this use case, we will use generic template which make use of Classification algorithm.
 
 1. Open **SAP Logon** and logon to **S4H** system.
-2. Open transaction `/nse24` and search for the ABAP class `ZCL_PRED_PLANETYPE_000`.
+2. Open transaction `/nse24` and search for the ABAP class `ZCL_PLANTYPE_HO`.
    ![](./images/1.png)
 
 3. Click the **Copy** button.
    ![](./images/2.png)
 
-4. Provide the unique name in the **Copy to** field. Enter a unique name such as `ZCL_PRED_PLANETYPE_###`, where ### is your attendee id. And click the **tick** icon.
+4. Provide the unique name in the **Copy to** field. Enter a unique name such as `ZCL_PLANTYPE_###`, where ### is your attendee id. And click the **tick** icon.
    ![](./images/3.png)
 
 5. Click the **Local Object** button.<br/>
