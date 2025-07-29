@@ -25,7 +25,7 @@ In this step, you’ll create a new intelligent scenario to generate the order c
 9. Click the **tick** icon.
    ![](./images/7.png)
 10. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}.
-    Input the username and password provided in the cheat sheet. Click on **Intelligent Scenario Management** section and choose the **Intelligent Scenarios** app.
+    Click on **Intelligent Scenario Management** section and choose the **Intelligent Scenarios** app.
     ![](./images/IntelligentScenariosApp.png)
 11. Click the **Create** button and choose **Side-by Side**.
     ![](./images/CreateSBS.png)
@@ -63,7 +63,6 @@ In this step, you’ll create a new intelligent scenario to generate the order c
     ![](./images/EnterSystemPromptNameAndDescription.png)
 
 20. Enter the **Prompt** text:
-
 ```
 You are a sales executive who is responsible for reaching out to customers for confirming or declining their orders via email.
 For the given sales order, evaluate the following:
@@ -76,7 +75,6 @@ Write an email in the following format:
 - The body of email should be of format: "Sales order contains <Category> to be delivered to <Location>. The order will be delivered via a <size> vehicle.
 IF <distance between source address and delivery address> > 100 kms THEN include a message about potential delivery delays ELSE congratulate on being eligible for one day delivery
 ```
-
 ![](./images/EnterSystemPrompt.png)
 
 21. Click the **Save** button.
