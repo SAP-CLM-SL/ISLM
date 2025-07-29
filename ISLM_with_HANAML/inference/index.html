@@ -1170,59 +1170,65 @@
 <h1 id="visualizing-model-version-predictions">Visualizing Model Version Predictions</h1>
 <ol>
 <li>
-<p>Open the Fiori Launchpad by clicking <a href="https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Input the username and password provided in the cheat sheet. Click on the <strong>Intelligent Scenario</strong> app.
-   <img alt="" src="../../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png" /></p>
+<p>Open the Fiori Launchpad by clicking <a href="https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Click on the <strong>Intelligent Scenario</strong> app.
+<img alt="" src="../../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png" /></p>
 </li>
 <li>
 <p>Search the Intelligent Scenario created by you by entering the <strong>Intelligent Scenario name</strong> as <code>Z_SEATOCC_FTCLAS_###</code>, where ### is your attendee id and <strong>Status = Published</strong>. Navigate to the details page by clicking the <code>&gt;</code> icon.
-   <img alt="" src="../images/SearchScenario.png" /></p>
+<img alt="" src="../images/SearchScenario.png" /></p>
 </li>
 <li>
 <p>Click on <strong>Apply Setting</strong> Tab. You can find the 3 Apply CDS views in this tab. We can see the predictions for each view in next steps.
-   <img alt="" src="../images/ViewApplyViews.png" /></p>
+<img alt="" src="../images/ViewApplyViews.png" /></p>
 </li>
 <li>
-<p>You will use the SAP GUI to view the model's prediction. Login to <strong>S4H/100</strong> system via SAP GUI, with the given credentials in cheat sheet.</p>
-</li>
-<li>
-<p>Type <code>/n se38</code> in the command field and press <strong>ENTER</strong>.
-   <img alt="" src="../images/28.png" /></p>
+<p>You will use the SAP GUI to view the model's prediction. Login to <strong>S4H/100</strong> system via SAP GUI. Type <code>/n se38</code> in the command field and press <strong>ENTER</strong>.
+<img alt="" src="../images/28.png" /></p>
 </li>
 <li>
 <p>Search for report <strong>RUT_DDLS_DATA_PREVIEW</strong> and click on <strong>Execute(F8)</strong>.
-   <img alt="" src="../images/29.png" /></p>
+<img alt="" src="../images/29.png" /></p>
 </li>
 <li>
-<p>Enter the ISLM generated 1st CDS view of created Intelligent Scenario to view predictions from trained model. - CDS View will have following name <strong>Z<em>SEATOCC_FTCLAS</em>###_CDS01</strong>, where ### is your attendee id. - Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
+<p>Enter the ISLM generated 1st CDS view of created Intelligent Scenario to view predictions from trained model. <br/> CDS View will have following name <code>Z_SEATOCC_FTCLAS_###_CDS01</code>, where ### is your attendee id. <br/> Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
    <img alt="" src="../images/30.png" /></p>
 </li>
 <li>
-<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong> - Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied. - Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
-   <img alt="" src="../images/Prediction1.png" /></p>
+<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong> <br/>Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied. <br/>Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
+   <img alt="" src="../images/PredictionsFromMainView.png" /></p>
 </li>
 <li>
-<p>Goto <strong>SE38</strong> again and Search for report <strong>RUT_DDLS_DATA_PREVIEW</strong> and click on <strong>Execute(F8)</strong>. Enter the ISLM generated 2nd CDS view of created Intelligent Scenario to view predictions from trained model. - CDS View will have following name <strong>Z<em>SEATOCC_FTCLAS</em>###_CDS01_KEY</strong>, where ### is your attendee id. - Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
+<p>Goto <strong>SE38</strong> again and Search for report <strong>RUT_DDLS_DATA_PREVIEW</strong> and click on <strong>Execute(F8)</strong>. Enter the ISLM generated 2nd CDS view of created Intelligent Scenario to view predictions from trained model.<br/> CDS View will have following name <code>Z_SEATOCC_FTCLAS_###_CDS01_KEY</code>, where ### is your attendee id. <br/>Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
    <img alt="" src="../images/32.png" /></p>
 </li>
 <li>
-<p>Provide below values to the respective CDS parameters: - P_BOOKID = <code>2274</code> - P_CARRID = <code>AZ</code> - P_CONNID = <code>555</code> - P_FLDATE = <code>20250813</code>
-    <img alt="" src="../images/EnterKeyParameters.png" /></p>
+<p>Provide below values to the respective CDS parameters:</p>
+<ul>
+<li>P_BOOKID = <code>2274</code></li>
+<li>P_CARRID = <code>AZ</code></li>
+<li>P_CONNID = <code>555</code></li>
+<li>P_FLDATE = <code>20250813</code>
+<img alt="" src="../images/EnterKeyParameters.png" /></li>
+</ul>
 </li>
 <li>
-<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong> - Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied. - Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
-    <img alt="" src="../images/Prediction2.png" /></p>
+<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong> <br/> Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied. <br/> Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
+    <img alt="" src="../images/PredictionFromKeyView.png" /></p>
 </li>
 <li>
-<p>Goto SE38 again and Search for report <strong>RUT_DDLS_DATA_PREVIEW</strong> and click on Execute(F8). Enter the ISLM generated 3rd CDS view of created Intelligent Scenario to view predictions from trained model. - CDS View will have following name <strong>Z<em>SEATOCC_FTCLAS</em>###_CDS01_WHR</strong>, where ### is your attendee i. - Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
+<p>Goto SE38 again and Search for report <strong>RUT_DDLS_DATA_PREVIEW</strong> and click on Execute(F8). Enter the ISLM generated 3rd CDS view of created Intelligent Scenario to view predictions from trained model. <br/> CDS View will have following name <code>Z_SEATOCC_FTCLAS_###_CDS01_WHR</code>, where ### is your attendee i. <br/> Enter CDS View Name in Entity Name field and click on <strong>Execute</strong>.
     <img alt="" src="../images/35.png" /></p>
 </li>
 <li>
-<p>Provide below values to the respective CDS parameters - P_WHERE = <code>CONNID = 0017 AND FLDATE = 20250813</code>
-    <img alt="" src="../images/EnterWhereParameter.png" /></p>
+<p>Provide below values to the respective CDS parameters </p>
+<ul>
+<li>P_WHERE = <code>CONNID = 0017 AND FLDATE = 20250813</code>
+<img alt="" src="../images/EnterWhereParameter.png" /></li>
+</ul>
 </li>
 <li>
-<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong> - Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied. - Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
-    <img alt="" src="../images/Prediction3.png" /></p>
+<p>You can scroll down and see the model's keys in the first four columns: <strong>Airline Code, Flight Connection Number, Flight Date and Booking number.</strong> <br/> Column <strong>SEATSOCCF</strong> has the actual value of the seats occupied. <br/> Column <strong>GB_SCORE_SEATSOCCF</strong> column has the predicted value of the occupied seats.
+    <img alt="" src="../images/PredictionsFromWhereView.png" /></p>
 </li>
 </ol>
 <p><strong>Well done, you just visualized your trained model predictions..!</strong></p>

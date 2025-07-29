@@ -1175,7 +1175,7 @@
 <p>Gradient Boosting regression model type provides a more accurate modeling result than the legacy regression model.</p>
 <ol>
 <li>
-<p>Open the Fiori Launchpad by clicking <a href="https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Input the username and password provided in the cheat sheet. Click the <strong>Intelligent Scenario</strong> app.
+<p>Open the Fiori Launchpad by clicking <a href="https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Click the <strong>Intelligent Scenario</strong> app.
    <img alt="" src="../../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png" /></p>
 </li>
 <li>
@@ -1187,7 +1187,14 @@
    <img alt="" src="../images/3.png" /></p>
 </li>
 <li>
-<p>Provide the required information in the screen: - <strong>Intelligent Scenario Name</strong>: Enter a unique name starting with Z, such as <code>Z_SEATOCC_FTCLAS_###</code>, where ### is your attendee id. - <strong>Intelligent Scenario Description</strong>: <code>Predict seats occupied in the first class of a flight</code>. - <strong>Intelligent Scenario Type</strong>: Select <code>Regression</code> type. - <strong>Algorithm</strong>: Select <code>Gradient Boosting</code>. - <strong>Machine Learning Library</strong>: Select <code>APL</code>.
+<p>Provide the required information in the screen:</p>
+</li>
+<li><strong>Intelligent Scenario Name</strong>: Enter a unique name starting with Z, such as <code>Z_SEATOCC_FTCLAS_###</code>, where ### is your attendee id.</li>
+<li><strong>Intelligent Scenario Description</strong>: <code>Predict seats occupied in the first class of a flight</code>.</li>
+<li><strong>Intelligent Scenario Type</strong>: Select <code>Regression</code> type.</li>
+<li><strong>Algorithm</strong>: Select <code>Gradient Boosting</code>.</li>
+<li>
+<p><strong>Machine Learning Library</strong>: Select <code>APL</code>.
    <img alt="" src="../images/AddScenarioDetails.png" /></p>
 </li>
 <li>
@@ -1195,7 +1202,15 @@
    <img alt="" src="../images/ClickAddModelButton.png" /></p>
 </li>
 <li>
-<p>The APL Regression Model screen will pop up. Provide information as mentioned below: - <strong>Name</strong>: Enter a model name starting with Z - <code>ZISLM_SFLIGHT_TRAIN_CDS_MODEL</code>. - <strong>Description</strong>: Enter the description - <code>Flight model</code>. - <strong>Training Dataset</strong>: <code>Z_SFLIGHTTRAINCDS</code>. Training Dataset to be used for training the model. - <strong>Apply Dataset</strong>: <code>Z_SFLIGHTPREDICTCDS</code>. Apply dataset is Dataset used for prediction. <strong>Note that apply dataset is different from training dataset.</strong> - <strong>Target</strong>: <code>SEATSOCCF</code>. Target variable is field whose value you want to predict. - <strong>Max Reason Code:</strong> <code>1</code> Number of reason codes you want to generate.<br/> Reason codes are variables whose values have the most influence in a score-based decision (typically a risk score). The variables for which the contribution is the most influential are selected as the most important reason codes.<br/> Apply output configuration has the selected metrics that are added in the intelligent scenario output and used for prediction.
+<p>The APL Regression Model screen will pop up. Provide information as mentioned below:</p>
+</li>
+<li><strong>Name</strong>: Enter a model name starting with Z - <code>ZISLM_SFLIGHT_TRAIN_CDS_MODEL</code>.</li>
+<li><strong>Description</strong>: Enter the description - <code>Flight model</code>.</li>
+<li><strong>Training Dataset</strong>: <code>Z_SFLIGHTTRAINCDS</code>. Training Dataset to be used for training the model.</li>
+<li><strong>Apply Dataset</strong>: <code>Z_SFLIGHTPREDICTCDS</code>. Apply dataset is Dataset used for prediction. <strong>Note that apply dataset is different from training dataset.</strong></li>
+<li><strong>Target</strong>: <code>SEATSOCCF</code>. Target variable is field whose value you want to predict.</li>
+<li>
+<p><strong>Max Reason Code:</strong> <code>1</code> Number of reason codes you want to generate.<br/> Reason codes are variables whose values have the most influence in a score-based decision (typically a risk score). The variables for which the contribution is the most influential are selected as the most important reason codes.<br/> Apply output configuration has the selected metrics that are added in the intelligent scenario output and used for prediction.
    <img alt="" src="../images/EnterModelDetails.png" /></p>
 </li>
 <li>

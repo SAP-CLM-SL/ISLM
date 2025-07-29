@@ -1171,7 +1171,7 @@
 <p>The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app. In this step, you’ll create a new intelligent scenario to predict the plane type using SAP BTP based ML service Data Attribute Recommendation.</p>
 <p>Create a Prediction Class which defines the behavior of the scenario. Prediction class has methods to specify Inference type and ML Template for Data Attribute Recommendation. For this use case, we will use generic template which make use of Classification algorithm.</p>
 <ol>
-<li>Open <strong>SAP Logon</strong> and logon to <strong>S4H</strong> system. Check the username and password provided in the cheat sheet.</li>
+<li>Open <strong>SAP Logon</strong> and logon to <strong>S4H</strong> system.</li>
 <li>
 <p>Open transaction <code>/nse24</code> and search for the ABAP class <code>ZCL_PRED_PLANETYPE_000</code>.
    <img alt="" src="../images/1.png" /></p>
@@ -1201,7 +1201,7 @@
    <img alt="" src="../images/7.png" /></p>
 </li>
 <li>
-<p>Open the Fiori Launchpad by clicking <a href="https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Input the username and password provided in the cheat sheet. Click on the <strong>Intelligent Scenario</strong> app.
+<p>Open the Fiori Launchpad by clicking <a href="https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#Shell-home" target="_blank">here</a>. Click on the <strong>Intelligent Scenario</strong> app.
    <img alt="" src="../../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png" /></p>
 </li>
 <li>
@@ -1209,11 +1209,17 @@
     <img alt="" src="../images/9.png" /></p>
 </li>
 <li>
-<p>Provide the required information in the screen: - <strong>Intelligent Scenario Name</strong>: Enter a unique name starting with Z, such as <code>Z_PRED_PLANETYPE_###</code>, where ### is your attendee id mentioned in the cheat sheet. - <strong>Intelligent Scenario Description</strong>: <code>CLM Day Hands on 2025</code> - <strong>Intelligent Scenario Type</strong>: <code>Data Attribute Recommendation</code> - Ensure the <code>Data Management checkbox</code> is selected
-    <img alt="" src="../images/create1.png" /></p>
+<p>Provide the required information in the screen:</p>
+<ul>
+<li><strong>Intelligent Scenario Name</strong>: Enter a unique name starting with Z, such as <code>Z_PRED_PLANETYPE_###</code>, where ### is your attendee id mentioned in the cheat sheet.</li>
+<li><strong>Intelligent Scenario Description</strong>: <code>CLM Day Hands on 2025</code></li>
+<li><strong>Intelligent Scenario Type</strong>: <code>Data Attribute Recommendation</code>
+<img alt="" src="../images/create1.png" /></li>
+</ul>
 </li>
 <li>
-<p>Ensure the <strong>Data Management checkbox</strong> is selected. <img alt="" src="../images/create2.png" /></p>
+<p>Ensure the <strong>Data Management checkbox</strong> is selected.
+<img alt="" src="../images/create2.png" /></p>
 </li>
 <li>
 <p>Click the value help for <strong>Prediction Class</strong>.
@@ -1224,8 +1230,13 @@
     <img alt="" src="../images/create4.png" /></p>
 </li>
 <li>
-<p>Click the <strong>Add Model</strong> button. The Add DAR Model dialog will pop up. Provide the following details: - <strong>Name</strong>: <code>Z_PRED_PLANETYPE_MOD</code> - <strong>Description</strong>: <code>Model for CLM Day 2025 - Hands on</code> - <strong>Training Dataset</strong>: <code>Z_SFLIGHT_DATA</code>
-    <img alt="" src="../images/create15.png" /></p>
+<p>Click the <strong>Add Model</strong> button. The Add DAR Model dialog will pop up. Provide the following details:</p>
+<ul>
+<li><strong>Name</strong>: <code>Z_PRED_PLANETYPE_MOD</code></li>
+<li><strong>Description</strong>: <code>Model for CLM Day 2025 - Hands on</code></li>
+<li><strong>Training Dataset</strong>: <code>Z_SFLIGHT_DATA</code>
+<img alt="" src="../images/create15.png" /></li>
+</ul>
 </li>
 <li>
 <p>Click the value help for the <strong>Inputs</strong> field.
