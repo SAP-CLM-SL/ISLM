@@ -3,7 +3,7 @@
 Once the Intelligent Scenario is published, we need to maintain the connection for an intelligent scenario in SAP S/4 HANA with the Generative AI Hub service in BTP.
 Your service key is indicated in the cheat sheet that you received.
 
-1. Logon to **S4H** system in **SAP GUI**. Check the username and password provided in the cheat sheet.
+1. Logon to **S4H** system in **SAP GUI**.
 2. Call up the transaction `/n ISLM_CONN_MAP` and Click the **Create Connection** icon.
    ![](./images/CreateConnection.png)
 3. Input the **Intelligent Scenario Name** and click on **Next** button.
