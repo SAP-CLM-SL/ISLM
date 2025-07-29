@@ -14,7 +14,7 @@ In this step, you will use the ABAP GUI to view the inference result from the tr
 4. Enter the prediction class associated with your Intelligent Scenario (`ZCL_PLANTYPE_###`, where ### is your attendee id). <br/> Click the **Execute** button.
    ![](./images/SelectPredictionClass.png)
 
-5. Your trained model is now ready to predict the target **PLANETYPE**. To predict this target, inputs to model has to be provided. <br/> Copy the below text which contains the Inference Request with inputs in JSON format.<br/> Inference Request contains the features and its value which is input for the trained model. <br/> **topN**- Parameter which defines how many options will be predicted. <br/> Inputs would be **FLDATE, PRICE, SEATSMAX, SEATSOCC, SEATSMAX_B, SEATSMAX_F, SEATSOCC_B, SEATSOCC_F, PAYMENTSUM, CURRENCY**.
+5. Your trained model is now ready to predict the target **PLANETYPE**. To predict this target, inputs to model has to be provided. <br/> Copy the below text which contains the Inference Request with inputs in JSON format.<br/> Inference Request contains the features and its value which is input for the trained model. <br/> **topN**- Parameter which defines how many options will be predicted. <br/> Inputs would be **FLDATE, PRICE, SEATSMAX, SEATSOCC, SEATSMAXB, SEATSMAXF, SEATSOCCB, SEATSOCCF, PAYMENTSUM, CURRENCY**.
 ```json
 {
   "topN": 2,
@@ -39,19 +39,19 @@ In this step, you will use the ABAP GUI to view the inference result from the tr
           "value": "374"
         },
         {
-          "name": "SEATSMAX_B",
+          "name": "SEATSMAXB",
           "value": "31"
         },
         {
-          "name": "SEATSMAX_F",
+          "name": "SEATSMAXF",
           "value": "21"
         },
         {
-          "name": "SEATSOCC_B",
+          "name": "SEATSOCCB",
           "value": "29"
         },
         {
-          "name": "SEATSOCC_F",
+          "name": "SEATSOCCF",
           "value": "21"
         },
         {
