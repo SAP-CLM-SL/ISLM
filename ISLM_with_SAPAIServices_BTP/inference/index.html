@@ -1179,20 +1179,15 @@
    <img alt="" src="../images/56.png" /></p>
 </li>
 <li>
-<p>In the API Definition, choose the option <strong>TRIGGER_ONLINE_INFERENCE</strong> from drop down.
-   <img alt="" src="../images/57.png" /></p>
+<p>Choose the option <strong>Side-By-Side</strong>. In the API Definition, select <strong>TRIGGER_ONLINE_INFERENCE</strong> from drop down.
+   <img alt="" src="../images/SelectOnlineInference.png" /></p>
 </li>
 <li>
-<p>Enter the prediction class associated with your Intelligent Scenario (<code>ZCL_PRED_PLANETYPE_###</code>, where ### is your attendee id). <br/> Click the <strong>Execute</strong> button.
-   <img alt="" src="../images/58.png" /></p>
+<p>Enter the prediction class associated with your Intelligent Scenario (<code>ZCL_PLANTYPE_###</code>, where ### is your attendee id). <br/> Click the <strong>Execute</strong> button.
+   <img alt="" src="../images/SelectPredictionClass.png" /></p>
 </li>
 <li>
-<p>Your trained model is now ready to predict the target <strong>PLANETYPE</strong>. To predict this target, inputs to model has to be provided. <br/> Copy the below text which contains the Inference Request with inputs in JSON format.</p>
-</li>
-<li>Inference Request contains the features and its value which is input for the trained model.</li>
-<li><strong>topN</strong>- Parameter which defines how many options will be predicted.</li>
-<li>
-<p>Inputs would be <strong>FLDATE, PRICE, SEATSMAX, SEATSOCC, SEATSMAX_B, SEATSMAX_F, SEATSOCC_B, SEATSOCC_F, PAYMENTSUM, CURRENCY</strong>.
+<p>Your trained model is now ready to predict the target <strong>PLANETYPE</strong>. To predict this target, inputs to model has to be provided. <br/> Copy the below text which contains the Inference Request with inputs in JSON format.<br/> Inference Request contains the features and its value which is input for the trained model. <br/> <strong>topN</strong>- Parameter which defines how many options will be predicted. <br/> Inputs would be <strong>FLDATE, PRICE, SEATSMAX, SEATSOCC, SEATSMAX_B, SEATSMAX_F, SEATSOCC_B, SEATSOCC_F, PAYMENTSUM, CURRENCY</strong>.
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;topN&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;objects&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1250,11 +1245,9 @@
    <img alt="" src="../images/59.png" /></p>
 </li>
 <li>
-<p>View the response from the trained model. <br/> In the response, you find the values that the model predicted. This includes the value that is predicted and the probability. <br/>The probability describes how certain the model is about its prediction. <strong>If the probability is close to 1, the model is very certain</strong>. Model predicts the PLANETYPE with two possible values(as defined in Inference request <strong>"topN": 2</strong> <br></p>
+<p>View the response from the trained model. <br/> In the response, you find the values that the model predicted. This includes the value that is predicted and the probability. <br/>The probability describes how certain the model is about its prediction. <strong>If the probability is close to 1, the model is very certain</strong>. Model predicts the PLANETYPE with two possible values(as defined in Inference request <strong>"topN": 2</strong>). <br> For predicted value of <strong>A319-100</strong>, the probability will be <strong>1.0</strong>. <br/> For predicted value of <strong>747-400</strong>, the probability will be <strong>0.0</strong>. 
+<img alt="" src="../images/60.png" /></p>
 </li>
-<li>For predicted value of <strong>A319-100</strong>, the probability will be <strong>1.0</strong>.</li>
-<li>For predicted value of <strong>747-400</strong>, the probability will be <strong>0.0</strong>. 
-<img alt="" src="../images/60.png" /></li>
 </ol>
 <p><strong>Note: The predicted values and the probabilities depend heavily on the inputs, the training data as well as the training metrics</strong></p>
 <p><strong>Well done, you just Viewed the inference result returned by the model in an ABAP report.</strong></p>
