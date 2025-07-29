@@ -18,9 +18,6 @@ In this step, you will use the ABAP GUI to view the inference result from the tr
    - Inference Request contains the features and its value which is input for the trained model.
    - **topN**- Parameter which defines how many options will be predicted.
    - Inputs would be **FLDATE, PRICE, SEATSMAX, SEATSOCC, SEATSMAX_B, SEATSMAX_F, SEATSOCC_B, SEATSOCC_F, PAYMENTSUM, CURRENCY**.
-
-# Inference Request in JSON
-
 ```json
 {
   "topN": 2,
@@ -78,11 +75,8 @@ In this step, you will use the ABAP GUI to view the inference result from the tr
    ![](./images/59.png)
 
 7. View the response from the trained model. <br/> In the response, you find the values that the model predicted. This includes the value that is predicted and the probability. <br/>The probability describes how certain the model is about its prediction. **If the probability is close to 1, the model is very certain**. Model predicts the PLANETYPE with two possible values(as defined in Inference request **"topN": 2** <br>
-   | Predicted Value | Probability |
-   | :---: | :---: |
-   | A319-100 | 1.0 |
-   | 747-400 | 0.0 |
-
+   - For predicted value of **A319-100**, the probability will be **1.0**.
+   - For predicted value of **747-400**, the probability will be **0.0**. 
 ![](./images/60.png)
 
 **Note: The predicted values and the probabilities depend heavily on the inputs, the training data as well as the training metrics**
