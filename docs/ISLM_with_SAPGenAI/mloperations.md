@@ -4,7 +4,7 @@ Once the Intelligent Scenario is published, the Intelligent Scenario Management 
 In this section, you will use the **Intelligent Scenario Management app** to perform operations on your Intelligent Scenario.
 
 1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}.
-   Input the username and password provided in the cheat sheet. Click on **Intelligent Scenario Management** section and choose the **Intelligent Scenario Management** app.
+   Click on **Intelligent Scenario Management** section and choose the **Intelligent Scenario Management** app.
    ![](./images/IntelligentScenarioManagementApp.png)
 2. Search the **Gen AI** scenario created by you and navigate to the details page by clicking the **>** icon.
    ![](./images/32.png)
