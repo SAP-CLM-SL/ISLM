@@ -4,7 +4,7 @@ Once the Intelligent Scenario is published, the Intelligent Scenario Management 
 
 In this section, you will use the Intelligent Scenario Management app to perform ML operations.
 
-1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}. Input the username and password provided in the cheat sheet. Click on the **Intelligent Scenario Management** app.
+1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}. Click on the **Intelligent Scenario Management** app.
    ![](../ISLM_with_SAPGenAI/images/IntelligentScenarioManagementApp.png)
 
 2. Search the **First-Class Seats Occupied** scenario created by you and navigate to the details page by clicking the `>` icon.
@@ -29,7 +29,11 @@ In this section, you will use the Intelligent Scenario Management app to perform
    ![](./images/21.png)
 
 9. View different tabs like **Quality Information and Debrief**. You can see attributes about data quality and what key influencers are affecting the predictions.
-   ![](./images/22.png) - **Mean Absolute Error(MAE):** Average absolute difference between the predicted values and the actual values. The lower the better. - **Root Mean Square Error(RMSE):** RMSE is the square root of mean squared error. It measures the average difference between values predicted by a model and the actual values. RMSE tells us how close the actual values are to prediction values made by the model. The lower the better. - **Mean Absolute Percentage Error(MAPE)** Average of the absolute percentage errors of the predictions. The lower the better.
+   - **Mean Absolute Error(MAE):** Average absolute difference between the predicted values and the actual values. The lower the better.
+   - **Root Mean Square Error(RMSE):** RMSE is the square root of mean squared error. It measures the average difference between values predicted by a model and the actual values. RMSE tells us how close the actual values are to prediction values made by the model. The lower the better.
+   - **Mean Absolute Percentage Error(MAPE)** Average of the absolute percentage errors of the predictions. The lower the better.
+   ![](./images/22.png) 
+   
 
 10. Choose the back icon <img src="../images/SAPBack_White.png" width="70"> to navigate back to Model Versions screen.<br/> Activate the model version to get the predictions from regression model. Select the Model Version and click the **Activate** button.
     ![](./images/23.png)
