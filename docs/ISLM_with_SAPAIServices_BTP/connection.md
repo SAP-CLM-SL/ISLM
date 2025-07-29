@@ -1,6 +1,6 @@
 # Set up the connection for Intelligent Scenario to connect to BTP based ML service
 
-Once the Intelligent Scenario is published, we need to maintain the connection for the intelligent scenario in SAP S/4 HANA with the Data Attribute Recommendation service in BTP. This service has already been provisioned in BTP and **service key** is available in the Desktop folder.
+Once the Intelligent Scenario is published, we need to maintain the connection for the intelligent scenario in SAP S/4 HANA with the Data Attribute Recommendation service in BTP. This service has already been provisioned in BTP and **service key** is available in the Cheat sheet.
 
 1. Open transaction **/nSPRO** in **S4H** system via **SAP Logon**. And click **SAP Reference IMG** button.
    ![](./images/22.png)
@@ -9,10 +9,10 @@ Once the Intelligent Scenario is published, we need to maintain the connection f
    ![](./images/23.png)
 
 3. Click the **Execute** button. <br/>
-   [](./images/24.png)
+![](./images/24.png)
 
 4. In the ISLM Connection Mapping screen, click the **Create Connection** icon.
-   ![](./images/create14.png)
+![](./images/create14.png)
 
 5. Input the Intelligent Scenario Name created by you (`Z_PRED_PLANETYPE_###`, where ### is your attendee id) and click the **Next** button.
    ![](./images/create8.png)
