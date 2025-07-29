@@ -3,32 +3,30 @@
 The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app.
 In this step, you’ll create a new intelligent scenario to generate the order confirmation email for Sales Order using LLM model.
 
-1. Open **SAP Logon** and logon to **S4H** system. Check the username and password provided in the cheat sheet.
-2. Create a Prediction Class which defines the behavior of the scenario. Prediction class has methods to specify Inference type and metadata like end point URI for LLM Model.
-   Open transaction `/nse24` and search for the class `ZCL_SOC_EMAIL_CONFIRMATION`
-   ![](./images/1.png)
+1. Open **SAP Logon** and logon to **S4H** system.
+2. Create a Prediction Class which defines the behavior of the scenario. Prediction class has methods to specify Inference type and metadata like end point URI for LLM Model. <br/>Open transaction `/nse24` and search for the class `ZCL_SOC_EMAIL_CONFIRMATION`
+![](./images/1.png)
 3. Click the **Copy** button.
-   ![](./images/2.png)
-4. Provide the unique name in the **Copy to** field. Enter a unique name starting with `ZCL`, such as `ZCL_SLS_ORD_CONF_###`, where ### is your attendee id mentioned in the cheat sheet.
-   And click the **tick icon**.
-   ![](./images/3.png)
+![](./images/2.png)
+
+4. Provide the unique name in the **Copy to** field. Enter a unique name starting with `ZCL`, such as `ZCL_SLS_ORD_CONF_###`, where ### is your attendee id mentioned in the cheat sheet. And click the **tick icon**.
+![](./images/3.png)
 5. Click the **Local Object** button.
-   ![](./images/4.png)
+![](./images/4.png)
 6. The class is created in **Inactive** status. Click the **Display** button.
-   ![](./images/5.png)
+![](./images/5.png)
 7. View the following methods of the prediction class.
-   - **IF_ISLM_INTS~GET_INFERENCE_TYPE** - Using this method, specify the inference type that supports this intelligent scenario.
-   - **IF_ISLM_INTS_SBS_DAR~GET_SERVEFLOW_ENDPOINT_URI** - Using this method, specify the end point URI of the LLM Model.
+   - **IF_ISLM_INTS~GET_INFERENCE_TYPE**: Using this method, specify the inference type that supports this intelligent scenario.
+   - **IF_ISLM_INTS_SBS_DAR~GET_SERVEFLOW_ENDPOINT_URI**: Using this method, specify the end point URI of the LLM Model.
 
 8. Click the **Activate** icon.
-   ![](./images/6.png)
+![](./images/6.png)
 9. Click the **tick** icon.
-   ![](./images/7.png)
-10. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}.
-    Click on **Intelligent Scenario Management** section and choose the **Intelligent Scenarios** app.
-    ![](./images/IntelligentScenariosApp.png)
+![](./images/7.png)
+10. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}.<br/>Click on **Intelligent Scenario Management** section and choose the **Intelligent Scenarios** app. 
+![](./images/IntelligentScenariosApp.png)
 11. Click the **Create** button and choose **Side-by Side**.
-    ![](./images/CreateSBS.png)
+![](./images/CreateSBS.png)
 12. Provide the required information in the screen:
     - **Intelligent Scenario Name**: Enter a unique name starting with Z, such as `Z_SLS_ORD_CONF_###`, where ### is your attendee id mentioned in the cheat sheet.
     - **Intelligent Scenario Description**: `Generate sales order confirmation email`
