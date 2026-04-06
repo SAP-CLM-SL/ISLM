@@ -14,9 +14,11 @@ By the end of this workshop, participants will gain a comprehensive understandin
 - **Business User**: The end user who interacts with the business application and uses the predictions from machine learning for the business purpose.
 
 - **Business Administrator**: A domain expert or analytics specialist, who can perform model trainings based on business context, evaluate model quality, and can activate a model for production usage.
-
+                                                                                        
 - **Technical Administrator**: A system administrator who can perform the configurations of connectivity between different entities as well as maintains the technical configurations of the system.
 
 - **ABAP Developer**: A developer who can create ABAP artifacts required for Intelligent Scenario registration.
 
 - **Intelligent Scenario Owner**: A owner who creates, reviews and publishes Intelligent Scenario.
+
+              [Next](Tutorials.md)
