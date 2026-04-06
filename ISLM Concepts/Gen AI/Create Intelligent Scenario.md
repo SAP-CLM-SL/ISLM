@@ -49,25 +49,29 @@ Click on **Intelligent Scenario Management section** and choose the **Intelligen
 16. Select the **prediction class** created by you in the previous section. 
 <img width="1791" height="600" alt="image" src="https://github.com/user-attachments/assets/6a41af05-efd8-4e76-b0c1-b3468927f94c" />
 
-Click the Add Model button. 
+17. Click the **Add Model** button. 
+<img width="1807" height="586" alt="image" src="https://github.com/user-attachments/assets/21d73b8d-c99a-40ca-9915-2f6b018dbddd" />
 
-The Add Generative AI Model screen will pop up. Enter the below details:
+18. The Add Generative AI Model screen will pop up. Enter the below details:
+- Name: `Z_SLS_ORD_CONF_MDL`
+- Description: `LLM Model for generating SO email`
+- Executable ID: `azure-openai`
+- Large Language Model Name: `gpt-4o-mini`
+<img width="1759" height="697" alt="image" src="https://github.com/user-attachments/assets/22e5c43c-d847-4640-884a-e0dff6e6400d" />
 
-Name: Z_SLS_ORD_CONF_MDL
-Description: LLM Model for generating SO email
-Executable ID: azure-openai
-Large Language Model Name: gpt-4o-mini 
-Click the Add button. 
+19. Click the **Add** button. 
+<img width="1738" height="748" alt="image" src="https://github.com/user-attachments/assets/b20a7f56-c2c7-47f1-98a6-97f9630a9f3e" />
 
-Click the Add prompt templates button. 
+20. Click the **Add** prompt templates button. 
+<img width="1738" height="748" alt="image" src="https://github.com/user-attachments/assets/5a66cbde-c597-4dba-a92f-ae9e3f92618b" />
 
-In the Add Prompt Template dialog, enter the below details:
+21. In the Add Prompt Template dialog, enter the below details:
+- Name: `SYSTEM_PROMPT`
+- Description: `Provide context to gpt-4o-mini model`
+<img width="1533" height="873" alt="image" src="https://github.com/user-attachments/assets/a542bfdf-8cd1-4bf5-aacf-09d4636f7043" />
 
-Name: SYSTEM_PROMPT
-Description: Provide context to gpt-4o-mini model 
-Enter the Prompt text:
-
-
+22. Enter the **Prompt** text:
+```
 You are a sales executive who is responsible for reaching out to customers for confirming or declining their orders via email.
 For the given sales order, evaluate the following:
 1. Size of the delivery vehicle based on the number of items.
@@ -78,28 +82,39 @@ Write an email in the following format:
 - The subject of email should be of format <Confirmation on order number: {order_number} placed on {booking_date}>
 - The body of email should be of format: "Sales order contains <Category> to be delivered to <Location>. The order will be delivered via a <size> vehicle.
 IF <distance between source address and delivery address> > 100 kms THEN include a message about potential delivery delays ELSE congratulate on being eligible for one day delivery
+```
+<img width="1534" height="874" alt="image" src="https://github.com/user-attachments/assets/6a636b8f-8100-4dd6-8579-c8922c0a59c2" />
 
-Click the Save button. 
+23. Click the **Save** button. 
+<img width="1534" height="874" alt="image" src="https://github.com/user-attachments/assets/1d69bd7f-7089-4b76-8d30-9c52a1fb8d54" />
 
-Click the Add prompt templates button. 
+24. Click the **Add** prompt templates button. 
+<img width="1534" height="874" alt="image" src="https://github.com/user-attachments/assets/28f4e385-6dfa-49b4-8419-d491260f09ff" />
 
-In the Add Prompt Template dialog, enter the below details:
+25. In the Add Prompt Template dialog, enter the below details:
+- Name: `USER_PROMPT`
+- Description: `Provide sales order item data for generating the order confirmation email`
+<img width="1537" height="882" alt="image" src="https://github.com/user-attachments/assets/7a61752d-c171-4617-a6c5-ff971d9d0adb" />
 
-Name: USER_PROMPT
-Description: Provide sales order item data for generating the order confirmation email 
-Enter the Prompt text:
-
-
+25. Enter the **Prompt** text:
+```
 Build a confirmation mail for a sales order containing {ISLM_Items}. The source address is {ISLM_Source} and the delivery address is {ISLM_Destination}.
+```
+<img width="1856" height="974" alt="image" src="https://github.com/user-attachments/assets/50c15abe-10aa-4b3b-a13a-dae7772ed792" />
 
-Click the Save button. 
+27. Click the **Save** button. 
+<img width="1526" height="892" alt="image" src="https://github.com/user-attachments/assets/5182ba8b-1987-40d7-ae9e-8d0591f7634e" />
 
-The added prompt should be visible in the Prompt Templates table. Click the Save Draft button. 
+28. The added prompt should be visible in the Prompt Templates table. Click the **Save Draft** button. 
+<img width="1909" height="1025" alt="image" src="https://github.com/user-attachments/assets/f45d5152-38dd-4753-ab5e-2ddc5476d4f6" />
 
-Navigate back to Intelligent Scenario by clicking the back button. 
+29. Navigate back to Intelligent Scenario by clicking the **back** button. 
+<img width="1909" height="1025" alt="image" src="https://github.com/user-attachments/assets/0c4bd8f3-f4d2-4e99-bc52-84751210c9ed" />
 
-Scenario is now ready to be published. Click on Publish button. You will receive a message that Intelligent Scenario is published. 
+30. Scenario is now ready to be published. Click on **Publish** button. You will receive a message that Intelligent Scenario is published. 
+<img width="1885" height="1038" alt="image" src="https://github.com/user-attachments/assets/3063d5e1-fdc9-42ec-91ae-824f62e63e2d" />
 
-Search the Intelligent Scenario created by you by entering the Intelligent Scenario name and Status = Published. 
+31. Search the Intelligent Scenario created by you by entering the **Intelligent Scenario name** and **Status = Published**. 
+<img width="1872" height="507" alt="image" src="https://github.com/user-attachments/assets/f76be606-5076-4862-8206-8fb90941515d" />
 
 Well done, you just created your first Side-by-side Intelligent Scenario.
