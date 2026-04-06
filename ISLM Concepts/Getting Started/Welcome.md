@@ -21,4 +21,4 @@ By the end of this workshop, participants will gain a comprehensive understandin
 
 - **Intelligent Scenario Owner**: A owner who creates, reviews and publishes Intelligent Scenario.
 
-              [Next](Tutorials.md)
+  [Tutorials->](Tutorials.md)
