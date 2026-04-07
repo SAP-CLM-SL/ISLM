@@ -4,7 +4,7 @@
 
 Generate an order confirmation email based on Sales data.
 
-👉 [Exercise 1](Gen%20AI/ISLM%20Overview.md)
+👉 [Exercise 1](../Gen%20AI/ISLM%20Overview.md)
 
 <br></br>
 >[!NOTE]
@@ -12,7 +12,7 @@ Generate an order confirmation email based on Sales data.
 
 Predict the number of first class seats occupied in a flight.
 
-👉 [Exercise 2](APL/Overview.md)
+👉 [Exercise 2](../APL/Overview.md)
 
 <br></br>
 >[!NOTE]
@@ -20,7 +20,7 @@ Predict the number of first class seats occupied in a flight.
 
 Predict the plane type of an aircraft.
 
-👉 [Exercise 3](DAR/Overview.md)                                                                                                            
+👉 [Exercise 3](../DAR/Overview.md)                                                                                                            
 <br></br>
 <br></br>
 <p>
