@@ -28,13 +28,18 @@ In this section, you will use the Intelligent Scenario Management app to perform
 8. Click on '>' icon to view Model Version Report. 
 <img width="1919" height="565" alt="image" src="https://github.com/user-attachments/assets/df8f35b6-2636-4c96-8fe4-7bc7d486deba" />
 
-View different tabs like Quality Information and Debrief. You can see attributes about data quality and what key influencers are affecting the predictions.
+9. View different tabs like **Quality Information and Debrief**. You can see attributes about data quality and what key influencers are affecting the predictions.
 
-Mean Absolute Error(MAE): Average absolute difference between the predicted values and the actual values. The lower the better.
-Root Mean Square Error(RMSE): RMSE is the square root of mean squared error. It measures the average difference between values predicted by a model and the actual values. RMSE tells us how close the actual values are to prediction values made by the model. The lower the better.
-Mean Absolute Percentage Error(MAPE) Average of the absolute percentage errors of the predictions. The lower the better. 
+10. **Mean Absolute Error(MAE):** Average absolute difference between the predicted values and the actual values. The lower the better.
 
-Choose the back icon  to navigate back to Model Versions screen.
-Activate the model version to get the predictions from regression model. Select the Model Version and click the Activate button. 
+11. **Root Mean Square Error(RMSE):** RMSE is the square root of mean squared error. It measures the average difference between values predicted by a model and the actual values. RMSE tells us how close the actual values are to prediction values made by the model. The lower the better.
+
+12. **Mean Absolute Percentage Error(MAPE)** Average of the absolute percentage errors of the predictions. The lower the better. 
+<img width="1920" height="945" alt="image" src="https://github.com/user-attachments/assets/21464554-a9e5-4380-890c-bcd8e22a41dd" />
+
+
+13. Choose the back icon <img width="106" height="35" alt="image" src="https://github.com/user-attachments/assets/8c095e18-7bb7-45f0-8b40-dbba9d0bfe82" /> to navigate back to Model Versions screen.
+Activate the model version to get the predictions from regression model. Select the Model Version and click the **Activate** button. 
+<img width="1919" height="575" alt="image" src="https://github.com/user-attachments/assets/bf69f7ce-2237-49a7-a628-bda81ab1b439" />
 
 Well done, you just Operated the Intelligent Scenario by training your first model.
