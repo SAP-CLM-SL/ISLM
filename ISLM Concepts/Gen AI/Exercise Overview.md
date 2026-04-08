@@ -12,7 +12,7 @@ This exercise includes the following steps:
 <br></br>
 
 <p>
-  <a href="ISLM%20Overview">⬅️ ISLM Overview</a>
+  <a href="ISLM%20Overview.md">⬅️ ISLM Overview</a>
   
   <a href="Create%20Intelligent%20Scenario.md">Create Intelligent Scenario ➡️</a>
 </p>
