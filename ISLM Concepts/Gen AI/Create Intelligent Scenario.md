@@ -118,3 +118,10 @@ Build a confirmation mail for a sales order containing {ISLM_Items}. The source 
 <img width="1872" height="507" alt="image" src="https://github.com/user-attachments/assets/f76be606-5076-4862-8206-8fb90941515d" />
 
 Well done, you just created your first Side-by-side Intelligent Scenario.
+
+<br></br>
+<p>
+  <a href="Exercise%20Overview.md">⬅️ Exercise Overview</a>
+  <a href="Connection%20setup.md">Connection setup ➡️</a>
+</p>
+
