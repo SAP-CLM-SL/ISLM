@@ -57,3 +57,10 @@ Column `GB_SCORE_SEATSOCCF` column has the predicted value of the occupied seats
 <img width="1391" height="1025" alt="image" src="https://github.com/user-attachments/assets/8bb5faab-1b68-4b85-8b06-55c8bf344e99" />
 
 **Well done, you just visualized your trained model predictions..!**
+
+<br></br>
+<p>
+  <a href="ML%20Operations.md">⬅️ ML Operations</a>
+  
+  <a href="Schedule%20Training.md">Schedule Training ➡️</a>
+</p>
