@@ -31,4 +31,10 @@ Once the Intelligent Scenario is published, the Intelligent Scenario Management 
 10. In the dialog Activate for All Users, choose **Activate For All** button.
     <img width="720" height="205" alt="image" src="https://github.com/user-attachments/assets/c685a42f-7c3b-4ecb-b71a-5d100c2c1267" />
 
-Well done, you just Used Intelligent Scenario Management app to deploy and activate the llm model.
+**Well done, you just Used Intelligent Scenario Management app to deploy and activate the llm model.**
+<br></br>
+<p>
+  <a href="Connection%20setup.md">⬅️ Connection setup</a>
+  
+  <a href="Inference.md">Inference ➡️</a>
+</p>
