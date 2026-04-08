@@ -122,6 +122,7 @@ Well done, you just created your first Side-by-side Intelligent Scenario.
 <br></br>
 <p>
   <a href="Exercise%20Overview.md">⬅️ Exercise Overview</a>
+ 
   <a href="Connection%20setup.md">Connection setup ➡️</a>
 </p>
 
