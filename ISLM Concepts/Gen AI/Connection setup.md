@@ -26,3 +26,10 @@ Once the Intelligent Scenario is published, we need to maintain the connection f
 
 
 Well done, you just **Set up the connection for Intelligent Scenario** to connect to BTP based Generative AI Hub service.
+
+<br></br>
+<p>
+  <a href="Create%20Intelligent%20Scenario.md">⬅️ Create Intelligent Scenario</a>
+  
+  <a href="ML%20Operations.md">ML Operations ➡️</a>
+</p>
