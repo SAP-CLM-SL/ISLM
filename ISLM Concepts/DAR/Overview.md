@@ -14,3 +14,10 @@ This exercise includes the following steps:
 2. Set up the connection for the Intelligent Scenario to connect to BTP based ML service.
 3. Use Intelligent Scenario Management app to train, view model quality, deploy and activate the model.
 4. View the inference result returned by the model in an ABAP report.
+
+<br></br>
+<p>
+  <a href="../APL/Schedule%20Training.md">⬅️ Schedule Training</a>
+  
+  <a href="Create%20Intelligent%20Scenario.md">Create Intelligent Scenario ➡️</a>
+</p>
