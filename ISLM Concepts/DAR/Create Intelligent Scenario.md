@@ -81,3 +81,9 @@ Click on **Publish** button. You will receive a message that Intelligent Scenari
 <img width="1903" height="574" alt="image" src="https://github.com/user-attachments/assets/853d3ca9-2691-4a6a-a8cf-9d44ddf3498d" />
 
 **Well done, you just created your first Side-by-side Intelligent Scenario.**
+<br></br>
+<p>
+  <a href="Overview.md">⬅️ Overview</a>
+  
+  <a href="Connect%20to%20SAP%20BTP.md">Connect to SAP BTP ➡️</a>
+</p>
