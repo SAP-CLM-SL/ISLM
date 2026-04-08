@@ -94,5 +94,5 @@ Well done, you just Viewed the inference result returned by the model in an ABAP
 <p>
   <a href="ML%20Operations.md">⬅️ ML Operations</a>
   
-  <a href="../Community/Blogs">Blogs ➡️</a>
+  <a href="../Community/Blogs.md">Blogs ➡️</a>
 </p>
