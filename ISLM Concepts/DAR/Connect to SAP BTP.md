@@ -33,3 +33,9 @@ Once the Intelligent Scenario is published, we need to maintain the connection f
 <img width="1897" height="406" alt="image" src="https://github.com/user-attachments/assets/e942f56f-56cb-418c-98a8-a45b35afeb20" />
 
 **Well done, you just Set up the connection for Intelligent Scenario to connect to BTP based ML service.**
+<br></br>
+<p>
+  <a href="Create%20Intelligent%20Scenario.md">⬅️ Create Intelligent Scenario</a>
+  
+  <a href="ML%20Operations.md">ML Operations ➡️</a>
+</p>
