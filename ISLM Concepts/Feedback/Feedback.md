@@ -13,5 +13,5 @@ We'd love to hear your thoughts!
 
 <br></br>
 <p>
-  <a href="../Contact%20Us/Contact%20Us">⬅️ Contact Us</a>
+  <a href="../Contact%20Us/Contact%20Us.md">⬅️ Contact Us</a>
 </p>
