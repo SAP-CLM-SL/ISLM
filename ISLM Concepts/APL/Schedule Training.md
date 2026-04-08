@@ -55,3 +55,11 @@ You can schedule a training for your intelligent scenarios. Once the trainings a
 **Well done, you just scheduled training.**
 
 🎉 Congratulations! 🎉 You have successfully completed the exercise.
+
+<br></br>
+<p>
+  <a href="Inference.md">⬅️ Inference</a>
+  
+  <a href="../DAR/Overview.md">Overview ➡️</a>
+</p>
+
