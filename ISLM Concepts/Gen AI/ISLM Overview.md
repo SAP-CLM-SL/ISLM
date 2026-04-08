@@ -29,3 +29,9 @@ Lifecycle Streamlining
 5. Enable prompt templating capabilities for effective GenAI model usage.
 6. **Connectivity to GenAI Hub:** ISLM enables seamless connectivity to SAP’s Generative AI Hub.
 7. **ISLM and ABAP AI SDK Integration:** ABAP AI SDK and Intelligent Scenario Lifecycle Management serve as integration components between business applications and large language models. Using ABAP AI SDK powered by Intelligent Scenario Lifecycle Management (ISLM), you can easily embed generative AI capabilities into your custom ABAP based applications. ISLM and ABAP AI SDK offer a low-code approach within ABAP stack, enabling seamless integration of generative AI models into your business applications. With the combined experience of ISLM and the ABAP AI SDK, customers can develop and deploy generative AI-driven use cases directly within their SAP S/4HANA environment.
+<br></br>
+<p>
+  <a href="../Getting%20Started/Tutorials.md">⬅️ Tutorials</a>
+  
+  <a href="Exercise%20Overview.md">Exercise Overview ➡️</a>
+</p>
