@@ -14,7 +14,7 @@ By the end of this exercise, participants will have gained hands-on experience i
 
 <br></br>
 <p>
-  <a href="Overview.md">⬅️ Overview</a>
+  <a href="../Gen%20AI/Inference.md">⬅️ Inference</a>
   
   <a href="Create%20Intelligent%20Scenario.md">Create Intelligent Scenario ➡️</a>
 </p>
