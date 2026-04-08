@@ -20,3 +20,11 @@
 - [SAP Cloud Appliance Library](https://cal.sap.com/catalog#/applianceTemplates)
 - [SAP S/4HANA Fully-Activated Appliance](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/sap-s-4hana-fully-activated-appliance-create-your-sap-s-4hana-system-in-a/ba-p/13365960)
 - [Demo script](https://www.sap.com/documents/2022/12/805bdaf3-547e-0010-bca6-c68f7e60039b.html)
+
+<br></br>
+<p>
+  <a href="../DAR/Inference.md">⬅️ Inference</a>
+
+  <a href="Videos.md">Videos ➡️</a>
+</p>
+
