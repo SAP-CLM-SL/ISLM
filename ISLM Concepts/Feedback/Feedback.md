@@ -10,3 +10,8 @@ We'd love to hear your thoughts!
 📱 Scan the QR code below:
 
 <img width="496" height="496" alt="image" src="https://github.com/user-attachments/assets/606af510-c2d2-479a-a3cf-0d5e34e6cc64" />
+
+<br></br>
+<p>
+  <a href="../Contact%20Us/Contact%20Us">⬅️ Contact Us</a>
+</p>
