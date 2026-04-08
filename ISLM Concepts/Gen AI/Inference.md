@@ -80,3 +80,10 @@ cl_demo_output=>display_text( text = lv_response ).
 
 
 Well done, you have successfully queried the **gpt-4o-mini model** to generate the confirmation email for sales order.
+
+<br></br>
+<p>
+  <a href="ML%20Operations.md">⬅️ ML Operations</a>
+  
+  <a href="../APL/Overview.md">Overview ➡️</a>
+</p>
