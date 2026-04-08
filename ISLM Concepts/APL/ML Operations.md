@@ -43,3 +43,10 @@ Activate the model version to get the predictions from regression model. Select 
 <img width="1919" height="575" alt="image" src="https://github.com/user-attachments/assets/bf69f7ce-2237-49a7-a628-bda81ab1b439" />
 
 Well done, you just Operated the Intelligent Scenario by training your first model.
+
+<br></br>
+<p>
+  <a href="Create%20Intelligent%20Scenario.md">⬅️ Create Intelligent Scenario</a>
+  
+  <a href="Inference.md">Inference ➡️</a>
+</p>
