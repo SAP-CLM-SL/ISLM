@@ -71,3 +71,10 @@ The Prediction variable includes the calculated result.
 <img width="1042" height="477" alt="image" src="https://github.com/user-attachments/assets/fa012cc9-c39a-4b73-9160-1f9ddac76b98" />
 
 Well done, you just created your first embedded Intelligent Scenario.
+
+<br></br>
+<p>
+  <a href="Overview.md">⬅️ Overview</a>
+  
+  <a href="ML%20Operations.md">ML Operations ➡️</a>
+</p>
