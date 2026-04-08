@@ -71,3 +71,9 @@ Validate that the Deployment has **Active for all** Indicator.
 <img width="1267" height="582" alt="image" src="https://github.com/user-attachments/assets/be40451b-3fbc-44a8-8c2f-ced5ea52b82e" />
 
 **Well done, you just used Intelligent Scenario Management app to train, view model quality, deploy and activate the model.**
+<br></br>
+<p>
+  <a href="Connect%20to%20SAP%20BTP.md">⬅️ Connect to SAP BTP</a>
+  
+  <a href="Inference.md">Inference ➡️</a>
+</p>
