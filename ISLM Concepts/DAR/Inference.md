@@ -89,3 +89,10 @@ For predicted value of **747-400**, the probability will be **0.0**.
 Well done, you just Viewed the inference result returned by the model in an ABAP report.
 
 🎉 Congratulations! You have successfully completed the Exercise!🎉
+
+<br></br>
+<p>
+  <a href="ML%20Operations.md">⬅️ ML Operations</a>
+  
+  <a href="../Community/Blogs">Blogs ➡️</a>
+</p>
