@@ -41,3 +41,8 @@ Enables automated decision support within business processes<br>
 
 ## What You'll Learn
 End to End implementation of AI in business application in S/4HANA using ISLM.
+
+<br></br>
+<p>
+ <a href="CreateIntelligentScenario.md">Create Intelligent Scenario ➡️</a>
+</p>
