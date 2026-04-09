@@ -119,3 +119,10 @@ If the prompt shield value was set to false in the Intelligent Scenario Model, t
 To prevent such attacks:
 It is recommended to avoid using dynamic parameters in system prompts.
 If your use case has risks of such attacks, ensure that the prompt shield value is true. 
+
+<br></br>
+<p>
+  <a href="OperateIntelligentScenario.md">⬅️ Operate Intelligent Scenario</a>
+  
+  <a href="Conclusion.md">Conclusion ➡️</a>
+</p>
