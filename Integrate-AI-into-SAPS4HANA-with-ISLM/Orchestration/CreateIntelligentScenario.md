@@ -273,3 +273,10 @@ Enter the package as local object $TMP
 <img width="1912" height="1007" alt="image" src="https://github.com/user-attachments/assets/ca85ea77-a3f9-464f-99d3-99f1a0a21c5f" />
 
 **Intelligent Scenario** is created successfully.
+
+<br></br>
+<p>
+  <a href="Introduction.md">⬅️ Introduction</a>
+  
+  <a href="OperateIntelligentScenario.md">Operate Intelligent Scenario ➡️</a>
+</p>
