@@ -26,3 +26,10 @@
 
 
 **Intelligent Scenario** is active and ready for prompt execution.
+
+<br></br>
+<p>
+  <a href="CreateIntelligentScenario.md">⬅️ Create Intelligent Scenario</a>
+  
+  <a href="PromptExecution.md">Prompt Execution ➡️</a>
+</p>
