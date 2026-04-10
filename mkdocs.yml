@@ -62,6 +62,8 @@ nav:
       - Connect to SAP BTP: "ISLM_with_SAPAIServices_BTP/connection.md"
       - ML Operations: "ISLM_with_SAPAIServices_BTP/mloperations.md"
       - Inference: "ISLM_with_SAPAIServices_BTP/inference.md"
+  - Gen AI Orchestration:
+      - Gen AI Orchestration: "Integrate-AI-into-SAPS4HANA-with-ISLM/README.md"
   - Community:
       - Blogs: "community/readme.md"
       - Videos: "community/videos.md"
