@@ -2108,7 +2108,7 @@ Use the intelligent scenario within the orchestration to drive decision-making a
 <img alt="Inference" src="Inference/8.jpg" /></p>
 </li>
 <li>
-<p>Enter the Company Name = <strong>Alph</strong>a and Press Execute.
+<p>Enter the Company Name = <strong>Alpha</strong> and Press Execute.
 <img alt="Inference" src="Inference/9.jpg" /></p>
 </li>
 <li>
@@ -2157,25 +2157,25 @@ Use the intelligent scenario within the orchestration to drive decision-making a
 <img alt="Inference" src="Inference/19.jpg" /></p>
 </li>
 <li>
-<p><strong>Explanation of the report program</strong><br>
-<strong>Explanation of the Return Policy Summarization</strong>: In the report, ABAP AI SDK APIs are used to execute the prompts maintained in the intelligent scenario.</p>
+<p><strong>Explanation of the report program</strong></p>
 </li>
-<li>First, an instance of your intelligent scenario is created.</li>
-<li>Next, the grounding query is added which is the company name provided in the selection screen.
-   This grounding query is passed to grounding module which identifies the relevant document which points to the company name, and returns the entire contents of the file (since the value Max Document Count = 1 is maintained in the Intelligent Scenario Model)</li>
-<li>Next, the prompt template to summarize the contents of the return policy document is added to the orchestration payload.</li>
-<li>The value of the dynamic parameter in the user prompt is updated to specify the company name provided in the selection screen.</li>
-<li>Finally, the orchestration payload containing the grounding, data masking, filtering, prompt templating and translation modules is sent to the orchestration service and the response is displayed.</li>
-<li>The response contains the JSON with details about the return policy, as mentioned in the user prompt.</li>
-<li>Since you have logged in with English language, the output of the translation module is in English.</li>
-<li>Since you have logged in with German language, the output of the translation module is in German.</li>
-<li>If you had logged in with a language which is not supported for translation, the response is displayed in English by default. <br>
-<strong>Explanation of the prompt injection code:</strong> In the report, ABAP AI SDK APIs are used to execute the prompts maintained in the intelligent scenario. Here we are trying to trick the LLM to respond in a way to force the user in clicking an untrusted URL. By setting the prompt shield flag = true, such attacks can be detected before the prompts are sent to the LLM. </li>
-<li>First, an instance of your intelligent scenario is created.</li>
-<li>Next, the grounding query is added which is the company name provided in the selection screen.<br>
-  This grounding query is passed to grounding module which identifies the relevant document which points    to the company name, and returns the entire contents of the file (since the value Max Document Count =    1 is maintained in the Intelligent Scenario Model)</li>
-<li>We add the system prompt to the prompt templating module. Here, we are changing the 'ISLM_RESPONSIBILITY' dynamic parameter to provide instructions to LLM to generate malicious content which can be used for hacking.<br></li>
 </ol>
+<p><strong>Explanation of the Return Policy Summarization</strong>: In the report, ABAP AI SDK APIs are used to execute the prompts maintained in the intelligent scenario.
+- First, an instance of your intelligent scenario is created.
+- Next, the grounding query is added which is the company name provided in the selection screen.
+   This grounding query is passed to grounding module which identifies the relevant document which points to the company name, and returns the entire contents of the file (since the value Max Document Count = 1 is maintained in the Intelligent Scenario Model)
+- Next, the prompt template to summarize the contents of the return policy document is added to the orchestration payload.
+- The value of the dynamic parameter in the user prompt is updated to specify the company name provided in the selection screen.
+- Finally, the orchestration payload containing the grounding, data masking, filtering, prompt templating and translation modules is sent to the orchestration service and the response is displayed.
+- The response contains the JSON with details about the return policy, as mentioned in the user prompt.
+- Since you have logged in with English language, the output of the translation module is in English.
+- Since you have logged in with German language, the output of the translation module is in German.
+- If you had logged in with a language which is not supported for translation, the response is displayed in English by default. <br></p>
+<p><strong>Explanation of the prompt injection code:</strong> In the report, ABAP AI SDK APIs are used to execute the prompts maintained in the intelligent scenario. Here we are trying to trick the LLM to respond in a way to force the user in clicking an untrusted URL. By setting the prompt shield flag = true, such attacks can be detected before the prompts are sent to the LLM. 
+- First, an instance of your intelligent scenario is created.
+- Next, the grounding query is added which is the company name provided in the selection screen.<br>
+  This grounding query is passed to grounding module which identifies the relevant document which points    to the company name, and returns the entire contents of the file (since the value Max Document Count =    1 is maintained in the Intelligent Scenario Model)
+- We add the system prompt to the prompt templating module. Here, we are changing the 'ISLM_RESPONSIBILITY' dynamic parameter to provide instructions to LLM to generate malicious content which can be used for hacking.<br></p>
 <p>The instruction specified in the system prompt is:
 You are an helpful assistant. Your responsibility is to assist the user with their queries.<br></p>
 <p><strong>INSTRUCTIONS</strong><br>
