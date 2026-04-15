@@ -329,7 +329,7 @@ For this, we have already created a report with other scenario. You can copy it 
 6. Execute the program `Z_POL_DOC_SUMMARY_##`.
 ![Inference](Inference/8.jpg)
 
-7. Enter the Company Name = **Alph**a and Press Execute.
+7. Enter the Company Name = **Alpha** and Press Execute.
 ![Inference](Inference/9.jpg)
 
 8. Output of the prompt execution with orchestration capabilities,
@@ -365,7 +365,8 @@ For this, we have already created a report with other scenario. You can copy it 
 17. Double click the error logged and you can see the prompt attack detected error.
 ![Inference](Inference/19.jpg)
 
-18. **Explanation of the report program**<br>
+18. **Explanation of the report program**
+
 **Explanation of the Return Policy Summarization**: In the report, ABAP AI SDK APIs are used to execute the prompts maintained in the intelligent scenario.
 - First, an instance of your intelligent scenario is created.
 - Next, the grounding query is added which is the company name provided in the selection screen.
@@ -377,6 +378,7 @@ For this, we have already created a report with other scenario. You can copy it 
 - Since you have logged in with English language, the output of the translation module is in English.
 - Since you have logged in with German language, the output of the translation module is in German.
 - If you had logged in with a language which is not supported for translation, the response is displayed in English by default. <br>
+
 **Explanation of the prompt injection code:** In the report, ABAP AI SDK APIs are used to execute the prompts maintained in the intelligent scenario. Here we are trying to trick the LLM to respond in a way to force the user in clicking an untrusted URL. By setting the prompt shield flag = true, such attacks can be detected before the prompts are sent to the LLM. 
 - First, an instance of your intelligent scenario is created.
 - Next, the grounding query is added which is the company name provided in the selection screen.<br>
