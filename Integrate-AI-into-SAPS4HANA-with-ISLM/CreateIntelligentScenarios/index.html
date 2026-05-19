@@ -1574,59 +1574,59 @@
 <ol>
 <li>
 <p>Open the browser and navigate to the Fiori Launchpad by clicking <a href="https://107.23.197.27:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html">here</a>. We've already kept the system logged in. And under "Analytics" tab launch the "Intelligent Scenarios" application.
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/017.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/017.jpg" /></p>
 </li>
 <li>
 <p>Click the Create button and choose Side-by-Side.
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/02.png" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/02.png" /></p>
 </li>
 <li>
 <p>Then in the <strong>Settings</strong> tab:<br>
 Select <strong>Generative AI</strong> as the <strong>Scenario Type</strong>.<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/02.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/02.jpg" /></p>
 </li>
 <li>
 <p>Enter unique <strong>Scenario name</strong> in the below format, where ## is your attendee ID.<br>
 <div class="highlight"><pre><span></span><code>Z_POL_DOC_SUMM_##
 </code></pre></div>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/03.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/03.jpg" /></p>
 </li>
 <li>
 <p>Enter the <strong>description</strong><br>
 <div class="highlight"><pre><span></span><code>Summarize Return Policy Document
 </code></pre></div>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/04.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/04.jpg" /></p>
 </li>
 <li>
 <p>Select <strong>Stateless – Customer</strong> as the Usage Type. <br>
 This option provide the shared connectivity model allows a single connection between the ABAP system and the SAP Generative AI Hub to be configured once and reused across multiple AI use cases. This simplifies administration, improves governance, and reduces setup effort. Reuse connectivity is already set up and no action is required here for connectivity.
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/05.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/05.jpg" /></p>
 </li>
 <li>
 <p>Add Generative AI Model to the Intelligent scenario<br>
 Choose Add Model and maintain the required details:<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/06.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/06.jpg" /></p>
 </li>
 <li>
 <p>Enter a <strong>model name</strong> as <strong>Z_POL_DOC_SUMMARIZE_MOD</strong><br>
    Enter the <strong>description</strong> as <strong>Model with orchestration modules</strong><br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/07.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/07.jpg" /></p>
 </li>
 <li>
 <p>Select the appropriate <strong>Executable ID</strong> from the drop down. In this case, we will choose <strong>azure-openai</strong><br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/08.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/08.jpg" /></p>
 </li>
 <li>
 <p>Select the corresponding <strong>model</strong> from the drop down. In this exercise, we will choose <strong>gpt-5-mini</strong><br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/09.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/09.jpg" /></p>
 </li>
 <li>
 <p>(Optional) Choose a specific <strong>model version</strong> (latest is selected by default). In this case, we can keep as empty to have latest.<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/010.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/010.jpg" /></p>
 </li>
 <li>
 <p>Choose <strong>Add</strong> to confirm<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/011.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/011.jpg" /></p>
 </li>
 <li>
 <p>Intelligent scenario with Orchestration service: <br></p>
@@ -1770,30 +1770,30 @@ Choose Add Model and maintain the required details:<br>
   }
 }
 </code></pre></div>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/4.jpg" /> <br></li>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/4.jpg" /> <br></li>
 <li>
 <p>Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.<br></p>
 </li>
 <li>
 <p>In the <strong>Grounding subsection</strong>, add the required data repository type <strong>vector</strong>. This will support the grounding document addition. <br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/019.jpg" /> <br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/019.jpg" /> <br>
 To restrict your grounding module output during inference, maintain Search Configuration value. This can help to retrieve only relevant data instead of all the uploaded data.<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/021.jpg" /><br></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/021.jpg" /><br></p>
 </li>
 <li>
 <p>The <strong>Input Translation</strong> module allows you to translate LLM text prompts and <strong>grounding module</strong> output into a target language. It may help improve LLM response when the configured model performs better with input in specific language, example English. In this use case, prompt texts are already English, so no need to maintain the Input translation configuration.<br>
 Also, <strong>Prompt Shield</strong> is already true as per the JSON configuration file.<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/6.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/6.jpg" /></p>
 </li>
 <li>
 <p>The <strong>Data Masking module</strong> enables the anonymization or pseudonymization of data before it is sent to the LLM model for processing. <br>
 The <strong>input filters</strong> defined in the Execution Flow Template JSON are populated and displayed in the table.
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/7.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/7.jpg" /></p>
 </li>
 <li>
 <p>The <strong>Output Filtering</strong> module allows you to filter the harmful or hateful content generated by the LLM.<br>
 The <strong>Output Translation</strong> module allows you to translate LLM response into a target language. It helps to display the LLM response in the language user logged, if the translation is supported.<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/014.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/014.jpg" /></p>
 </li>
 <li>
 <p><strong>Add Prompt &amp; Grounding Template</strong><br></p>
@@ -1804,12 +1804,12 @@ The <strong>Output Translation</strong> module allows you to translate LLM respo
 <li>Select the <strong>Display template information</strong> as <strong>Yes</strong>. The grounding template can include dynamic parameters similar to the user prompt.<br></li>
 <li>
 <p>The Grounding Template retrieves relevant information from the selected data repository and appends it to the user prompt. It supports dynamic parameters, which are provided at runtime (during inference).<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/9.jpg" />
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/10.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/9.jpg" />
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/10.jpg" /></p>
 </li>
 <li>
 <p>Add <strong>prompt template</strong> for <strong>system prompt</strong><br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/11.jpg" /> <br></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/11.jpg" /> <br></p>
 </li>
 <li>Enter the prompt name <strong>SYSTEM_PROMPT</strong>. The system prompt is used to set the overall context, behavior, or persona for the AI's responses. It provides the fundamental instruction set to guide the model's behaviour throughout an interaction.<br></li>
 <li>Enter the description <strong>Explain the role and responsibility for the LLM</strong><br></li>
@@ -1824,7 +1824,7 @@ Enter the below text as <strong>Prompt text</strong><br>
 <p>Default parameter value of <strong>ISLM_RESPONSIBILITY</strong>:
 <div class="highlight"><pre><span></span><code>Assist the user with their queries.
 </code></pre></div>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/12.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/12.jpg" /></p>
 </li>
 <li>
 <p>Add <strong>prompt template</strong> for <strong>user prompt</strong><br></p>
@@ -1931,40 +1931,40 @@ Enter the below text as <strong>Prompt text</strong><br>
 <li>
 <p>If you have configured grounding module, at least one User Prompt must be added with the following parameter: {ISLM_GROUNDING_OUTPUT}<br>
 At runtime, this placeholder is automatically replaced with the content retrieved by the Grounding Template from the configured data repository.<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/13.jpg" />
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/14.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/13.jpg" />
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/14.jpg" /></p>
 </li>
 <li>
 <p>Save draft<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/15.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/15.jpg" /></p>
 </li>
 <li>
 <p>Navigate to Scenario documents section by pressing <strong>Back</strong><br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/022.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/022.jpg" /></p>
 </li>
 <li>
 <p>Upload grounding documents to an Intelligent Scenario<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/16.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/16.jpg" /></p>
 </li>
 <li>
 <p>Press <strong>Upload</strong> button<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/17.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/17.jpg" /></p>
 </li>
 <li>
 <p>Select the below files from the Grounding files folder in your desktop<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/18.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/18.jpg" /></p>
 </li>
 <li>
 <p>Enter the document names like below and choose <strong>English</strong> as language for all the files.<br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/015.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/015.jpg" /></p>
 </li>
 <li>
 <p>Click <strong>Publish</strong> button and enter the package as <strong>local object $TMP</strong>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/020.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/020.jpg" /></p>
 </li>
 <li>
 <p>Press <strong>OK</strong><br>
-<img alt="Intelligent Scenarios" src="Integrate-AI-into-SAPS4HANA-with-ISLM/IntelligentScenario/21.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/21.jpg" /></p>
 </li>
 </ol>
 <p><strong>Intelligent Scenario</strong> is created successfully.</p>
