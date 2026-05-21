@@ -2,11 +2,10 @@
 1. Open the browser and navigate to the Fiori Launchpad by clicking [here](https://107.23.197.27:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html). We've already kept the system logged in. And under "Analytics" tab launch the "Intelligent Scenarios" application.
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/017.jpg)
 
-2. Click the Create button and choose Side-by-Side.
+2. Click the **Create** button and choose **Side-by-Side**.
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/02.png)
 
-3. Then in the **Settings** tab:<br>
-Select **Generative AI** as the **Scenario Type**.<br>
+3. Next, go to the **Settings** tab and select **Generative AI** as the Scenario Type.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/02.jpg)
 
 4. Enter unique **Scenario name** in the below format, where ## is your attendee ID.<br>
@@ -26,29 +25,33 @@ This option provide the shared connectivity model allows a single connection bet
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/05.jpg)
 
 
-7. Add Generative AI Model to the Intelligent scenario<br>
-Choose Add Model and maintain the required details:<br>
+7. Add a Generative AI model to the Intelligent Scenario by selecting **Add Model** and providing the required details. <br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/06.jpg)
 
-8. Enter a **model name** as **Z_POL_DOC_SUMMARIZE_MOD**<br>
-   Enter the **description** as **Model with orchestration modules**<br>
+8. Enter the below details: <br>
+- **Model name** as `Z_POL_DOC_SUMMARIZE_MOD`<br>
+- **Description** as `Model with orchestration modules`<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/07.jpg)
 
 9. Select the appropriate **Executable ID** from the drop down. In this case, we will choose **azure-openai**<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/08.jpg)
 
-10. Select the corresponding **model** from the drop down. In this exercise, we will choose **gpt-5-mini**<br>
+10. Select the corresponding **Model** from the drop down. In this exercise, we will choose **gpt-5-mini**<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/09.jpg)
 
-11. (Optional) Choose a specific **model version** (latest is selected by default). In this case, we can keep as empty to have latest.<br>
+11. Optionally, choose a specific **Model Version** (latest is selected by default). In this case, we can keep as empty to have latest.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/010.jpg)
 
 12. Choose **Add** to confirm<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/011.jpg)
 
-13. Intelligent scenario with Orchestration service: <br>
-- Navigate to the Execution Flow Template<br>
-- Use the Upload button to upload the execution flow template. Refer to folder Orchestration config in your desktop. Open the config_json.txt file to see the orchestration configuration JSON. Select All & Copy or Paste the below JSON into the dialog.<br>
+13. Intelligent scenario with Orchestration service:
+- Navigate to the **Execution Flow Template**<br>
+- Upload the Execution Flow Template
+   - Click the **Upload** button.
+   - Locate the **Orchestration config folder** on your desktop.
+   - Open the `config_json.txt` file to view the orchestration configuration JSON.
+   - Either select all and copy the JSON, or paste the below JSON directly into the dialog.
 ```
 {
   "module_configurations": {
@@ -190,7 +193,7 @@ Choose Add Model and maintain the required details:<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/4.jpg) <br>
 - Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.<br>
 
-14. In the **Grounding subsection**, add the required data repository type **vector**. This will support the grounding document addition. <br>
+14. In the **Grounding subsection**, add the required data repository type **Vector**. This will support the grounding document addition. <br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/019.jpg) <br>
 To restrict your grounding module output during inference, maintain Search Configuration value. This can help to retrieve only relevant data instead of all the uploaded data.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/021.jpg)<br>
@@ -200,14 +203,14 @@ Also, **Prompt Shield** is already true as per the JSON configuration file.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/6.jpg)
 
 16. The **Data Masking module** enables the anonymization or pseudonymization of data before it is sent to the LLM model for processing. <br>
-The **input filters** defined in the Execution Flow Template JSON are populated and displayed in the table.
+The **Input filters** defined in the Execution Flow Template JSON are populated and displayed in the table.
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/7.jpg)
 
 17. The **Output Filtering** module allows you to filter the harmful or hateful content generated by the LLM.<br>
 The **Output Translation** module allows you to translate LLM response into a target language. It helps to display the LLM response in the language user logged, if the translation is supported.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/014.jpg)
 
-18. **Add Prompt & Grounding Template**<br>
+18. Add **Prompt** & **Grounding Template**<br>
 - Add a Grounding Template with name **GROUNDING_TEMPLATE** with description **Grounding query** and then add the below Grounding template text.<br>
 ``` 
 {ISLM_GROUNDING_QUERY}
@@ -217,26 +220,17 @@ The **Output Translation** module allows you to translate LLM response into a ta
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/9.jpg)
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/10.jpg)
 
-19. Add **prompt template** for **system prompt**<br>
+19. Add **Prompt template** for **System prompt**<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/11.jpg) <br>
 - Enter the prompt name **SYSTEM_PROMPT**. The system prompt is used to set the overall context, behavior, or persona for the AI's responses. It provides the fundamental instruction set to guide the model's behaviour throughout an interaction.<br>
 - Enter the description **Explain the role and responsibility for the LLM**<br>
 - Select the **Display template information** as **Yes**.<br>
-Enter the below text as **Prompt text**<br>
-```
- You are {ISLM_ROLE}. Your responsibility is to {ISLM_RESPONSIBILITY}.
-``` 
-- Default parameter value of **ISLM_ROLE**:
-```
-An helpful assistant.
-``` 
-- Default parameter value of **ISLM_RESPONSIBILITY**:
-```
-Assist the user with their queries.
-``` 
+Enter the below text as **Prompt text**: `You are {ISLM_ROLE}. Your responsibility is to {ISLM_RESPONSIBILITY}.` 
+- Default parameter value of **ISLM_ROLE**: `An helpful assistant.` 
+- Default parameter value of **ISLM_RESPONSIBILITY**: `Assist the user with their queries.`
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/12.jpg)
 
-20. Add **prompt template** for **user prompt**<br>
+20. Add **Prompt template** for **User prompt**<br>
 - Enter the prompt name: `SUMMARIZE_RETURN_POLICY`
 - Enter the description `Use LLM to summarize the return policy document to populate standard JSON`
 - Select the **Display template information** as **Yes**.
@@ -341,7 +335,7 @@ At runtime, this placeholder is automatically replaced with the content retrieve
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/13.jpg)
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/14.jpg)
 
-22. Save draft<br>
+22. Save **Draft**<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/15.jpg)
 
 23. Navigate to Scenario documents section by pressing **Back**<br>
