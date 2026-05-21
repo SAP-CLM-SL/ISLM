@@ -1,4 +1,9 @@
 # Prerequisites
-- You should have the orchestration configuration JSON file prepared from the SAP AI Launchpad in BTP.<br>
-  Refer to **folder Orchestration config** in your **desktop**. Open the **config_json.txt** file to see the orchestration configuration JSON.
-- In case of any login ID & password required, please refer to the **cheat_sheet.txt** in your **desktop** for the user ID & password. User ID & password is same for both Fiori & Backend ABAP system.
+- Obtain the JSON file: <br>
+  - Ensure you have the orchestration configuration JSON file prepared from SAP AI Launchpad in BTP.
+- Locate the file:<br>
+  - Go to the Orchestration config folder on your desktop.
+  - Open the config_json.txt file to view the orchestration configuration JSON.
+- Login credentials (if required):<br>
+  - If prompted for a login ID and password, refer to the cheat_sheet.txt file on your desktop.
+  - The user ID and password are the same for both Fiori and Backend ABAP systems.
