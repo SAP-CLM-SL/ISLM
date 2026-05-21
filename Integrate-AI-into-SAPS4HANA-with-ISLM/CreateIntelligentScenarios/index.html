@@ -1197,7 +1197,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
+    Overview
   
 
     
@@ -1577,12 +1577,11 @@
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/017.jpg" /></p>
 </li>
 <li>
-<p>Click the Create button and choose Side-by-Side.
+<p>Click the <strong>Create</strong> button and choose <strong>Side-by-Side</strong>.
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/02.png" /></p>
 </li>
 <li>
-<p>Then in the <strong>Settings</strong> tab:<br>
-Select <strong>Generative AI</strong> as the <strong>Scenario Type</strong>.<br>
+<p>Next, go to the <strong>Settings</strong> tab and select <strong>Generative AI</strong> as the Scenario Type.<br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/02.jpg" /></p>
 </li>
 <li>
@@ -1603,13 +1602,15 @@ This option provide the shared connectivity model allows a single connection bet
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/05.jpg" /></p>
 </li>
 <li>
-<p>Add Generative AI Model to the Intelligent scenario<br>
-Choose Add Model and maintain the required details:<br>
+<p>Add a Generative AI model to the Intelligent Scenario by selecting <strong>Add Model</strong> and providing the required details. <br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/06.jpg" /></p>
 </li>
 <li>
-<p>Enter a <strong>model name</strong> as <strong>Z_POL_DOC_SUMMARIZE_MOD</strong><br>
-   Enter the <strong>description</strong> as <strong>Model with orchestration modules</strong><br>
+<p>Enter the below details: <br></p>
+</li>
+<li><strong>Model name</strong> as <code>Z_POL_DOC_SUMMARIZE_MOD</code><br></li>
+<li>
+<p><strong>Description</strong> as <code>Model with orchestration modules</code><br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/07.jpg" /></p>
 </li>
 <li>
@@ -1617,11 +1618,11 @@ Choose Add Model and maintain the required details:<br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/08.jpg" /></p>
 </li>
 <li>
-<p>Select the corresponding <strong>model</strong> from the drop down. In this exercise, we will choose <strong>gpt-5-mini</strong><br>
+<p>Select the corresponding <strong>Model</strong> from the drop down. In this exercise, we will choose <strong>gpt-5-mini</strong><br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/09.jpg" /></p>
 </li>
 <li>
-<p>(Optional) Choose a specific <strong>model version</strong> (latest is selected by default). In this case, we can keep as empty to have latest.<br>
+<p>Optionally, choose a specific <strong>Model Version</strong> (latest is selected by default). In this case, we can keep as empty to have latest.<br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/010.jpg" /></p>
 </li>
 <li>
@@ -1629,10 +1630,14 @@ Choose Add Model and maintain the required details:<br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/011.jpg" /></p>
 </li>
 <li>
-<p>Intelligent scenario with Orchestration service: <br></p>
+<p>Intelligent scenario with Orchestration service:</p>
 </li>
-<li>Navigate to the Execution Flow Template<br></li>
-<li>Use the Upload button to upload the execution flow template. Refer to folder Orchestration config in your desktop. Open the config_json.txt file to see the orchestration configuration JSON. Select All &amp; Copy or Paste the below JSON into the dialog.<br>
+<li>Navigate to the <strong>Execution Flow Template</strong><br></li>
+<li>Upload the Execution Flow Template</li>
+<li>Click the <strong>Upload</strong> button.</li>
+<li>Locate the <strong>Orchestration config folder</strong> on your desktop.</li>
+<li>Open the <code>config_json.txt</code> file to view the orchestration configuration JSON.</li>
+<li>Either select all and copy the JSON, or paste the below JSON directly into the dialog.
 <div class="highlight"><pre><span></span><code>{
   &quot;module_configurations&quot;: {
     &quot;grounding_module_config&quot;: {
@@ -1775,7 +1780,7 @@ Choose Add Model and maintain the required details:<br>
 <p>Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.<br></p>
 </li>
 <li>
-<p>In the <strong>Grounding subsection</strong>, add the required data repository type <strong>vector</strong>. This will support the grounding document addition. <br>
+<p>In the <strong>Grounding subsection</strong>, add the required data repository type <strong>Vector</strong>. This will support the grounding document addition. <br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/019.jpg" /> <br>
 To restrict your grounding module output during inference, maintain Search Configuration value. This can help to retrieve only relevant data instead of all the uploaded data.<br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/021.jpg" /><br></p>
@@ -1787,7 +1792,7 @@ Also, <strong>Prompt Shield</strong> is already true as per the JSON configurati
 </li>
 <li>
 <p>The <strong>Data Masking module</strong> enables the anonymization or pseudonymization of data before it is sent to the LLM model for processing. <br>
-The <strong>input filters</strong> defined in the Execution Flow Template JSON are populated and displayed in the table.
+The <strong>Input filters</strong> defined in the Execution Flow Template JSON are populated and displayed in the table.
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/7.jpg" /></p>
 </li>
 <li>
@@ -1796,7 +1801,7 @@ The <strong>Output Translation</strong> module allows you to translate LLM respo
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/014.jpg" /></p>
 </li>
 <li>
-<p><strong>Add Prompt &amp; Grounding Template</strong><br></p>
+<p>Add <strong>Prompt</strong> &amp; <strong>Grounding Template</strong><br></p>
 </li>
 <li>Add a Grounding Template with name <strong>GROUNDING_TEMPLATE</strong> with description <strong>Grounding query</strong> and then add the below Grounding template text.<br>
 <div class="highlight"><pre><span></span><code>{ISLM_GROUNDING_QUERY}
@@ -1808,26 +1813,20 @@ The <strong>Output Translation</strong> module allows you to translate LLM respo
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/10.jpg" /></p>
 </li>
 <li>
-<p>Add <strong>prompt template</strong> for <strong>system prompt</strong><br>
+<p>Add <strong>Prompt template</strong> for <strong>System prompt</strong><br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/11.jpg" /> <br></p>
 </li>
 <li>Enter the prompt name <strong>SYSTEM_PROMPT</strong>. The system prompt is used to set the overall context, behavior, or persona for the AI's responses. It provides the fundamental instruction set to guide the model's behaviour throughout an interaction.<br></li>
 <li>Enter the description <strong>Explain the role and responsibility for the LLM</strong><br></li>
 <li>Select the <strong>Display template information</strong> as <strong>Yes</strong>.<br>
-Enter the below text as <strong>Prompt text</strong><br>
-<div class="highlight"><pre><span></span><code> You are {ISLM_ROLE}. Your responsibility is to {ISLM_RESPONSIBILITY}.
-</code></pre></div></li>
-<li>Default parameter value of <strong>ISLM_ROLE</strong>:
-<div class="highlight"><pre><span></span><code>An helpful assistant.
-</code></pre></div></li>
+Enter the below text as <strong>Prompt text</strong>: <code>You are {ISLM_ROLE}. Your responsibility is to {ISLM_RESPONSIBILITY}.</code> </li>
+<li>Default parameter value of <strong>ISLM_ROLE</strong>: <code>An helpful assistant.</code> </li>
 <li>
-<p>Default parameter value of <strong>ISLM_RESPONSIBILITY</strong>:
-<div class="highlight"><pre><span></span><code>Assist the user with their queries.
-</code></pre></div>
+<p>Default parameter value of <strong>ISLM_RESPONSIBILITY</strong>: <code>Assist the user with their queries.</code>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/12.jpg" /></p>
 </li>
 <li>
-<p>Add <strong>prompt template</strong> for <strong>user prompt</strong><br></p>
+<p>Add <strong>Prompt template</strong> for <strong>User prompt</strong><br></p>
 </li>
 <li>Enter the prompt name: <code>SUMMARIZE_RETURN_POLICY</code></li>
 <li>Enter the description <code>Use LLM to summarize the return policy document to populate standard JSON</code></li>
@@ -1935,7 +1934,7 @@ At runtime, this placeholder is automatically replaced with the content retrieve
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/14.jpg" /></p>
 </li>
 <li>
-<p>Save draft<br>
+<p>Save <strong>Draft</strong><br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/15.jpg" /></p>
 </li>
 <li>
