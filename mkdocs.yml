@@ -63,7 +63,7 @@ nav:
       - ML Operations: "ISLM_with_SAPAIServices_BTP/mloperations.md"
       - Inference: "ISLM_with_SAPAIServices_BTP/inference.md"
   - Gen AI Orchestration:
-      - Introduction: "Integrate-AI-into-SAPS4HANA-with-ISLM/Introduction.md"
+      - Overview: "Integrate-AI-into-SAPS4HANA-with-ISLM/Introduction.md"
       - Prerequisites: "Integrate-AI-into-SAPS4HANA-with-ISLM/Prerequisites.md"
       - Create Intelligent Scenarios: "Integrate-AI-into-SAPS4HANA-with-ISLM/CreateIntelligentScenarios.md"
       - Operate Intelligent Scenario: "Integrate-AI-into-SAPS4HANA-with-ISLM/OperateIntelligentScenario.md"
