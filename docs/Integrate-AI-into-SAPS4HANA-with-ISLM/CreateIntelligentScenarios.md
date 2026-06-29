@@ -49,7 +49,7 @@ This option provide the shared connectivity model allows a single connection bet
 - Navigate to the **Execution Flow Template**<br>
 - Upload the Execution Flow Template
    - Click the **Upload** button.
-   - Either select all and copy the JSON from [config file](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/GroundingFiles/config_json.txt), or paste the below JSON directly into the dialog.
+   - Either select all and copy the JSON from [config file](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/OrchestrationConfigFiles/Orchestration%20config.zip), or paste the below JSON directly into the dialog.
 ```
 {
   "module_configurations": {
@@ -191,8 +191,7 @@ This option provide the shared connectivity model allows a single connection bet
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/4.jpg) <br>
 - Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.<br>
 
-14. In the **Grounding subsection**, add the required data repository type **Vector**. This will support the grounding document addition. <br>
-Click [here](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/GroundingFiles/Grounding%20files.zip) to download the grounding files. <br>
+14. In the **Grounding subsection**, add the required data repository type **Vector**. This will support the grounding document addition. Click [here](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/GroundingFiles/Grounding%20files.zip) to download the grounding files. <br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/019.jpg) <br>
 To restrict your grounding module output during inference, maintain Search Configuration value. This can help to retrieve only relevant data instead of all the uploaded data.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/021.jpg)<br>
