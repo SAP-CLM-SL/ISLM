@@ -194,6 +194,7 @@ This option provide the shared connectivity model allows a single connection bet
 - Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.<br>
 
 14. In the **Grounding subsection**, add the required data repository type **Vector**. This will support the grounding document addition. <br>
+Download grounding file from [here](Integrate-AI-into-SAPS4HANA-with-ISLM/../GroundingFiles/Grounding%20files.zip)
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/019.jpg) <br>
 To restrict your grounding module output during inference, maintain Search Configuration value. This can help to retrieve only relevant data instead of all the uploaded data.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/021.jpg)<br>
