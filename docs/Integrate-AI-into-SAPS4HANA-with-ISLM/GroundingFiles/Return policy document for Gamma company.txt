@@ -1,0 +1,46 @@
+### Gamma Return Policy
+**Last Updated: December 10, 2025**
+
+Gamma prioritizes satisfaction with flexible options. No returns on sale items.
+
+**Return Window**  
+14 days from delivery. No extensions.
+
+**Eligibility**  
+- Conditions: Unused, tags on.  
+- Proof: Not required (order history auto-looked up).  
+- Condition: Pristine, unopened.
+
+**Non-Returnable**  
+- Perishables, custom products, final sale, software.  
+- Reasons: Spoilage risk, made-to-order.
+
+**Process**  
+- Initiation: Email support or phone.  
+- Steps: 1. Email photo. 2. Get approval. 3. Ship.  
+- Authorization: Required; no form URL; label not provided.  
+- Shipping: Customer pays; pack securely. Address: Gamma Returns Dept, 789 Pine Rd, Miami, FL 33101. Carriers: Any.  
+- Documents: Packing slip, photo of issue.
+
+**Refunds**  
+- Types: Partial refund, exchange.  
+- Default: Exchange.  
+- Payment: Gift card only.  
+- Time: 7-10 days.  
+- Fees: $15 restocking (15%); applies to electronics; other: Return shipping.
+
+**Shipping Costs**  
+Original: False. Return: False.
+
+**Special Cases**  
+- Defective: No extended window, free shipping false, full refund true.  
+- Wrong item: Process: Contact for correction.  
+- Holidays: True.  
+- Other: None.
+
+**Contact**  
+Email: help@gamma.com | Phone: None | Live chat: False | URL: None
+
+**Legal**  
+- State laws: FL consumer protection.  
+- Warranties: None beyond returns.
