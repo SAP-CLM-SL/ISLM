@@ -1,5 +1,5 @@
 # Steps to Create Intelligent Scenarios<br>
-1. Open the browser and navigate to the Fiori Launchpad by clicking [here](https://107.23.197.27:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html). We've already kept the system logged in. And under "Analytics" tab launch the "Intelligent Scenarios" application.
+1. Open the browser and navigate to the Fiori Launchpad by clicking [here](https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home) and under "Analytics" tab launch the "Intelligent Scenarios" application.
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/017.jpg)
 
 2. Click the **Create** button and choose **Side-by-Side**.
@@ -49,9 +49,7 @@ This option provide the shared connectivity model allows a single connection bet
 - Navigate to the **Execution Flow Template**<br>
 - Upload the Execution Flow Template
    - Click the **Upload** button.
-   - Locate the **Orchestration config folder** on your desktop.
-   - Open the `config_json.txt` file to view the orchestration configuration JSON.
-   - Either select all and copy the JSON, or paste the below JSON directly into the dialog.
+   - Either select all and copy the JSON from [config file](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/GroundingFiles/config_json.txt), or paste the below JSON directly into the dialog.
 ```
 {
   "module_configurations": {
