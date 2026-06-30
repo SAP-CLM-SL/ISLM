@@ -3,7 +3,7 @@
 The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app.
 In this step, you’ll create a new intelligent scenario to generate the order confirmation email for Sales Order using LLM model.
 
-1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home).<br/>Click on **Intelligent Scenario Management** section and choose the **Intelligent Scenarios** app. 
+1. Open the Fiori Launchpad by clicking [here](https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home) and launch **Intelligent Scenarios** app under **Analytics** tab. 
 ![](./images/IntelligentScenariosApp.png)
 2. Click the **Create** button and choose **Side-by Side**.
 ![](./images/CreateSBS.png)
