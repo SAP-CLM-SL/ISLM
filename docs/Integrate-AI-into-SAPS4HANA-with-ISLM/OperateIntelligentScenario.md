@@ -1,5 +1,5 @@
 # Steps to Operate Intelligent Scenario<br>
-1. Launch the SAP Fiori Launchpad by clicking [here](https://107.23.197.27:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html) and under **Analytics** tab, open the **Intelligent Scenario Management** app. Open the scenario created,<br>
+1. Launch the SAP Fiori Launchpad by clicking [here](https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home) and under **Analytics** tab, open the **Intelligent Scenario Management** app. Open the scenario created,<br>
 ![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/018.jpg)
 ![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/1.jpg)
 
