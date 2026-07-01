@@ -1,21 +1,23 @@
 # Steps to Operate Intelligent Scenario<br>
-1. Launch the SAP Fiori Launchpad by clicking [here](https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home) and under **Analytics** tab, open the **Intelligent Scenario Management** app. Open the scenario created,<br>
-![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/018.jpg)
-![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/1.jpg)
+1. Launch the SAP Fiori Launchpad by clicking [here](https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home) and under **Analytics** tab, open the **Intelligent Scenario Management** app.<br>
+![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/Management.png)
+2. Open the created scenario.
+![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/MS.png)
 
-2. Sync completed successfully with the default training, as GenAI is a pre-trained model and the reuse connectivity is already maintained in the system.
-![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/2.jpg)
+3. Sync completed successfully with the default training, as GenAI is a pre-trained model and the reuse connectivity is already maintained in the system.
 
-3. Click **Deploy** and then **Deploy and Monitor**
-![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/3.jpg)
+4. Click **Deploy** and then **Deploy and Monitor**
+![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/Deploy.png)
+![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/DeployMonitor.png)
 
-4. Deployment is **Scheduled**.
-![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/4.jpg)
+5. Deployment is **Scheduled**.
+![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/Scheduled.png)
 
-5. Deployment is deployed immediately as it's **Shared deployment**.
-![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/5.jpg)
+6. Deployment is deployed immediately as it's **Shared deployment**.
+![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/Deployed.png)
 
-6. Click **Activate** and do **Activate For All**.
-![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/6.jpg)
+7. Click **Activate** and do **Activate For All**.
+![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/Activate.png)
+![Intelligent Scenario Management](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenarioManage/ActiveForAll.png)
 
 **Intelligent Scenario** is active and ready for prompt execution.
