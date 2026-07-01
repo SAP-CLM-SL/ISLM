@@ -28,9 +28,9 @@ This option provide the shared connectivity model allows a single connection bet
 7. Add a Generative AI model to the Intelligent Scenario by selecting **Add Model** and providing the required details. <br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/06.jpg)
 
-8. Enter the below details: <br>
-- **Model name** as `Z_POL_DOC_SUMMARIZE_MOD`<br>
-- **Description** as `Model with orchestration modules`<br>
+8. Enter the below details:
+- **Model name** as `Z_POL_DOC_SUMMARIZE_MOD`
+- **Description** as `Model with orchestration modules`
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/07.jpg)
 
 9. Select the appropriate **Executable ID** from the drop down. In this case, we will choose **azure-openai**<br>
@@ -52,140 +52,200 @@ This option provide the shared connectivity model allows a single connection bet
    - Either select all and copy the JSON from [config file](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/OrchestrationConfigFiles/Orchestration%20config.zip), or paste the below JSON directly into the dialog.
 ```
 {
-  "module_configurations": {
-    "grounding_module_config": {
-      "type": "document_grounding_service",
-      "config": {
-        "filters": [
-          {
-            "id": "filter1",
-            "data_repositories": [
-              "2a35766b-e72e-4ef8-9223-5995c839b1cd"
-            ],
-            "search_config": {
-              "max_document_count": 0
-            },
-            "data_repository_type": "vector"
-          }
-        ],
-        "input_params": [
-          "grounding_input_variable_1"
-        ],
-        "output_param": "grounding_output_variable"
-      }
-    },
-    "llm_module_config": {
-      "model_name": "gpt-5-mini",
-      "model_params": {},
-      "model_version": {}
-    },
-    "templating_module_config": {
-      "template_ref": {}
-    },
-    "filtering_module_config": {
-      "input": {
-        "filters": [
-          {
-            "type": "azure_content_safety",
-            "config": {
-              "Hate": 0,
-              "SelfHarm": 0,
-              "Sexual": 0,
-              "Violence": 0
-            }
-          },
-          {
-            "type": "llama_guard_3_8b",
-            "config": {
-              "child_exploitation": true,
-              "code_interpreter_abuse": true,
-              "defamation": true,
-              "elections": true,
-              "hate": true,
-              "indiscriminate_weapons": true,
-              "intellectual_property": true,
-              "non_violent_crimes": true,
-              "privacy": true,
-              "self_harm": true,
-              "sex_crimes": true,
-              "sexual_content": true,
-              "specialized_advice": true,
-              "violent_crimes": true
-            }
-          }
-        ]
-      },
-      "output": {
-        "filters": [
-          {
-            "type": "azure_content_safety",
-            "config": {
-              "Hate": 0,
-              "SelfHarm": 2,
-              "Sexual": 4,
-              "Violence": 6
-            }
-          },
-          {
-            "type": "llama_guard_3_8b",
-            "config": {
-              "child_exploitation": true,
-              "code_interpreter_abuse": true,
-              "defamation": true,
-              "elections": true,
-              "hate": true,
-              "indiscriminate_weapons": true,
-              "intellectual_property": true,
-              "non_violent_crimes": true,
-              "privacy": true,
-              "self_harm": true,
-              "sex_crimes": true,
-              "sexual_content": true,
-              "specialized_advice": true,
-              "violent_crimes": true
-            }
-          }
-        ]
-      }
-    },
-    "masking_module_config": {
-      "masking_providers": [
-        {
-          "type": "sap_data_privacy_integration",
-          "method": "anonymization",
-          "entities": [
-            {
-              "type": "profile-email"
-            },
-            {
-              "type": "profile-gender"
-            },
-            {
-              "type": "profile-pronouns-gender"
-            },
-            {
-              "type": "profile-location"
-            },
-            {
-              "type": "profile-person"
-            },
-            {
-              "type": "profile-url"
-            }
-          ],
-          "mask_grounding_input": {
-            "enabled": true
-          },
-          "allowlist": [
-            "ANALYTICS",
-            "SPECIALIST"
-          ]
-        }
-      ]
-    },
-    "input_translation_module_config": {},
-    "output_translation_module_config": {}
-  }
+	"modules": {
+		"prompt_templating": {
+			"prompt": {
+				"template": [
+					{
+						"role": "user",
+						"content": [
+							{
+								"type": "text",
+								"text": "{{?grounding_output_variable}}"
+							}
+						]
+					}
+				],
+				"defaults": {}
+			},
+			"model": {
+				"name": "gpt-5-mini",
+				"params": {
+					"max_tokens": 64000,
+					"temperature": 1
+				},
+				"version": "2025-08-07"
+			}
+		},
+		"filtering": {
+			"input": {
+				"filters": [
+					{
+						"type": "azure_content_safety",
+						"config": {
+							"hate": 2,
+							"self_harm": 2,
+							"sexual": 2,
+							"violence": 2,
+							"prompt_shield": true
+						}
+					},
+					{
+						"type": "llama_guard_3_8b",
+						"config": {
+							"child_exploitation": true,
+							"code_interpreter_abuse": true,
+							"defamation": true,
+							"elections": true,
+							"hate": true,
+							"indiscriminate_weapons": true,
+							"intellectual_property": true,
+							"non_violent_crimes": true,
+							"privacy": true,
+							"self_harm": true,
+							"sex_crimes": true,
+							"sexual_content": true,
+							"specialized_advice": true,
+							"violent_crimes": true
+						}
+					}
+				]
+			},
+			"output": {
+				"filters": [
+					{
+						"type": "azure_content_safety",
+						"config": {
+							"hate": 2,
+							"self_harm": 2,
+							"sexual": 2,
+							"violence": 2
+						}
+					},
+					{
+						"type": "llama_guard_3_8b",
+						"config": {
+							"child_exploitation": true,
+							"code_interpreter_abuse": true,
+							"defamation": true,
+							"elections": true,
+							"hate": true,
+							"indiscriminate_weapons": true,
+							"intellectual_property": true,
+							"non_violent_crimes": true,
+							"privacy": true,
+							"self_harm": true,
+							"sex_crimes": true,
+							"sexual_content": true,
+							"specialized_advice": true,
+							"violent_crimes": true
+						}
+					}
+				]
+			}
+		},
+		"masking": {
+			"masking_providers": [
+				{
+					"type": "sap_data_privacy_integration",
+					"method": "pseudonymization",
+					"entities": [
+						{
+							"type": "profile-credit-card-number"
+						},
+						{
+							"type": "profile-driverlicense"
+						},
+						{
+							"type": "profile-email"
+						},
+						{
+							"type": "profile-sensitive-data"
+						},
+						{
+							"type": "profile-ethnicity"
+						},
+						{
+							"type": "profile-gender"
+						},
+						{
+							"type": "profile-pronouns-gender"
+						},
+						{
+							"type": "profile-iban"
+						},
+						{
+							"type": "profile-location"
+						},
+						{
+							"type": "profile-nationalid"
+						},
+						{
+							"type": "profile-nationality"
+						},
+						{
+							"type": "profile-org"
+						},
+						{
+							"type": "profile-passport"
+						},
+						{
+							"type": "profile-person"
+						},
+						{
+							"type": "profile-phone"
+						},
+						{
+							"type": "profile-political-group"
+						},
+						{
+							"type": "profile-sapids-public"
+						},
+						{
+							"type": "profile-religious-group"
+						},
+						{
+							"type": "profile-sapids-internal"
+						},
+						{
+							"type": "profile-ssn"
+						},
+						{
+							"type": "profile-sexual-orientation"
+						},
+						{
+							"type": "profile-trade-union"
+						},
+						{
+							"type": "profile-address"
+						},
+						{
+							"type": "profile-url"
+						},
+						{
+							"type": "profile-university"
+						},
+						{
+							"type": "profile-username-password"
+						}
+					],
+					"mask_grounding_input": {
+						"enabled": true
+					},
+					"allowlist": []
+				}
+			]
+		},
+		"translation": {
+			"output": {
+				"type": "sap_document_translation",
+				"config": {
+					"source_language": "en-US",
+					"target_language": ""
+				}
+			}
+		}
+	}
 }
 ```
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/4.jpg) <br>
@@ -193,6 +253,7 @@ This option provide the shared connectivity model allows a single connection bet
 
 14. In the **Grounding subsection**, add the required data repository type **Vector**. This will support the grounding document addition. Click [here](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/GroundingFiles/Grounding%20files.zip) to download the grounding files. <br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/019.jpg) <br>
+
 To restrict your grounding module output during inference, maintain Search Configuration value. This can help to retrieve only relevant data instead of all the uploaded data.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/021.jpg)<br>
 
@@ -201,24 +262,23 @@ Also, **Prompt Shield** is already true as per the JSON configuration file.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/6.jpg)
 
 17. The **Data Masking module** enables the anonymization or pseudonymization of data before it is sent to the LLM model for processing. <br>
-The **Input filters** defined in the Execution Flow Template JSON are populated and displayed in the table.
+
+18. The **Input filters** defined in the Execution Flow Template JSON are populated and displayed in the table.
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/7.jpg)
 
-18. The **Output Filtering** module allows you to filter the harmful or hateful content generated by the LLM.<br>
-The **Output Translation** module allows you to translate LLM response into a target language. It helps to display the LLM response in the language user logged, if the translation is supported.<br>
+19. The **Output Filtering** module allows you to filter the harmful or hateful content generated by the LLM.<br>
+
+20. The **Output Translation** module allows you to translate LLM response into a target language. It helps to display the LLM response in the language user logged, if the translation is supported.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/014.jpg)
 
-19. Add **Prompt** & **Grounding Template**<br>
-- Add a Grounding Template with name **GROUNDING_TEMPLATE** with description **Grounding query** and then add the below Grounding template text.<br>
-``` 
-{ISLM_GROUNDING_QUERY}
-``` 
+21. Add **Prompt** & **Grounding Template**<br>
+- Add a Grounding Template with name **GROUNDING_TEMPLATE** with description **Grounding query** and then add the below Grounding template text: `{ISLM_GROUNDING_QUERY}`
 - Select the **Display template information** as **Yes**. The grounding template can include dynamic parameters similar to the user prompt.<br>
 - The Grounding Template retrieves relevant information from the selected data repository and appends it to the user prompt. It supports dynamic parameters, which are provided at runtime (during inference).<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/9.jpg)
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/10.jpg)
 
-19. Add **Prompt template** for **System prompt**<br>
+22. Add **Prompt template** for **System prompt**<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/11.jpg) <br>
 - Enter the prompt name **SYSTEM_PROMPT**. The system prompt is used to set the overall context, behavior, or persona for the AI's responses. It provides the fundamental instruction set to guide the model's behaviour throughout an interaction.<br>
 - Enter the description **Explain the role and responsibility for the LLM**<br>
@@ -228,7 +288,7 @@ Enter the below text as **Prompt text**: `You are {ISLM_ROLE}. Your responsibili
 - Default parameter value of **ISLM_RESPONSIBILITY**: `Assist the user with their queries.`
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/12.jpg)
 
-20. Add **Prompt template** for **User prompt**<br>
+23. Add **Prompt template** for **User prompt**<br>
 - Enter the prompt name: `SUMMARIZE_RETURN_POLICY`
 - Enter the description `Use LLM to summarize the return policy document to populate standard JSON`
 - Select the **Display template information** as **Yes**.
@@ -328,33 +388,32 @@ Generate a summary of return policy document provided below for the company {ISL
 {ISLM_GROUNDING_OUTPUT}
 ```
 
-21. If you have configured grounding module, at least one User Prompt must be added with the following parameter: {ISLM_GROUNDING_OUTPUT}<br>
+24. If you have configured grounding module, at least one User Prompt must be added with the following parameter: {ISLM_GROUNDING_OUTPUT}<br>
 At runtime, this placeholder is automatically replaced with the content retrieved by the Grounding Template from the configured data repository.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/13.jpg)
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/14.jpg)
 
-22. Save **Draft**<br>
+25. Save **Draft** and navigate to Scenario documents section by pressing **Back**<br><br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/15.jpg)
 
-23. Navigate to Scenario documents section by pressing **Back**<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/022.jpg)
 
-24. Upload grounding documents to an Intelligent Scenario<br>
+26. Upload grounding documents to an Intelligent Scenario<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/16.jpg)
 
-25. Press **Upload** button<br>
+27. Press **Upload** button<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/17.jpg)
 
-26. Select the below files from the Grounding files folder in your desktop<br>
+28. Select the below files from the Grounding files folder in your desktop<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/18.jpg)
 
-27. Enter the document names like below and choose **English** as language for all the files.<br>
+29. Enter the document names like below and choose **English** as language for all the files.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/015.jpg)
 
-28. Click **Publish** button and enter the package as **local object $TMP**
+30. Click **Publish** button and enter the package as **local object $TMP**
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/020.jpg)
 
-29. Press **OK**<br>
+31. Press **OK**<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/21.jpg)
 
 **Intelligent Scenario** is created successfully.
