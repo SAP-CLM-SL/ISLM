@@ -22,6 +22,7 @@ In this step, you’ll create a new intelligent scenario to generate the order c
     - Description: `LLM Model for generating SO email`
     - Executable ID: `azure-openai`
     - Large Language Model Name: `gpt-5-mini`
+    - Optionally, choose a specific Model Version (latest is selected by default). In this case, we can keep as empty to have latest.
     ![](./images/add_model.png)
 
 7. Click the **Add** button.
