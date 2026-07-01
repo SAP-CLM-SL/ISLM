@@ -1,48 +1,49 @@
 # Steps to Create Intelligent Scenarios<br>
 1. Open the browser and navigate to the Fiori Launchpad by clicking [here](https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home) and launch the **Intelligent Scenarios** application under **Analytics** tab .
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/017.jpg)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Registration.png)
 
 2. Click the **Create** button and choose **Side-by-Side**.
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/02.png)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Create.png)
 
 3. Next, go to the **Settings** tab and select **Generative AI** as the Scenario Type.<br>
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/02.jpg)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/IntelligentScenarioType.png)
 
 4. Enter unique **Scenario name** in `Z_POL_DOC_SUMM_##` format, where ## is your attendee ID.<br>
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/03.jpg)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Name.png)
 
 5. Enter the **description**:`Summarize Return Policy Document`
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/04.jpg)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Description.png)
 
 6. Select **Stateless – Customer** as the Usage Type. <br>
 This option provide the shared connectivity model allows a single connection between the ABAP system and the SAP Generative AI Hub to be configured once and reused across multiple AI use cases. This simplifies administration, improves governance, and reduces setup effort. Reuse connectivity is already set up and no action is required here for connectivity.
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/05.jpg)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/UsageType.png)
 
 
 7. Add a Generative AI model to the Intelligent Scenario by selecting **Add Model** and providing the required details. <br>
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/06.jpg)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/AddModel.png)
 
 8. Enter the below details:
 - **Model name** as `Z_POL_DOC_SUMMARIZE_MOD`
 - **Description** as `Model with orchestration modules`
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/07.jpg)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/ModelNameDescription.png)
 
 9. Select the appropriate **Executable ID** from the drop down. In this case, we will choose **azure-openai**<br>
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/08.jpg)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/ExecutableId.png)
 
 10. Select the corresponding **Model** from the drop down. In this exercise, we will choose **gpt-5-mini**<br>
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/09.jpg)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/LLMname.png)
 
 11. Optionally, choose a specific **Model Version** (latest is selected by default). In this case, we can keep as empty to have latest.<br>
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/010.jpg)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/ModelVersion.png)
 
 12. Choose **Add** to confirm<br>
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/011.jpg)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Add.png)
 
 13. Intelligent scenario with Orchestration service:
 - Navigate to the **Execution Flow Template**<br>
 - Upload the Execution Flow Template
    - Click the **Upload** button.
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/ExecutionFlow.png)
    - Either select all and copy the JSON from [config file](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/OrchestrationConfigFiles/Orchestration%20config.zip), or paste the below JSON directly into the dialog.
 ```
 {
@@ -242,7 +243,7 @@ This option provide the shared connectivity model allows a single connection bet
 	}
 }
 ```
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/4.jpg) <br>
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Upload.png) <br>
 - Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.<br>
 
 14. In the **Grounding subsection**, add the required data repository type **Vector**. This will support the grounding document addition. Click [here](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/GroundingFiles/Grounding%20files.zip) to download the grounding files. <br>
