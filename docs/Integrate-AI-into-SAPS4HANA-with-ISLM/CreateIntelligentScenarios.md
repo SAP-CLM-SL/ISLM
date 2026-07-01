@@ -1,5 +1,5 @@
 # Steps to Create Intelligent Scenarios<br>
-1. Open the browser and navigate to the Fiori Launchpad by clicking [here](https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home) and under "Analytics" tab launch the "Intelligent Scenarios" application.
+1. Open the browser and navigate to the Fiori Launchpad by clicking [here](https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home) and launch the **Intelligent Scenarios** application under **Analytics** tab .
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/017.jpg)
 
 2. Click the **Create** button and choose **Side-by-Side**.
@@ -8,16 +8,10 @@
 3. Next, go to the **Settings** tab and select **Generative AI** as the Scenario Type.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/02.jpg)
 
-4. Enter unique **Scenario name** in the below format, where ## is your attendee ID.<br>
-```
-Z_POL_DOC_SUMM_##
-```
+4. Enter unique **Scenario name** in `Z_POL_DOC_SUMM_##` format, where ## is your attendee ID.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/03.jpg)
 
-5. Enter the **description**<br>
-```
-Summarize Return Policy Document
-```
+5. Enter the **description**:`Summarize Return Policy Document`
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/04.jpg)
 
 6. Select **Stateless – Customer** as the Usage Type. <br>
@@ -271,7 +265,7 @@ Also, **Prompt Shield** is already true as per the JSON configuration file.<br>
 20. The **Output Translation** module allows you to translate LLM response into a target language. It helps to display the LLM response in the language user logged, if the translation is supported.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/014.jpg)
 
-21. Add **Prompt** & **Grounding Template**<br>
+21. Add **Grounding Template**<br>
 - Add a Grounding Template with name **GROUNDING_TEMPLATE** with description **Grounding query** and then add the below Grounding template text: `{ISLM_GROUNDING_QUERY}`
 - Select the **Display template information** as **Yes**. The grounding template can include dynamic parameters similar to the user prompt.<br>
 - The Grounding Template retrieves relevant information from the selected data repository and appends it to the user prompt. It supports dynamic parameters, which are provided at runtime (during inference).<br>
