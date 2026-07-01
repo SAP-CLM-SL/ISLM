@@ -1,0 +1,49 @@
+### Omega Return Policy
+**Last Updated: November 5, 2025**
+
+Omega: No-hassle policy with free shipping on returns. Tech-focused.
+
+**Overview**  
+Summary: 90-day tech returns. Free returns: true. Notes: Generous for gadgets.
+
+**Return Window**  
+90 days from delivery. Extensions: ["Defective items", "holidays"].
+
+**Eligibility**  
+- Conditions: ["Unused", "all accessories"].  
+- Proof: False.  
+- Condition: Like new.
+
+**Non-Returnable**  
+- Digital software, opened media.  
+- Reasons: Licensing, hygiene.
+
+**Process**  
+- Methods: ["Online portal", "live chat"].  
+- Steps: ["Submit request online", "Print label", "Track shipment"].  
+- Authorization: True; form_url: omega.ra.com; label_provided: true.  
+- Shipping: Prepaid label (merchant); drop at carrier. Address: Omega Logistics, 101 Tech Blvd, San Jose, CA 95101. Preferred: ["FedEx", "UPS"].  
+- Documents: ["Order number"].
+
+**Refunds**  
+- Types: ["Full refund", "exchange"].  
+- Default: Full refund.  
+- Payment: Original payment.  
+- Time: 2-3 business days.  
+- Fees: Restocking {amount:0, percentage:0}; other: ["None"].
+
+**Shipping Costs**  
+Original: true. Return: true.
+
+**Special Cases**  
+- Defective: true, true, true.  
+- Wrong item: "Free overnight replacement.".  
+- Holidays: true.  
+- Other: ["Warranty claims integrated"].
+
+**Contact**  
+Email: returns@omega.tech | Phone: 1-800-OMEGA99 | Live chat: true | return_center_url: omega.returncenter.tech
+
+**Legal**  
+- State laws: ["CA tech consumer rights"].  
+- Warranties: "2-year limited warranty."

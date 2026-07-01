@@ -25,7 +25,7 @@
     
     
       
-        <title>Prompt Execution - CLM Day 2025 - ISLM Handson</title>
+        <title>Prompt Execution - ISLM Handson</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="CLM Day 2025 - ISLM Handson" class="md-header__button md-logo" aria-label="CLM Day 2025 - ISLM Handson" data-md-component="logo">
+    <a href="../.." title="ISLM Handson" class="md-header__button md-logo" aria-label="ISLM Handson" data-md-component="logo">
       
   <img src="../../assets/clm-day-banner.png" alt="logo">
 
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            CLM Day 2025 - ISLM Handson
+            ISLM Handson
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -386,12 +386,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="CLM Day 2025 - ISLM Handson" class="md-nav__button md-logo" aria-label="CLM Day 2025 - ISLM Handson" data-md-component="logo">
+    <a href="../.." title="ISLM Handson" class="md-nav__button md-logo" aria-label="ISLM Handson" data-md-component="logo">
       
   <img src="../../assets/clm-day-banner.png" alt="logo">
 
     </a>
-    CLM Day 2025 - ISLM Handson
+    ISLM Handson
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -630,34 +630,6 @@
     
   
     Create Intelligent Scenario
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPGenAI/connection/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Connect to SAP BTP
   
 
     
@@ -1644,84 +1616,45 @@
 Use the intelligent scenario within the orchestration to drive decision-making and automation.  Once the selected deployment is activated, you can use ABAP AI SDK for inference consumption.</p>
 <p>For this, we have already created a report with other scenario. You can copy it and change the Intelligent scenario name(Z_POL_DOC_SUMM_## where ## is the Attendee ID) and check the SDK APIs implementation and execute the report for the inference.</p>
 <ol>
-<li>
-<p>Copy the existing report program <code>Z_POL_DOC_SUMMARY</code> to another <code>Z_POL_DOC_SUMMARY_##</code>, where ## is your attendee number.
-<img alt="Inference" src="../Inference/1.jpg" />
-<img alt="Inference" src="../Inference/2.jpg" /></p>
-</li>
-<li>
-<p>Select All and press <strong>Copy</strong>.
-<img alt="Inference" src="../Inference/3.jpg" /></p>
-</li>
-<li>
-<p><strong>Activate</strong> the newly copied program and press <strong>Enter</strong>.
-<img alt="Inference" src="../Inference/4.jpg" />
-<img alt="Inference" src="../Inference/5.jpg" /></p>
-</li>
-<li>
-<p>Press <strong>Change</strong>,
-<img alt="Inference" src="../Inference/6.jpg" /></p>
-</li>
-<li>
-<p>Change the Intelligent scenario name to the Intelligent Scenario name that you had created in the above steps <code>Z_POL_DOC_SUMM_##</code> where ## is the Attendee ID. Then <strong>Activate</strong>.
-<img alt="Inference" src="../Inference/7.jpg" /></p>
-</li>
-<li>
-<p>Execute the program <code>Z_POL_DOC_SUMMARY_##</code>.
-<img alt="Inference" src="../Inference/8.jpg" /></p>
-</li>
-<li>
-<p>Enter the Company Name = <strong>Alpha</strong> and Press Execute.
-<img alt="Inference" src="../Inference/9.jpg" /></p>
-</li>
-<li>
-<p>Output of the prompt execution with orchestration capabilities,
-<img alt="Inference" src="../Inference/10.jpg" /></p>
-</li>
-<li>
-<p>For testing the output translation, please login to the system with DE(German) language.
-<img alt="Inference" src="../Inference/11.jpg" /></p>
-</li>
-<li>
-<p>Choose the below option to avoid interuptting other sessions.
-<img alt="Inference" src="../Inference/12.jpg" /></p>
-</li>
-<li>
-<p>Goto transation <strong>SE38</strong> and enter the program that you created <code>Z_POL_DOC_SUMMARY_##</code> and press F8 or Execute.
-<img alt="Inference" src="../Inference/13.jpg" /></p>
-</li>
-<li>
-<p>Enter the company name = <strong>Alpha</strong>. Press <strong>F8</strong> or <strong>Execute</strong>.
-<img alt="Inference" src="../Inference/14.jpg" /></p>
-</li>
-<li>
-<p>Output with orchestration capabilities of translation module and displayed in DE(German).
-<img alt="Inference" src="../Inference/15.jpg" /></p>
-</li>
-<li>
-<p>For testing prompt injection, in the selection with same company name = <strong>Alpha</strong>, select Prompt Injection and then press <strong>F8</strong> or <strong>Execute</strong>.
-<img alt="Inference" src="../Inference/16.jpg" /></p>
-</li>
-<li>
-<p>Results in runtime error as LLM detects the prompt injection.
-<img alt="Inference" src="../Inference/17.jpg" /></p>
-</li>
-<li>
-<p>We have logged this error in the application log <strong>SLG1</strong>. Goto <strong>SLG1</strong> transaction and enter the below parameters. <br></p>
-</li>
+<li>Copy the existing report program <code>Z_POL_DOC_SUMMARY</code> to another <code>Z_POL_DOC_SUMMARY_##</code>, where ## is your attendee number.<br>
+<img alt="Inference" src="../Inference/Copy.png" /><br>
+<img alt="Inference" src="../Inference/Copy1.png" /><br></li>
+<li>Select All and press <strong>Copy</strong>.<br>
+<img alt="Inference" src="../Inference/Copy2.png" /><br></li>
+<li><strong>Activate</strong> the newly copied program and press <strong>Enter</strong>.<br>
+<img alt="Inference" src="../Inference/RActivate.png" /><br></li>
+<li>Press <strong>Change</strong>.<br>
+<img alt="Inference" src="../Inference/Change.png" /><br></li>
+<li>Change the Intelligent scenario name to the Intelligent Scenario name that you had created in the above steps <code>Z_POL_DOC_SUMM_##</code> where ## is the Attendee ID. Then <strong>Activate</strong>.<br>
+<img alt="Inference" src="../Inference/CodeChange.png" /><br></li>
+<li>Execute the program <code>Z_POL_DOC_SUMMARY_##</code>.<br>
+<img alt="Inference" src="../Inference/Execute.png" /><br></li>
+<li>Enter the Company Name = <strong>Alpha</strong> and Press Execute.<br>
+<img alt="Inference" src="../Inference/R1.png" /><br></li>
+<li>Output of the prompt execution with orchestration capabilities.<br>
+<img alt="Inference" src="../Inference/R1result.png" /><br></li>
+<li>For testing the output translation, please login to the system with DE(German) language.<br>
+<img alt="Inference" src="../Inference/OT1.png" /><br></li>
+<li>Choose the below option to avoid interuptting other sessions.<br>
+<img alt="Inference" src="../Inference/OT2.png" /><br></li>
+<li>Goto transation <strong>SE38</strong> and enter the program that you created <code>Z_POL_DOC_SUMMARY_##</code> and press F8 or Execute.<br>
+<img alt="Inference" src="../Inference/OTrun.png" /><br></li>
+<li>Enter the company name = <strong>Alpha</strong>. Press <strong>F8</strong> or <strong>Execute</strong>.<br>
+<img alt="Inference" src="../Inference/R1.png" /><br></li>
+<li>Output with orchestration capabilities of translation module and displayed in DE(German).<br>
+<img alt="Inference" src="../Inference/OTresult.png" /><br></li>
+<li>For testing prompt injection, in the selection with same company name = <strong>Alpha</strong>, select Prompt Injection and then press <strong>F8</strong> or <strong>Execute</strong>.<br>
+<img alt="Inference" src="../Inference/R2.png" /><br></li>
+<li>Results in runtime error as LLM detects the prompt injection.<br>
+<img alt="Inference" src="../Inference/RuntimeError.png" /><br></li>
+<li>We have logged this error in the application log <strong>SLG1</strong>. Goto <strong>SLG1</strong> transaction and enter the below parameters. <br></li>
 <li>Objekt - <code>ISLM</code> <br></li>
 <li>Unterobjekt - <code>*</code> <br></li>
-<li>
-<p>Ext. Identif. - <em>Z_POL_DOC_SUMM_##</em>. This is your scenario name which you created with attendee ID.
-<img alt="Inference" src="../Inference/18.jpg" /></p>
-</li>
-<li>
-<p>Double click the error logged and you can see the prompt attack detected error.
-<img alt="Inference" src="../Inference/19.jpg" /></p>
-</li>
-<li>
-<p><strong>Explanation of the report program</strong></p>
-</li>
+<li>Ext. Identif. - <em>Z_POL_DOC_SUMM_##</em>. This is your scenario name which you created with attendee ID.<br>
+<img alt="Inference" src="../Inference/SLG1.png" /><br></li>
+<li>Double click the error logged and you can see the prompt attack detected error.<br>
+<img alt="Inference" src="../Inference/SLGresult.png" /><br></li>
+<li><strong>Explanation of the report program</strong></li>
 </ol>
 <p><strong>Return Policy Summarization</strong>: In the report, ABAP AI SDK APIs are used to execute the prompts maintained in the intelligent scenario.
 - First, an instance of your intelligent scenario is created.

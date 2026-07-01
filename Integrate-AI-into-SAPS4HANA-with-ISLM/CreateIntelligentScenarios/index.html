@@ -25,7 +25,7 @@
     
     
       
-        <title>Create Intelligent Scenarios - CLM Day 2025 - ISLM Handson</title>
+        <title>Create Intelligent Scenarios - ISLM Handson</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="CLM Day 2025 - ISLM Handson" class="md-header__button md-logo" aria-label="CLM Day 2025 - ISLM Handson" data-md-component="logo">
+    <a href="../.." title="ISLM Handson" class="md-header__button md-logo" aria-label="ISLM Handson" data-md-component="logo">
       
   <img src="../../assets/clm-day-banner.png" alt="logo">
 
@@ -105,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            CLM Day 2025 - ISLM Handson
+            ISLM Handson
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -386,12 +386,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="CLM Day 2025 - ISLM Handson" class="md-nav__button md-logo" aria-label="CLM Day 2025 - ISLM Handson" data-md-component="logo">
+    <a href="../.." title="ISLM Handson" class="md-nav__button md-logo" aria-label="ISLM Handson" data-md-component="logo">
       
   <img src="../../assets/clm-day-banner.png" alt="logo">
 
     </a>
-    CLM Day 2025 - ISLM Handson
+    ISLM Handson
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -630,34 +630,6 @@
     
   
     Create Intelligent Scenario
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ISLM_with_SAPGenAI/connection/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Connect to SAP BTP
   
 
     
@@ -1573,264 +1545,328 @@
 <h1 id="steps-to-create-intelligent-scenarios">Steps to Create Intelligent Scenarios<br></h1>
 <ol>
 <li>
-<p>Open the browser and navigate to the Fiori Launchpad by clicking <a href="https://107.23.197.27:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html">here</a>. We've already kept the system logged in. And under "Analytics" tab launch the "Intelligent Scenarios" application.
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/017.jpg" /></p>
+<p>Open the browser and navigate to the Fiori Launchpad by clicking <a href="https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home">here</a> and launch the <strong>Intelligent Scenarios</strong> application under <strong>Analytics</strong> tab .
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Registration.png" /></p>
 </li>
 <li>
 <p>Click the <strong>Create</strong> button and choose <strong>Side-by-Side</strong>.
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/02.png" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Create.png" /></p>
 </li>
 <li>
 <p>Next, go to the <strong>Settings</strong> tab and select <strong>Generative AI</strong> as the Scenario Type.<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/02.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/IntelligentScenarioType.png" /></p>
 </li>
 <li>
-<p>Enter unique <strong>Scenario name</strong> in the below format, where ## is your attendee ID.<br>
-<div class="highlight"><pre><span></span><code>Z_POL_DOC_SUMM_##
-</code></pre></div>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/03.jpg" /></p>
+<p>Enter unique <strong>Scenario name</strong> in <code>Z_POL_DOC_SUMM_##</code> format, where ## is your attendee ID.<br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Name.png" /></p>
 </li>
 <li>
-<p>Enter the <strong>description</strong><br>
-<div class="highlight"><pre><span></span><code>Summarize Return Policy Document
-</code></pre></div>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/04.jpg" /></p>
+<p>Enter the <strong>description</strong>:<code>Summarize Return Policy Document</code>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Description.png" /></p>
 </li>
 <li>
 <p>Select <strong>Stateless – Customer</strong> as the Usage Type. <br>
 This option provide the shared connectivity model allows a single connection between the ABAP system and the SAP Generative AI Hub to be configured once and reused across multiple AI use cases. This simplifies administration, improves governance, and reduces setup effort. Reuse connectivity is already set up and no action is required here for connectivity.
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/05.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/UsageType.png" /></p>
 </li>
 <li>
 <p>Add a Generative AI model to the Intelligent Scenario by selecting <strong>Add Model</strong> and providing the required details. <br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/06.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/AddModel.png" /></p>
 </li>
 <li>
-<p>Enter the below details: <br></p>
+<p>Enter the below details:</p>
 </li>
-<li><strong>Model name</strong> as <code>Z_POL_DOC_SUMMARIZE_MOD</code><br></li>
+<li><strong>Model name</strong> as <code>Z_POL_DOC_SUMMARIZE_MOD</code></li>
 <li>
-<p><strong>Description</strong> as <code>Model with orchestration modules</code><br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/07.jpg" /></p>
+<p><strong>Description</strong> as <code>Model with orchestration modules</code>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/ModelNameDescription.png" /></p>
 </li>
 <li>
 <p>Select the appropriate <strong>Executable ID</strong> from the drop down. In this case, we will choose <strong>azure-openai</strong><br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/08.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/ExecutableId.png" /></p>
 </li>
 <li>
 <p>Select the corresponding <strong>Model</strong> from the drop down. In this exercise, we will choose <strong>gpt-5-mini</strong><br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/09.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/LLMname.png" /></p>
 </li>
 <li>
 <p>Optionally, choose a specific <strong>Model Version</strong> (latest is selected by default). In this case, we can keep as empty to have latest.<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/010.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/ModelVersion.png" /></p>
 </li>
 <li>
 <p>Choose <strong>Add</strong> to confirm<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/011.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Add.png" /></p>
 </li>
 <li>
 <p>Intelligent scenario with Orchestration service:</p>
 </li>
-<li>Navigate to the <strong>Execution Flow Template</strong><br></li>
-<li>Upload the Execution Flow Template</li>
-<li>Click the <strong>Upload</strong> button.</li>
-<li>Locate the <strong>Orchestration config folder</strong> on your desktop.</li>
-<li>Open the <code>config_json.txt</code> file to view the orchestration configuration JSON.</li>
-<li>Either select all and copy the JSON, or paste the below JSON directly into the dialog.
+<li>Navigate to the <strong>Execution Flow Template</strong> and click the <strong>Upload</strong> button to upload the json.
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/ExecutionFlow.png" /></li>
+<li>Either select all and copy the JSON from <a href="https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/OrchestrationConfigFiles/Orchestration%20config.zip">config file</a>, or paste the below JSON directly into the dialog.
 <div class="highlight"><pre><span></span><code>{
-  &quot;module_configurations&quot;: {
-    &quot;grounding_module_config&quot;: {
-      &quot;type&quot;: &quot;document_grounding_service&quot;,
-      &quot;config&quot;: {
-        &quot;filters&quot;: [
-          {
-            &quot;id&quot;: &quot;filter1&quot;,
-            &quot;data_repositories&quot;: [
-              &quot;2a35766b-e72e-4ef8-9223-5995c839b1cd&quot;
-            ],
-            &quot;search_config&quot;: {
-              &quot;max_document_count&quot;: 0
+    &quot;modules&quot;: {
+        &quot;prompt_templating&quot;: {
+            &quot;prompt&quot;: {
+                &quot;template&quot;: [
+                    {
+                        &quot;role&quot;: &quot;user&quot;,
+                        &quot;content&quot;: [
+                            {
+                                &quot;type&quot;: &quot;text&quot;,
+                                &quot;text&quot;: &quot;{{?grounding_output_variable}}&quot;
+                            }
+                        ]
+                    }
+                ],
+                &quot;defaults&quot;: {}
             },
-            &quot;data_repository_type&quot;: &quot;vector&quot;
-          }
-        ],
-        &quot;input_params&quot;: [
-          &quot;grounding_input_variable_1&quot;
-        ],
-        &quot;output_param&quot;: &quot;grounding_output_variable&quot;
-      }
-    },
-    &quot;llm_module_config&quot;: {
-      &quot;model_name&quot;: &quot;gpt-5-mini&quot;,
-      &quot;model_params&quot;: {},
-      &quot;model_version&quot;: {}
-    },
-    &quot;templating_module_config&quot;: {
-      &quot;template_ref&quot;: {}
-    },
-    &quot;filtering_module_config&quot;: {
-      &quot;input&quot;: {
-        &quot;filters&quot;: [
-          {
-            &quot;type&quot;: &quot;azure_content_safety&quot;,
-            &quot;config&quot;: {
-              &quot;Hate&quot;: 0,
-              &quot;SelfHarm&quot;: 0,
-              &quot;Sexual&quot;: 0,
-              &quot;Violence&quot;: 0
+            &quot;model&quot;: {
+                &quot;name&quot;: &quot;gpt-5-mini&quot;,
+                &quot;params&quot;: {
+                    &quot;max_tokens&quot;: 64000,
+                    &quot;temperature&quot;: 1
+                },
+                &quot;version&quot;: &quot;2025-08-07&quot;
             }
-          },
-          {
-            &quot;type&quot;: &quot;llama_guard_3_8b&quot;,
-            &quot;config&quot;: {
-              &quot;child_exploitation&quot;: true,
-              &quot;code_interpreter_abuse&quot;: true,
-              &quot;defamation&quot;: true,
-              &quot;elections&quot;: true,
-              &quot;hate&quot;: true,
-              &quot;indiscriminate_weapons&quot;: true,
-              &quot;intellectual_property&quot;: true,
-              &quot;non_violent_crimes&quot;: true,
-              &quot;privacy&quot;: true,
-              &quot;self_harm&quot;: true,
-              &quot;sex_crimes&quot;: true,
-              &quot;sexual_content&quot;: true,
-              &quot;specialized_advice&quot;: true,
-              &quot;violent_crimes&quot;: true
+        },
+        &quot;filtering&quot;: {
+            &quot;input&quot;: {
+                &quot;filters&quot;: [
+                    {
+                        &quot;type&quot;: &quot;azure_content_safety&quot;,
+                        &quot;config&quot;: {
+                            &quot;hate&quot;: 2,
+                            &quot;self_harm&quot;: 2,
+                            &quot;sexual&quot;: 2,
+                            &quot;violence&quot;: 2,
+                            &quot;prompt_shield&quot;: true
+                        }
+                    },
+                    {
+                        &quot;type&quot;: &quot;llama_guard_3_8b&quot;,
+                        &quot;config&quot;: {
+                            &quot;child_exploitation&quot;: true,
+                            &quot;code_interpreter_abuse&quot;: true,
+                            &quot;defamation&quot;: true,
+                            &quot;elections&quot;: true,
+                            &quot;hate&quot;: true,
+                            &quot;indiscriminate_weapons&quot;: true,
+                            &quot;intellectual_property&quot;: true,
+                            &quot;non_violent_crimes&quot;: true,
+                            &quot;privacy&quot;: true,
+                            &quot;self_harm&quot;: true,
+                            &quot;sex_crimes&quot;: true,
+                            &quot;sexual_content&quot;: true,
+                            &quot;specialized_advice&quot;: true,
+                            &quot;violent_crimes&quot;: true
+                        }
+                    }
+                ]
+            },
+            &quot;output&quot;: {
+                &quot;filters&quot;: [
+                    {
+                        &quot;type&quot;: &quot;azure_content_safety&quot;,
+                        &quot;config&quot;: {
+                            &quot;hate&quot;: 2,
+                            &quot;self_harm&quot;: 2,
+                            &quot;sexual&quot;: 2,
+                            &quot;violence&quot;: 2
+                        }
+                    },
+                    {
+                        &quot;type&quot;: &quot;llama_guard_3_8b&quot;,
+                        &quot;config&quot;: {
+                            &quot;child_exploitation&quot;: true,
+                            &quot;code_interpreter_abuse&quot;: true,
+                            &quot;defamation&quot;: true,
+                            &quot;elections&quot;: true,
+                            &quot;hate&quot;: true,
+                            &quot;indiscriminate_weapons&quot;: true,
+                            &quot;intellectual_property&quot;: true,
+                            &quot;non_violent_crimes&quot;: true,
+                            &quot;privacy&quot;: true,
+                            &quot;self_harm&quot;: true,
+                            &quot;sex_crimes&quot;: true,
+                            &quot;sexual_content&quot;: true,
+                            &quot;specialized_advice&quot;: true,
+                            &quot;violent_crimes&quot;: true
+                        }
+                    }
+                ]
             }
-          }
-        ]
-      },
-      &quot;output&quot;: {
-        &quot;filters&quot;: [
-          {
-            &quot;type&quot;: &quot;azure_content_safety&quot;,
-            &quot;config&quot;: {
-              &quot;Hate&quot;: 0,
-              &quot;SelfHarm&quot;: 2,
-              &quot;Sexual&quot;: 4,
-              &quot;Violence&quot;: 6
+        },
+        &quot;masking&quot;: {
+            &quot;masking_providers&quot;: [
+                {
+                    &quot;type&quot;: &quot;sap_data_privacy_integration&quot;,
+                    &quot;method&quot;: &quot;pseudonymization&quot;,
+                    &quot;entities&quot;: [
+                        {
+                            &quot;type&quot;: &quot;profile-credit-card-number&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-driverlicense&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-email&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-sensitive-data&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-ethnicity&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-gender&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-pronouns-gender&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-iban&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-location&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-nationalid&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-nationality&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-org&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-passport&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-person&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-phone&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-political-group&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-sapids-public&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-religious-group&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-sapids-internal&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-ssn&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-sexual-orientation&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-trade-union&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-address&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-url&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-university&quot;
+                        },
+                        {
+                            &quot;type&quot;: &quot;profile-username-password&quot;
+                        }
+                    ],
+                    &quot;mask_grounding_input&quot;: {
+                        &quot;enabled&quot;: true
+                    },
+                    &quot;allowlist&quot;: []
+                }
+            ]
+        },
+        &quot;translation&quot;: {
+            &quot;output&quot;: {
+                &quot;type&quot;: &quot;sap_document_translation&quot;,
+                &quot;config&quot;: {
+                    &quot;source_language&quot;: &quot;en-US&quot;,
+                    &quot;target_language&quot;: &quot;&quot;
+                }
             }
-          },
-          {
-            &quot;type&quot;: &quot;llama_guard_3_8b&quot;,
-            &quot;config&quot;: {
-              &quot;child_exploitation&quot;: true,
-              &quot;code_interpreter_abuse&quot;: true,
-              &quot;defamation&quot;: true,
-              &quot;elections&quot;: true,
-              &quot;hate&quot;: true,
-              &quot;indiscriminate_weapons&quot;: true,
-              &quot;intellectual_property&quot;: true,
-              &quot;non_violent_crimes&quot;: true,
-              &quot;privacy&quot;: true,
-              &quot;self_harm&quot;: true,
-              &quot;sex_crimes&quot;: true,
-              &quot;sexual_content&quot;: true,
-              &quot;specialized_advice&quot;: true,
-              &quot;violent_crimes&quot;: true
-            }
-          }
-        ]
-      }
-    },
-    &quot;masking_module_config&quot;: {
-      &quot;masking_providers&quot;: [
-        {
-          &quot;type&quot;: &quot;sap_data_privacy_integration&quot;,
-          &quot;method&quot;: &quot;anonymization&quot;,
-          &quot;entities&quot;: [
-            {
-              &quot;type&quot;: &quot;profile-email&quot;
-            },
-            {
-              &quot;type&quot;: &quot;profile-gender&quot;
-            },
-            {
-              &quot;type&quot;: &quot;profile-pronouns-gender&quot;
-            },
-            {
-              &quot;type&quot;: &quot;profile-location&quot;
-            },
-            {
-              &quot;type&quot;: &quot;profile-person&quot;
-            },
-            {
-              &quot;type&quot;: &quot;profile-url&quot;
-            }
-          ],
-          &quot;mask_grounding_input&quot;: {
-            &quot;enabled&quot;: true
-          },
-          &quot;allowlist&quot;: [
-            &quot;ANALYTICS&quot;,
-            &quot;SPECIALIST&quot;
-          ]
         }
-      ]
-    },
-    &quot;input_translation_module_config&quot;: {},
-    &quot;output_translation_module_config&quot;: {}
-  }
+    }
 }
 </code></pre></div>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/4.jpg" /> <br></li>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Upload.png" /> <br></li>
 <li>
 <p>Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.<br></p>
 </li>
 <li>
-<p>In the <strong>Grounding subsection</strong>, add the required data repository type <strong>Vector</strong>. This will support the grounding document addition. <br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/019.jpg" /> <br>
-To restrict your grounding module output during inference, maintain Search Configuration value. This can help to retrieve only relevant data instead of all the uploaded data.<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/021.jpg" /><br></p>
+<p>In the <strong>Grounding subsection</strong>, add the required data repository type <strong>Vector</strong>. This will support the grounding document addition. Click <a href="https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/GroundingFiles/Grounding%20files.zip">here</a> to download the grounding files. <br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Vector.png" /> <br></p>
 </li>
+</ol>
+<p>To restrict your grounding module output during inference, maintain Search Configuration value. This can help to retrieve only relevant data instead of all the uploaded data.<br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Vector1.png" /><br></p>
+<ol>
 <li>
-<p>The <strong>Input Translation</strong> module allows you to translate LLM text prompts and <strong>grounding module</strong> output into a target language. It may help improve LLM response when the configured model performs better with input in specific language, example English. In this use case, prompt texts are already English, so no need to maintain the Input translation configuration.<br>
-Also, <strong>Prompt Shield</strong> is already true as per the JSON configuration file.<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/6.jpg" /></p>
+<p>The <strong>Input Translation</strong> module allows you to translate LLM text prompts and <strong>grounding module</strong> output into a target language. It may help improve LLM response when the configured model performs better with input in specific language, example English. In this use case, prompt texts are already English, so no need to maintain the Input translation configuration.<br></p>
 </li>
 <li>
 <p>The <strong>Data Masking module</strong> enables the anonymization or pseudonymization of data before it is sent to the LLM model for processing. <br>
-The <strong>Input filters</strong> defined in the Execution Flow Template JSON are populated and displayed in the table.
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/7.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/DataMasking.png" /></p>
+</li>
+<li>
+<p>The <strong>Input filters</strong> defined in the Execution Flow Template JSON are populated and displayed in the table. Also, <strong>Prompt Shield</strong> is already true as per the JSON configuration file.<br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/InputFiltering.png" /></p>
 </li>
 <li>
 <p>The <strong>Output Filtering</strong> module allows you to filter the harmful or hateful content generated by the LLM.<br>
-The <strong>Output Translation</strong> module allows you to translate LLM response into a target language. It helps to display the LLM response in the language user logged, if the translation is supported.<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/014.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/OutputFiltering.png" /></p>
 </li>
 <li>
-<p>Add <strong>Prompt</strong> &amp; <strong>Grounding Template</strong><br></p>
+<p>The <strong>Output Translation</strong> module allows you to translate LLM response into a target language. It helps to display the LLM response in the language user logged, if the translation is supported.<br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/OutputTranslation.png" /></p>
 </li>
-<li>Add a Grounding Template with name <strong>GROUNDING_TEMPLATE</strong> with description <strong>Grounding query</strong> and then add the below Grounding template text.<br>
-<div class="highlight"><pre><span></span><code>{ISLM_GROUNDING_QUERY}
-</code></pre></div></li>
-<li>Select the <strong>Display template information</strong> as <strong>Yes</strong>. The grounding template can include dynamic parameters similar to the user prompt.<br></li>
 <li>
-<p>The Grounding Template retrieves relevant information from the selected data repository and appends it to the user prompt. It supports dynamic parameters, which are provided at runtime (during inference).<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/9.jpg" />
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/10.jpg" /></p>
+<p>Add <strong>Grounding Template</strong><br>
+The Grounding Template retrieves relevant information from the selected data repository and appends it to the user prompt. It supports dynamic parameters, which are provided at runtime (during inference).<br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/GT.png" /></p>
+</li>
+<li>Enter Grounding Template <strong>name</strong>: <code>GROUNDING_TEMPLATE</code></li>
+<li>Enter <strong>Description</strong>: <code>Grounding query</code> </li>
+<li>Select the <strong>Display template information</strong> as <code>Yes</code>.</li>
+<li>
+<p>Enter <strong>Grounding template text</strong>: <code>{ISLM_GROUNDING_QUERY}</code> <br>
+  The grounding template can include dynamic parameters similar to the user prompt.<br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/GroundingTemplate.png" /></p>
 </li>
 <li>
 <p>Add <strong>Prompt template</strong> for <strong>System prompt</strong><br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/11.jpg" /> <br></p>
+The system prompt is used to set the overall context, behavior, or persona for the AI's responses. It provides the fundamental instruction set to guide the model's behaviour throughout an interaction.<br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/PT.png" /> <br></p>
 </li>
-<li>Enter the prompt name <strong>SYSTEM_PROMPT</strong>. The system prompt is used to set the overall context, behavior, or persona for the AI's responses. It provides the fundamental instruction set to guide the model's behaviour throughout an interaction.<br></li>
-<li>Enter the description <strong>Explain the role and responsibility for the LLM</strong><br></li>
-<li>Select the <strong>Display template information</strong> as <strong>Yes</strong>.<br>
-Enter the below text as <strong>Prompt text</strong>: <code>You are {ISLM_ROLE}. Your responsibility is to {ISLM_RESPONSIBILITY}.</code> </li>
+<li>Enter the <strong>Prompt name</strong>: <code>SYSTEM_PROMPT</code>. </li>
+<li>Enter the <strong>Description</strong>: <code>Explain the role and responsibility for the LLM</code><br></li>
+<li>Select the <strong>Display template information</strong> as <code>Yes</code>.<br></li>
+<li>Enter <strong>Prompt text</strong>: <code>You are {ISLM_ROLE}. Your responsibility is to {ISLM_RESPONSIBILITY}.</code> </li>
 <li>Default parameter value of <strong>ISLM_ROLE</strong>: <code>An helpful assistant.</code> </li>
 <li>
 <p>Default parameter value of <strong>ISLM_RESPONSIBILITY</strong>: <code>Assist the user with their queries.</code>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/12.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/SystemPrompt.png" /></p>
 </li>
 <li>
-<p>Add <strong>Prompt template</strong> for <strong>User prompt</strong><br></p>
+<p>Add <strong>Prompt template</strong> for <strong>User prompt</strong><br>
+If you have configured grounding module, at least one User Prompt must be added with the following parameter: {ISLM_GROUNDING_OUTPUT}<br>
+At runtime, this placeholder is automatically replaced with the content retrieved by the Grounding Template from the configured data repository.<br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/PT.png" /> <br></p>
 </li>
-<li>Enter the prompt name: <code>SUMMARIZE_RETURN_POLICY</code></li>
-<li>Enter the description <code>Use LLM to summarize the return policy document to populate standard JSON</code></li>
-<li>Select the <strong>Display template information</strong> as <strong>Yes</strong>.</li>
+<li>Enter the <strong>Prompt name</strong>: <code>SUMMARIZE_RETURN_POLICY</code></li>
+<li>Enter the <strong>Description</strong> <code>Use LLM to summarize the return policy document to populate standard JSON</code></li>
+<li>Select the <strong>Display template information</strong> as <code>Yes</code>.</li>
 <li>
 <p>Enter the below text as <strong>Prompt text</strong><br>
 <div class="highlight"><pre><span></span><code>Generate a summary of return policy document provided below for the company {ISLM_COMPANY_NAME}.
@@ -1925,45 +1961,32 @@ Enter the below text as <strong>Prompt text</strong>: <code>You are {ISLM_ROLE}.
 
 ### RETURN POLICY DOCUMENT
 {ISLM_GROUNDING_OUTPUT}
-</code></pre></div></p>
+</code></pre></div>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/UserPrompt.png" /></p>
 </li>
 <li>
-<p>If you have configured grounding module, at least one User Prompt must be added with the following parameter: {ISLM_GROUNDING_OUTPUT}<br>
-At runtime, this placeholder is automatically replaced with the content retrieved by the Grounding Template from the configured data repository.<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/13.jpg" />
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/14.jpg" /></p>
+<p>Save <strong>Draft</strong> and navigate to Scenario documents section by pressing <strong>Back</strong><br><br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/DraftBack.png" /></p>
 </li>
 <li>
-<p>Save <strong>Draft</strong><br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/15.jpg" /></p>
+<p>Upload grounding documents to an Intelligent Scenario by clicking on <strong>Upload</strong> button<br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/DocumentsUpload.png" /></p>
 </li>
 <li>
-<p>Navigate to Scenario documents section by pressing <strong>Back</strong><br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/022.jpg" /></p>
-</li>
-<li>
-<p>Upload grounding documents to an Intelligent Scenario<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/16.jpg" /></p>
-</li>
-<li>
-<p>Press <strong>Upload</strong> button<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/17.jpg" /></p>
-</li>
-<li>
-<p>Select the below files from the Grounding files folder in your desktop<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/18.jpg" /></p>
+<p>Select the below files from the Grounding files folder from your desktop<br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Documents.png" /></p>
 </li>
 <li>
 <p>Enter the document names like below and choose <strong>English</strong> as language for all the files.<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/015.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/DocumentsNames.png" /></p>
 </li>
 <li>
 <p>Click <strong>Publish</strong> button and enter the package as <strong>local object $TMP</strong>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/020.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Publish.png" /></p>
 </li>
 <li>
 <p>Press <strong>OK</strong><br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/21.jpg" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/OK.png" /></p>
 </li>
 </ol>
 <p><strong>Intelligent Scenario</strong> is created successfully.</p>
