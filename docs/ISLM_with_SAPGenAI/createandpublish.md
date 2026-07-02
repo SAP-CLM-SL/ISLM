@@ -21,7 +21,7 @@ In this step, you’ll create a new intelligent scenario to generate the order c
     - Name: `Z_SLS_ORD_CONF_MDL`
     - Description: `LLM Model for generating SO email`
     - Executable ID: `azure-openai`
-    - Large Language Model Name: `gpt-5-mini`
+    - Large Language Model Name: `gpt-4o-mini`
     - Optionally, choose a specific Model Version (latest is selected by default). In this case, we can keep as empty to have latest.
     ![](./images/add_model.png)
 
@@ -31,9 +31,9 @@ In this step, you’ll create a new intelligent scenario to generate the order c
 8. Click the **Add** prompt templates button.
     ![](./images/ClickAddPromptButton1.png)
 
-9. In the A**dd Prompt Template** dialog, enter the below details:
+9. In the Add **Prompt Template** dialog, enter the below details:
     - Name: `SYSTEM_PROMPT`
-    - Description: `Provide context to gpt-5-mini model`
+    - Description: `Provide context to gpt-4o-mini model`
     ![](./images/EnterSystemPromptNameAndDescription.png)
 
 10. Enter the below **Prompt** text:
