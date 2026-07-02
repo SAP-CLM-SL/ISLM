@@ -1546,53 +1546,57 @@
 <p>The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app.
 In this step, you’ll create a new intelligent scenario to generate the order confirmation email for Sales Order using LLM model.</p>
 <ol>
-<li>Open the Fiori Launchpad by clicking <a href="https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home">here</a> and launch <strong>Intelligent Scenarios</strong> app under <strong>Analytics</strong> tab. 
-<img alt="" src="../images/IntelligentScenariosApp.png" /></li>
-<li>Click the <strong>Create</strong> button and choose <strong>Side-by Side</strong>.
-<img alt="" src="../images/CreateSBS.png" /></li>
-<li>Provide the required information on the screen:<ul>
+<li>
+<p>Open the Fiori Launchpad by clicking <a href="https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home">here</a> and launch <strong>Intelligent Scenarios</strong> app under <strong>Analytics</strong> tab. 
+<img alt="" src="../images/Registration.png" /><br></p>
+</li>
+<li>
+<p>Click the <strong>Create</strong> button and choose <strong>Side-by Side</strong>.
+<img alt="" src="../images/Create.png" /> <br></p>
+</li>
+<li>
+<p>Provide the required information on the screen:</p>
+<ul>
 <li><strong>Intelligent Scenario Name</strong>: Enter a unique name starting with Z, such as <code>Z_SLS_ORD_CONF_###</code>, where ### is your attendee id mentioned in the cheat sheet.</li>
 <li><strong>Intelligent Scenario Description</strong>: <code>Generate sales order confirmation email</code></li>
-<li><strong>Intelligent Scenario Type</strong>: <code>Generative AI</code>
-  <img alt="" src="../images/8.png" /></li>
+<li><strong>Intelligent Scenario Type</strong>: <code>Generative AI</code> <br>
+<img alt="" src="../images/NameDescriptionType.png" /><br></li>
 </ul>
 </li>
 <li>
-<p>Select the <strong>Usage Type</strong> as <strong>Stateless - With Embeddings</strong>.<br> The usage type provides connectivity to GenAI Hub. For Stateless - With Embeddings usage type, the information or data from previous interactions with LLM is not retained. Each interaction is treated as a new request, ensuring a fresh context for every interaction.</p>
+<p>Select the <strong>Usage Type</strong> as <strong>Stateless - With Embeddings</strong>.<br> The usage type provides connectivity to GenAI Hub. For Stateless - With Embeddings usage type, the information or data from previous interactions with LLM is not retained. Each interaction is treated as a new request, ensuring a fresh context for every interaction. <br>
+<img alt="" src="../images/UsageType.png" /></p>
 </li>
 <li>
 <p>Click the <strong>Add Model</strong> button.
-    <img alt="" src="../images/11.png" /></p>
+<img alt="" src="../images/AddModel.png" /></p>
 </li>
 <li>
 <p>The <strong>Add Generative AI Model</strong> screen will pop up. Enter the below details:</p>
 <ul>
-<li>Name: <code>Z_SLS_ORD_CONF_MDL</code></li>
-<li>Description: <code>LLM Model for generating SO email</code></li>
-<li>Executable ID: <code>azure-openai</code></li>
-<li>Large Language Model Name: <code>gpt-5-mini</code></li>
-<li>Optionally, choose a specific Model Version (latest is selected by default). In this case, we can keep as empty to have latest.
-<img alt="" src="../images/add_model.png" /></li>
+<li><strong>Name</strong>: <code>Z_SLS_ORD_CONF_MDL</code></li>
+<li><strong>Description</strong>: <code>LLM Model for generating SO email</code></li>
+<li><strong>Executable ID</strong>: <code>azure-openai</code></li>
+<li><strong>Large Language Model Name</strong>: <code>gpt-5-mini</code></li>
+<li>Optionally, choose a specific <strong>Model Version</strong> (latest is selected by default). In this case, we can keep as empty to have latest.
+<img alt="" src="../images/ModelDetails.png" /></li>
 </ul>
 </li>
 <li>
 <p>Click the <strong>Add</strong> button.
-    <img alt="" src="../images/ClickAddButtonInAddGenAIModelDialog.png" /></p>
+<img alt="" src="../images/Add.png" /></p>
 </li>
 <li>
-<p>Click the <strong>Add</strong> prompt templates button.
-    <img alt="" src="../images/ClickAddPromptButton1.png" /></p>
+<p>Click the <strong>Add</strong> prompt templates button to add <strong>System prompt</strong>.
+<img alt="" src="../images/SPT.png" /></p>
 </li>
 <li>
-<p>In the A<strong>dd Prompt Template</strong> dialog, enter the below details:</p>
+<p>In the Add <strong>Prompt Template</strong> dialog, enter the below details:</p>
 <ul>
-<li>Name: <code>SYSTEM_PROMPT</code></li>
-<li>Description: <code>Provide context to gpt-5-mini model</code>
-<img alt="" src="../images/EnterSystemPromptNameAndDescription.png" /></li>
-</ul>
-</li>
-<li>
-<p>Enter the below <strong>Prompt</strong> text:
+<li><strong>Name</strong>: <code>SYSTEM_PROMPT</code></li>
+<li><strong>Description</strong>: <code>Provide context to gpt-5-mini model</code></li>
+<li>Select the <strong>Display template information</strong> as <code>Yes</code></li>
+<li>Enter the below <strong>Prompt</strong> text:
 <div class="highlight"><pre><span></span><code>You are a sales executive who is responsible for reaching out to customers for confirming or declining their orders via email.
 For the given sales order, evaluate the following:
 1. Size of the delivery vehicle based on the number of items.
@@ -1604,49 +1608,48 @@ Write an email in the following format:
 - The body of email should be of format: &quot;Sales order contains &lt;Category&gt; to be delivered to &lt;Location&gt;. The order will be delivered via a &lt;size&gt; vehicle.
 IF &lt;distance between source address and delivery address&gt; &gt; 100 kms THEN include a message about potential delivery delays ELSE congratulate on being eligible for one day delivery
 </code></pre></div>
-<img alt="" src="../images/EnterSystemPrompt.png" /></p>
+<img alt="" src="../images/SystemPrompt.png" /></li>
+</ul>
 </li>
 <li>
 <p>Click the <strong>Save</strong> button.
-    <img alt="" src="../images/SaveSystemPrompt.png" /></p>
+<img alt="" src="../images/Ssave.png" /></p>
 </li>
 <li>
-<p>Click the <strong>Add</strong> prompt templates button.
-    <img alt="" src="../images/ClickAddPromptButton2.png" /></p>
+<p>Click the <strong>Add</strong> prompt templates button to add <strong>User prompt</strong>.
+<img alt="" src="../images/UPT.png" /></p>
 </li>
 <li>
 <p>In the <strong>Add Prompt Template</strong> dialog, enter the below details:</p>
 <ul>
-<li>Name: <code>USER_PROMPT</code></li>
-<li>Description: <code>Provide sales order item data for generating the order confirmation email</code>
-<img alt="" src="../images/19.png" /></li>
+<li><strong>Name</strong>: <code>USER_PROMPT</code></li>
+<li><strong>Description</strong>: <code>Provide sales order item data for generating the order confirmation email</code></li>
+<li>Select the <strong>Display template information</strong> as <code>Yes</code></li>
+<li>Enter the below <strong>Prompt</strong> text:
+<div class="highlight"><pre><span></span><code>Build a confirmation mail for a sales order containing {ISLM_Items}. The source address is {ISLM_Source} and the delivery address is {ISLM_Destination}.
+</code></pre></div>
+<img alt="" src="../images/UserPrompt.png" /></li>
 </ul>
 </li>
 <li>
-<p>Enter the below <strong>Prompt</strong> text:
-<div class="highlight"><pre><span></span><code>Build a confirmation mail for a sales order containing {ISLM_Items}. The source address is {ISLM_Source} and the delivery address is {ISLM_Destination}.
-</code></pre></div>
-<img alt="" src="../images/20.png" /></p>
-</li>
-<li>
 <p>Click the <strong>Save</strong> button.
-    <img alt="" src="../images/21.png" /></p>
+<img alt="" src="../images/Usave.png" /></p>
 </li>
 <li>
-<p>The added prompt should be visible in the Prompt Templates table. Click the <strong>Save Draft</strong> button.
-    <img alt="" src="../images/SaveDraftModel.png" /></p>
+<p>The added prompt should be visible in the Prompt Templates table. 
+<img alt="" src="../images/Prompts.png" /></p>
 </li>
 <li>
-<p>Navigate back to Intelligent Scenario by clicking the <strong>back</strong> button.
-    <img alt="" src="../images/NavigateBackToDraftScenario.png" /></p>
+<p>Click the <strong>Save Draft</strong> button and navigate back to Intelligent Scenario by clicking the <strong>back</strong> button.
+<img alt="" src="../images/DraftBack.png" /></p>
 </li>
 <li>
 <p>Scenario is now ready to be published. Click on <strong>Publish</strong> button. You will receive a message that Intelligent Scenario is published.
-    <img alt="" src="../images/24.png" /></p>
+    <img alt="" src="../images/Publish.png" /></p>
 </li>
 <li>
 <p>Search the Intelligent Scenario created by you by entering the <strong>Intelligent Scenario name</strong> and <strong>Status = Published</strong>.
-    <img alt="" src="../images/25.png" /></p>
+    <img alt="" src="../images/PIS.png" /></p>
 </li>
 </ol>
 <p>Well done, you just created your first Side-by-side Intelligent Scenario.</p>
