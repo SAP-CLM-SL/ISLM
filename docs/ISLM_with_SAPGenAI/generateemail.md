@@ -45,8 +45,7 @@ TRY.
 
     " Set LLM parameters
     DATA(lo_parameter_setter) = lo_sdk_islm_api->get_parameter_setter( ).
-    lo_parameter_setter->set_temperature( '0.7' ).
-    lo_parameter_setter->set_maximum_tokens( 800 ).
+    lo_parameter_setter->set_maximum_tokens( 7500 ).
 
 
     " Send request to LLM and receive result
