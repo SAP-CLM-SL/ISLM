@@ -38,6 +38,7 @@ In this step, you’ll create a new intelligent scenario to generate the order c
 9. In the Add **Prompt Template** dialog, enter the below details:
     - **Name**: `SYSTEM_PROMPT`
     - **Description**: `Provide context to gpt-5-mini model`
+    - Select the **Display template information** as `Yes`
     - Enter the below **Prompt** text:
 ```
 You are a sales executive who is responsible for reaching out to customers for confirming or declining their orders via email.
@@ -62,6 +63,7 @@ IF <distance between source address and delivery address> > 100 kms THEN include
 12. In the **Add Prompt Template** dialog, enter the below details:
     - **Name**: `USER_PROMPT`
     - **Description**: `Provide sales order item data for generating the order confirmation email`
+    - Select the **Display template information** as `Yes`
     - Enter the below **Prompt** text:
 ```
 Build a confirmation mail for a sales order containing {ISLM_Items}. The source address is {ISLM_Source} and the delivery address is {ISLM_Destination}.
