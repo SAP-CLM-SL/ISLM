@@ -49,6 +49,13 @@ nav:
       - Create Intelligent Scenario: "ISLM_with_SAPGenAI/createandpublish.md"
       - ML Operations: "ISLM_with_SAPGenAI/mloperations.md"
       - Inference: "ISLM_with_SAPGenAI/generateemail.md"
+  - Gen AI Orchestration:
+      - Overview: "Integrate-AI-into-SAPS4HANA-with-ISLM/Introduction.md"
+      - Prerequisites: "Integrate-AI-into-SAPS4HANA-with-ISLM/Prerequisites.md"
+      - Create Intelligent Scenarios: "Integrate-AI-into-SAPS4HANA-with-ISLM/CreateIntelligentScenarios.md"
+      - Operate Intelligent Scenario: "Integrate-AI-into-SAPS4HANA-with-ISLM/OperateIntelligentScenario.md"
+      - Prompt Execution: "Integrate-AI-into-SAPS4HANA-with-ISLM/PromptExecution.md"
+      - Conclusion: "Integrate-AI-into-SAPS4HANA-with-ISLM/Conclusion.md"
   - APL:
       - Overview: "ISLM_with_HANAML/overview.md"
       - Create Intelligent Scenario: "ISLM_with_HANAML/createandpublish.md"
@@ -60,21 +67,13 @@ nav:
 #      - Create Intelligent Scenario: "ISLM_with_SAPAIServices_BTP/createandpublish.md"
 #      - Connect to SAP BTP: "ISLM_with_SAPAIServices_BTP/connection.md"
 #      - ML Operations: "ISLM_with_SAPAIServices_BTP/mloperations.md"
-#      - Inference: "ISLM_with_SAPAIServices_BTP/inference.md"
-  - Gen AI Orchestration:
-      - Overview: "Integrate-AI-into-SAPS4HANA-with-ISLM/Introduction.md"
-      - Prerequisites: "Integrate-AI-into-SAPS4HANA-with-ISLM/Prerequisites.md"
-      - Create Intelligent Scenarios: "Integrate-AI-into-SAPS4HANA-with-ISLM/CreateIntelligentScenarios.md"
-      - Operate Intelligent Scenario: "Integrate-AI-into-SAPS4HANA-with-ISLM/OperateIntelligentScenario.md"
-      - Prompt Execution: "Integrate-AI-into-SAPS4HANA-with-ISLM/PromptExecution.md"
-      - Conclusion: "Integrate-AI-into-SAPS4HANA-with-ISLM/Conclusion.md"
-      
+#      - Inference: "ISLM_with_SAPAIServices_BTP/inference.md"      
   - Community:
       - Blogs: "community/readme.md"
       - Videos: "community/videos.md"
 
-  - Contact us: "Contactus/readme.md"
-  - Feedback: "feedback/readme.md"
+#  - Contact us: "Contactus/readme.md"
+#  - Feedback: "feedback/readme.md"
 
 extra:
   generator: false # Hides "Made with MkDocs"
