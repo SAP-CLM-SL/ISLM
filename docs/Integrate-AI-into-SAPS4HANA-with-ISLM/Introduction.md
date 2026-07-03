@@ -8,13 +8,13 @@ Over the past year, these Generative AI capabilities are now enabled through ISL
 ISLM supports integration with the Orchestration Service on SAP AI Core, enabling advanced Generative AI capabilities such as document grounding, content filtering, and data masking. Additional features like input and output translation and a Prompt Shield filter help protect against prompt injection attacks, strengthening security. New API enhancements further improve grounding quality through larger chunk sizes and application-specific document chunking. Together, these capabilities enable standardized, flexible, and enterprise-ready GenAI integration and reinforcing ISLM as the central framework for governing and scaling Generative AI across SAP landscapes.<br>
 
 The following modules within the orchestration service are supported by ISLM :<br>
-1. **Data Masking** – Protects sensitive information by masking or removing confidential data. <br>
-2. **Input Filtering** – Validates and sanitizes incoming data before it is processed by the LLM. <br>
-3. **Output Filtering** – Reviews and filters the LLM-generated output to ensure compliance and relevance. <br>
-4. **Grounding** – Aligns model outputs with enterprise data or domain-specific knowledge to improve      response accuracy. <br>
-5. **Input Translation** - Helps translate LLM input into a specified language in which the model may perform better, for example English. <br>
-6. **Output Translation** - Translates LLM responses into your preferred language. <br>
-7. **Prompt Shield** to prevent prompt injection attacks. <br>
+- **Data Masking** – Protects sensitive information by masking or removing confidential data.
+- **Input Filtering** – Validates and sanitizes incoming data before it is processed by the LLM.
+- **Output Filtering** – Reviews and filters the LLM-generated output to ensure compliance and relevance.
+- **Grounding** – Aligns model outputs with enterprise data or domain-specific knowledge to improve      response accuracy.
+- **Input Translation** - Helps translate LLM input into a specified language in which the model may perform better, for example English.
+- **Output Translation** - Translates LLM responses into your preferred language.
+- **Prompt Shield** to prevent prompt injection attacks. <br>
 
 ## What You'll Build
 ### Use case
