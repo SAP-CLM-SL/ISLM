@@ -10,7 +10,7 @@ SAP HANA APL lets you build and apply different types of predictive models, such
 
 Gradient Boosting regression model type provides a more accurate modeling result than the legacy regression model.
 
-1. Open the Fiori Launchpad by clicking [here](https://18.214.3.29:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&sap-language=EN#Shell-home){:target="\_blank"}. Click the **Intelligent Scenario** app.
+1. Open the Fiori Launchpad by clicking [here](https://107.23.197.27:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html){:target="\_blank"}. Click the **Intelligent Scenario** app.
    ![](../ISLM_with_SAPGenAI/images/IntelligentScenariosApp.png)
 
 2. Click the **Create** button and choose **Embedded**.<br/>In Embedded approach, a business application, for example SAP S/4HANA runs in the same stack as its machine learning provider SAP HANA ML and it provides analytics libraries **SAP HANA Automated Predictive Library (APL)** or **SAP HANA Predictive Analysis Library (PAL)**.
