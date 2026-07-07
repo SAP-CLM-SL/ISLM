@@ -3,11 +3,12 @@
 ### **SAP Community blogs**
 - [ISLM – SAP Community – Topic page](https://pages.community.sap.com/topics/intelligent-scenario-lifecycle-management-s4hana)
 - [Unlocking the Power of Generative AI with ISLM](https://community.sap.com/t5/technology-blog-posts-by-sap/unlocking-the-power-of-generative-ai-with-intelligent-scenario-lifecycle/ba-p/14040565)
-<br/>
+- [Scaling Generative AI in SAP S/4HANA: Enterprise-Ready Innovation with ISLM](https://community.sap.com/t5/technology-blog-posts-by-sap/scaling-generative-ai-in-sap-s-4hana-enterprise-ready-innovation-with-islm/ba-p/14332507)
+<br>
 
 ### **SAP Help Portal site links**
-- [SAP S/4HANA](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8308e6d301d54584a33cd04a9861bc52/436151b128614f0e84024015136043d3.html?version=2022.002&locale=en-US)
-- [SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/a630d57fc5004c6383e7a81efee7a8bb/3fa32d7a1e21465f8d9696f6b8cb6ee9.html?version=2508.500)
+- [SAP S/4HANA](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8308e6d301d54584a33cd04a9861bc52/436151b128614f0e84024015136043d3.html)
+- [SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/a630d57fc5004c6383e7a81efee7a8bb/3fa32d7a1e21465f8d9696f6b8cb6ee9.html?version=2608.VAL)
 <br/>
 
 ### **SAP Road Map Explorer**
@@ -26,5 +27,9 @@
 - [Demo script](https://www.sap.com/documents/2022/12/805bdaf3-547e-0010-bca6-c68f7e60039b.html)
 <br/>
 
+### **Web session replays**
+- [Web session replays](https://www.youtube.com/live/oY7w0UW3HjI)
+<br>
 
-
+### **Intelligent Scenario Lifecycle Management – Frequently Asked Questions**
+- [FAQs](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/intelligent-scenario-lifecycle-management-frequently-asked-questions/ba-p/13521020)
