@@ -38,9 +38,9 @@ TRY.
     DATA(lo_user_prompt_template) = cl_aic_islm_prompt_tpl_factory=>get( )->create_instance( islm_scenario = lv_scenario_name
                                                                                              template_id   = 'USER_PROMPT' ).
     DATA parameters TYPE if_aic_prompt_template=>param_values.
-    parameters = VALUE #( ( name = 'ISLM_Items'       value = '200 Pencils,#80 Monitors,#2500 Notepads,#100 Office chairs,#200 Coffee Mugs,#50 Black Markers,#80 Laptops,#50 Green Markers')
+    parameters = VALUE #( ( name = 'ISLM_Items'       value = '200 Pencils,#80 Monitors,#2500 Notepads,#100 Office chairs,#200 Coffee Mugs,#50 Black Markers,#80 Laptops,#50 Green Markers' )
                           ( name = 'ISLM_Source'      value = 'Chennai' )
-                          ( name = 'ISLM_Destination' value = 'Mumbai') ).
+                          ( name = 'ISLM_Destination' value = 'Mumbai' ) ).
     lo_message_container->add_user_message( lo_user_prompt_template->get_prompt( parameters ) ).
 
     " Set LLM parameters
