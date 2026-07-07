@@ -42,6 +42,7 @@ markdown_extensions:
 nav:
   - Getting Started:
       - Welcome: "index.md"
+      - Prerequisites: "Gettingstarted/Prerequisites.md"
       - Tutorials: "Gettingstarted/tutorials.md"
   - Gen AI Foundation:
       - ISLM Overview: "ISLM_with_SAPGenAI/overview.md"
@@ -51,17 +52,16 @@ nav:
       - Inference: "ISLM_with_SAPGenAI/generateemail.md"
   - Gen AI Orchestration:
       - Overview: "Integrate-AI-into-SAPS4HANA-with-ISLM/Introduction.md"
-      - Prerequisites: "Integrate-AI-into-SAPS4HANA-with-ISLM/Prerequisites.md"
       - Create Intelligent Scenarios: "Integrate-AI-into-SAPS4HANA-with-ISLM/CreateIntelligentScenarios.md"
       - Operate Intelligent Scenario: "Integrate-AI-into-SAPS4HANA-with-ISLM/OperateIntelligentScenario.md"
       - Prompt Execution: "Integrate-AI-into-SAPS4HANA-with-ISLM/PromptExecution.md"
       - Conclusion: "Integrate-AI-into-SAPS4HANA-with-ISLM/Conclusion.md"
-  - APL:
-      - Overview: "ISLM_with_HANAML/overview.md"
-      - Create Intelligent Scenario: "ISLM_with_HANAML/createandpublish.md"
-      - ML Operations: "ISLM_with_HANAML/mloperations.md"
-      - Inference: "ISLM_with_HANAML/inference.md"
-      - ScheduleTraining: "ISLM_with_HANAML/scheduletraining.md"
+#  - APL:
+#      - Overview: "ISLM_with_HANAML/overview.md"
+#      - Create Intelligent Scenario: "ISLM_with_HANAML/createandpublish.md"
+#      - ML Operations: "ISLM_with_HANAML/mloperations.md"
+#      - Inference: "ISLM_with_HANAML/inference.md"
+#      - ScheduleTraining: "ISLM_with_HANAML/scheduletraining.md"
 #  - DAR:
 #      - Overview: "ISLM_with_SAPAIServices_BTP/overview.md"
 #      - Create Intelligent Scenario: "ISLM_with_SAPAIServices_BTP/createandpublish.md"
@@ -72,7 +72,7 @@ nav:
       - Blogs: "community/readme.md"
       - Videos: "community/videos.md"
 
-#  - Contact us: "Contactus/readme.md"
+  - Contact us: "Contactus/readme.md"
 #  - Feedback: "feedback/readme.md"
 
 extra:
