@@ -54,8 +54,9 @@ IF <distance between source address and delivery address> > 100 kms THEN include
 ```
 ![](./images/SystemPrompt.png)
 
-10. Click the **Save** button.
-![](./images/Ssave.png)
+10. Click the **Save** button and click **Ok**.
+![](./images/Ssave.png)<br>
+![](./images/Yes.png)
 
 11. Click the **Add** prompt templates button to add **User prompt**.
 ![](./images/UPT.png)
@@ -70,8 +71,9 @@ Build a confirmation mail for a sales order containing {ISLM_Items}. The source 
 ```
 ![](./images/UserPrompt.png)
 
-13. Click the **Save** button.
-![](./images/Usave.png)
+13. Click the **Save** button and click **Ok**.
+![](./images/Usave.png)<br>
+![](./images/Yes.png)
 
 14. The added prompt should be visible in the Prompt Templates table. 
 ![](./images/Prompts.png)
