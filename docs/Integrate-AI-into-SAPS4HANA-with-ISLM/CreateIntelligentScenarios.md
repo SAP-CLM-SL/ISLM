@@ -272,7 +272,8 @@ The Grounding Template retrieves relevant information from the selected data rep
 - Select the **Display template information** as `Yes`.
 - Enter **Grounding template text**: `{ISLM_GROUNDING_QUERY}` <br>
   The grounding template can include dynamic parameters similar to the user prompt.<br>
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/GroundingTemplate.png)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/GroundingTemplate.png)<br>
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Yes.png)
 
 23. Add **Prompt template** for **System prompt**<br>
 The system prompt is used to set the overall context, behavior, or persona for the AI's responses. It provides the fundamental instruction set to guide the model's behaviour throughout an interaction.<br>
@@ -283,7 +284,8 @@ The system prompt is used to set the overall context, behavior, or persona for t
 - Enter **Prompt text**: `You are {ISLM_ROLE}. Your responsibility is to {ISLM_RESPONSIBILITY}.` 
 - Default parameter value of **ISLM_ROLE**: `An helpful assistant.` 
 - Default parameter value of **ISLM_RESPONSIBILITY**: `Assist the user with their queries.`
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/SystemPrompt.png)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/SystemPrompt.png)<br>
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Yes.png)
 
 24. Add **Prompt template** for **User prompt**<br>
 If you have configured grounding module, at least one User Prompt must be added with the following parameter: {ISLM_GROUNDING_OUTPUT}<br>
@@ -387,7 +389,8 @@ Generate a summary of return policy document provided below for the company {ISL
 ### RETURN POLICY DOCUMENT
 {ISLM_GROUNDING_OUTPUT}
 ```
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/UserPrompt.png)
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/UserPrompt.png)<br>
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Yes.png)
 
 25. Save **Draft** and navigate to Scenario documents section by pressing **Back**<br><br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/DraftBack.png)
