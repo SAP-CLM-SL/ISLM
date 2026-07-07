@@ -1,11 +1,11 @@
-> [!TIP]
-> Gen AI Foundation Exercise - Generate an order confirmation email based on Sales data.
+!!! warning
+    Gen AI Foundation Exercise - Generate an order confirmation email based on Sales data.
 
 👉 [Exercise 1](https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPGenAI/overview)
 
 <br/>
 
-> [!TIP]
-> Gen AI Orchestration Exercise - Extract key return policy information from different companies, prompt injection and output translation.
+!!! warning
+    Gen AI Orchestration Exercise - Extract key return policy information from different companies, prompt injection and output translation.
 
 👉 [Exercise 2](https://sap-clm-sl.github.io/ISLM/Integrate-AI-into-SAPS4HANA-with-ISLM/Introduction/)
