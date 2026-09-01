@@ -273,10 +273,10 @@ To restrict your grounding module output during inference, maintain Search Confi
 20. Add **Grounding Template**<br>
 The Grounding Template retrieves relevant information from the selected data repository and appends it to the user prompt. It supports dynamic parameters, which are provided at runtime (during inference).<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/GT.png)
-- Enter Grounding Template **name**: `GROUNDING_TEMPLATE`
-- Enter **Description**: `Grounding query`
-- Select the **Display template information** as `Yes`.
-- Enter **Grounding template text**: `{ISLM_GROUNDING_QUERY}` <br>
+-	Enter Grounding Template **name**: `GROUNDING_TEMPLATE`
+-	Enter **Description**: `Grounding query`
+-	Select the **Display template information** as `Yes`.
+-	Enter **Grounding template text**: `{ISLM_GROUNDING_QUERY}` <br>
   The grounding template can include dynamic parameters similar to the user prompt.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/GroundingTemplate.png)<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Yes.png)
@@ -284,12 +284,12 @@ The Grounding Template retrieves relevant information from the selected data rep
 21. Add **Prompt template** for **System prompt**<br>
 The system prompt is used to set the overall context, behavior, or persona for the AI's responses. It provides the fundamental instruction set to guide the model's behaviour throughout an interaction.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/PT.png)
-- Enter the **Prompt name**: `SYSTEM_PROMPT`.
-- Enter the **Description**: `Explain the role and responsibility for the LLM`
-- Select the **Display template information** as `Yes`.
-- Enter **Prompt text**: `You are {ISLM_ROLE}. Your responsibility is to {ISLM_RESPONSIBILITY}.`
-- Default parameter value of **ISLM_ROLE**: `An helpful assistant.`
-- Default parameter value of **ISLM_RESPONSIBILITY**: `Assist the user with their queries.`
+- 	Enter the **Prompt name**: `SYSTEM_PROMPT`.
+- 	Enter the **Description**: `Explain the role and responsibility for the LLM`
+- 	Select the **Display template information** as `Yes`.
+- 	Enter **Prompt text**: `You are {ISLM_ROLE}. Your responsibility is to {ISLM_RESPONSIBILITY}.`
+- 	Default parameter value of **ISLM_ROLE**: `An helpful assistant.`
+- 	Default parameter value of **ISLM_RESPONSIBILITY**: `Assist the user with their queries.`
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/SystemPrompt.png)<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Yes.png)
 
@@ -297,10 +297,10 @@ The system prompt is used to set the overall context, behavior, or persona for t
 If you have configured grounding module, at least one User Prompt must be added with the following parameter: {ISLM_GROUNDING_OUTPUT}<br>
 At runtime, this placeholder is automatically replaced with the content retrieved by the Grounding Template from the configured data repository.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/PT.png)
-- Enter the **Prompt name**: `SUMMARIZE_RETURN_POLICY`
-- Enter the **Description** `Use LLM to summarize the return policy document to populate standard JSON`
-- Select the **Display template information** as `Yes`.
-- Enter the below text as **Prompt text**<br>
+- 	Enter the **Prompt name**: `SUMMARIZE_RETURN_POLICY`
+- 	Enter the **Description** `Use LLM to summarize the return policy document to populate standard JSON`
+- 	Select the **Display template information** as `Yes`.
+- 	Enter the below text as **Prompt text**<br>
 ```
 Generate a summary of return policy document provided below for the company {ISLM_COMPANY_NAME}.
 
