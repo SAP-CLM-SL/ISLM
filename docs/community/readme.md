@@ -8,7 +8,7 @@
 
 ### **SAP Help Portal site links**
 - [SAP S/4HANA](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/8308e6d301d54584a33cd04a9861bc52/436151b128614f0e84024015136043d3.html)
-- [SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/a630d57fc5004c6383e7a81efee7a8bb/3fa32d7a1e21465f8d9696f6b8cb6ee9.html?version=2608.VAL)
+- [SAP S/4HANA Cloud](https://help.sap.com/docs/SAP_S4HANA_CLOUD/a630d57fc5004c6383e7a81efee7a8bb/3fa32d7a1e21465f8d9696f6b8cb6ee9.html)
 <br/>
 
 ### **SAP Road Map Explorer**
