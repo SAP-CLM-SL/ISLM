@@ -248,7 +248,7 @@ Within AI Launchpad, configure the required orchestration modules based on the u
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Upload.png) <br>
 - Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.
 
-14. **Grounding** provides the LLM with relevant and reliable information from external data sources before generating a response. This helps the model generate responses based on the provided data rather than relying only on its pre-trained knowledge.
+14. **Grounding** provides the LLM with relevant and reliable information from external data sources before generating a response. This helps the model generate responses based on the provided data rather than relying only on its pre-trained knowledge. <br>
 In an orchestration workflow, grounding can be used to retrieve relevant information from sources such as documents, databases, or other enterprise data and provide it as context to the LLM.<br>
 In the **Grounding subsection**, add the required data repository type **Vector**. This will support the grounding document addition. Click [here](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/GroundingFiles/Grounding%20files.zip) to download the grounding files. <br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Vector.png) <br>
