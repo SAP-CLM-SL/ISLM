@@ -14,8 +14,8 @@
 5. Enter the **description**:`Summarize Return Policy Document`
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Description.png)
 
-6. Select **Stateless – Customer** as the Usage Type. <br>
-A shared connectivity model in ISLM enables a single connection between the ABAP system and the SAP Generative AI Hub to be configured once and reused across multiple AI use cases. This streamlines connectivity management, strengthens governance, and reduces the overall configuration and setup effort. Reuse connectivity is already set up and no action is required here for connectivity.
+6. **Usage Type**: A shared connectivity model in ISLM enables a single connection between the ABAP system and the SAP Generative AI Hub to be configured once and reused across multiple AI use cases. This streamlines connectivity management, strengthens governance, and reduces the overall configuration and setup effort. Reuse connectivity is already set up and no action is required here for connectivity.<br>
+Select **Stateless – Customer** as the Usage Type.
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/UsageType.png)
 
 
@@ -42,8 +42,8 @@ Select the corresponding **Model** from the drop down. In this exercise, we will
 12. Choose **Add** to confirm.<br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Add.png)
 
-13. Intelligent scenario with Orchestration service: <br>
-Within AI Launchpad, configure the required orchestration modules based on the use case. The configuration should be a valid orchestration workflow and must be exported as a JSON file. Workflow is already configured, validated and exported as JSON. No action is required here.<br>
+13. **Intelligent scenario with Orchestration service**: <br>
+Within AI Launchpad, configure the required orchestration modules based on the use case. The configuration should be a valid orchestration workflow and must be exported as a JSON file. Workflow is already configured, validated, exported as JSON and provided below. No action is required here.<br>
 - Navigate to the **Execution Flow Template** and click the **Upload** button to upload the json.
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/ExecutionFlow.png)
 - Either select all and copy the JSON from [config file](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/OrchestrationConfigFiles/Orchestration%20config.zip), or paste the below JSON directly into the dialog.
@@ -248,7 +248,7 @@ Within AI Launchpad, configure the required orchestration modules based on the u
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Upload.png) <br>
 - Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.<br>
 
-14. Grounding provides the LLM with relevant and reliable information from external data sources before generating a response. This helps the model generate responses based on the provided data rather than relying only on its pre-trained knowledge.
+14. **Grounding** provides the LLM with relevant and reliable information from external data sources before generating a response. This helps the model generate responses based on the provided data rather than relying only on its pre-trained knowledge.
 In an orchestration workflow, grounding can be used to retrieve relevant information from sources such as documents, databases, or other enterprise data and provide it as context to the LLM.<br>
 In the **Grounding subsection**, add the required data repository type **Vector**. This will support the grounding document addition. Click [here](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/GroundingFiles/Grounding%20files.zip) to download the grounding files. <br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Vector.png) <br>
