@@ -3,7 +3,7 @@
 The Intelligent Scenarios app is used to create intelligent scenarios, review, and publish them, and to make them available in the Intelligent Scenario Management app.
 In this step, you’ll create a new intelligent scenario to generate the order confirmation email for Sales Order using LLM model.
 
-1. Open the Fiori Launchpad by clicking [here](https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home) and launch **Intelligent Scenarios** app under **Analytics** tab. 
+1. Open the Fiori Launchpad and launch the **Intelligent Scenarios** app under the **Analytics** tab. Please refer to the cheat sheet for guidance. 
 ![](./images/Registration.png)<br>
 
 2. Click the **Create** button and choose **Side-by Side**.
@@ -15,7 +15,7 @@ In this step, you’ll create a new intelligent scenario to generate the order c
     - **Intelligent Scenario Type**: `Generative AI` <br>
 ![](./images/NameDescriptionType.png)<br>
       
-4. Select the **Usage Type** as **Stateless - With Embeddings**.<br> The usage type provides connectivity to GenAI Hub. For Stateless - With Embeddings usage type, the information or data from previous interactions with LLM is not retained. Each interaction is treated as a new request, ensuring a fresh context for every interaction. <br>
+4. Select the **Usage Type**.<br> A shared connectivity model in ISLM enables a single connection between the ABAP system and the SAP Generative AI Hub to be configured once and reused across multiple AI use cases. This streamlines connectivity management, strengthens governance, and reduces the overall configuration and setup effort. <br>
 ![](./images/UsageType.png)
 
 5. Click the **Add Model** button.
