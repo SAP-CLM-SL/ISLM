@@ -246,7 +246,7 @@ Within AI Launchpad, configure the required orchestration modules based on the u
 }
 ```
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Upload.png) <br>
-- Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.<br>
+- Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.
 
 14. **Grounding** provides the LLM with relevant and reliable information from external data sources before generating a response. This helps the model generate responses based on the provided data rather than relying only on its pre-trained knowledge.
 In an orchestration workflow, grounding can be used to retrieve relevant information from sources such as documents, databases, or other enterprise data and provide it as context to the LLM.<br>
@@ -254,9 +254,9 @@ In the **Grounding subsection**, add the required data repository type **Vector*
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Vector.png) <br>
 
 To restrict your grounding module output during inference, maintain Search Configuration value. This can help to retrieve only relevant data instead of all the uploaded data.<br>
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Vector1.png)<br>
+![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Vector1.png)
 
-15. The **Input Translation** module allows you to translate LLM text prompts and **grounding module** output into a target language. It may help improve LLM response when the configured model performs better with input in specific language, example English. In this use case, prompt texts are already English, so no need to maintain the Input translation configuration.<br>
+15. The **Input Translation** module allows you to translate LLM text prompts and **grounding module** output into a target language. It may help improve LLM response when the configured model performs better with input in specific language, example English. In this use case, prompt texts are already English, so no need to maintain the Input translation configuration.
 
 16. The **Data Masking module** enables the anonymization or pseudonymization of data before it is sent to the LLM model for processing. <br>
 ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/DataMasking.png)
