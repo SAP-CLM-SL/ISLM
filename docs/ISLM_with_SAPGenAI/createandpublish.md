@@ -18,7 +18,7 @@ In this step, you’ll create a new intelligent scenario to generate the order c
 4. Select the **Usage Type**.<br> A shared connectivity model in ISLM enables a single connection between the ABAP system and the SAP Generative AI Hub to be configured once and reused across multiple AI use cases. This streamlines connectivity management, strengthens governance, and reduces the overall configuration and setup effort. <br>
 ![](./images/UsageType.png)
 
-5. Click the **Add Model** button.
+5. **Model**: An ISLM entity that represents the AI model configured for use by an intelligent scenario, enabling centralized model configuration and reuse across supported AI use cases. Click the **Add Model** button.
 ![](./images/AddModel.png)
 
 6. The **Add Generative AI Model** screen will pop up. Enter the below details:
@@ -32,7 +32,7 @@ In this step, you’ll create a new intelligent scenario to generate the order c
 7. Click the **Add** button.
 ![](./images/Add.png)
 
-8. Click the **Add** prompt templates button to add **System prompt**.
+8. The **System Prompt** is used to set the overall context, behavior, or persona for the AI's responses. It provides the fundamental instruction set to guide the model's behaviour throughout an interaction. Click the **Add** prompt templates button to add **System prompt**. 
 ![](./images/SPT.png)
 
 9. In the Add **Prompt Template** dialog, enter the below details:
@@ -58,7 +58,7 @@ IF <distance between source address and delivery address> > 100 kms THEN include
 ![](./images/Ssave.png)<br>
 ![](./images/Yes.png)
 
-11. Click the **Add** prompt templates button to add **User prompt**.
+11. The second prompt will be an **User Prompt**. User prompts are dynamic instructions or queries for an AI to perform a particular task. Click the **Add** prompt templates button to add **User prompt**.
 ![](./images/UPT.png)
 
 12. In the **Add Prompt Template** dialog, enter the below details:
