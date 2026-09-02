@@ -1360,43 +1360,42 @@ In the <strong>Grounding subsection</strong>, add the required data repository t
 <li>
 <p>Add <strong>Grounding Template</strong><br>
 The Grounding Template retrieves relevant information from the selected data repository and appends it to the user prompt. It supports dynamic parameters, which are provided at runtime (during inference).<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/GT.png" /></p>
-</li>
-<li>Enter Grounding Template <strong>name</strong>: <code>GROUNDING_TEMPLATE</code></li>
-<li>Enter <strong>Description</strong>: <code>Grounding query</code></li>
-<li>Select the <strong>Display template information</strong> as <code>Yes</code>.</li>
-<li>
-<p>Enter <strong>Grounding template text</strong>: <code>{ISLM_GROUNDING_QUERY}</code> <br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/GT.png" /> <br></p>
+<ul>
+<li>Enter Grounding Template <strong>name</strong>: <code>GROUNDING_TEMPLATE</code><br></li>
+<li>Enter <strong>Description</strong>: <code>Grounding query</code><br></li>
+<li>Select the <strong>Display template information</strong> as <code>Yes</code>.<br></li>
+<li>Enter <strong>Grounding template text</strong>: <code>{ISLM_GROUNDING_QUERY}</code> <br>
   The grounding template can include dynamic parameters similar to the user prompt.<br>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/GroundingTemplate.png" /><br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/Yes.png" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Yes.png" /></li>
+</ul>
 </li>
 <li>
 <p>Add <strong>Prompt template</strong> for <strong>System prompt</strong><br>
 The system prompt is used to set the overall context, behavior, or persona for the AI's responses. It provides the fundamental instruction set to guide the model's behaviour throughout an interaction.<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/PT.png" /></p>
-</li>
-<li>Enter the <strong>Prompt name</strong>: <code>SYSTEM_PROMPT</code>.</li>
-<li>Enter the <strong>Description</strong>: <code>Explain the role and responsibility for the LLM</code></li>
-<li>Select the <strong>Display template information</strong> as <code>Yes</code>.</li>
-<li>Enter <strong>Prompt text</strong>: <code>You are {ISLM_ROLE}. Your responsibility is to {ISLM_RESPONSIBILITY}.</code></li>
-<li>Default parameter value of <strong>ISLM_ROLE</strong>: <code>An helpful assistant.</code></li>
-<li>
-<p>Default parameter value of <strong>ISLM_RESPONSIBILITY</strong>: <code>Assist the user with their queries.</code>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/PT.png" /> <br></p>
+<ul>
+<li>Enter the <strong>Prompt name</strong>: <code>SYSTEM_PROMPT</code>. <br></li>
+<li>Enter the <strong>Description</strong>: <code>Explain the role and responsibility for the LLM</code> <br></li>
+<li>Select the <strong>Display template information</strong> as <code>Yes</code>. <br></li>
+<li>Enter <strong>Prompt text</strong>: <code>You are {ISLM_ROLE}. Your responsibility is to {ISLM_RESPONSIBILITY}.</code><br></li>
+<li>Default parameter value of <strong>ISLM_ROLE</strong>: <code>An helpful assistant.</code><br></li>
+<li>Default parameter value of <strong>ISLM_RESPONSIBILITY</strong>: <code>Assist the user with their queries.</code>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/SystemPrompt.png" /><br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/Yes.png" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Yes.png" /></li>
+</ul>
 </li>
 <li>
 <p>Add <strong>Prompt template</strong> for <strong>User prompt</strong><br>
 If you have configured grounding module, at least one User Prompt must be added with the following parameter: {ISLM_GROUNDING_OUTPUT}<br>
 At runtime, this placeholder is automatically replaced with the content retrieved by the Grounding Template from the configured data repository.<br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/PT.png" /></p>
-</li>
-<li>Enter the <strong>Prompt name</strong>: <code>SUMMARIZE_RETURN_POLICY</code></li>
-<li>Enter the <strong>Description</strong> <code>Use LLM to summarize the return policy document to populate standard JSON</code></li>
-<li>Select the <strong>Display template information</strong> as <code>Yes</code>.</li>
-<li>
-<p>Enter the below text as <strong>Prompt text</strong><br>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/PT.png" /> <br></p>
+<ul>
+<li>Enter the <strong>Prompt name</strong>: <code>SUMMARIZE_RETURN_POLICY</code><br></li>
+<li>Enter the <strong>Description</strong> <code>Use LLM to summarize the return policy document to populate standard JSON</code><br></li>
+<li>Select the <strong>Display template information</strong> as <code>Yes</code>.<br></li>
+<li>Enter the below text as <strong>Prompt text</strong><br>
 <div class="highlight"><pre><span></span><code>Generate a summary of return policy document provided below for the company {ISLM_COMPANY_NAME}.
 
 ### INSTRUCTIONS
@@ -1491,7 +1490,8 @@ At runtime, this placeholder is automatically replaced with the content retrieve
 {ISLM_GROUNDING_OUTPUT}
 </code></pre></div>
 <img alt="Intelligent Scenarios" src="../IntelligentScenario/UserPrompt.png" /><br>
-<img alt="Intelligent Scenarios" src="../IntelligentScenario/Yes.png" /></p>
+<img alt="Intelligent Scenarios" src="../IntelligentScenario/Yes.png" /></li>
+</ul>
 </li>
 <li>
 <p>Save <strong>Draft</strong> and navigate to Scenario documents section by pressing <strong>Back</strong>.<br>
