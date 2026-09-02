@@ -6,11 +6,11 @@
     - Select **User Specified System** and click **Next**.<br>
   ![Intelligent Scenarios](./images/UserSpecifiedSystem.png)
     - Enter below system details or refer cheat_sheet (if required) and click **Next**.<br>
-        - System ID (SID) : S4H
-        - Application server: 44.219.212.100
-        - Instance Number : 00
-        - Client : 100
-        - Language : EN
+        - **System ID (SID)** : S4H
+        - **Application server** : 44.219.212.100
+        - **Instance Number** : 00
+        - **Client** : 100
+        - **Language** : EN
   ![Intelligent Scenarios](./images/SystemDetails.png)
     - Click **Next** and **Finish**.
     - System should be visible on SAP Logon.
