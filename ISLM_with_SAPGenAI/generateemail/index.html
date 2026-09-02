@@ -1066,11 +1066,18 @@
 
 <h1 id="generate-sales-order-confirmation-email">Generate Sales Order Confirmation email</h1>
 <p>In this step, you will use the ABAP GUI to view the email generated using LLM model.</p>
-<ol>
-<li>
-<p>Logon to <code>S4H</code> system in SAP GUI and execute the transaction code <code>/nSE38</code>.
+<p><strong>Explanation of the report:</strong> In the report, ABAP AI SDK APIs are used to execute the prompts maintained in your intelligent scenario.
+- First, an instance of your intelligent scenario is created.
+- Next, an instance of message container is created to execute multiple prompts at once.
+- The system prompt and user prompt with sales data, are added to the message container.
+- The hyper parameters like temperature and max tokens limit are set.
+- The prompts are executed using gpt-4o-mini model.
+- The response from LLM is then displayed.
+<br></p>
+<p><strong>Steps to create and execute the report to generate Sales order confirmation email:</strong>
+1. Logon to <code>S4H</code> system in SAP GUI and execute the transaction code <code>/nSE38</code>.
    <img alt="" src="../images/SE38.png" /></p>
-</li>
+<ol>
 <li>
 <p>Input the Report Name as <code>Z_SALES_ORD_CONF_###</code>, where ### is your attendee id mentioned in the cheat sheet. Click the <strong>Create</strong> button.
    <img alt="" src="../images/RCreate.png" /></p>

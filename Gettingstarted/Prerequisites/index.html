@@ -1065,14 +1065,21 @@
 
 
 <h1 id="prerequisites">Prerequisites</h1>
-<ul>
+<ol>
 <li>Add the S/4HANA system to SAP Logon<ul>
 <li>Click on <strong>New</strong> and select <strong>Connection</strong>. <br>
   <img alt="Intelligent Scenarios" src="../images/Connection.png" /></li>
 <li>Select <strong>User Specified System</strong> and click <strong>Next</strong>.<br>
   <img alt="Intelligent Scenarios" src="../images/UserSpecifiedSystem.png" /></li>
-<li>Enter system details, refer cheat_sheet (if required) and click <strong>Next</strong>.<br>
+<li>Enter below system details or refer cheat_sheet (if required) and click <strong>Next</strong>.<br><ul>
+<li><strong>System ID (SID)</strong> : S4H</li>
+<li><strong>Application server</strong> : 44.219.212.100</li>
+<li><strong>Instance Number</strong> : 00</li>
+<li><strong>Client</strong> : 100</li>
+<li><strong>Language</strong> : EN
   <img alt="Intelligent Scenarios" src="../images/SystemDetails.png" /></li>
+</ul>
+</li>
 <li>Click <strong>Next</strong> and <strong>Finish</strong>.</li>
 <li>System should be visible on SAP Logon.
   <img alt="Intelligent Scenarios" src="../images/CAL.png" /></li>
@@ -1084,7 +1091,12 @@
 <li>The user ID and password are the same for both Fiori and Backend ABAP systems.</li>
 </ul>
 </li>
+<li>After logging into SAP Fiori Launchpad, access below applications<ul>
+<li><a href="https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#IntelligentScenario-register">Intelligent Scenarios</a></li>
+<li><a href="https://44.219.212.100:44301/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=100&amp;sap-language=EN#IntelligentScenario-manage">Intelligent Scenario Management</a></li>
 </ul>
+</li>
+</ol>
 
 
 
