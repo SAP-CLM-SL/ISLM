@@ -2,12 +2,12 @@
 
 In this step, you will use the ABAP GUI to view the email generated using LLM model.
 
-**Explanation of the report:** In the report, ABAP AI SDK APIs are used to execute the prompts maintained in your intelligent scenario.
+**Explanation of the report:** In the report, ABAP AI SDK APIs are used to execute the prompts maintained in your intelligent scenario. <br>
 - First, an instance of your intelligent scenario is created.
 - Next, an instance of message container is created to execute multiple prompts at once.
 - The system prompt and user prompt with sales data, are added to the message container.
 - The hyper parameters like temperature and max tokens limit are set.
-- The prompts are executed using gpt-4o-mini model.
+- The prompts are executed using gpt-5-mini model.
 - The response from LLM is then displayed.
 <br>
 
