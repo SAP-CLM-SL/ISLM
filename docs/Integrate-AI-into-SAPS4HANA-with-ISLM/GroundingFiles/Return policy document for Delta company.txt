@@ -1,0 +1,49 @@
+### Delta Return Policy
+**Last Updated: March 1, 2026**
+
+Welcome to Delta. Returns for store credit within 60 days. Strict on condition.
+
+**Overview**  
+Summary: Extended window, store credit focus. Free returns: false. Notes: Ideal for trying sizes.
+
+**Return Window**  
+60 days from purchase. Extensions: Holidays.
+
+**Eligibility**  
+- ["With receipt", "original packaging"].  
+- Proof required: True; alternatives: None.  
+- Condition: Unwashed, tags intact.
+
+**Non-Returnable**  
+- Undergarments, swimwear, personalized gifts.  
+- Reasons: Hygiene, non-resellable.
+
+**Process**  
+- Methods: In-store only.  
+- Steps: Bring to any location with item.  
+- Authorization: False.  
+- Shipping: N/A (in-store).  
+- Documents: Receipt.
+
+**Refunds**  
+- Types: Store credit only.  
+- Default: Store credit.  
+- Payment: Gift card.  
+- Processing: Immediate.  
+- Fees: Restocking 20% (amount: 10); applies to clothing; other: None.
+
+**Shipping Costs**  
+Original: True. Return: N/A.
+
+**Special Cases**  
+- Defective: Extended true, free true, full true.  
+- Wrong item: In-store swap.  
+- Holidays: False.  
+- Other: ["Bulk orders special handling"].
+
+**Contact**  
+Email: N/A | Phone: 1-555-DELTA | Live chat: True | URL: delta-stores.com/returns
+
+**Legal**  
+- ["NY, CA laws apply"].  
+- Warranties: Extended on appliances.

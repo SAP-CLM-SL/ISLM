@@ -1,0 +1,81 @@
+site_name: ISLM Hands-On
+site_url: https://sap-clm-sl.github.io/ISLM/
+theme:
+  name: material
+#  logo: assets/clm-day-banner.png
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: indigo
+      accent: indio
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - content.code.copy
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
+
+markdown_extensions:
+  - codehilite
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.progressbar
+  - attr_list
+  - md_in_html
+  - tables
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
+nav:
+  - Getting Started:
+      - Welcome: "index.md"
+      - Prerequisites: "Gettingstarted/Prerequisites.md"
+      - Tutorials: "Gettingstarted/tutorials.md"
+  - Gen AI Foundation:
+      - ISLM Overview: "ISLM_with_SAPGenAI/overview.md"
+      - Exercise Overview: "ISLM_with_SAPGenAI/exerciseoverview.md"
+      - Create Intelligent Scenario: "ISLM_with_SAPGenAI/createandpublish.md"
+      - ML Operations: "ISLM_with_SAPGenAI/mloperations.md"
+      - Inference: "ISLM_with_SAPGenAI/generateemail.md"
+  - Gen AI Orchestration:
+      - Overview: "Integrate-AI-into-SAPS4HANA-with-ISLM/Introduction.md"
+      - Create Intelligent Scenarios: "Integrate-AI-into-SAPS4HANA-with-ISLM/CreateIntelligentScenarios.md"
+      - Operate Intelligent Scenario: "Integrate-AI-into-SAPS4HANA-with-ISLM/OperateIntelligentScenario.md"
+      - Prompt Execution: "Integrate-AI-into-SAPS4HANA-with-ISLM/PromptExecution.md"
+      - Conclusion: "Integrate-AI-into-SAPS4HANA-with-ISLM/Conclusion.md"
+#  - APL:
+#      - Overview: "ISLM_with_HANAML/overview.md"
+#      - Create Intelligent Scenario: "ISLM_with_HANAML/createandpublish.md"
+#      - ML Operations: "ISLM_with_HANAML/mloperations.md"
+#      - Inference: "ISLM_with_HANAML/inference.md"
+#      - ScheduleTraining: "ISLM_with_HANAML/scheduletraining.md"
+#  - DAR:
+#      - Overview: "ISLM_with_SAPAIServices_BTP/overview.md"
+#      - Create Intelligent Scenario: "ISLM_with_SAPAIServices_BTP/createandpublish.md"
+#      - Connect to SAP BTP: "ISLM_with_SAPAIServices_BTP/connection.md"
+#      - ML Operations: "ISLM_with_SAPAIServices_BTP/mloperations.md"
+#      - Inference: "ISLM_with_SAPAIServices_BTP/inference.md"      
+  - Community:
+      - Blogs: "community/readme.md"
+      - Videos: "community/videos.md"
+
+  - Contact us: "Contactus/readme.md"
+#  - Feedback: "feedback/readme.md"
+
+extra:
+  generator: false # Hides "Made with MkDocs"
+  legal: |
+    © 2025 Your Company • Powered by Gen AI -doesnt work 🚀
