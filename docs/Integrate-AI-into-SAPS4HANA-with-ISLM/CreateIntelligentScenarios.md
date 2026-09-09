@@ -287,103 +287,104 @@
     At runtime, this placeholder is automatically replaced with the content retrieved by the Grounding Template from the configured data repository.<br>
     ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/PT.png) <br> - Enter the **Prompt name**: `SUMMARIZE_RETURN_POLICY`<br> - Enter the **Description** `Use LLM to summarize the return policy document to populate standard JSON`<br> - Select the **Display template information** as `Yes`.<br> - Enter the below text as **Prompt text**<br>
 
-        ```
-
+    ```
     Generate a summary of return policy document provided below for the company {ISLM_COMPANY_NAME}.
 
-### INSTRUCTIONS
+    ### INSTRUCTIONS
 
-- Populate the conditions of the return policy in the following JSON format
-  {
-  "return_policy": {
-  "overview": {
-  "summary": "string",
-  "free_returns": "boolean",
-  "customer_friendly_notes": "string"
-  },
-  "return_window": {
-  "days": "integer",
-  "from_date": "string", // e.g., "from delivery date" or "from purchase date"
-  "extensions": ["string"] // e.g., ["holidays", "defective items"]
-  },
-  "eligibility_criteria": {
-  "conditions": ["string"], // e.g., ["unused", "original packaging", "with tags"]
-  "proof_of_purchase": {
-  "required": "boolean",
-  "alternatives": ["string"] // e.g., ["order history", "email confirmation"]
-  },
-  "item_condition": "string" // e.g., "unworn, unwashed"
-  },
-  "non_returnable_items": {
-  "categories": ["string"], // e.g., ["software", "undergarments", "perishables", "custom products", "final sale"]
-  "reasons": ["string"]
-  },
-  "return_process": {
-  "initiation_methods": ["string"], // e.g., ["online portal", "email support", "phone", "in-store"]
-  "steps": ["string"],
-  "return_authorization": {
-  "required": "boolean",
-  "form_url": "string",
-  "label_provided": "boolean"
-  },
-  "shipping": {
-  "who_pays": "string", // e.g., "customer", "merchant", "prepaid label"
-  "instructions": "string",
-  "address": "string",
-  "preferred_carriers": ["string"]
-  },
-  "required_documents": ["string"] // e.g., ["receipt", "order number", "packing slip"]
-  },
-  "refund_options": {
-  "types": ["string"], // e.g., ["full refund", "partial refund", "store credit", "exchange"]
-  "default_method": "string",
-  "payment_method": "string", // e.g., "original payment", "gift card"
-  "processing_time": "string", // e.g., "3-5 business days"
-  "fees": {
-  "restocking_fee": {
-  "amount": "number",
-  "percentage": "number",
-  "applies_to": ["string"]
-  },
-  "other_fees": ["string"]
-  }
-  },
-  "shipping_costs": {
-  "original_shipping": "boolean", // refundable?
-  "return_shipping": "boolean" // refundable?
-  },
-  "special_cases": {
-  "defective_damaged": {
-  "extended_window": "boolean",
-  "free_shipping": "boolean",
-  "full_refund": "boolean"
-  },
-  "wrong_item": {
-  "process": "string"
-  },
-  "holidays": "boolean",
-  "other": ["string"]
-  },
-  "contact_info": {
-  "support_email": "string",
-  "phone": "string",
-  "live_chat": "boolean",
-  "return_center_url": "string"
-  },
-  "legal_notes": {
-  "state_laws": ["string"],
-  "warranties": "string"
-  },
-  "last_updated": "string" // for policy version tracking
-  }
-  }
+    - Populate the conditions of the return policy in the following JSON format
 
-- Respond with only the JSON output
+    {
+    "return_policy": {
+    "overview": {
+    "summary": "string",
+    "free_returns": "boolean",
+    "customer_friendly_notes": "string"
+    },
+    "return_window": {
+    "days": "integer",
+    "from_date": "string", // e.g., "from delivery date" or "from purchase date"
+    "extensions": ["string"] // e.g., ["holidays", "defective items"]
+    },
+    "eligibility_criteria": {
+    "conditions": ["string"], // e.g., ["unused", "original packaging", "with tags"]
+    "proof_of_purchase": {
+    "required": "boolean",
+    "alternatives": ["string"] // e.g., ["order history", "email confirmation"]
+    },
+    "item_condition": "string" // e.g., "unworn, unwashed"
+    },
+    "non_returnable_items": {
+    "categories": ["string"], // e.g., ["software", "undergarments", "perishables", "custom products", "final sale"]
+    "reasons": ["string"]
+    },
+    "return_process": {
+    "initiation_methods": ["string"], // e.g., ["online portal", "email support", "phone", "in-store"]
+    "steps": ["string"],
+    "return_authorization": {
+    "required": "boolean",
+    "form_url": "string",
+    "label_provided": "boolean"
+    },
+    "shipping": {
+    "who_pays": "string", // e.g., "customer", "merchant", "prepaid label"
+    "instructions": "string",
+    "address": "string",
+    "preferred_carriers": ["string"]
+    },
+    "required_documents": ["string"] // e.g., ["receipt", "order number", "packing slip"]
+    },
+    "refund_options": {
+    "types": ["string"], // e.g., ["full refund", "partial refund", "store credit", "exchange"]
+    "default_method": "string",
+    "payment_method": "string", // e.g., "original payment", "gift card"
+    "processing_time": "string", // e.g., "3-5 business days"
+    "fees": {
+    "restocking_fee": {
+    "amount": "number",
+    "percentage": "number",
+    "applies_to": ["string"]
+    },
+    "other_fees": ["string"]
+    }
+    },
+    "shipping_costs": {
+    "original_shipping": "boolean", // refundable?
+    "return_shipping": "boolean" // refundable?
+    },
+    "special_cases": {
+    "defective_damaged": {
+    "extended_window": "boolean",
+    "free_shipping": "boolean",
+    "full_refund": "boolean"
+    },
+    "wrong_item": {
+    "process": "string"
+    },
+    "holidays": "boolean",
+    "other": ["string"]
+    },
+    "contact_info": {
+    "support_email": "string",
+    "phone": "string",
+    "live_chat": "boolean",
+    "return_center_url": "string"
+    },
+    "legal_notes": {
+    "state_laws": ["string"],
+    "warranties": "string"
+    },
+    "last_updated": "string" // for policy version tracking
+    }
+    }
 
-### RETURN POLICY DOCUMENT
 
-{ISLM_GROUNDING_OUTPUT}
-```
+    - Respond with only the JSON output
+
+    ### RETURN POLICY DOCUMENT
+
+    {ISLM_GROUNDING_OUTPUT}
+    ```
 
     ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/UserPrompt.png)<br>
     ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Yes.png)
