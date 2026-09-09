@@ -45,204 +45,206 @@
 13. **Intelligent scenario with Orchestration service**: <br>
     Within AI Launchpad, configure the required orchestration modules based on the use case. The configuration should be a valid orchestration workflow and must be exported as a JSON file. Workflow is already configured, validated, exported as JSON and provided below. No action is required here.<br> - Navigate to the **Execution Flow Template** and click the **Upload** button to upload the json.
     ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/ExecutionFlow.png) - Either select all and copy the JSON from [config file](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/OrchestrationConfigFiles/Orchestration%20config.zip), or paste the below JSON directly into the dialog.
-    `
-	{
-		"modules": {
-			"prompt_templating": {
-				"prompt": {
-					"template": [
-						{
-							"role": "user",
-							"content": [
-								{
-									"type": "text",
-									"text": "{{?grounding_output_variable}}"
-								}
-							]
-						}
-					],
-					"defaults": {}
-				},
-				"model": {
-					"name": "gpt-5-mini",
-					"params": {
-						"max_tokens": 64000,
-						"temperature": 1
-					},
-					"version": "2025-08-07"
-				}
-			},
-			"filtering": {
-				"input": {
-					"filters": [
-						{
-							"type": "azure_content_safety",
-							"config": {
-								"hate": 2,
-								"self_harm": 2,
-								"sexual": 2,
-								"violence": 2,
-								"prompt_shield": true
-							}
-						},
-						{
-							"type": "llama_guard_3_8b",
-							"config": {
-								"child_exploitation": true,
-								"code_interpreter_abuse": true,
-								"defamation": true,
-								"elections": true,
-								"hate": true,
-								"indiscriminate_weapons": true,
-								"intellectual_property": true,
-								"non_violent_crimes": true,
-								"privacy": true,
-								"self_harm": true,
-								"sex_crimes": true,
-								"sexual_content": true,
-								"specialized_advice": true,
-								"violent_crimes": true
-							}
-						}
-					]
-				},
-				"output": {
-					"filters": [
-						{
-							"type": "azure_content_safety",
-							"config": {
-								"hate": 2,
-								"self_harm": 2,
-								"sexual": 2,
-								"violence": 2
-							}
-						},
-						{
-							"type": "llama_guard_3_8b",
-							"config": {
-								"child_exploitation": true,
-								"code_interpreter_abuse": true,
-								"defamation": true,
-								"elections": true,
-								"hate": true,
-								"indiscriminate_weapons": true,
-								"intellectual_property": true,
-								"non_violent_crimes": true,
-								"privacy": true,
-								"self_harm": true,
-								"sex_crimes": true,
-								"sexual_content": true,
-								"specialized_advice": true,
-								"violent_crimes": true
-							}
-						}
-					]
-				}
-			},
-			"masking": {
-				"masking_providers": [
-					{
-						"type": "sap_data_privacy_integration",
-						"method": "pseudonymization",
-						"entities": [
-							{
-								"type": "profile-credit-card-number"
-							},
-							{
-								"type": "profile-driverlicense"
-							},
-							{
-								"type": "profile-email"
-							},
-							{
-								"type": "profile-sensitive-data"
-							},
-							{
-								"type": "profile-ethnicity"
-							},
-							{
-								"type": "profile-gender"
-							},
-							{
-								"type": "profile-pronouns-gender"
-							},
-							{
-								"type": "profile-iban"
-							},
-							{
-								"type": "profile-location"
-							},
-							{
-								"type": "profile-nationalid"
-							},
-							{
-								"type": "profile-nationality"
-							},
-							{
-								"type": "profile-org"
-							},
-							{
-								"type": "profile-passport"
-							},
-							{
-								"type": "profile-person"
-							},
-							{
-								"type": "profile-phone"
-							},
-							{
-								"type": "profile-political-group"
-							},
-							{
-								"type": "profile-sapids-public"
-							},
-							{
-								"type": "profile-religious-group"
-							},
-							{
-								"type": "profile-sapids-internal"
-							},
-							{
-								"type": "profile-ssn"
-							},
-							{
-								"type": "profile-sexual-orientation"
-							},
-							{
-								"type": "profile-trade-union"
-							},
-							{
-								"type": "profile-address"
-							},
-							{
-								"type": "profile-url"
-							},
-							{
-								"type": "profile-university"
-							},
-							{
-								"type": "profile-username-password"
-							}
-						],
-						"mask_grounding_input": {
-							"enabled": true
-						},
-						"allowlist": []
-					}
-				]
-			},
-			"translation": {
-				"output": {
-					"type": "sap_document_translation",
-					"config": {
-						"source_language": "en-US",
-						"target_language": ""
-					}
-				}
-			}
-		}
-	}
-	`
+
+    ```
+    {
+    	"modules": {
+    		"prompt_templating": {
+    			"prompt": {
+    				"template": [
+    					{
+    						"role": "user",
+    						"content": [
+    							{
+    								"type": "text",
+    								"text": "{{?grounding_output_variable}}"
+    							}
+    						]
+    					}
+    				],
+    				"defaults": {}
+    			},
+    			"model": {
+    				"name": "gpt-5-mini",
+    				"params": {
+    					"max_tokens": 64000,
+    					"temperature": 1
+    				},
+    				"version": "2025-08-07"
+    			}
+    		},
+    		"filtering": {
+    			"input": {
+    				"filters": [
+    					{
+    						"type": "azure_content_safety",
+    						"config": {
+    							"hate": 2,
+    							"self_harm": 2,
+    							"sexual": 2,
+    							"violence": 2,
+    							"prompt_shield": true
+    						}
+    					},
+    					{
+    						"type": "llama_guard_3_8b",
+    						"config": {
+    							"child_exploitation": true,
+    							"code_interpreter_abuse": true,
+    							"defamation": true,
+    							"elections": true,
+    							"hate": true,
+    							"indiscriminate_weapons": true,
+    							"intellectual_property": true,
+    							"non_violent_crimes": true,
+    							"privacy": true,
+    							"self_harm": true,
+    							"sex_crimes": true,
+    							"sexual_content": true,
+    							"specialized_advice": true,
+    							"violent_crimes": true
+    						}
+    					}
+    				]
+    			},
+    			"output": {
+    				"filters": [
+    					{
+    						"type": "azure_content_safety",
+    						"config": {
+    							"hate": 2,
+    							"self_harm": 2,
+    							"sexual": 2,
+    							"violence": 2
+    						}
+    					},
+    					{
+    						"type": "llama_guard_3_8b",
+    						"config": {
+    							"child_exploitation": true,
+    							"code_interpreter_abuse": true,
+    							"defamation": true,
+    							"elections": true,
+    							"hate": true,
+    							"indiscriminate_weapons": true,
+    							"intellectual_property": true,
+    							"non_violent_crimes": true,
+    							"privacy": true,
+    							"self_harm": true,
+    							"sex_crimes": true,
+    							"sexual_content": true,
+    							"specialized_advice": true,
+    							"violent_crimes": true
+    						}
+    					}
+    				]
+    			}
+    		},
+    		"masking": {
+    			"masking_providers": [
+    				{
+    					"type": "sap_data_privacy_integration",
+    					"method": "pseudonymization",
+    					"entities": [
+    						{
+    							"type": "profile-credit-card-number"
+    						},
+    						{
+    							"type": "profile-driverlicense"
+    						},
+    						{
+    							"type": "profile-email"
+    						},
+    						{
+    							"type": "profile-sensitive-data"
+    						},
+    						{
+    							"type": "profile-ethnicity"
+    						},
+    						{
+    							"type": "profile-gender"
+    						},
+    						{
+    							"type": "profile-pronouns-gender"
+    						},
+    						{
+    							"type": "profile-iban"
+    						},
+    						{
+    							"type": "profile-location"
+    						},
+    						{
+    							"type": "profile-nationalid"
+    						},
+    						{
+    							"type": "profile-nationality"
+    						},
+    						{
+    							"type": "profile-org"
+    						},
+    						{
+    							"type": "profile-passport"
+    						},
+    						{
+    							"type": "profile-person"
+    						},
+    						{
+    							"type": "profile-phone"
+    						},
+    						{
+    							"type": "profile-political-group"
+    						},
+    						{
+    							"type": "profile-sapids-public"
+    						},
+    						{
+    							"type": "profile-religious-group"
+    						},
+    						{
+    							"type": "profile-sapids-internal"
+    						},
+    						{
+    							"type": "profile-ssn"
+    						},
+    						{
+    							"type": "profile-sexual-orientation"
+    						},
+    						{
+    							"type": "profile-trade-union"
+    						},
+    						{
+    							"type": "profile-address"
+    						},
+    						{
+    							"type": "profile-url"
+    						},
+    						{
+    							"type": "profile-university"
+    						},
+    						{
+    							"type": "profile-username-password"
+    						}
+    					],
+    					"mask_grounding_input": {
+    						"enabled": true
+    					},
+    					"allowlist": []
+    				}
+    			]
+    		},
+    		"translation": {
+    			"output": {
+    				"type": "sap_document_translation",
+    				"config": {
+    					"source_language": "en-US",
+    					"target_language": ""
+    				}
+    			}
+    		}
+    	}
+    }
+    ```
+
     ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Upload.png) <br> - Once a valid JSON is uploaded, the modules will be displayed with their parameters and values in display mode.
 
 14. **Grounding** provides the LLM with relevant and reliable information from external data sources before generating a response. This helps the model generate responses based on the provided data rather than relying only on its pre-trained knowledge. <br>
