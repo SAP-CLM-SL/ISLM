@@ -1,36 +1,36 @@
 # Steps to Create Intelligent Scenarios<br>
 
-1. Open the Fiori Launchpad and launch the **Intelligent Scenarios** app under the **Analytics** tab. Please refer to the cheat sheet for guidance.
-   ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Registration.png)
+1.  Open the Fiori Launchpad and launch the **Intelligent Scenarios** app under the **Analytics** tab. Please refer to the cheat sheet for guidance.
+    ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Registration.png)
 
-2. Click the **Create** button and choose **Side-by-Side**.
-   ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Create.png)
+2.  Click the **Create** button and choose **Side-by-Side**.
+    ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Create.png)
 
-3. Next, go to the **Settings** tab and select **Generative AI** as the Scenario Type.<br>
-   ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/IntelligentScenarioType.png)
+3.  Next, go to the **Settings** tab and select **Generative AI** as the Scenario Type.<br>
+    ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/IntelligentScenarioType.png)
 
-4. Enter unique **Scenario name** in `Z_POL_DOC_SUMM_##` format, where ## is your attendee ID.<br>
-   ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Name.png)
+4.  Enter unique **Scenario name** in `Z_POL_DOC_SUMM_##` format, where ## is your attendee ID.<br>
+    ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Name.png)
 
-5. Enter the **description**:`Summarize Return Policy Document`
-   ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Description.png)
+5.  Enter the **description**:`Summarize Return Policy Document`
+    ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Description.png)
 
-6. **Usage Type**: A shared connectivity model in ISLM enables a single connection between the ABAP system and the SAP Generative AI Hub to be configured once and reused across multiple AI use cases. This streamlines connectivity management, strengthens governance, and reduces the overall configuration and setup effort. Reuse connectivity is already set up and no action is required here for connectivity.<br>
-   Select **Stateless – Customer** as the Usage Type.
-   ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/UsageType.png)
+6.  **Usage Type**: A shared connectivity model in ISLM enables a single connection between the ABAP system and the SAP Generative AI Hub to be configured once and reused across multiple AI use cases. This streamlines connectivity management, strengthens governance, and reduces the overall configuration and setup effort. Reuse connectivity is already set up and no action is required here for connectivity.<br>
+    Select **Stateless – Customer** as the Usage Type.
+    ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/UsageType.png)
 
-7. **Model**: An ISLM entity that represents the AI model configured for use by an intelligent scenario, enabling centralized model configuration and reuse across supported AI use cases. <br>
-   Add a Generative AI model to the Intelligent Scenario by selecting **Add Model** and providing the required details. <br>
-   ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/AddModel.png)
+7.  **Model**: An ISLM entity that represents the AI model configured for use by an intelligent scenario, enabling centralized model configuration and reuse across supported AI use cases. <br>
+    Add a Generative AI model to the Intelligent Scenario by selecting **Add Model** and providing the required details. <br>
+    ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/AddModel.png)
 
-8. Enter the below details: <br>
-   **Model name** as `Z_POL_DOC_SUMMARIZE_MOD` <br>
-   **Description** as `Model with orchestration modules` <br>
-   ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/ModelNameDescription.png)
+8.  Enter the below details: <br>
+    **Model name** as `Z_POL_DOC_SUMMARIZE_MOD` <br>
+    **Description** as `Model with orchestration modules` <br>
+    ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/ModelNameDescription.png)
 
-9. The **Executable ID** identifies the executable configuration used by the Intelligent Scenario to access the Generative AI model. It represents the configured provider or execution endpoint through which the LLM is invoked. <br>
-   Select the appropriate **Executable ID** from the drop down. In this case, we will choose **azure-openai**<br>
-   ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/ExecutableId.png)
+9.  The **Executable ID** identifies the executable configuration used by the Intelligent Scenario to access the Generative AI model. It represents the configured provider or execution endpoint through which the LLM is invoked. <br>
+    Select the appropriate **Executable ID** from the drop down. In this case, we will choose **azure-openai**<br>
+    ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/ExecutableId.png)
 
 10. The **Large Language Model (LLM)** specifies the language model that processes the input and generates the response. The LLM is defined by its model name and, where applicable, its version.<br>
     Select the corresponding **Model** from the drop down. In this exercise, we will choose **gpt-5-mini**<br>
@@ -287,103 +287,106 @@
     At runtime, this placeholder is automatically replaced with the content retrieved by the Grounding Template from the configured data repository.<br>
     ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/PT.png) <br> - Enter the **Prompt name**: `SUMMARIZE_RETURN_POLICY`<br> - Enter the **Description** `Use LLM to summarize the return policy document to populate standard JSON`<br> - Select the **Display template information** as `Yes`.<br> - Enter the below text as **Prompt text**<br>
 
-```
-Generate a summary of return policy document provided below for the company {ISLM_COMPANY_NAME}.
+        ```
+
+    Generate a summary of return policy document provided below for the company {ISLM_COMPANY_NAME}.
 
 ### INSTRUCTIONS
+
 - Populate the conditions of the return policy in the following JSON format
-{
+  {
   "return_policy": {
-    "overview": {
-      "summary": "string",
-      "free_returns": "boolean",
-      "customer_friendly_notes": "string"
-    },
-    "return_window": {
-      "days": "integer",
-      "from_date": "string", // e.g., "from delivery date" or "from purchase date"
-      "extensions": ["string"] // e.g., ["holidays", "defective items"]
-    },
-    "eligibility_criteria": {
-      "conditions": ["string"], // e.g., ["unused", "original packaging", "with tags"]
-      "proof_of_purchase": {
-        "required": "boolean",
-        "alternatives": ["string"] // e.g., ["order history", "email confirmation"]
-      },
-      "item_condition": "string" // e.g., "unworn, unwashed"
-    },
-    "non_returnable_items": {
-      "categories": ["string"], // e.g., ["software", "undergarments", "perishables", "custom products", "final sale"]
-      "reasons": ["string"]
-    },
-    "return_process": {
-      "initiation_methods": ["string"], // e.g., ["online portal", "email support", "phone", "in-store"]
-      "steps": ["string"],
-      "return_authorization": {
-        "required": "boolean",
-        "form_url": "string",
-        "label_provided": "boolean"
-      },
-      "shipping": {
-        "who_pays": "string", // e.g., "customer", "merchant", "prepaid label"
-        "instructions": "string",
-        "address": "string",
-        "preferred_carriers": ["string"]
-      },
-      "required_documents": ["string"] // e.g., ["receipt", "order number", "packing slip"]
-    },
-    "refund_options": {
-      "types": ["string"], // e.g., ["full refund", "partial refund", "store credit", "exchange"]
-      "default_method": "string",
-      "payment_method": "string", // e.g., "original payment", "gift card"
-      "processing_time": "string", // e.g., "3-5 business days"
-      "fees": {
-        "restocking_fee": {
-          "amount": "number",
-          "percentage": "number",
-          "applies_to": ["string"]
-        },
-        "other_fees": ["string"]
-      }
-    },
-    "shipping_costs": {
-      "original_shipping": "boolean", // refundable?
-      "return_shipping": "boolean" // refundable?
-    },
-    "special_cases": {
-      "defective_damaged": {
-        "extended_window": "boolean",
-        "free_shipping": "boolean",
-        "full_refund": "boolean"
-      },
-      "wrong_item": {
-        "process": "string"
-      },
-      "holidays": "boolean",
-      "other": ["string"]
-    },
-    "contact_info": {
-      "support_email": "string",
-      "phone": "string",
-      "live_chat": "boolean",
-      "return_center_url": "string"
-    },
-    "legal_notes": {
-      "state_laws": ["string"],
-      "warranties": "string"
-    },
-    "last_updated": "string" // for policy version tracking
+  "overview": {
+  "summary": "string",
+  "free_returns": "boolean",
+  "customer_friendly_notes": "string"
+  },
+  "return_window": {
+  "days": "integer",
+  "from_date": "string", // e.g., "from delivery date" or "from purchase date"
+  "extensions": ["string"] // e.g., ["holidays", "defective items"]
+  },
+  "eligibility_criteria": {
+  "conditions": ["string"], // e.g., ["unused", "original packaging", "with tags"]
+  "proof_of_purchase": {
+  "required": "boolean",
+  "alternatives": ["string"] // e.g., ["order history", "email confirmation"]
+  },
+  "item_condition": "string" // e.g., "unworn, unwashed"
+  },
+  "non_returnable_items": {
+  "categories": ["string"], // e.g., ["software", "undergarments", "perishables", "custom products", "final sale"]
+  "reasons": ["string"]
+  },
+  "return_process": {
+  "initiation_methods": ["string"], // e.g., ["online portal", "email support", "phone", "in-store"]
+  "steps": ["string"],
+  "return_authorization": {
+  "required": "boolean",
+  "form_url": "string",
+  "label_provided": "boolean"
+  },
+  "shipping": {
+  "who_pays": "string", // e.g., "customer", "merchant", "prepaid label"
+  "instructions": "string",
+  "address": "string",
+  "preferred_carriers": ["string"]
+  },
+  "required_documents": ["string"] // e.g., ["receipt", "order number", "packing slip"]
+  },
+  "refund_options": {
+  "types": ["string"], // e.g., ["full refund", "partial refund", "store credit", "exchange"]
+  "default_method": "string",
+  "payment_method": "string", // e.g., "original payment", "gift card"
+  "processing_time": "string", // e.g., "3-5 business days"
+  "fees": {
+  "restocking_fee": {
+  "amount": "number",
+  "percentage": "number",
+  "applies_to": ["string"]
+  },
+  "other_fees": ["string"]
   }
-}
+  },
+  "shipping_costs": {
+  "original_shipping": "boolean", // refundable?
+  "return_shipping": "boolean" // refundable?
+  },
+  "special_cases": {
+  "defective_damaged": {
+  "extended_window": "boolean",
+  "free_shipping": "boolean",
+  "full_refund": "boolean"
+  },
+  "wrong_item": {
+  "process": "string"
+  },
+  "holidays": "boolean",
+  "other": ["string"]
+  },
+  "contact_info": {
+  "support_email": "string",
+  "phone": "string",
+  "live_chat": "boolean",
+  "return_center_url": "string"
+  },
+  "legal_notes": {
+  "state_laws": ["string"],
+  "warranties": "string"
+  },
+  "last_updated": "string" // for policy version tracking
+  }
+  }
 
 - Respond with only the JSON output
 
 ### RETURN POLICY DOCUMENT
+
 {ISLM_GROUNDING_OUTPUT}
 ```
 
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/UserPrompt.png)<br>
-![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Yes.png)
+    ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/UserPrompt.png)<br>
+    ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Yes.png)
 
 23. Save **Draft** and navigate to Scenario documents section by pressing **Back**.<br>
     ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/DraftBack.png)
