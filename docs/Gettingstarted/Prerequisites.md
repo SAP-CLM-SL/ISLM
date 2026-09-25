@@ -13,11 +13,11 @@
 ![Intelligent Scenarios](./images/UserSpecifiedSystem.png)
 
 - Enter the system details below (or refer to the cheat sheet if required) and click **Next**.
-  - **System ID (SID)**: S4H
-  - **Application Server**: 44.219.212.100
-  - **Instance Number**: 00
-  - **Client**: 100
-  - **Language**: EN
+    - **System ID (SID)**: S4H
+    - **Application Server**: 44.219.212.100
+    - **Instance Number**: 00
+    - **Client**: 100
+    - **Language**: EN
 
 ![Intelligent Scenarios](./images/SystemDetails.png)
 
