@@ -2,7 +2,7 @@
 
 1. Add the S/4HANA system to SAP Logon
 
-   ### Windows
+   **Windows**
 
    1. Click on **New** and select **Connection**.<br>
       ![Intelligent Scenarios](./images/Connection.png)
@@ -19,7 +19,7 @@
    5. The system should now be visible in SAP Logon.<br>
       ![Intelligent Scenarios](./images/CAL.png)
 
-   ### Mac
+   **Mac**
 
    1. Open SAP Logon (SAP GUI).
    2. Click **New Entry** (the "+" or "New Item" button in the toolbar).
