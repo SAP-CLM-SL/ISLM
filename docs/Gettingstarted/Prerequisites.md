@@ -3,6 +3,7 @@
 1. Add the S/4HANA system to SAP Logon
 
    **Windows**
+
    - Click on **New** and select **Connection**.<br>
      ![Intelligent Scenarios](./images/Connection.png)
    - Select **User Specified System** and click **Next**.<br>
@@ -13,21 +14,21 @@
      - **Instance Number**: 00
      - **Client**: 100
      - **Language**: EN<br>
-       ![Intelligent Scenarios](./images/SystemDetails.png)
+     ![Intelligent Scenarios](./images/SystemDetails.png)
    - Click **Next** and **Finish**.
    - The system should now be visible in SAP Logon.<br>
      ![Intelligent Scenarios](./images/CAL.png)
 
    **Mac**
+
    - Open SAP Logon (SAP GUI).
    - Click **New Entry** (the "+" or "New Item" button in the toolbar).
    - In the dialog, enter the description and select the **Advanced** tab.
    - Enable **Expert Mode** and enter your IP address.<br>
      ![Intelligent Scenarios](./images/MacLogon.png)
    - Click **Save**. The system should now appear in your SAP Logon list.
-
 2. Attendee ID - ensures your ISLM Scenario name is unique across all participants.
-3. Login credentials (if required):<br>
+3. Login credentials (if required):
    - If prompted for a login ID and password, refer to the cheat_sheet.
    - The user ID and password are the same for both Fiori and Backend ABAP systems.
 4. After logging into SAP Fiori Launchpad, access below applications
