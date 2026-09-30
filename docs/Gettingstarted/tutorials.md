@@ -1,10 +1,8 @@
-<!--
 !!! warning "Gen AI Foundation Exercise"
 
     - Generate an order confirmation email based on Sales data.
 
     👉 [Exercise 1](https://sap-clm-sl.github.io/ISLM/ISLM_with_SAPGenAI/overview)
--->
 
 !!! warning "Gen AI Orchestration Exercise"
 

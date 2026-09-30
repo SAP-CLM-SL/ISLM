@@ -44,12 +44,12 @@ nav:
       - Welcome: "index.md"
       - Prerequisites: "Gettingstarted/Prerequisites.md"
       - Tutorials: "Gettingstarted/tutorials.md"
-  #- Gen AI Foundation:
-  #    - ISLM Overview: "ISLM_with_SAPGenAI/overview.md"
-  #    - Exercise Overview: "ISLM_with_SAPGenAI/exerciseoverview.md"
-  #    - Create Intelligent Scenario: "ISLM_with_SAPGenAI/createandpublish.md"
-  #    - ML Operations: "ISLM_with_SAPGenAI/mloperations.md"
-  #    - Inference: "ISLM_with_SAPGenAI/generateemail.md"
+  - Gen AI Foundation:
+      - ISLM Overview: "ISLM_with_SAPGenAI/overview.md"
+      - Exercise Overview: "ISLM_with_SAPGenAI/exerciseoverview.md"
+      - Create Intelligent Scenario: "ISLM_with_SAPGenAI/createandpublish.md"
+      - ML Operations: "ISLM_with_SAPGenAI/mloperations.md"
+      - Inference: "ISLM_with_SAPGenAI/generateemail.md"
   - Gen AI Orchestration:
       - Overview: "Integrate-AI-into-SAPS4HANA-with-ISLM/Introduction.md"
       - Create Intelligent Scenarios: "Integrate-AI-into-SAPS4HANA-with-ISLM/CreateIntelligentScenarios.md"
