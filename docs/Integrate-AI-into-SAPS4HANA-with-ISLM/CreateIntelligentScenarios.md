@@ -249,7 +249,7 @@
 
 14. **Grounding** provides the LLM with relevant and reliable information from external data sources before generating a response. This helps the model generate responses based on the provided data rather than relying only on its pre-trained knowledge. <br>
     In an orchestration workflow, grounding can be used to retrieve relevant information from sources such as documents, databases, or other enterprise data and provide it as context to the LLM.<br>
-    In the **Grounding subsection**, add the required data repository type **Vector**. This will support the grounding document addition. Click [here](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/GroundingFiles/Grounding%20files.zip) to download the grounding files. <br>
+    In the **Grounding subsection**, add the required data repository type **Vector**. This will support the grounding document addition. <br>
     ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/Vector.png) <br>
 
     To restrict your grounding module output during inference, maintain Search Configuration value. This can help to retrieve only relevant data instead of all the uploaded data.<br>
@@ -392,7 +392,7 @@
 23. Save **Draft** and navigate to Scenario documents section by pressing **Back**.<br>
     ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/DraftBack.png)
 
-24. Upload grounding documents to an Intelligent Scenario by clicking on **Upload** button.<br>
+24. Upload grounding documents to an Intelligent Scenario by clicking on **Upload** button. Click [here](https://github.com/SAP-CLM-SL/ISLM/raw/main/docs/Integrate-AI-into-SAPS4HANA-with-ISLM/GroundingFiles/Grounding%20files.zip) to download and extract the grounding files to your desktop before proceeding.<br>
     ![Intelligent Scenarios](Integrate-AI-into-SAPS4HANA-with-ISLM/../IntelligentScenario/DocumentsUpload.png)
 
 25. Select the below files from the Grounding files folder from your desktop.<br>
