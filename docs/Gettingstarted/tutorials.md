@@ -8,4 +8,4 @@
 
     - Extract key return policy information from different companies, prompt injection and output translation.
 
-    👉 [Exercise ](https://sap-clm-sl.github.io/ISLM/Integrate-AI-into-SAPS4HANA-with-ISLM/Introduction/)
+    👉 [Exercise 2](https://sap-clm-sl.github.io/ISLM/Integrate-AI-into-SAPS4HANA-with-ISLM/Introduction/)
